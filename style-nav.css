@@ -1,0 +1,26 @@
+.container {
+    width: 100%
+    margin: 0 auto;
+    background: green;
+}
+
+section {
+    height:300px;
+    background: blue;
+    margin-bottom: 20px;
+}
+
+/* Navigation*/
+
+nav {
+    height: 50px;
+    color: #F1F1F1;
+    text-decoration: none;
+}
+
+nav .container > a {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+
