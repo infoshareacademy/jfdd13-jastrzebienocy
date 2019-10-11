@@ -1,26 +1,36 @@
-.container {
-    width: 100%
-    margin: 0 auto;
-    background: green;
+
+* {
+    box-sizing: border-box; 
 }
 
-section {
+.section {
     height:300px;
     background: blue;
-    margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 /* Navigation*/
 
-nav {
+
+.nav-container {
+    
+    position: fixed;
+    
+    margin: 0 auto;
+    background: green;
     height: 50px;
     color: #F1F1F1;
-    text-decoration: none;
+    text-align: center;
+    
 }
 
-nav .container > a {
+.nav-container a {
     font-weight: bold;
     color: #FFFFFF;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 20px;
+
 }
 
 
