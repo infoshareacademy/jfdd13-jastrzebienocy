@@ -1,0 +1,21 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.hero{
+    background: url(https://cdn-04.independent.ie/incoming/article37246795.ece/86765/BINARY/BUSINESS-food-waste.png) no-repeat center ;
+    width: 100%;
+    height: 50%;
+  
+
+}
+.hero-title{
+    text-transform: uppercase;
+    color: white;
+    background: transparent;
+}
+.hero-text{
+    text-shadow: thistle 2px;
+    color: tomato;
+}
