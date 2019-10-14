@@ -25,7 +25,7 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
-    text-align: center;*/
+    text-align: center;
 }
 
 .nav-container a {
@@ -54,7 +54,7 @@
   text-transform: uppercase;
   color: rgb(228, 240, 200);
   background: transparent;
-    padding: 20px;
+  padding: 20px;
   font-size: 20px;
 }
 .hero-text {
@@ -71,12 +71,20 @@
   
   /* Here is section main style */
   .main-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 200px 500px 200px 500px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+
+
     
   }
-  .setOne {
-    display:inline-flex;
+  /* .setOne {
+    display:flexbox;
     flex-direction: row;
+    justify-content: center;
+  } */
+  .odd {
+    display: grid;
     justify-content: center;
   }
