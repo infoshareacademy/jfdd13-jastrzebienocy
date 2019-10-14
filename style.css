@@ -70,21 +70,9 @@
 
   
   /* Here is section main style */
-  .main-content {
-    display: grid;
-    grid-template-columns: 200px 500px 200px 500px;
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 10px;
-
-
-    
-  }
-  /* .setOne {
-    display:flexbox;
-    flex-direction: row;
-    justify-content: center;
-  } */
-  .odd {
-    display: grid;
-    justify-content: center;
-  }
+.main-content {
+  display: grid;
+  grid-template-columns: 200px 500px 200px 500px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
