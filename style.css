@@ -74,7 +74,12 @@
   
   /* Here is section main style */
   .main-content {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     
+  }
+  .setOne {
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
   }
