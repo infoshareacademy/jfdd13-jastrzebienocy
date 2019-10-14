@@ -1,0 +1,9 @@
+.fridge{
+    background: url(photo-slides/fridge/fridge.jpg);
+    height: 64vh;
+    opacity: 0.9;
+}
+
+.fas fa-bread-slice{
+    padding: 10px;
+}
