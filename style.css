@@ -1,3 +1,12 @@
+.fridge{
+    background: url(photo-slides/fridge/fridge.jpg);
+    height: 64vh;
+    opacity: 0.9;
+}
+
+.fas fa-bread-slice{
+    padding: 10px;
+}
 .main-container {
     background-color: chartreuse;
 }
@@ -25,7 +34,11 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
+<<<<<<< HEAD
     text-align: center;
+=======
+    z-index: 3;
+>>>>>>> eb46ecf947833144c4fa50fc72ed09bcabdb76d2
 }
 
 .nav-container a {
@@ -48,7 +61,7 @@
   justify-content: space-around;
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
-  padding: 20px;;
+  padding: 20px;
 }
 .hero-title {
   text-transform: uppercase;
@@ -68,11 +81,25 @@
   
 }
 
+.hero a{
+    color: green;
+    text-decoration: none;
+    border: 1px solid green;
+    background: transparent;
+}
   
   /* Here is section main style */
+<<<<<<< HEAD
 .main-content {
   display: grid;
   grid-template-columns: 200px 500px 200px 500px;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
 }
+=======
+  .main-content {
+    display: inline-flex;
+    flex-direction: column;
+    
+  }
+>>>>>>> eb46ecf947833144c4fa50fc72ed09bcabdb76d2
