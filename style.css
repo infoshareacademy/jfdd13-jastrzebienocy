@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box; 
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section {
+    height:300px;
+    background: blue;
+    margin-top: 60px;
+}
+
+/* Navigation*/
+
+
+.nav-container {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: green;
+    /* position: fixed;
+    margin: 0 auto;
+    background: green;
+    height: 50px; 
+    color: #F1F1F1;
+    text-align: center;*/
+}
+
+.nav-container a {
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 20px;
+
+}
+
+
