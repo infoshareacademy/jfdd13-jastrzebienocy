@@ -1,7 +1,8 @@
 .fridge{
-    background: url(photo-slides/fridge/fridge.jpg);
-    height: 64vh;
-    opacity: 0.9;
+    background: url(photo-slides/fridge/fridge.jpg) no-repeat;
+    height: 520px;
+    
+    
 }
 
 .fas fa-bread-slice{
