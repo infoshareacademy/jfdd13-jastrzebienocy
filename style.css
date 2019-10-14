@@ -1,69 +1,80 @@
+.main-container {
+    background-color: chartreuse;
+}
 * {
-  box-sizing: border-box;
-}
-
-header {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section {
-  height: 300px;
-  background: blue;
-  margin-top: 60px;
-}
-
-/* Navigation*/
-
-.nav-container {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  background: green;
-  /* position: fixed;
+    box-sizing: border-box;
+  }
+  
+  header {
     margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section {
+    height: 300px;
+    background: blue;
+    margin-top: 60px;
+  }
+  
+  /* Navigation*/
+  
+  .nav-container {
+    position: fixed;
+    width: 100%;
+    text-align: center;
     background: green;
-    height: 50px; 
-    color: #F1F1F1;
-    text-align: center;*/
-}
+    /* position: fixed;
+      margin: 0 auto;
+      background: green;
+      height: 50px; 
+      color: #F1F1F1;
+      text-align: center;*/
+  }
+  
+  .nav-container a {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  .hero {
+    background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
+      no-repeat center;
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hero-title {
+    text-transform: uppercase;
+    color: rgb(228, 240, 200);
+    background: transparent;
+  
+    font-size: 20px;
+  }
+  .hero-text {
+    text-shadow: thistle 2px;
+    color: rgb(26, 100, 30);
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .hero a {
+    color: green;
+    border: 1px solid green;
+    text-decoration: none;
+  }
 
-.nav-container a {
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 30px;
-  text-decoration: none;
-  padding: 20px;
-}
-
-.hero {
-  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
-    no-repeat center;
-  width: 100%;
-  height: 50vh;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.hero-title {
-  text-transform: uppercase;
-  color: rgb(228, 240, 200);
-  background: transparent;
-
-  font-size: 20px;
-}
-.hero-text {
-  text-shadow: thistle 2px;
-  color: rgb(26, 100, 30);
-  text-align: center;
-  font-weight: bold;
-}
-
-.hero a {
-  color: green;
-  border: 1px solid green;
-  text-decoration: none;
-}
+  
+  /* Here is section main style */
+  .main-content {
+    display: inline-flex;
+    flex-direction: column;
+    
+  }
