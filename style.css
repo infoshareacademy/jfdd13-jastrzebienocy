@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 * {
     box-sizing: border-box; 
 }
@@ -35,7 +36,50 @@
     font-size: 30px;
     text-decoration: none;
     padding: 20px;
+=======
+*{
+    box-sizing: border-box;
+}
+
+.hero{
+    background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg) no-repeat center ;
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+.hero-title{
+    text-transform: uppercase;
+    color: rgb(228, 240, 200);
+    background: transparent;
+    
+    font-size: 20px;
+}
+.hero-text{
+    text-shadow: thistle 2px;
+    color: rgb(26, 100, 30);    text-align: center;
+    font-weight: bold;
+    
+}
+
+.hero a{
+    color: green;
+    border: 1px solid green;
+    text-decoration: none;
+    
+>>>>>>> Kinga
 
 }
 
 
+<<<<<<< HEAD
+=======
+    
+https://pickupimage.com/data/photo/2015/5/6/0506157-2590-D31A-4082689F24D57EFC.jpg
+>>>>>>> Kinga
