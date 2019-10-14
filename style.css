@@ -34,11 +34,8 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
-<<<<<<< HEAD
     text-align: center;
-=======
     z-index: 3;
->>>>>>> eb46ecf947833144c4fa50fc72ed09bcabdb76d2
 }
 
 .nav-container a {
@@ -89,17 +86,9 @@
 }
   
   /* Here is section main style */
-<<<<<<< HEAD
 .main-content {
   display: grid;
   grid-template-columns: 200px 500px 200px 500px;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
 }
-=======
-  .main-content {
-    display: inline-flex;
-    flex-direction: column;
-    
-  }
->>>>>>> eb46ecf947833144c4fa50fc72ed09bcabdb76d2
