@@ -34,6 +34,7 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
+    z-index: 3;
 }
 
 .nav-container a {
