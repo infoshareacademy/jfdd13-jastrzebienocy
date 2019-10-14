@@ -1,3 +1,12 @@
+.fridge{
+    background: url(photo-slides/fridge/fridge.jpg);
+    height: 64vh;
+    opacity: 0.9;
+}
+
+.fas fa-bread-slice{
+    padding: 10px;
+}
 .main-container {
     background-color: chartreuse;
 }
@@ -25,7 +34,6 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
-    text-align: center;
 }
 
 .nav-container a {
