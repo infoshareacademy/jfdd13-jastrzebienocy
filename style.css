@@ -70,4 +70,11 @@
     border: 1px solid green;
     text-decoration: none;
   }
+
   
+  /* Here is section main style */
+  .main-content {
+    display: inline-flex;
+    flex-direction: column;
+    
+  }
