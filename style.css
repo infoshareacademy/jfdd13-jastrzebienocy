@@ -7,3 +7,79 @@
 .fas fa-bread-slice{
     padding: 10px;
 }
+.main-container {
+    background-color: chartreuse;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  header {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section {
+    height: 300px;
+    background: blue;
+    margin-top: 60px;
+  }
+  
+  /* Navigation*/
+  
+  .nav-container {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: green;
+    height: 50px; 
+    color: #F1F1F1;
+}
+
+.nav-container a {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.hero {
+  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
+    no-repeat;
+  width: 100%;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  padding: 20px;;
+}
+.hero-title {
+  text-transform: uppercase;
+  color: rgb(228, 240, 200);
+  background: transparent;
+    padding: 20px;
+  font-size: 20px;
+}
+.hero-text {
+ 
+  color: rgb(26, 100, 30);
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(248, 247, 238, 0.5);
+  padding: 20px;
+  max-width: 100%;
+  
+}
+
+  
+  /* Here is section main style */
+  .main-content {
+    display: inline-flex;
+    flex-direction: column;
+    
+  }
