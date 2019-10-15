@@ -1,41 +1,42 @@
-.fridge{
-    background: url(photo-slides/fridge/fridge.jpg);
-    height: 64vh;
-    opacity: 0.9;
+.fridge {
+  background: url(photo-slides/fridge/fridge.jpg);
+  height: 64vh;
+  opacity: 0.9;
 }
 
-.fas fa-bread-slice{
-    padding: 10px;
+.fas fa-bread-slice {
+  padding: 10px;
 }
 .main-container {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
 * {
-    box-sizing: border-box;
-  }
-  
-  header {
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .section {
-    height: 300px;
-    background: blue;
-    margin-top: 60px;
-  }
-  
-  /* Navigation*/
-  
-  .nav-container {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    background: green;
-    height: 50px; 
-    color: #F1F1F1;
-    text-align: center;
-    z-index: 3;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  height: 300px;
+  background: blue;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* Navigation*/
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: green;
+  height: 50px;
+  color: #f1f1f1;
+  text-align: center;
+  z-index: 3;
 }
 
 .nav-container a {
@@ -46,12 +47,13 @@
   padding: 20px;
 }
 
+/*hero section*/
 .hero {
   background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
     no-repeat;
   width: 100%;
   height: 50vh;
-  margin: 0 auto;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,30 +64,41 @@
 }
 .hero-title {
   text-transform: uppercase;
-  color: rgb(228, 240, 200);
-  background: transparent;
+  color: #212121;
+
   padding: 20px;
-  font-size: 20px;
+  /*text-shadow: 2px 2px 1px #212121;*/
+  font-weight: bold;
+  font-size: 60px;
+  border: 1px solid #212121;
 }
 .hero-text {
- 
-  color: rgb(26, 100, 30);
+  color: #757575;
+  
   text-align: center;
   font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
   padding: 20px;
   max-width: 100%;
-  
+  font-size: 28px;
 }
 
-.hero a{
-    color: green;
-    text-decoration: none;
-    border: 1px solid green;
-    background: transparent;
-}
   
-  /* Here is section main style */
+.hero p{
+  font-size: 20px;
+}
+
+.hero a {
+  color: #757575;
+
+  text-decoration: none;
+  font-size: 32px;
+  padding: 20px;
+  background: transparent;
+  text-shadow: 1px 2px 1px #212121;
+}
+
+/* Here is section main style */
 .main-content {
   display: grid;
   grid-template-columns: 200px 1fr 200px 1fr;
