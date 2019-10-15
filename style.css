@@ -35,6 +35,8 @@
     background: green;
     height: 50px; 
     color: #F1F1F1;
+    text-align: center;
+    z-index: 3;
 }
 
 .nav-container a {
@@ -45,6 +47,8 @@
   padding: 20px;
 }
 
+
+/*hero section*/
 .hero {
   background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
     no-repeat;
@@ -63,7 +67,7 @@
   text-transform: uppercase;
   color: rgb(228, 240, 200);
   background: transparent;
-    padding: 20px;
+  padding: 20px;
   font-size: 20px;
 }
 .hero-text {
@@ -85,9 +89,9 @@
 }
   
   /* Here is section main style */
-  .main-content {
-    display: inline-flex;
-    flex-direction: column;
-    
-  }
-
+.main-content {
+  display: grid;
+  grid-template-columns: 200px 500px 200px 500px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
