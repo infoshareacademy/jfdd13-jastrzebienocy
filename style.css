@@ -261,7 +261,6 @@ header {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  /* margin: 20px; */
 }
 /* font-family: 'Mansalva', cursive; - czcionka fantasy do tytułów opiwów funkcji */
 span {
@@ -278,16 +277,12 @@ span {
   padding: 30px;
   margin: 0;
   letter-spacing: 2px;
+  text-align: center;
 }
 .text {
   border: 10px ridge #dcedc8;
   background-color: #bdb;
   width: 60%;
-  margin: 0 auto;
+  text-align: left;
   font-weight: 300;
 }
-<<<<<<< HEAD
-=======
-/* font-family: 'Zhi Mang Xing', cursive; - czcionka fantasy do tytułów opiwów funkcji */
-
->>>>>>> 0b9a361a08306c4e29bfb26909add747428a5218
