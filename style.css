@@ -282,7 +282,8 @@ span {
 .text {
   border: 10px ridge #dcedc8;
   background-color: #bdb;
-  width: 60%;
+  width: 80%;
   text-align: left;
   font-weight: 300;
+  margin: 0 120px;
 }
