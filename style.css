@@ -1,13 +1,77 @@
 .fridge{
     background: url(photo-slides/fridge/fridge.jpg) no-repeat;
     height: 520px;
-    
-    
+    color: #ffc107;
+    opacity: 0.75;
+    padding: 90px;
+    font-size: 40px;
+  
+  }
+
+
+
+.scale{
+    background: url(photo-slides/waga/scaleFinal.jpg) no-repeat;
+    height: 520px;
+    color: #ffc107;
+    opacity: 0.75;
+    padding: 90px;
+    font-size: 40px;
+    background-position: 56% 50%;
 }
 
-.fas fa-bread-slice{
-    padding: 10px;
+.recipe{
+  background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat;
+  height: 520px;
+  color: #ffc107;
+  opacity: 0.75;
+    padding: 90px;
+    font-size: 40px;
+    background-position: 50% 50%;
 }
+
+.rank{
+  background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat;
+  height: 520px;
+  color: #ffc107;
+  opacity: 0.75;
+  padding: 90px;
+  font-size: 40px;
+ 
+}
+
+/* slides container */
+.funktion {
+  width: 400vw;
+  animation: slide 18s ease-in-out infinite;
+}
+
+/* single slide */
+.slide {
+  float: left;
+  height: 520px;
+  width: 100vw;
+}
+
+@keyframes slide {
+  20% {margin-left: 0px;}
+  /* 30% {margin-left: -100vw;} */
+  50% {margin-left: -100vw;}
+  /* 60% {margin-left: -200vw;} */
+  70% {margin-left: -200vw;}
+  /* 80% {margin-left: -300vw;} */
+  90% {margin-left: -300vw;}
+}
+
+
+
+
+
+
+
+
+
+
 .main-container {
     background-color: chartreuse;
 }
@@ -95,4 +159,5 @@
   grid-template-columns: 200px 500px 200px 500px;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
+  width: 100%;
 }
