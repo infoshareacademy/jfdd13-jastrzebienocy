@@ -17,6 +17,7 @@
 header {
   margin: 0 auto;
   text-align: center;
+  /* background-color: #f3fbe8; */
 }
 
 .section {
@@ -100,6 +101,7 @@ header {
 
 /* Here is section main style */
 .main-content {
+  width:100%;
   display: grid;
   grid-template-columns: 200px 1fr 200px 1fr;
   grid-auto-rows: minmax(100px, auto);
@@ -107,12 +109,35 @@ header {
 }
 .text {
   margin-left: 100px;
-  padding: 10px
+  padding: 10px;
 }
 .main-content img {
+  margin: 50px ;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  margin: 20px;
+  /* margin: 20px; */
 }
-/* font-family: 'Zhi Mang Xing', cursive; - czcionka fantasy do tytułów opiwów funkcji */
+/* font-family: 'Mansalva', cursive; - czcionka fantasy do tytułów opiwów funkcji */
+span {
+  width: 60%;
+  font-family: 'Mansalva', cursive;
+  font-size: 2.4em;
+  line-height: 2.4em;
+  color: #689F38;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.main-content p {
+  width: 80%;
+  padding: 30px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.text {
+  border: 10px ridge #dcedc8;
+  background-color: #bdb;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 300;
+}
