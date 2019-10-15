@@ -73,8 +73,9 @@
 
 
 .main-container {
-    background-color: chartreuse;
+  background-color: chartreuse;
 }
+
 * {
     box-sizing: border-box;
   }
@@ -96,22 +97,51 @@
   .nav-container {
     position: fixed;
     width: 100%;
-    text-align: center;
-    background: green;
-    height: 50px; 
-    color: #F1F1F1;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #689F38;
+    height: auto; 
+    
     z-index: 3;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  height: 300px;
+  background: blue;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* Navigation*/
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: green;
+  height: 50px;
+  color: #f1f1f1;
+  text-align: center;
+  z-index: 3;
 }
 
 .nav-container a {
+  
   font-weight: bold;
-  color: #ffffff;
-  font-size: 30px;
+  /*color: #DCEDC8;
+  color: #FFC107;*/
+  color: #212121;
+  font-size: 24px;
   text-decoration: none;
   padding: 20px;
 }
-
 
 /*hero section*/
 .hero {
@@ -119,7 +149,7 @@
     no-repeat;
   width: 100%;
   height: 50vh;
-  margin: 0 auto;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,36 +158,107 @@
   background-size: cover;
   padding: 20px;
 }
-.hero-title {
+.heroTitle {
   text-transform: uppercase;
-  color: rgb(228, 240, 200);
-  background: transparent;
+  color: #212121;
+
   padding: 20px;
-  font-size: 20px;
+  /*text-shadow: 2px 2px 1px #212121;*/
+  font-weight: bold;
+  font-size: 60px;
+  border: 1px solid #212121;
 }
-.hero-text {
- 
-  color: rgb(26, 100, 30);
+.heroText {
+  color: #757575;
+  
   text-align: center;
   font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
   padding: 20px;
   max-width: 100%;
-  
+  font-size: 28px;
 }
 
-.hero a{
-    color: green;
-    text-decoration: none;
-    border: 1px solid green;
-    background: transparent;
-}
   
-  /* Here is section main style */
+.hero p{
+  font-size: 20px;
+}
+
+.hero a {
+  color: #757575;
+
+  text-decoration: none;
+  font-size: 32px;
+  padding: 20px;
+  background: transparent;
+  text-shadow: 1px 2px 1px #212121;
+}
+
+/* Here is section main style */
 .main-content {
   display: grid;
-  grid-template-columns: 200px 500px 200px 500px;
+  grid-template-columns: 200px 1fr 200px 1fr;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
   width: 100%;
 }
+
+
+
+
+.newsBox{
+  height: 40vh;
+  width: 60vw;
+  background: #FFC107;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.wpis{
+  margin: 10px;
+  width: 15vw;
+  border: 1px solid #212121;;
+  border-radius: 6px;
+  background: #DCEDC8;
+  
+}
+
+.hej{background: url(https://www.canva.com/design/DADoXqesQPE/_pFb_zuI8p8mwhYRlOssQg/view?utm_content=DADoXqesQPE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
+
+}
+
+
+
+/*Team*/
+.teamText {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.teamEach {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+ 
+}
+
+.text {
+  margin-left: 100px;
+  padding: 10px
+}
+.main-content img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+/* font-family: 'Zhi Mang Xing', cursive; - czcionka fantasy do tytułów opiwów funkcji */
+
