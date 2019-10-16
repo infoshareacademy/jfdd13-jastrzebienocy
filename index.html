@@ -6,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Food waste</title>
     <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
     <link rel="stylesheet" href="style.css">
-=======
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
->>>>>>> 0fbd7a9783ae50640ac714c675bdfe4084f6bbd9
 
 </head>
 <body>
@@ -19,8 +16,8 @@
         <img src="./Images/logo2.jpg" width="200px" height="200px" >
     </header>
 
-    <nav>
-        <div class="nav-container">
+    <nav id="navbar">
+        <div class="nav-container" >
             <a href="#hero">Food Waste</a>
             <a href="#zCzym">Z czym to sie je?</a>
             <a href="#iCoDalej">I co dalej?</a>
@@ -203,6 +200,21 @@
             <i class="fab fa-linkedin fa-5x"></i>
         </div>
     </section>
+    
+    <script>
+        window.onscroll = function() {myFunction()};
         
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
 </body>
 </html> 
