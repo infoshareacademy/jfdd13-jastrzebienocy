@@ -82,11 +82,6 @@ font-family: 'Open Sans', sans-serif;
 .main-container {
   background-color: chartreuse;
 }
-<<<<<<< HEAD
-
-/* * {
-    box-sizing: border-box;
-=======
 /* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
 dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
 przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
@@ -96,7 +91,6 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
     box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
->>>>>>> develop
   } */
   
   header {
