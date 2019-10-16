@@ -1,3 +1,11 @@
+/* Whole page width */
+* {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
 .fridge{
     background: url(photo-slides/fridge/fridge.jpg) no-repeat;
     height: 520px;
@@ -51,6 +59,7 @@
   float: left;
   height: 520px;
   width: 100vw;
+  display: slide-container;
 }
 
 @keyframes slide {
@@ -62,12 +71,6 @@
   /* 80% {margin-left: -300vw;} */
   90% {margin-left: -300vw;}
 }
-
-
-
-
-
-
 
 
 
@@ -195,19 +198,6 @@ header {
   text-shadow: 1px 2px 1px #212121;
 }
 
-/* Here is section main style */
-.main-content {
-  width:100%;
-  display: grid;
-  grid-template-columns: 200px 1fr 200px 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
-  width: 100%;
-}
-
-
-
-
 .newsBox{
   height: 40vh;
   width: 60vw;
@@ -245,45 +235,32 @@ header {
 }
 
 .teamEach {
-  display: flex;
+  display: inline-flexbox;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 30px;
  
 }
+/* Here is section main style - JK*/
+.main-content {
+  display: grid;
+  max-width: 80%;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
 
-.text {
-  margin-left: 100px;
-  padding: 10px;
 }
+
+/* Main content image - JK*/
 .main-content img {
-  margin: 50px ;
+  margin: 10px auto;
+  border: 2px groove #689F38;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
-/* font-family: 'Mansalva', cursive; - czcionka fantasy do tytułów opiwów funkcji */
-span {
-  width: 60%;
-  font-family: 'Mansalva', cursive;
-  font-size: 2.4em;
-  line-height: 2.4em;
-  color: #689F38;
-  text-decoration: underline;
-  font-weight: bold;
+/* The only text part for now - JK */
+h4 {
+  margin: 10px 0;
 }
-.main-content p {
-  width: 80%;
-  padding: 30px;
-  margin: 0;
-  letter-spacing: 2px;
-  text-align: center;
-}
-.text {
-  border: 10px ridge #dcedc8;
-  background-color: #bdb;
-  width: 80%;
-  text-align: left;
-  font-weight: 300;
-  margin: 0 120px;
-}
+
+/* Jak będą czcionki to  */
