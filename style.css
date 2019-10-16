@@ -1,65 +1,71 @@
+{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .fridge{
-    background: url(photo-slides/fridge/fridge.jpg) no-repeat;
-    height: 520px;
+    /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
     color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-  
+    justify-content: center;
   }
 
-
-
 .scale{
-    background: url(photo-slides/waga/scaleFinal.jpg) no-repeat;
-    height: 520px;
+   /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
     color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
     background-position: 56% 50%;
 }
 
 .recipe{
-  background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat;
-  height: 520px;
+/* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
   color: #ffc107;
-  opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-    background-position: 50% 50%;
+  background-position: 50% 50%;
 }
 
 .rank{
-  background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat;
-  height: 520px;
+ /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
   color: #ffc107;
-  opacity: 0.75;
-  padding: 90px;
-  font-size: 40px;
- 
+}
+
+
+
+.container{
+  height: 520px;
+  width: 100%;
+  background: url(photo-slides/tlo.png);
+  padding: 30px 0;
+
+  
+
+}
+
+.slideContainer{
+  display: flex;
+  height: 50vh;
+  width: 400vw;
+  flex-direction: row;
+  animation: slide 20s ease-in-out infinite;
 }
 
 /* slides container */
 .funktion {
   width: 400vw;
-  animation: slide 18s ease-in-out infinite;
+  
 }
 
 /* single slide */
 .slide {
   float: left;
-  height: 520px;
   width: 100vw;
+  font-size: 40px;
 }
 
 @keyframes slide {
   20% {margin-left: 0px;}
-  /* 30% {margin-left: -100vw;} */
+  30% {margin-left: -100vw;} 
   50% {margin-left: -100vw;}
-  /* 60% {margin-left: -200vw;} */
+  60% {margin-left: -200vw;} 
   70% {margin-left: -200vw;}
-  /* 80% {margin-left: -300vw;} */
+  80% {margin-left: -300vw;} 
   90% {margin-left: -300vw;}
 }
 
