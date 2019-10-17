@@ -4,72 +4,64 @@
   margin: 0 auto;
 }
 
+/* fonts mamy uzyc pierwsza do tytuow i headingow, druga do reszty
+font-family: 'Oswald', sans-serif;   
+font-family: 'Open Sans', sans-serif;
+*/
 
 
 .fridge{
-    background: url(photo-slides/fridge/fridge.jpg) no-repeat;
-    height: 520px;
-    color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-  
-  }
+  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
+  color: #ffc107
+;
+  justify-content: center;
+}.scale{
+ /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
+  color: #ffc107
+;
+  background-position: 56% 50%;
+}.recipe{
+/* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
+color: #ffc107
+;
+background-position: 50% 50%;
+}.rank{
+/* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
+color: #ffc107;
 
 
-
-.scale{
-    background: url(photo-slides/waga/scaleFinal.jpg) no-repeat;
-    height: 520px;
-    color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-    background-position: 56% 50%;
+}
+.funktion-Container{
+height: 520px;
+width: 100%;
+background: url("Images/tlo.png");
+padding: 30px 0;
+margin-bottom: 30px;
 }
 
-.recipe{
-  background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat;
-  height: 520px;
-  color: #ffc107;
-  opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-    background-position: 50% 50%;
-}
+.slideContainer{
+display: flex;
+height: 50vh;
+width: 400vw;
+flex-direction: row;
+animation: slide 20s ease-in-out infinite;
+}/* slides container */
 
-.rank{
-  background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat;
-  height: 520px;
-  color: #ffc107;
-  opacity: 0.75;
-  padding: 90px;
-  font-size: 40px;
- 
-}
 
-/* slides container */
 .funktion {
-  width: 400vw;
-  animation: slide 18s ease-in-out infinite;
-}
-
-/* single slide */
+width: 400vw;}/* single slide */
 .slide {
-  float: left;
-  height: 520px;
-  width: 100vw;
-  display: slide-container;
-}
-
-@keyframes slide {
-  20% {margin-left: 0px;}
-  /* 30% {margin-left: -100vw;} */
-  50% {margin-left: -100vw;}
-  /* 60% {margin-left: -200vw;} */
-  70% {margin-left: -200vw;}
-  /* 80% {margin-left: -300vw;} */
-  90% {margin-left: -300vw;}
+float: left;
+width: 100vw;
+font-size: 40px;
+}@keyframes slide {
+20% {margin-left: 0px;}
+30% {margin-left: -100vw;}
+50% {margin-left: -100vw;}
+60% {margin-left: -200vw;}
+70% {margin-left: -200vw;}
+80% {margin-left: -300vw;}
+90% {margin-left: -300vw;}
 }
 
 
@@ -78,57 +70,53 @@
 .main-container {
   background-color: chartreuse;
 }
-
-* {
+/* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
+dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
+przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
+i powtarzam tylko i wyłącznie do zmian na całej stronie nie w swojej części sorki ale
+o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
+/* * {
     box-sizing: border-box;
-  }
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
   
   header {
     margin: 0 auto;
     text-align: center;
+    background: #f3fbe8;
   }
-  
-  .section {
-    height: 300px;
-    background: blue;
-    margin-top: 60px;
-    margin-bottom: 30px;
-  }
-  
+ 
   /* Navigation*/
   
-  .nav-container {
+  nav {
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+ }
+ 
+ .nav-container {
     position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #689F38;
-    height: auto; 
-    
-    z-index: 3;
-  box-sizing: border-box;
-}
-
-header {
-  margin: 0 auto;
-  text-align: center;
-  /* background-color: #f3fbe8; */
-}
-
-.section {
-  height: 300px;
-  background: blue;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
-
-
+    background: #8BC34A;
+    height: auto;    
+    z-index: 5;
+ }
+ .nav-container a {  
+  font-weight: bold;
+ 
+  color: #212121;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 20px;
+ }
 
 /*hero section*/
 .hero {
-  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)
-    no-repeat;
+  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg) no-repeat;
+  background-size: cover; 
   width: 100%;
   height: 50vh;
   margin: 50px 0;
@@ -204,26 +192,50 @@ header {
 }
 
 
+
 /*Team*/
-.teamText {
+#team {
+  margin-top: 30px;
+  padding: 20px;
+  background: #DCEDC8
+ ;
+ }.teamText {
   margin: 0 auto;
   text-align: center;
   font-size: 18px;
-}
-
-.teamEach {
-  display: inline-flexbox;
+ }.teamEach {
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 30px;
- 
-}
+  margin-bottom: 30px;}.teamEach a {
+  text-decoration: none;
+  color: #212121
+ ;
+ }.teamEach a:hover {
+  color: #FFC107
+ ;
+ }.text {
+  margin-left: 100px;
+  padding: 10px;
+ }
+ .main-content img {
+  margin: 50px ;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+ }
+/* To zakomitowałem ponieważ gryzło się z moim ale zmieniłem u siebie klasę i można tego używać tylko nie wiem komu potrzebna klasa .text */
+/* .text {
+  margin-left: 100px;
+  padding: 10px;
+} */
 /* Here is section main style - JK*/
 .main-content {
   display: grid;
   max-width: 80%;
   grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
+  text-align: left;
 }
 /* Images for functionality -JK */
 .main-content img {
@@ -236,8 +248,6 @@ header {
 /* The only text part for now - JK */
 h4 {
   margin: 10px 0;
-  
 }
 
-
-
+/* Jak będą czcionki to  */
