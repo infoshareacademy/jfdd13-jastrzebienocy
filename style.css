@@ -11,13 +11,9 @@ font-family: 'Open Sans', sans-serif;
 
 
 .fridge{
-    background: url(photo-slides/fridge/fridge.jpg) no-repeat;
-    height: 520px;
+    /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
     color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-  
+    justify-content: center;
   }
 
 
@@ -25,56 +21,60 @@ font-family: 'Open Sans', sans-serif;
 
 
 .scale{
-    background: url(photo-slides/waga/scaleFinal.jpg) no-repeat;
-    height: 520px;
+   /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
     color: #ffc107;
-    opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
     background-position: 56% 50%;
 }
 
 .recipe{
-  background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat;
-  height: 520px;
+/* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
   color: #ffc107;
-  opacity: 0.75;
-    padding: 90px;
-    font-size: 40px;
-    background-position: 50% 50%;
+  background-position: 50% 50%;
 }
 
 .rank{
-  background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat;
-  height: 520px;
+ /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
   color: #ffc107;
-  opacity: 0.75;
-  padding: 90px;
-  font-size: 40px;
- 
+}
+
+
+
+.funktion-Container{
+  height: 520px;
+  width: 100%;
+  background: url(photo-slides/tlo.png);
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+.slideContainer{
+  display: flex;
+  height: 50vh;
+  width: 400vw;
+  flex-direction: row;
+  animation: slide 20s ease-in-out infinite;
 }
 
 /* slides container */
 .funktion {
   width: 400vw;
-  animation: slide 18s ease-in-out infinite;
+  
 }
 
 /* single slide */
 .slide {
   float: left;
-  height: 520px;
   width: 100vw;
   display: slide-container;
 }
 
 @keyframes slide {
   20% {margin-left: 0px;}
-  /* 30% {margin-left: -100vw;} */
+  30% {margin-left: -100vw;} 
   50% {margin-left: -100vw;}
-  /* 60% {margin-left: -200vw;} */
+  60% {margin-left: -200vw;} 
   70% {margin-left: -200vw;}
-  /* 80% {margin-left: -300vw;} */
+  80% {margin-left: -300vw;} 
   90% {margin-left: -300vw;}
 }
 
@@ -132,13 +132,12 @@ nav {
 }
 
 /*hero section*/
+/*url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)*/
 .hero {
-  background: url("./hero.png")  /*url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)*/
-    no-repeat;
-    
+  background: url("./hero.png")   no-repeat;    
   width: 100%;
   height: 50vh;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
