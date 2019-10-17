@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* Whole page width */
 * {
   max-width: 1200px;
@@ -10,7 +8,6 @@
 font-family: 'Oswald', sans-serif;   
 font-family: 'Open Sans', sans-serif;
 */
->>>>>>> dd16e9c950ad1009c23d8487c02cb9d12a802192
 
 
 .fridge{
@@ -19,13 +16,10 @@ font-family: 'Open Sans', sans-serif;
     justify-content: center;
   }
 
-<<<<<<< HEAD
-=======
 
   
 
 
->>>>>>> dd16e9c950ad1009c23d8487c02cb9d12a802192
 .scale{
    /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
     color: #ffc107;
@@ -71,11 +65,7 @@ font-family: 'Open Sans', sans-serif;
 .slide {
   float: left;
   width: 100vw;
-<<<<<<< HEAD
-  font-size: 40px;
-=======
   display: slide-container;
->>>>>>> dd16e9c950ad1009c23d8487c02cb9d12a802192
 }
 
 @keyframes slide {
@@ -144,8 +134,7 @@ nav {
 /*hero section*/
 .hero {
   background: url("./hero.png")  /*url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)*/
-    no-repeat;cd ..
-    
+  no-repeat;    
   width: 100%;
   height: 50vh;
   margin: 50px 0 0 0;
