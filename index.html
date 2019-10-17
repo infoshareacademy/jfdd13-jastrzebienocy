@@ -62,30 +62,30 @@
 
     <main class="main-content" id="iCoDalej">
 
-        <img src="./zdjfoods/wyborpr.jpg" alt="produkty">
+        <img src="./zdjfoods/wyborpr.png" alt="produkty">
         <div class="main-text">
             <h4>Wybór produktu</h4>
             <p>Użytkownik będzie miał możliwość  wybrania rodzaju produktów, w zależności od ich rodzaju, z których będziemy chcieli przygotować danie.</p>
         </div>
 
-            <img src="./zdjfoods/szala.jpg" alt="Zdjęcie szali">
+        <img src="./zdjfoods/il-waga.png" alt="Zdjęcie szali">
 
-            <div class="mainText">
-                <h4>Waga Produktu</h4>
-                <p>Użytkownik będzie miał możliwość wybrania przepisu na smaczny posiłek na podstawie wagi produktów, które znajdują się w jego lodówce.</p>
-            </div>
+        <div class="main-text">
+            <h4>Waga Produktu</h4>
+            <p>Użytkownik będzie miał możliwość wybrania przepisu na smaczny posiłek na podstawie wagi produktów, które znajdują się w jego lodówce.</p>
+        </div>
 
 
-        <img src="./zdjfoods/ilosc-masa.jpg" alt="produkty">
+        <img src="./zdjfoods/ilosc-sztuk.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Ilość produktu</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie określonej ilości danego produktu w lodówce</p>
         </div>
 
-        <img src="./zdjfoods/il-waga.jpg" alt="produkty">
+        <img src="./zdjfoods/szacunkowo.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Szacuj</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów żywnościowych posiadanych we własnej lodówce.</p>
         </div>
@@ -93,44 +93,44 @@
 
         <img src="./zdjfoods/przepisy.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Wybierz przepis</h4>
             <p>Użytkownik będzie miał możlilwość wyboru z istniejących w bazie danych przepisów na pyszne posiłki.</p>
         </div>
 
-        <img src="./zdjfoods/dodaj-przepis.jpg" alt="produkty">
+        <img src="./zdjfoods/dodaj-przepis.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Dodaj przepis</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość dodania własnego przepisu na danie z danych produktów.</p>
         </div>
 
 
-        <img src="./zdjfoods/aktalizuj-przepis.jpg" alt="produkty">
+        <img src="./zdjfoods/aktualizuj-przepis.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Aktualizuj przepis</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość aktualizacji własnego przepisu na danie z danych produktów.</p>
         </div>
 
-        <img src="./zdjfoods/czas.jpg" alt="produkty">
+        <img src="./zdjfoods/czas.png" alt="Zegar">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Sprawdź czas</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu w zależności od czasu jego przygotowania.</p>
         </div>
 
 
-        <img src="./zdjfoods/ocena.jpg" alt="produkty"></div>
+        <img src="./zdjfoods/ocena.png" alt="produkty"></div>
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Oceniaj</h4>
             <p>Użytkownik będzie miał możliwość oceny przepisu po którym przepisy będą wyświetlały się według najwyższej noty <b> (największej ilości gwiazdek).</b></p>
         </div>
 
-        <img src="./zdjfoods/komentarz.jpg" alt="produkty">
+        <img src="./zdjfoods/komentarz.png" alt="produkty">
 
-        <div class="mainText">
+        <div class="main-text">
             <h4>Dodaj komentarz</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość dodania komentarza każdego z przepisów.</p>
         </div>
@@ -181,15 +181,25 @@
         </div>
     </section>    
     <script>
-        window.onscroll = function() {myFunction()};        
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;   
-            function myFunction() {
-                if (window.pageYOffset >= sticky) {
+        // window.onscroll = function() {myFunction()};        
+        //     var navbar = document.getElementById("navbar");
+        //     var sticky = navbar.offsetTop;   
+        //     function myFunction() {
+        //         if (window.pageYOffset >= sticky) {
+        //         navbar.classList.add("sticky")
+        //         } else {
+        //     navbar.classList.remove("sticky");
+        //   }
+        // }
+        window.onscroll = function() {myFunction()};
+        var navbar = document.querySelector("#navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
-                } else {
-            navbar.classList.remove("sticky");
-          }
+            } else {
+                navbar.classList.remove("sticky");
+            }
         }
     </script>
     </body>

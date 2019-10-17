@@ -140,12 +140,11 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 }
 .heroText {
   color: #757575;
-  
   text-align: center;
   font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
-  padding: 20px;
-  max-width: 100%;
+  padding: 20px; /* Kinga jeśli z tym drugim zdjęciem też będziesz miała przesunięcie to wywal ten padding bo to on wszystko rozwala - wiem bo sprawdziłem w konsoli*/
+  max-width: 100%; /* Tutaj Kinga jak ten box zmienisz na 95% to będzie wyglądało lepiej przemyśl to i sprawdź najlepiej dziś jak się uda. */
   font-size: 28px;
 }
 
@@ -231,6 +230,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 } */
 /* Here is section main style - JK*/
 .main-content {
+  margin: 10px auto;
   display: grid;
   max-width: 80%;
   grid-template-columns: 1fr 2fr 1fr 2fr;
@@ -239,15 +239,37 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 }
 /* Images for functionality -JK */
 .main-content img {
-  margin: 10px auto;
+  margin: 20px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
   height: 100px;
 }
 /* The only text part for now - JK */
-h4 {
-  margin: 10px 0;
+.main-content h4 {
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;  
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8em;
+}
+.main-content p {
+  line-height: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  padding: 5px;
 }
 
-/* Jak będą czcionki to  */
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* .sticky + .content {
+  padding-top: 60px;
+} */
