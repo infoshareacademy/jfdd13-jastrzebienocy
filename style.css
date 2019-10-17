@@ -28,14 +28,12 @@
 
 
 
-.container{
+.funktion-Container{
   height: 520px;
   width: 100%;
   background: url(photo-slides/tlo.png);
   padding: 30px 0;
-
-  
-
+  margin-bottom: 30px;
 }
 
 .slideContainer{
@@ -156,7 +154,7 @@ header {
     no-repeat;
   width: 100%;
   height: 50vh;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
