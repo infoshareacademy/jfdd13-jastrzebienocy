@@ -1,3 +1,15 @@
+/* Whole page width */
+* {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* fonts mamy uzyc pierwsza do tytuow i headingow, druga do reszty
+font-family: 'Oswald', sans-serif;   
+font-family: 'Open Sans', sans-serif;
+*/
+
+
 .fridge{
     background: url(photo-slides/fridge/fridge.jpg) no-repeat;
     height: 520px;
@@ -53,6 +65,7 @@
   float: left;
   height: 520px;
   width: 100vw;
+  display: slide-container;
 }
 
 @keyframes slide {
@@ -68,71 +81,43 @@
 
 
 
-
-
-
-
-
-
 .main-container {
   background-color: chartreuse;
 }
-
-* {
+/* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
+dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
+przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
+i powtarzam tylko i wyłącznie do zmian na całej stronie nie w swojej części sorki ale
+o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
+/* * {
     box-sizing: border-box;
-  }
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
   
   header {
     margin: 0 auto;
     text-align: center;
+    background: #f3fbe8;
   }
-  
-  .section {
-    height: 300px;
-    background: blue;
-    margin-top: 60px;
-    margin-bottom: 30px;
-  }
-  
+ 
   /* Navigation*/
   
+nav {
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+}
+
   .nav-container {
     position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #689F38;
+    background: #8BC34A;
     height: auto; 
     
-    z-index: 3;
-  box-sizing: border-box;
-}
-
-header {
-  margin: 0 auto;
-  text-align: center;
-  /* background-color: #f3fbe8; */
-}
-
-.section {
-  height: 300px;
-  background: blue;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
-
-/* Navigation*/
-
-.nav-container {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  background: green;
-  height: 50px;
-  color: #f1f1f1;
-  text-align: center;
-  z-index: 3;
+    z-index: 5;
 }
 
 .nav-container a {
@@ -198,19 +183,6 @@ header {
   text-shadow: 1px 2px 1px #212121;
 }
 
-/* Here is section main style */
-.main-content {
-  width:100%;
-  display: grid;
-  grid-template-columns: 200px 1fr 200px 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
-  width: 100%;
-}
-
-
-
-
 .newsBox{
   height: 40vh;
   width: 60vw;
@@ -241,6 +213,14 @@ header {
 
 
 /*Team*/
+#team {
+  margin-top: 30px;
+  padding: 20px;
+  background: #DCEDC8;
+}
+
+
+
 .teamText {
   margin: 0 auto;
   text-align: center;
@@ -248,45 +228,38 @@ header {
 }
 
 .teamEach {
-  display: flex;
+  display: inline-flexbox;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 30px;
  
 }
-
-.text {
+.teamEach a:hover {
+  color: #FFC107;
+}
+/* To zakomitowałem ponieważ gryzło się z moim ale zmieniłem u siebie klasę i można tego używać tylko nie wiem komu potrzebna klasa .text */
+/* .text {
   margin-left: 100px;
   padding: 10px;
+} */
+/* Here is section main style - JK*/
+.main-content {
+  display: grid;
+  max-width: 80%;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
 }
+/* Images for functionality -JK */
 .main-content img {
-  margin: 50px ;
+  margin: 10px auto;
+  border: 2px groove #689F38;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
-/* font-family: 'Mansalva', cursive; - czcionka fantasy do tytułów opiwów funkcji */
-span {
-  width: 60%;
-  font-family: 'Mansalva', cursive;
-  font-size: 2.4em;
-  line-height: 2.4em;
-  color: #689F38;
-  text-decoration: underline;
-  font-weight: bold;
+/* The only text part for now - JK */
+h4 {
+  margin: 10px 0;
 }
-.main-content p {
-  width: 80%;
-  padding: 30px;
-  margin: 0;
-  letter-spacing: 2px;
-  text-align: center;
-}
-.text {
-  border: 10px ridge #dcedc8;
-  background-color: #bdb;
-  width: 80%;
-  text-align: left;
-  font-weight: 300;
-  margin: 0 120px;
-}
+
+/* Jak będą czcionki to  */
