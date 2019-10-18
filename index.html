@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Food waste</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
-
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Food waste</title>    
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <img src="./Images/LOGO.png" >
-
-    </header>
-
+   <header>
+       <img src="./Images/LOGO.png" >    
+    </header>  
     <nav id="navbar">
-        <div class="nav-container" >
-            <a href="#hero">Food Waste</a>
-            <a href="#zCzym">Z czym to sie je?</a>
-            <a href="#iCoDalej">I co dalej?</a>
-            <a href="#newsletter">Newsletter</a>
-            <a href="#team">Team</a>
-        </div>
-    </nav>
+       <div class="nav-container" >
+           <a href="#hero">Food Waste</a>
+           <a href="#zCzym">Z czym to sie je?</a>
+           <a href="#iCoDalej">I co dalej?</a>
+           <a href="#newsletter">Newsletter</a>
+           <a href="#team">Team</a>
+       </div>
+   </nav>
 
     <section class="hero" id="hero">
       <div class="heroTitle">
@@ -46,118 +44,94 @@
       </div>
     </section>
     
-    <section class="funktion" id="zCzym">
-    
-        
-        <div class="fridge slide">
-                <i class="fas fa-bread-slice"></i> Wybierz produkty  
-        </div>
-    
-
-        <div class="scale slide">
-            <i class="fas fa-balance-scale"></i> Określ wagę lub ilość
-        </div>
-    
-        <div class="recipe slide">
-             <i class="fas fa-cookie-bite"></i> Wybierz przepis
-        </div>
-    
-        <div class="rank slide">
-             <i class="fas fa-star-half-alt"></i> Oceniaj przepisy lub stwórz własny
-       </div>  
-
-    </section>
+    <section class="funktion" id="zCzym">       
+         <div class="funktion-Container">           
+              <div class="slideContainer">              
+                    <div class="fridge slide">
+        <div class="fridgeLeft">
+            <i class="fas fa-bread-slice"></i> Wybierz produkty</div>
+    </div>                
+    <div class="scale slide">
+        <div class="scaleLeft">
+            <i class="fas fa-balance-scale"></i> Określ wagę lub ilość</div>
+    </div>                <div class="recipe slide">
+        <div class="recipeLeft"><i class="fas fa-cookie-bite"></i> Wybierz przepis</div>
+    </div>                <div class="rank slide">
+        <div class="rankLeft"><i class="fas fa-star-half-alt"></i> Oceniaj przepisy lub stwórz własny</div>
+    </div>            </div>        </div>    </section>
 
     <main class="main-content" id="iCoDalej">
-        <div class="image imageOne">
 
-            <img src="./zdjfoods/wyborpr.jpg" alt="produkty">
-
-        </div>
-        <div class="text textOne">
-            <span>Wybór produktu</span>
+        <img src="./zdjfoods/wyborpr.png" alt="produkty">
+        <div class="main-text">
+            <h4>Wybór produktu</h4>
             <p>Użytkownik będzie miał możliwość  wybrania rodzaju produktów, w zależności od ich rodzaju, z których będziemy chcieli przygotować danie.</p>
         </div>
-        <div class="image imageTwo">
 
-            <img src="./zdjfoods/szala.jpg" alt="Zdjęcie szali">
+        <img src="./zdjfoods/il-waga.png" alt="Zdjęcie szali">
 
-        </div>
-        <div class="text textTwo">
-            <span>Waga Produktu</span>
+        <div class="main-text">
+            <h4>Waga Produktu</h4>
             <p>Użytkownik będzie miał możliwość wybrania przepisu na smaczny posiłek na podstawie wagi produktów, które znajdują się w jego lodówce.</p>
         </div>
-        <div class="image imageThree">
 
-            <img src="./zdjfoods/ilosc-masa.jpg" alt="produkty">
 
-        </div>
-        <div class="text textThree">
-            <span>Ilość produktu</span>
+        <img src="./zdjfoods/ilosc-sztuk.png" alt="produkty">
+
+        <div class="main-text">
+            <h4>Ilość produktu</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie określonej ilości danego produktu w lodówce</p>
         </div>
-        <div class="image imageFour">
 
-            <img src="./zdjfoods/il-waga.jpg" alt="produkty">
+        <img src="./zdjfoods/szacunkowo.png" alt="produkty">
 
-        </div>
-        <div class="text textFour">
-            <span>Szacuj</span>
+        <div class="main-text">
+            <h4>Szacuj</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów żywnościowych posiadanych we własnej lodówce.</p>
         </div>
-        <div class="image imageFive">
 
-            <img src="./zdjfoods/przepisy.jpg" alt="produkty">
 
+        <img src="./zdjfoods/przepisy.png" alt="produkty">
+
+        <div class="main-text">
+            <h4>Wybierz przepis</h4>
+            <p>Użytkownik będzie miał możlilwość wyboru z istniejących w bazie danych przepisów na pyszne posiłki.</p>
         </div>
-        <div class="text textFive">
-            <span>Wybierz przepis</span>
-            <p>Użytkownik będzie miał możliwość możlilwość wyboru z istniejących w bazie danych przepisów na pyszne posiłki</p>
-        </div>
-        <div class="image imageSix">
 
-            <img src="./zdjfoods/dodaj-przepis.jpg" alt="produkty">
+        <img src="./zdjfoods/dodaj-przepis.png" alt="produkty">
 
-        </div>
-        <div class="text textSix">
-            <span>Dodaj przepis</span>
+        <div class="main-text">
+            <h4>Dodaj przepis</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość dodania własnego przepisu na danie z danych produktów.</p>
         </div>
-        <div class="image imageSeven">
 
-            <img src="./zdjfoods/aktalizuj-przepis.jpg" alt="produkty">
 
-        </div>
-        <div class="text textSeven">
-            <span>Aktualizuj przepis</span>
+        <img src="./zdjfoods/aktualizuj-przepis.png" alt="produkty">
+
+        <div class="main-text">
+            <h4>Aktualizuj przepis</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość aktualizacji własnego przepisu na danie z danych produktów.</p>
         </div>
-        <div class="image imageEight">
 
-            <img src="./zdjfoods/czas.jpg" alt="produkty">
+        <img src="./zdjfoods/czas.png" alt="Zegar">
 
-        </div>
-        <div class="text textEight">
-            <span>Sprawdź czas</span>
+        <div class="main-text">
+            <h4>Sprawdź czas</h4>
             <p>Użytkownik będzie miał możliwość wyboru przepisu w zależności od czasu jego przygotowania.</p>
         </div>
 
-        <div class="image imageNine">
 
-            <img src="./zdjfoods/ocena.jpg" alt="produkty">
+        <img src="./zdjfoods/ocena.png" alt="produkty"></div>
 
-        </div>
-        <div class="text textNine">
-            <span>Oceniaj</span>
+        <div class="main-text">
+            <h4>Oceniaj</h4>
             <p>Użytkownik będzie miał możliwość oceny przepisu po którym przepisy będą wyświetlały się według najwyższej noty <b> (największej ilości gwiazdek).</b></p>
         </div>
-        <div class="image imageTen">
 
-            <img src="./zdjfoods/komentarz.jpg" alt="produkty">
+        <img src="./zdjfoods/komentarz.png" alt="produkty">
 
-        </div>
-        <div class="text textTen">
-            <span>Dodaj komentarz</span>
+        <div class="main-text">
+            <h4>Dodaj komentarz</h4>
             <p>Po zalogowaniu użytkownik będzie miał możliwość dodania komentarza każdego z przepisów.</p>
         </div>
 
@@ -184,12 +158,10 @@
             <h2>Nasz zespół:</h2>
             <p> Nie ma dla nas rzeczy niemożliwych. </p>
             <p>Podejmiemy się każdego wyzwania  – im trudniejsze, z tym większą zaciętością pracujemy.</p>
-            <p>Pracujemy szybko i kreatywnie – jak trzeba nie śpimy, nie jemy, po prostu pracujemy, nasze pomysły są świeże i oryginalne.</p>
-            
-        </div>
+            <p>Pracujemy szybko i kreatywnie – jak trzeba nie śpimy, nie jemy, po prostu pracujemy, nasze pomysły są świeże i oryginalne.</p>        </div>
         <div class="teamEach">
-            <img src="////via.placeholder.com/200x200" alt="zdjecie">
-            <h3><a href="kinga.html">Kinga Zawarczyńska </a> </h3>
+            <img src="/Images/kinga.jpg" width="200px" height="200px" alt="zdjecie">
+            <h3><a href="https://github.com/Kinga-Zawarczynska">Kinga Zawarczyńska </a> </h3>
             <i class="fab fa-linkedin fa-5x"></i>
         </div>
         <div class="teamEach">
@@ -198,32 +170,28 @@
             <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank" ><i class="fab fa-linkedin fa-5x"></i></a>
         </div>
         <div class="teamEach">
-            <img src="////via.placeholder.com/200x200" alt="zdjecie">
-            <h3><a href="filip.html"> Filip Siwiec </a></h3>
+            <img src="/Images/filip.jpg" width="200px" height="200px" alt="zdjecie">
+            <h3><a href="https://github.com/FilipSiwiec"> Filip Siwiec </a></h3>
             <i class="fab fa-linkedin fa-5x"></i>
-        </div> 
+        </div>
         <div class="teamEach">
             <img src="/Images/adam.jpeg" alt="zdjecie">
             <h3><a href="https://github.com/AdamToczko" target="blank" > Adam Toczko </a></h3>
             <a href="https://pl.linkedin.com/in/adamtoczko" target="blank" ><i class="fab fa-linkedin fa-5x"></i></a>
         </div>
-    </section>
-    
+    </section>    
     <script>
+      
         window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
+        var navbar = document.querySelector("#navbar");
         var sticky = navbar.offsetTop;
-        
         function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
         }
     </script>
-
-</body>
-</html> 
- 
+    </body>
+ </html>
