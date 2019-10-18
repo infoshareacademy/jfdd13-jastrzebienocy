@@ -11,71 +11,64 @@ font-family: 'Open Sans', sans-serif;
 
 
 .fridge{
-    /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-    color: #ffc107;
-    justify-content: center;
-  }
-
-
-  
-
+  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
+  color: #ffc107;
+  justify-content: center;
+}
 
 .scale{
-   /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-    color: #ffc107;
-    background-position: 56% 50%;
+ /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
+  color: #ffc107;
+  background-position: 56% 50%;
 }
 
 .recipe{
 /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
-  color: #ffc107;
-  background-position: 50% 50%;
+color: #ffc107;
+background-position: 50% 50%;
 }
 
 .rank{
- /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
-  color: #ffc107;
+/* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
+color: #ffc107;
 }
 
-
-
 .funktion-Container{
-  height: 520px;
-  width: 100%;
-  background: url(photo-slides/tlo.png);
-  padding: 30px 0;
-  margin-bottom: 30px;
+height: 520px;
+width: 100%;
+background: url("Images/tlo.png");
+padding: 30px 0;
+margin-bottom: 30px;
 }
 
 .slideContainer{
-  display: flex;
-  height: 50vh;
-  width: 400vw;
-  flex-direction: row;
-  animation: slide 20s ease-in-out infinite;
+display: flex;
+height: 50vh;
+width: 100%;
+flex-direction: row;
+animation: slide 20s ease-in-out infinite;
 }
 
 /* slides container */
 .funktion {
-  width: 400vw;
-  
+width: 400vw;
 }
 
 /* single slide */
 .slide {
-  float: left;
-  width: 100vw;
-  display: slide-container;
+align-self: center;
+width: 100vw;
+font-size: 40px;
 }
 
 @keyframes slide {
-  20% {margin-left: 0px;}
-  30% {margin-left: -100vw;} 
-  50% {margin-left: -100vw;}
-  60% {margin-left: -200vw;} 
-  70% {margin-left: -200vw;}
-  80% {margin-left: -300vw;} 
-  90% {margin-left: -300vw;}
+20% {margin-left: 0px;}
+30% {margin-left: -100vw;}
+50% {margin-left: -100vw;}
+60% {margin-left: -200vw;}
+70% {margin-left: -200vw;}
+80% {margin-left: -300vw;}
+90% {margin-left: -300vw;}
 }
 
 
@@ -84,6 +77,7 @@ font-family: 'Open Sans', sans-serif;
 .main-container {
   background-color: chartreuse;
 }
+
 /* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
 dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
 przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
@@ -103,41 +97,37 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
  
   /* Navigation*/
   
-nav {
+  nav {
     z-index: 1;
     font-family: 'Oswald', sans-serif;
-}
-
-  .nav-container {
+ }
+ 
+ .nav-container {
     position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #8BC34A;
-    height: auto; 
-    
+    height: auto;    
     z-index: 5;
-}
+ }
 
-.nav-container a {
-  
+ .nav-container a {  
   font-weight: bold;
-  /*color: #DCEDC8;
-  color: #FFC107;*/
   color: #212121;
   font-size: 24px;
   text-decoration: none;
   padding: 20px;
-}
+ }
 
 /*hero section*/
 .hero {
-  background: url("./hero.png")  /*url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg)*/
-  no-repeat;    
+  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg) no-repeat;
+  background-size: cover; 
   width: 100%;
   height: 50vh;
-  margin: 50px 0 0 0;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,27 +136,26 @@ nav {
   background-size: cover;
   padding: 20px;
 }
+
 .heroTitle {
   text-transform: uppercase;
   color: #212121;
-
   padding: 20px;
   /*text-shadow: 2px 2px 1px #212121;*/
   font-weight: bold;
   font-size: 60px;
   border: 1px solid #212121;
 }
+
 .heroText {
-  color: 212121;
-  
+  color: #757575;
   text-align: center;
-  /*sfont-weight: bold;*/
+  font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
-  padding: 20px;
-  max-width: 100%;
+  padding: 20px; /* Kinga jeśli z tym drugim zdjęciem też będziesz miała przesunięcie to wywal ten padding bo to on wszystko rozwala - wiem bo sprawdziłem w konsoli*/
+  max-width: 100%; /* Tutaj Kinga jak ten box zmienisz na 95% to będzie wyglądało lepiej przemyśl to i sprawdź najlepiej dziś jak się uda. */
   font-size: 28px;
 }
-
   
 .hero p{
   font-size: 20px;
@@ -174,7 +163,6 @@ nav {
 
 .hero a {
   color: #757575;
-
   text-decoration: none;
   font-size: 32px;
   padding: 20px;
@@ -193,7 +181,6 @@ nav {
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 .wpis{
@@ -202,7 +189,6 @@ nav {
   border: 1px solid #212121;;
   border-radius: 6px;
   background: #DCEDC8;
-  
 }
 
 .hej{background: url(https://www.canva.com/design/DADoXqesQPE/_pFb_zuI8p8mwhYRlOssQg/view?utm_content=DADoXqesQPE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
@@ -216,26 +202,39 @@ nav {
   margin-top: 30px;
   padding: 20px;
   background: #DCEDC8;
-}
-
-
-
-.teamText {
+ }
+ 
+ .teamText {
   margin: 0 auto;
   text-align: center;
   font-size: 18px;
-}
-
-.teamEach {
-  display: inline-flexbox;
+ }
+ 
+ .teamEach {
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 30px;
- 
+  margin-bottom: 30px;}.teamEach a {
+  text-decoration: none;
+  color: #212121;
 }
+
 .teamEach a:hover {
-  color: #FFC107;
-}
+  color: #FFC107 ;
+ }
+ 
+ .text {
+  margin-left: 100px;
+  padding: 10px;
+ }
+
+ .main-content img {
+  margin: 50px ;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+ }
+
 /* To zakomitowałem ponieważ gryzło się z moim ale zmieniłem u siebie klasę i można tego używać tylko nie wiem komu potrzebna klasa .text */
 /* .text {
   margin-left: 100px;
@@ -243,22 +242,49 @@ nav {
 } */
 /* Here is section main style - JK*/
 .main-content {
+  margin: 10px auto;
   display: grid;
   max-width: 80%;
   grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
+  text-align: left;
 }
+
 /* Images for functionality -JK */
 .main-content img {
-  margin: 10px auto;
+  margin: 20px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
   height: 100px;
 }
+
 /* The only text part for now - JK */
-h4 {
-  margin: 10px 0;
+.main-content h4 {
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;  
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8em;
 }
 
-/* Jak będą czcionki to  */
+.main-content p {
+  line-height: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  padding: 5px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* .sticky + .content {
+  padding-top: 60px;
+} */
