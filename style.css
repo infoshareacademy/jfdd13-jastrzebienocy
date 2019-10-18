@@ -12,25 +12,27 @@ font-family: 'Open Sans', sans-serif;
 
 .fridge{
   /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-  color: #ffc107
-;
+  color: #ffc107;
   justify-content: center;
-}.scale{
+}
+
+.scale{
  /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  color: #ffc107
-;
+  color: #ffc107;
   background-position: 56% 50%;
-}.recipe{
+}
+
+.recipe{
 /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
-color: #ffc107
-;
+color: #ffc107;
 background-position: 50% 50%;
-}.rank{
+}
+
+.rank{
 /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
 color: #ffc107;
-
-
 }
+
 .funktion-Container{
 height: 520px;
 width: 100%;
@@ -42,19 +44,24 @@ margin-bottom: 30px;
 .slideContainer{
 display: flex;
 height: 50vh;
-width: 400vw;
+width: 100%;
 flex-direction: row;
 animation: slide 20s ease-in-out infinite;
-}/* slides container */
+}
 
-
+/* slides container */
 .funktion {
-width: 400vw;}/* single slide */
+width: 400vw;
+}
+
+/* single slide */
 .slide {
-float: left;
+align-self: center;
 width: 100vw;
 font-size: 40px;
-}@keyframes slide {
+}
+
+@keyframes slide {
 20% {margin-left: 0px;}
 30% {margin-left: -100vw;}
 50% {margin-left: -100vw;}
@@ -70,6 +77,7 @@ font-size: 40px;
 .main-container {
   background-color: chartreuse;
 }
+
 /* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
 dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
 przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
@@ -104,9 +112,9 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
     height: auto;    
     z-index: 5;
  }
+
  .nav-container a {  
   font-weight: bold;
- 
   color: #212121;
   font-size: 24px;
   text-decoration: none;
@@ -128,16 +136,17 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   background-size: cover;
   padding: 20px;
 }
+
 .heroTitle {
   text-transform: uppercase;
   color: #212121;
-
   padding: 20px;
   /*text-shadow: 2px 2px 1px #212121;*/
   font-weight: bold;
   font-size: 60px;
   border: 1px solid #212121;
 }
+
 .heroText {
   color: #757575;
   text-align: center;
@@ -147,7 +156,6 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   max-width: 100%; /* Tutaj Kinga jak ten box zmienisz na 95% to będzie wyglądało lepiej przemyśl to i sprawdź najlepiej dziś jak się uda. */
   font-size: 28px;
 }
-
   
 .hero p{
   font-size: 20px;
@@ -155,7 +163,6 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 
 .hero a {
   color: #757575;
-
   text-decoration: none;
   font-size: 32px;
   padding: 20px;
@@ -174,7 +181,6 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 .wpis{
@@ -183,7 +189,6 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   border: 1px solid #212121;;
   border-radius: 6px;
   background: #DCEDC8;
-  
 }
 
 .hej{background: url(https://www.canva.com/design/DADoXqesQPE/_pFb_zuI8p8mwhYRlOssQg/view?utm_content=DADoXqesQPE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
@@ -198,11 +203,13 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   padding: 20px;
   background: #DCEDC8;
  }
+ 
  .teamText {
-  margin: 20px auto;
+  margin: 0 auto;
   text-align: center;
-  font-size: 18px;}
-
+  font-size: 18px;
+ }
+ 
  .teamEach {
   display: flex;
   justify-content: space-around;
@@ -210,7 +217,8 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   margin-bottom: 30px;}.teamEach a {
   text-decoration: none;
   color: #212121;
-}.teamEach h3 {
+}
+.teamEach h3 {
   width:17%;
 }
 
@@ -254,6 +262,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
 }
+
 /* Images for functionality -JK */
 .main-content img {
   margin: 20px auto;
@@ -262,6 +271,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   width: 100px;
   height: 100px;
 }
+
 /* The only text part for now - JK */
 .main-content h4 {
   margin-bottom: 10px;
@@ -271,6 +281,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   text-decoration: underline;
   font-size: 1.8em;
 }
+
 .main-content p {
   line-height: 1.1em;
   font-family: 'Open Sans', sans-serif;
