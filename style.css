@@ -1,4 +1,4 @@
-Oceniaj przepisy lub stwórz własne/** Whole page width */
+/** Whole page width */
 * {
   box-sizing: border-box;
   max-width: 1200px;
@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-.wrapper {Oceniaj przepisy lub stwórz własne
+.wrapper {
   max-width: 100%;
   width: 1200px;
   margin: 0 auto;
