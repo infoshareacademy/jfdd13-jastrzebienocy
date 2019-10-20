@@ -223,7 +223,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   padding: 5px;
 }
 
-.newsBox a:hover{
+.newsBox a:hover, .rodo:hover:hover{
   color: #FFC107;
 }
 
