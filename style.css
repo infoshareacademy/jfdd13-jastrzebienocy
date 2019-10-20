@@ -122,7 +122,7 @@ font-size: 40px;
   padding: 20px 0;
 }
 
-.heroTitle {
+.heroTitle h1 {
   text-transform: uppercase;
   color: #212121;
   padding: 15px;
