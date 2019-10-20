@@ -50,11 +50,12 @@ animation: slide 20s ease-in-out infinite;
 
 .funktion {
 width: 400vw;}/* single slide */
-.slide {
+/* .slide {
 float: left;
 width: 100vw;
 font-size: 40px;
-}@keyframes slide {
+}
+@keyframes slide {
 20% {margin-left: 0px;}
 30% {margin-left: -100vw;}
 50% {margin-left: -100vw;}
@@ -62,7 +63,7 @@ font-size: 40px;
 70% {margin-left: -200vw;}
 80% {margin-left: -300vw;}
 90% {margin-left: -300vw;}
-}
+} */
 
 
 
