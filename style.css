@@ -142,13 +142,14 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   background-size: cover; 
   width: 100%;
   height: 50vh;
-  margin: 60px 0 0;
+  margin: 40px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
+  padding: 20px 0;
 }
 
 .heroTitle {
@@ -157,7 +158,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   padding: 15px;
   /*text-shadow: 2px 2px 1px #212121;*/
   font-weight: bold;
-  font-size: 60px;
+  font-size: 45px;
   border: 1px solid #212121;
 }
 
@@ -166,9 +167,9 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   text-align: center;
   font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
-  padding: 20px; /* Kinga jeśli z tym drugim zdjęciem też będziesz miała przesunięcie to wywal ten padding bo to on wszystko rozwala - wiem bo sprawdziłem w konsoli*/
+  padding: 10px; /* Kinga jeśli z tym drugim zdjęciem też będziesz miała przesunięcie to wywal ten padding bo to on wszystko rozwala - wiem bo sprawdziłem w konsoli*/
   max-width: 90%; /* Tutaj Kinga jak ten box zmienisz na 95% to będzie wyglądało lepiej przemyśl to i sprawdź najlepiej dziś jak się uda. */
-  font-size: 28px;
+  font-size: 20px;
 }
   
 .hero p{
@@ -193,43 +194,42 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   font-size: 26px;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  
+  font-family: 'Open Sans', sans-serif;
 }
 
-.newsBox input{
-  line-height: 2.2em;
-  margin-bottom;: 10px;
-}
-
-.newsBox div{
-  text-decoration: none;
-  color: inherit;
+.news-label, .news-input{
   display: flex;
-  justify-content: center;
-  border: 1px solid #212121;
-  border-radius: 20px;
-  
-
+  flex-direction: row;
 }
 
-
-
-
+.newsBox span{
+  padding: 0 80px;
+}
 
 .wpis{
+  line-height: 2.2em;
+  margin-bottom: 10px;
   margin: 20px;
   width: 15vw;
   border: 1px solid #212121;;
   border-radius: 6px;
   background: #DCEDC8;
-
+  text-align: center;
 }
 
+.newsBox a, p{
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
+}
 
+.newsBox a:hover{
+  color: #FFC107;
+}
 
-
-
+.news-small{
+  font-size: 12px;
+}
 /*Team*/
 #team {
   margin-top: 30px;
@@ -333,6 +333,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   left: 0;
   right: 0;
   width: 100%;
+  height: 40px;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
