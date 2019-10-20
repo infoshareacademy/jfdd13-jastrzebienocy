@@ -330,7 +330,7 @@ font-size: 40px;
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
 }
@@ -342,6 +342,8 @@ font-size: 40px;
 
 /* Next & previous buttons */
 .prev, .next {
+  /* border: 1px solid #444; */
+  background-color: #ccc;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -355,8 +357,8 @@ font-size: 40px;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-/* Position the "next button" to the right */
+Sli
+/* Position the "next button" to the right */Sli
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
