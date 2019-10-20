@@ -43,7 +43,7 @@
     </section>
 
     <section class="funktion" id="zCzym">
-      <div class="funktion-Container">
+      <!-- <div class="funktion-Container">
         <div class="slideContainer">
           <div class="fridge slide">
             <div class="fridgeLeft">
@@ -70,7 +70,53 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
+      <img src="./zdjfoods/czas.png" style="width:25%"> 
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
+      <img src="./zdjfoods/dodaj-przepis.png" style="width:25%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
+      <img src="./zdjfoods/komentarz.png" style="width:25%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
+      <img src="./zdjfoods/przepisy.png" style="width:25%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons  -->
+<!-- Nie widać ich na razie, ale jak jakiś kolor wejdzie to będzie je widać, ale można też wywalić ponieważ mamy kropki pod obrazkami-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
     </section>
 
     <main class="main-content" id="iCoDalej">
@@ -210,15 +256,12 @@
   <section id="team">
     <div class="teamText">
       <h2>Nasz zespół:</h2>
-      <p>Nie ma dla nas rzeczy niemożliwych.</p>
+      <p>Nie ma dla nas rzeczy niemożliwych!</p>
       <p>
-        Podejmiemy się każdego wyzwania – im trudniejsze, z tym większą
-        zaciętością pracujemy.
-      </p>
-      <p>
-        Pracujemy szybko i kreatywnie – jak trzeba nie śpimy, nie jemy, po
+        Podejmiemy się każdego wyzwania – jak trzeba nie śpimy, nie jemy, po
         prostu pracujemy, nasze pomysły są świeże i oryginalne.
       </p>
+  
     </div>
     <div class="teamEach">
       <img src="/Images/kinga.jpg" width="200px" height="200px" alt="zdjecie" />
@@ -266,6 +309,64 @@
         navbar.classList.remove("sticky");
       }
     }
+// Here is code with slides funcionality:
+// var slideIndex = 1;
+// showSlides(slideIndex);
+
+// Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+// ----------------------------------------------------
+// Automatic slide show
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 
   
   </script>
