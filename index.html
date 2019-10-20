@@ -113,12 +113,12 @@
 
 
       <!-- The dots/circles -->
-      <div style="text-align:center">
+      <!-- <div style="text-align:center" - Nie działają na razie więc można wywalić>
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
+      </div> -->
 
     </section>
 
@@ -357,12 +357,12 @@
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
     }
 
 
