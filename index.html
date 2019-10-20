@@ -43,7 +43,7 @@
     </section>
 
     <section class="funktion" id="zCzym">
-      <!-- <div class="funktion-Container">
+     <!-- <section class="funktion-Container">
         <div class="slideContainer">
           <div class="fridge slide">
             <div class="fridgeLeft">
@@ -70,8 +70,7 @@
             </div>
           </div>
         </div>
-      </div> -->
-      <!-- Slideshow container -->
+      </section>  -->
       <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
@@ -113,12 +112,12 @@
 
 
       <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+       <!-- <div style="text-align:center" - Nie działają na razie więc można wywalić>
+        <span class="dot" onclick="currentSlide(1)"></span>section
+        <span class="dot" onclick="currentSlide(2)"></span>section
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
+      </div> -->
     </section>
 
     <main class="main-content" id="iCoDalej">
@@ -336,32 +335,32 @@
     // }
     // ----------------------------------------------------
     // Automatic slide show
-    var slideIndex = 0;
+    let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-      } var slideIndex = 0;
+      } slideIndex = 0;
       showSlides();
 
       function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
+        i;
+        slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
     }
 
 
