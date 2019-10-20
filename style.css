@@ -1,6 +1,8 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 body {
@@ -305,7 +307,12 @@ font-size: 40px;
 /* -------------------------------------------------------- */
 /* -------------------------------------------------------- */
 /* Slajdy z Js-em */
-* {box-sizing:border-box}
+/* * {
+  box-sizing:border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -334,8 +341,6 @@ font-size: 40px;
 
 /* Next & previous buttons */
 .prev, .next {
-  /* border: 1px solid #444; */
-  background-color: #ccc;
   cursor: pointer;
   position: absolute;
   top: 50%;
