@@ -1,4 +1,4 @@
-/** Whole page width */
+Oceniaj przepisy lub stwórz własne/** Whole page width */
 * {
   box-sizing: border-box;
   max-width: 1200px;
@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 
-.wrapper {
+.wrapper {Oceniaj przepisy lub stwórz własne
   max-width: 100%;
   width: 1200px;
   margin: 0 auto;
@@ -24,28 +24,7 @@ font-family: 'Open Sans', sans-serif;
 */
 
 
-.fridge{
-  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-  color: #ffc107;
-  justify-content: center;
-}
 
-.scale{
- /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  color: #ffc107;
-  background-position: 56% 50%;
-}
-
-.recipe{
-/* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
-color: #ffc107;
-background-position: 50% 50%;
-}
-
-.rank{
-/* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
-color: #ffc107;
-}
 
 .funktion-Container{
 height: 520px;
@@ -66,10 +45,10 @@ animation: slide 20s ease-in-out infinite;
 /* slides container */
 .funktion {
   overflow: hidden;
-}
+}*/
 
 /* single slide */
-.slide {
+/* .slide {
 align-self: center;
 width: 1200px;
 font-size: 40px;
@@ -83,7 +62,7 @@ font-size: 40px;
 70% {margin-left: -200vw;}
 80% {margin-left: -300vw;}
 90% {margin-left: -300vw;}
-} */
+} */ 
 
 
 
@@ -340,12 +319,25 @@ font-size: 40px;
   max-width: 1200px;
   position: relative;
   margin: auto;
+  height: 520px;
+  width: 100%;
+  background: url("Images/tlo.png");
+  padding: 30px 0;
+  margin-bottom: 30px;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  color: #FFC107;
+  font-size: 40px;
+  height: 520px;
+  padding: 190px;
+  text-align: center;
+  
+  
 }
+
 
 /* Next & previous buttons */
 /* .prev, .next {
@@ -364,15 +356,19 @@ font-size: 40px;
 } */
 
 /* Position the "next button" to the right */
+<<<<<<< HEAD
 .next {
+=======
+/* .next {
+>>>>>>> origin
   right: 0;
   border-radius: 3px 0 0 3px;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+/* .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
+} */
 
 /* Caption text */
 .text {
@@ -403,7 +399,7 @@ font-size: 40px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease; 
 }
 
 .active, .dot:hover {
@@ -413,9 +409,9 @@ font-size: 40px;
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
