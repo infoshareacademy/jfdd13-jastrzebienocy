@@ -142,11 +142,15 @@ font-size: 40px;
   font-size: 20px;
 }
   
-.hero p{
-  font-size: 20px;
+.hero a{
+  text-decoration: none;
+  color: #212121;
+  padding: 20px;
+  background: transparent;
+  font-size: 14px;
 }
 
-.hero a {
+.hero p {
   color: #757575;
   text-decoration: none;
   font-size: 32px;
