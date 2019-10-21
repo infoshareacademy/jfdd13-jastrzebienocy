@@ -268,13 +268,13 @@
     </div>
     <div class="teamEach">
       <img src="Images/jakub.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3><a href="kuba.html"> Jakub Kruszyński </a></h3>
+      <h3><a href="https://github.com/Kruchy1980" target="_blank"> Jakub Kruszyński </a></h3>
       <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i
           class="fab fa-linkedin fa-5x"></i></a>
     </div>
     <div class="teamEach">
       <img src="Images/filip.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3><a href="https://github.com/FilipSiwiec"> Filip Siwiec </a></h3>
+      <h3><a href="https://github.com/FilipSiwiec" target="_blank"> Filip Siwiec </a></h3>
       <i class="fab fa-linkedin fa-5x"></i>
     </div>
     <div class="teamEach">
@@ -282,7 +282,7 @@
       <h3>
         <a href="https://github.com/AdamToczko" target="blank">
           Adam Toczko
-        </a>
+        </a>target="_blank"
       </h3>
       <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a>
     </div>
@@ -351,11 +351,12 @@
         slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
+          // console.log(i)
         }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
+        // slideIndex++;
+        // if (slideIndex > slides.length) { slideIndex = 1 }
+        // slides[slideIndex - 1].style.display = "block";
+        // setTimeout(showSlides, 4000); // Change image every 4 seconds
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
