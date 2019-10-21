@@ -1,99 +1,46 @@
-/* Whole page width */
- *{
+/** Whole page width */
+* {
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* fonts mamy uzyc pierwsza do tytuow i headingow, druga do reszty
-font-family: 'Oswald', sans-serif;   
-font-family: 'Open Sans', sans-serif;
-*/
-
-
-.fridge{
-  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-  color: #ffc107;
-  
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.scale{
- /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  color: #ffc107;
-  
-}
-
-.recipe{
-/* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
-color: #ffc107;
-background-position: 50% 50%;
-}
-
-.rank{
-/* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
-color: #ffc107;
+.wrapper {
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .funktion-Container{
 height: 520px;
 width: 100%;
 background: url("Images/tlo.png");
-
-margin-bottom: 30px 0 0 0;
+padding:  0;
+margin-bottom: 30px;
 }
 
 .slideContainer{
 display: flex;
 height: 50vh;
-width: 1200px;
+width: 100%;
 flex-direction: row;
 animation: slide 20s ease-in-out infinite;
-padding: 50px 0;
-
 }
 
 /* slides container */
 .funktion {
-width: 400vw;
+  overflow: hidden;
 }
-
-/* single slide */
-.slide {
-align-self: center;
-font-size: 40px;
-width: 1200px;
-
-
-}
-
-
-    @keyframes slideContainer {
-      20% {margin-left: 0px;}
-      30% {margin-left: -400vw;}
-      50% {margin-left: -400vw;}
-      60% {margin-left: -800vw;}
-      70% {margin-left: -800vw;}
-      80% {margin-left: -1100vw;}
-      90% {margin-left: -1100vw;}
-      }
-
-
-
 
 .main-container {
   background-color: chartreuse;
 }
-
-/* Nie używamy takiego oznaczenia chcąc zmienić swoją częśc projektu gwiazdka
-dotyczy wszystkiego na całej stronie nie w swojej części jest mocniejsza od
-przypisania elementów do body - na przyszłość gwiazdki używamy tylko i wyłącznie
-i powtarzam tylko i wyłącznie do zmian na całej stronie nie w swojej części sorki ale
-o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
-/* * {
-    box-sizing: border-box;
-    max-width: 1200px;
-    margin: 0 auto;
-  } */
-  
+ 
   header {
     margin: 0 auto;
     text-align: center;
@@ -108,7 +55,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
  }
  
  .nav-container {
-    position: fixed;
+  font-family: 'Oswald', sans-serif; 
     width: 100%;
     display: flex;
     align-items: center;
@@ -119,6 +66,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
  }
 
  .nav-container a {  
+  font-family: 'Oswald', sans-serif; 
   font-weight: bold;
   color: #212121;
   font-size: 24px;
@@ -128,38 +76,38 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 
 /*hero section*/
 .hero {
-  background: url(https://pickupimage.com/data/photo/2015/5/6/0506155-2590-D31A-408833BA96576FD5.jpg) no-repeat;
+  background: url(Images/hero3.png) no-repeat;
   background-size: cover; 
   width: 100%;
   height: 50vh;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-family: Arial, Helvetica, sans-serif;
+  
   background-size: cover;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .heroTitle {
   text-transform: uppercase;
   color: #212121;
-  padding: 20px;
-  /*text-shadow: 2px 2px 1px #212121;*/
+  padding: 15px;
+
   font-weight: bold;
-  font-size: 60px;
+  font-size: 45px;
   border: 1px solid #212121;
 }
 
 .heroText {
-  color: #757575;
+  color: #212121;
   text-align: center;
   font-weight: bold;
   background-color: rgba(248, 247, 238, 0.5);
-  padding: 20px; /* Kinga jeśli z tym drugim zdjęciem też będziesz miała przesunięcie to wywal ten padding bo to on wszystko rozwala - wiem bo sprawdziłem w konsoli*/
-  max-width: 100%; /* Tutaj Kinga jak ten box zmienisz na 95% to będzie wyglądało lepiej przemyśl to i sprawdź najlepiej dziś jak się uda. */
-  font-size: 28px;
+  padding: 10px; 
+  max-width: 90%;
+  font-size: 20px;
 }
   
 .hero p{
@@ -176,32 +124,50 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 }
 
 .newsBox{
-  height: 40vh;
-  width: 60vw;
-  background: #FFC107;
+  height: 60vh;
+  background: url(Images/news5.png) no-repeat center;
   padding: 30px;
   display: flex;
   flex-direction: column;
   font-size: 26px;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.news-label, .news-input{
+  display: flex;
+  flex-direction: row;
+}
+
+.newsBox span{
+  padding: 0 80px;
 }
 
 .wpis{
-  margin: 10px;
+  line-height: 2.2em;
+  margin-bottom: 10px;
+  margin: 20px;
   width: 15vw;
   border: 1px solid #212121;;
   border-radius: 6px;
   background: #DCEDC8;
+  text-align: center;
 }
 
-.hej{background: url(https://www.canva.com/design/DADoXqesQPE/_pFb_zuI8p8mwhYRlOssQg/view?utm_content=DADoXqesQPE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink);
-
+.newsBox a, p{
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
 }
 
+.newsBox a:hover, .rodo:hover{
+  color: #FFC107;
+}
 
-
+.news-small{
+  font-size: 12px;
+}
 /*Team*/
 #team {
   margin-top: 30px;
@@ -210,12 +176,16 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
  }
  
  .teamText {
-  margin: 0 auto;
+  font-family: 'Oswald', sans-serif; 
+  margin: 15px auto;
   text-align: center;
   font-size: 18px;
+  line-height: 34px;
+
  }
  
  .teamEach {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -223,15 +193,21 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   text-decoration: none;
   color: #212121;
 }
+.teamEach h3 {
+  width:17%;
+}
+
+
 
 .teamEach a:hover {
-  color: #FFC107 ;
- }
- 
- .text {
-  margin-left: 100px;
-  padding: 10px;
- }
+  color: #FFC107;
+}
+
+.teamEach img {
+  border-radius: 50%;
+  border:2px solid #757575;
+}
+
 
  .main-content img {
   margin: 50px ;
@@ -240,16 +216,13 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   height: 200px;
  }
 
-/* To zakomitowałem ponieważ gryzło się z moim ale zmieniłem u siebie klasę i można tego używać tylko nie wiem komu potrzebna klasa .text */
-/* .text {
-  margin-left: 100px;
-  padding: 10px;
-} */
+
+
 /* Here is section main style - JK*/
 .main-content {
+  max-width: 80%;
   margin: 10px auto;
   display: grid;
-  max-width: 80%;
   grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
@@ -257,7 +230,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 
 /* Images for functionality -JK */
 .main-content img {
-  margin: 20px auto;
+  margin: 40px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
@@ -273,7 +246,7 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
   text-decoration: underline;
   font-size: 1.8em;
 }
-
+/* Small text in functionality  -JK */
 .main-content p {
   line-height: 1.1em;
   font-family: 'Open Sans', sans-serif;
@@ -286,10 +259,51 @@ o zacomituje aby można było zobaczyć jak się nie robi - Kruchy */
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  height: 40px;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-/* .sticky + .content {
-  padding-top: 60px;
-} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+  height: 520px;
+  width: 100%;
+  background: url("Images/tlo.png");
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  color: #FFC107;
+  font-size: 40px;
+  height: 520px;
+  padding: 190px;
+  text-align: center;
+  
+  
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
