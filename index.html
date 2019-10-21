@@ -216,11 +216,11 @@
         <a href="https://github.com/Kinga-Zawarczynska">Kinga Zawarczyńska
         </a>
       </h3>
-      <i class="fab fa-linkedin fa-5x"></i>
+      <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a>
     </div>
     <div class="teamEach">
       <img src="Images/jakub.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3><a href="kuba.html"> Jakub Kruszyński </a></h3>
+      <h3><a href="https://github.com/Kruchy1980"> Jakub Kruszyński </a></h3>
       <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i
           class="fab fa-linkedin fa-5x"></i></a>
     </div>
@@ -257,33 +257,36 @@
       }
     }
 
-    // Automatic slide show
+    // // Automatic slide show
     let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-      let i;
+      let i = 0;
       let slides = document.getElementsByClassName("mySlides");
+
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       } slideIndex = 0;
       showSlides();
-
+    
       function showSlides() {
-        i;
+
         slides = document.getElementsByClassName("mySlides");
+
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
+
         }
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
+        setTimeout(showSlides, 2000);
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // Change image every 4 seconds
+      setTimeout(showSlides, 2000);
     }
 
 
@@ -291,4 +294,4 @@
 
 </body>
 
-</html>
+</html> 
