@@ -44,29 +44,27 @@
     </section>
 
     <section class="funktion" id="zCzym">
-
-      <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <i class="fas fa-bread-slice">Wybierz produkty</i>
-        </div>
-
-        <div class="mySlides fade">
-          <i class="fas fa-balance-scale">Określ wagę lub ilość</i>  
-        </div>
-
-        <div class="mySlides fade">
-          <i class="fas fa-cookie-bite">Wybierz przepis</i>
-        </div>
-
-        <div class="mySlides fade">
-                    <i class="fas fa-star-half-alt">Oceniaj przepisy lub stwórz
-            własne</i>
-        </div>
-      </div>
-
-
-    </section>
+      <div class="funktion-Container">
+           <div class="slideContainer">
+                 <div class="fridge slide">
+                      <div class="fridgeLeft">
+                         <i class="fas fa-bread-slice"></i> Wybierz produkty</div>
+                  </div>
+                   <div class="scale slide">
+                       <div class="scaleLeft">
+                         <i class="fas fa-balance-scale"></i> Określ wagę lub ilość</div>
+                  </div>
+                  <div class="recipe slide">
+                      <div class="recipeLeft">
+                         <i class="fas fa-cookie-bite"></i> Wybierz przepis</div>
+                 </div>
+                 <div class="rank slide">
+                      <div class="rankLeft">
+                         <i class="fas fa-star-half-alt"></i> Oceniaj przepisy lub stwórz własny</div>
+                 </div>
+          </div>
+   </div>
+</section>
 
     <main class="main-content" id="iCoDalej">
 
@@ -257,37 +255,6 @@
       }
     }
 
-    // // Automatic slide show
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let i = 0;
-      let slides = document.getElementsByClassName("mySlides");
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      } slideIndex = 0;
-      showSlides();
-    
-      function showSlides() {
-
-        slides = document.getElementsByClassName("mySlides");
-
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000);
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000);
-    }
 
 
   </script>
