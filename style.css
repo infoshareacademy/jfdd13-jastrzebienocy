@@ -88,9 +88,6 @@ body {
   
 .hero p{
   font-size: 20px;
-}
-
-.hero a {
   color: #757575;
   text-decoration: none;
   font-size: 32px;
@@ -99,9 +96,17 @@ body {
   text-shadow: 1px 2px 1px #212121;
 }
 
+.hero a {
+  color: #212121;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+  
+}
+
 .newsBox{
   height: 60vh;
-  background: url(Images/news5.png) no-repeat center;
+  background: url("Images/newsBack.png") no-repeat center;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -313,5 +318,5 @@ body {
  .slide {
  align-self: center;
  width: 100vw;
- font-size: 40px;
+ font-size: 30px;
  }
