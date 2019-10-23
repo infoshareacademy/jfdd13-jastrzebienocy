@@ -320,3 +320,26 @@ body {
  width: 100vw;
  font-size: 25px;
  }
+
+/* Footer styles */
+.bottom {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid ;
+}
+.bottom a {
+  justify-content: center;
+  text-decoration: none;
+  margin: 10px;
+  color: #fff;
+  background-color: #757575;
+  line-height: 2em;
+  border: 1px solid #5e5e5e;
+  /* max-width: 20%; */
+  border-radius: 8px;
+  padding: 3px;
+  linear-gradient: 
+}
+.bottom span {
+  justify-content: flex-start;
+}
