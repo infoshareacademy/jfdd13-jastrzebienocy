@@ -328,19 +328,20 @@ padding: 20px;
   flex-direction: row;
   border-top: 1px solid #000;
 }
-.bottom a {
+/* .bottom a {
   justify-content: flex-start;
   text-decoration: none;
   margin: 10px;
   color: #4e4e4e;
   line-height: 2em;
-}
+} */
 
 /* .bottom span {
   justify-content: center;
 } */
 .bottom .copywrights {
   text-align: left;
+
 }
 .links {
   text-align: right;
