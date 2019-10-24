@@ -1,7 +1,7 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   }
   
   body {
@@ -330,10 +330,11 @@
  flex-direction: row;
  animation: slide 20s ease-in-out infinite;
  }
+
  /* slides container */
  .funktion {
  width: 400vw;
- }
+ } */
  /* single slide */
  .slide {
  align-self: center;
@@ -342,25 +343,40 @@
  }
 
 /* Footer styles */
-.bottom {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  border-top: 1px solid #000;
+.footer-box {
+  /* display: flex; */
+  /* flex-direction: row; */
+  height: 2em;
+  margin: 0 20px;
+  /* justify-content: space-between; */
+  font-size: 0.9em;
+  font-family: 'Open Sans', sans-serif;
+  /* border-top: 1px solid black */
 }
-.bottom a {
-  justify-content: flex-start;
-  text-decoration: none;
-  margin: 10px;
-  color: #4e4e4e;
+/* Copywrights */
+.copywright {
+  color: #757575;
   line-height: 2em;
+  float: left;
 }
+/* Privacy policy and contact styles */
+.footer-links {
+  /* justify-items: flex-start; */
+  line-height: 2em;
+  margin-left: 10px;
+  float: right;
+  text-decoration: none;
+  color: #000;
+  order: 1;
 
-.bottom span {
-  justify-content: center;
 }
-
-/* Polityka prywatności - footer */
+.footer-links:hover {
+  background-color: #757575;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+/* Privacy policy style */
 .prywatnosc {
   text-align: center;
   margin: 2em;
