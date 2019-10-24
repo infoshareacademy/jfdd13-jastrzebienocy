@@ -37,6 +37,13 @@ animation: slide 20s ease-in-out infinite;
   overflow: hidden;
 }
 
+
+
+
+
+
+
+
 .main-container {
   background-color: chartreuse;
 }
@@ -47,6 +54,7 @@ animation: slide 20s ease-in-out infinite;
     background: #f3fbe8;
   }
  
+
   /* Navigation*/
   
   nav {
