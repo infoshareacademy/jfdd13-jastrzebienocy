@@ -66,7 +66,7 @@ body {
   padding: 20px 0;
 }
 
-.heroTitle {
+.heroTitle h1 {
   text-transform: uppercase;
   color: #212121;
   padding: 15px;
@@ -86,8 +86,15 @@ body {
   font-size: 20px;
 }
   
-.hero p{
-  font-size: 20px;
+.hero a{
+  text-decoration: none;
+  color: #212121;
+  padding: 20px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.hero p {
   color: #757575;
   text-decoration: none;
   font-size: 32px;
