@@ -1,7 +1,7 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   }
   
   body {
@@ -344,32 +344,26 @@
  }
 
 /* Footer styles */
-.bottom {
-  max-width: 1200px;
+.footer-box {
   display: flex;
   flex-direction: row;
-  border-top: 1px solid #000;
-}
-/* .bottom a {
-  justify-content: flex-start;
-  text-decoration: none;
-  margin: 10px;
-  color: #4e4e4e;
-  line-height: 2em;
-} */
-
-/* .bottom span {
-  justify-content: center;
-} */
-.bottom .copywrights {
-  text-align: left;
-
-}
-.links {
-  text-align: right;
+  height: 3em;
+  margin: 0 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Polityka prywatności - footer */
+.copywright {
+  color: #757575;
+  line-height: 3em;
+}
+.footer-links {
+  justify-items: flex-end;
+  line-height: 3em;
+  margin-left: 10px;
+}
+
+/* PPrivacy policy style */
 .prywatnosc {
   text-align: center;
   margin: 2em;
