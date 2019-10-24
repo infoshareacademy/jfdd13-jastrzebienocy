@@ -351,19 +351,30 @@
   margin: 0 20px;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.9em;
+  font-family: 'Open Sans', sans-serif;
 }
-
+/* Copywrights */
 .copywright {
   color: #757575;
   line-height: 3em;
+  justify-items: flex-start;
 }
-.footer-links {
+/* Privacy policy and contact styles */
+.footer-links a{
   justify-items: flex-end;
   line-height: 3em;
   margin-left: 10px;
+  text-decoration: none;
+  color: #000;
 }
-
-/* PPrivacy policy style */
+.footer-links a:hover {
+  background-color: #757575;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* Privacy policy style */
 .prywatnosc {
   text-align: center;
   margin: 2em;
