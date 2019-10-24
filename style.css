@@ -1,57 +1,52 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
-  max-width: 1200px;
   margin: 0 auto;
-}
-
-body {
+  }
+  
+  body {
   margin: 0;
   padding: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-
-  header {
-    margin: 0 auto;
-    text-align: center;
-    background: #f3fbe8;
   }
- 
-  /* Navigation*/
   
-nav {
+  .wrapper {
+  max-width: 100%;
+
+  margin: 0 auto;
+  }
+  
+  header {
+  margin: 0 auto;
+  text-align: center;
+  background: #f3fbe8;
+  }
+  /* Navigation*/
+  nav {
   z-index: 1;
   font-family: 'Oswald', sans-serif;
-}
-
-.nav-container {
-font-family: 'Oswald', sans-serif; 
+  }
+  .nav-container {
+  font-family: 'Oswald', sans-serif; 
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #8BC34A;
-  height: auto;    
+  height: auto; 
   z-index: 5;
-}
-
-.nav-container a {  
-font-family: 'Oswald', sans-serif; 
-font-weight: bold;
-color: #212121;
-font-size: 24px;
-text-decoration: none;
-padding: 20px;
-}
-
-/*hero section*/
-.hero {
+  }
+  
+  .nav-container a { 
+  font-family: 'Oswald', sans-serif; 
+  font-weight: bold;
+  color: #212121;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 20px;
+  }
+  
+  /*hero section*/
+  .hero {
   background: url(Images/hero3.png) no-repeat;
   background-size: cover; 
   width: 100%;
@@ -64,19 +59,19 @@ padding: 20px;
   
   background-size: cover;
   padding: 20px 0;
-}
-
-.heroTitle {
+  }
+  
+  .heroTitle {
   text-transform: uppercase;
   color: #212121;
   padding: 15px;
-
+  
   font-weight: bold;
   font-size: 45px;
   border: 1px solid #212121;
-}
-
-.heroText {
+  }
+  
+  .heroText {
   color: #212121;
   text-align: center;
   font-weight: bold;
@@ -86,8 +81,15 @@ padding: 20px;
   font-size: 20px;
 }
   
-.hero p{
-  font-size: 20px;
+.hero a{
+  text-decoration: none;
+  color: #212121;
+  padding: 20px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.hero p {
   color: #757575;
   text-decoration: none;
   font-size: 32px;
@@ -125,6 +127,25 @@ padding: 20px;
   padding: 0 80px;
 }
 
+.newsBox input{
+  line-height: 2.2em;
+  margin-bottom: 10px;
+}
+
+.newsBox div{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  }
+  
+
+
+
+
+
+
+
 .wpis{
   line-height: 2.2em;
   margin-bottom: 10px;
@@ -161,37 +182,37 @@ padding: 20px;
   margin-top: 30px;
   padding: 20px;
   background: #DCEDC8;
- }
- 
- .teamText {
+  }
+  .team {
+  display: flex;
+  }
+  
+  .teamText {
   font-family: 'Oswald', sans-serif; 
   margin: 15px auto;
   text-align: center;
   font-size: 18px;
   line-height: 34px;
-
- }
- 
- .teamEach {
+  
+  }
+  .teamFigure {
   font-family: 'Open Sans', sans-serif;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 30px;}.teamEach a {
+  }
+  
+  .teamFigure figcaption {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* .teamEach a {
   text-decoration: none;
   color: #212121;
-}
-.teamEach h3 {
+  } */
+  .teamEach h3 {
   width:17%;
-}
-
-
-
-.teamEach a:hover {
-  color: #FFC107;
-}
-
-.teamEach img {
+  }
+  
+  .teamFigure img {
   border-radius: 50%;
   border:2px solid #757575;
 }
@@ -214,21 +235,21 @@ padding: 20px;
   grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
-}
-
-/* Images for functionality -JK */
-.main-content img {
+  }
+  
+  /* Images for functionality -JK */
+  .main-content img {
   margin: 40px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-}
-
-/* The only text part for now - JK */
-.main-content h4 {
+  }
+  
+  /* The only text part for now - JK */
+  .main-content h4 {
   margin-bottom: 10px;
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Oswald', sans-serif; 
   letter-spacing: 2px;
   font-weight: bold;
   text-decoration: underline;
@@ -241,10 +262,10 @@ padding: 20px;
   letter-spacing: 1px;
   font-size: 0.95em;
   padding: 5px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -310,10 +331,11 @@ padding: 20px;
  flex-direction: row;
  animation: slide 20s ease-in-out infinite;
  }
+
  /* slides container */
  .funktion {
  width: 400vw;
- }
+ } */
  /* single slide */
  .slide {
  align-self: center;
