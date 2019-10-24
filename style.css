@@ -57,6 +57,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  
   background-size: cover;
   padding: 20px 0;
   }
@@ -79,25 +80,34 @@
   padding: 10px; 
   max-width: 90%;
   font-size: 20px;
-  }
-  .hero p{
-  font-size: 20px;
+}
+  
+.hero a{
+  text-decoration: none;
+  color: #212121;
+  padding: 20px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.hero p {
   color: #757575;
   text-decoration: none;
   font-size: 32px;
   padding: 20px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
-  }
-  
-  .hero a {
+}
+
+.hero a {
   color: #212121;
   text-decoration: none;
   font-size: 20px;
   padding: 20px;
-  }
   
-  .newsBox{
+}
+
+.newsBox{
   height: 60vh;
   background: url("Images/newsBack.png") no-repeat center;
   padding: 30px;
@@ -107,18 +117,37 @@
   align-items: center;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
-  }
-  
-  .news-label, .news-input{
+}
+
+.news-label, .news-input{
+  display: flex;
+  flex-direction: row;
+}
+
+.newsBox span{
+  padding: 0 80px;
+}
+
+.newsBox input{
+  line-height: 2.2em;
+  margin-bottom: 10px;
+}
+
+.newsBox div{
+  text-decoration: none;
+  color: inherit;
   display: flex;
   flex-direction: row;
   }
   
-  .newsBox span{
-  padding: 0 80px;
-  }
-  
-  .wpis{
+
+
+
+
+
+
+
+.wpis{
   line-height: 2.2em;
   margin-bottom: 10px;
   margin: 20px;
@@ -127,30 +156,30 @@
   border-radius: 6px;
   background: #DCEDC8;
   text-align: center;
-  }
-  
-  .newsBox a, p{
+}
+
+.newsBox a, p{
   text-decoration: none;
   color: inherit;
   padding: 5px;
-  }
-  .send {
+}
+.send {
   border: 1px solid #212121;
   padding: 5px;
   border-radius: 20px;
   width: 20%;
   text-align: center;
   background-color: #689F38;
-  }
-  .newsBox a:hover, .rodo:hover{
+}
+.newsBox a:hover, .rodo:hover{
   color: #FFC107;
-  }
-  
-  .news-small{
+}
+
+.news-small{
   font-size: 12px;
-  }
-  /*Team*/
-  #team {
+}
+/*Team*/
+#team {
   margin-top: 30px;
   padding: 20px;
   background: #DCEDC8;
@@ -187,19 +216,20 @@
   .teamFigure img {
   border-radius: 50%;
   border:2px solid #757575;
-  margin: 20px;
-  }
-  
-  .main-content img {
+}
+
+
+ .main-content img {
   margin: 50px ;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  }
-  
-  
-  /* Here is section main style - JK*/
-  .main-content {
+ }
+
+
+
+/* Here is section main style - JK*/
+.main-content {
   max-width: 80%;
   margin: 10px auto;
   display: grid;
@@ -225,9 +255,9 @@
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.8em;
-  }
-  /* Small text in functionality -JK */
-  .main-content p {
+}
+/* Small text in functionality  -JK */
+.main-content p {
   line-height: 1.1em;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
@@ -242,10 +272,12 @@
   left: 0;
   right: 0;
   width: 100%;
-  }
-  
-  /* Slideshow container */
-  .slideshow-container {
+  height: 40px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
   max-width: 1200px;
   position: relative;
   margin: auto;
@@ -254,59 +286,102 @@
   background: url("Images/tlo.png");
   padding: 30px 0;
   margin-bottom: 30px;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
+}
+
+/* Hide the images by default */
+.mySlides {
   display: none;
   color: #FFC107;
   font-size: 40px;
   height: 520px;
   padding: 190px;
   text-align: center;
-  }
-  .fridge{
+  
+  
+}
+.fridge{
   /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
   color: #ffc107;
   justify-content: center;
-  }
-  .scale{
-  /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
+ }
+ .scale{
+ /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
   color: #ffc107;
   background-position: 56% 50%;
-  }
-  .recipe{
-  /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
-  color: #ffc107;
-  background-position: 50% 50%;
-  }
-  .rank{
-  /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
-  color: #ffc107;
-  }
-  .funktion-Container{
-  height: 520px;
-  width: 100%;
-  background: url("Images/tlo.png");
-  padding: 30px 0;
-  margin-bottom: 30px;
-  }
-  .slideContainer{
+ }
+ .recipe{
+ /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
+ color: #ffc107;
+ background-position: 50% 50%;
+ }
+ .rank{
+ /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
+ color: #ffc107;
+ }
+ .funktion-Container{
+ height: 520px;
+ width: 100%;
+ background: url("Images/tlo.png");
+ padding: 30px 0;
+ margin-bottom: 30px;
+ }
+ .slideContainer{
+ display: flex;
+ height: 50vh;
+ width: 100%;
+ flex-direction: row;
+ animation: slide 20s ease-in-out infinite;
+ }
+ /* slides container */
+ .funktion {
+ width: 400vw;
+ }
+ /* single slide */
+ .slide {
+ align-self: center;
+ width: 100vw;
+ font-size: 25px;
+ }
+
+/* Footer styles */
+.bottom {
+  max-width: 1200px;
   display: flex;
-  height: 50vh;
-  width: 100%;
   flex-direction: row;
-  animation: slide 20s ease-in-out infinite;
-  }
-  /* slides container */
-  .funktion {
-  width: 400vw;
-  }
-  /* single slide */
-  .slide {
-  align-self: center;
-  width: 100vw;
-  font-size: 25px;
-  }
-  
-  
+  border-top: 1px solid #000;
+}
+.bottom a {
+  justify-content: flex-start;
+  text-decoration: none;
+  margin: 10px;
+  color: #4e4e4e;
+  line-height: 2em;
+}
+
+.bottom span {
+  justify-content: center;
+}
+
+/* Polityka prywatności - footer */
+.prywatnosc {
+  text-align: center;
+  margin: 2em;
+
+}
+.policy-text {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+.policy-text p{
+  text-align: left;
+  margin-top: 1.1em;
+
+}
+.policy-text p:first-child{
+  text-align: center;
+  padding: 10px 0;
+}
+
+.policy-text p:last-child{
+  padding-bottom: 10px;
+}
