@@ -7,12 +7,14 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Food waste</title>
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style-slides.css">
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./mobile-main.css">
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapperBig">
 <header>
 <img src="./Images/LOGO.png" />
 </header>
@@ -44,29 +46,56 @@ STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
 </section>
 
 <section class="funktion" id="what">
-<div class="funktion-Container">
-<div class="slideContainer">
-<div class="fridge slide">
-<div class="fridgeLeft">
-<i class="fas fa-bread-slice"></i> Wybierz produkty</div>
-</div>
-<div class="scale slide">
-<div class="scaleLeft">
-<i class="fas fa-balance-scale"></i> Określ wagę lub ilość</div>
-</div>
-<div class="recipe slide">
-<div class="recipeLeft">
-<i class="fas fa-cookie-bite"></i> Wybierz przepis</div>
-</div>
-<div class="rank slide">
-<div class="rankLeft">
-<i class="fas fa-star-half-alt"></i> Oceniaj przepisy lub stwórz własny</div>
-</div>
-</div>
-</div>
+    <div class="wrapper">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <!-- <img src="14584.jpg" style="width:100%"> -->
+                <div class="i-tag"> <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i></div>
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <!-- <img src="OKLG6T0.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i></div>
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-book"> WYBIERZ PRZEPIS</i></div>
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-star-half-alt"> OCEŃ PRZEPIS</i></div>
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+    </div>
 </section>
 
-  <main class="main-content" id="whatNext">
+  <main class="main-content main-content-mobile" id="whatNext">
 
       <img src="./functionality-images/choose.png" alt="Choose product" />
 
@@ -90,16 +119,16 @@ STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
     <div class="main-text">
       <h4>Ilość produktu</h4>
       <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie
-      określonej ilości danego produktu w lodówce.</p>
+      określonej, lub szacunkowej ilości danego produktu w lodówce.</p>
     </div>
 
-      <img src="./functionality-images/calculate.png" alt="Calculate quantity of product" />
+      <!-- <img src="./functionality-images/calculate.png" alt="Calculate quantity of product" /> -->
 
-    <div class="main-text">
+    <!-- <div class="main-text">
       <h4>Szacuj</h4>
       <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów posiadanych we
       własnej lodówce.</p>
-    </div>
+    </div> -->
 
     <img src="./functionality-images/recipy.png" alt="Recipies for meal" />
 
@@ -112,17 +141,17 @@ STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
 
     <div class="main-text">
       <h4>Dodaj przepis</h4>
-      <p>Po zalogowaniu użytkownik będzie miał możliwość dodania własnego
-      przepisu na danie z danych produktów.</p>
+      <p>Po zalogowaniu użytkownik będzie miał możliwość dodania lub aktualizacji własnego
+      przepisu na danie.</p>
     </div>
 
-    <img src="./functionality-images/update-recipy.png" alt="Update your recipy/ies" />
+    <!-- <img src="./functionality-images/update-recipy.png" alt="Update your recipy/ies" />
 
     <div class="main-text">
       <h4>Aktualizuj przepis</h4>
       <p>Po zalogowaniu użytkownik będzie miał możliwość aktualizacji
       własnego przepisu na danie z danych produktów.</p>
-    </div>
+    </div> -->
 
     <img src="./functionality-images/time.png" alt="Choose your recipy based on preparing time" />
 
@@ -218,13 +247,14 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
 <!-- <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
 </div>
 </section>
-  <footer class="bottom">
-      <div>&copy 2019 Food Waste</div>
-      <div>
-        <a href="./privacy.html">Polityka prywatności</a>
-        <a href="#team">Kontakt</a>
-      </div>
-
+  <footer >
+    <div class="footer-box footer-box-mobile">
+      <span class="copywright">&copy 2019 Food Waste</span>
+      <!-- <div class="footer-links"> -->
+      <a class="footer-links" href="#team">Kontakt</a></span>
+      <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
+  <!--     </div> -->
+    </div>
   </footer>
 
 <script>
@@ -240,6 +270,70 @@ navbar.classList.add("sticky");
 navbar.classList.remove("sticky");
 }
 }
+
+
+var slideIndex = 1;
+manualSlides(slideIndex);
+
+
+//  const mouse = document.querySelector('.slideshow-container');
+ const wrapper = document.querySelector('.wrapper');
+
+ wrapper.addEventListener("mouseenter", manualSlides);
+ wrapper.addEventListener("mouseleave", autoSlides);
+//  mouse.addEventListener("mouseover", manualSlides);
+
+var timeOut;
+
+ 
+        // Next/previous controls
+function plusSlides(n) {
+    manualSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    manualSlides(slideIndex = n);
+  }
+  
+  function manualSlides(n) {
+    console.log('manualSlides');
+    clearTimeout(timeOut);
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+
+
+  var autoSlideIndex = 0;
+autoSlides(autoSlideIndex);
+
+
+
+function autoSlides() {
+  console.log('autoSlides');
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  autoSlideIndex++;
+  if (autoSlideIndex > slides.length) {autoSlideIndex = 1}
+  slides[autoSlideIndex-1].style.display = "block";
+  clearTimeout(timeOut);
+  timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
+} 
 
 
 </script>
