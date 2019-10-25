@@ -63,10 +63,12 @@
   .heroTitle {
   text-transform: uppercase;
   color: #212121;
-  padding: 15px;
+  padding: 0 15px;
   font-weight: bold;
   font-size: 45px;
   border: 1px solid #212121;
+  line-height: 10px;
+  font-family: oswald;
   }
   
   .heroText {
@@ -75,8 +77,9 @@
   font-weight: bold;
   /*background-color: rgba(248, 247, 238, 0.5);*/
   padding: 10px; 
-  max-width: 90%;
+  max-width: 50%;
   font-size: 20px;
+  font-family: sans-serif;
 }
   
 .hero a{
@@ -85,6 +88,7 @@
   padding: 20px;
   background: transparent;
   font-size: 14px;
+  border: 1px solid #212121;
 }
 
 .hero p {
