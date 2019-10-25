@@ -277,75 +277,10 @@
 
 
 
-/* Slideshow container
-.slideshow-container {
-  max-width: 1200px;
-  position: relative;
-  margin: auto;
-  height: 520px;
-  width: 100%;
-  background: url("Images/tlo.png");
-  padding: 30px 0;
-  margin-bottom: 30px;
-}
 
-/* Hide the images by default */
-/* .mySlides {
-  display: none;
-  color: #FFC107;
-  font-size: 40px;
-  height: 520px;
-  padding: 190px;
-  text-align: center;
-  
-  
-}
-.fridge{
-  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
- /* color: #ffc107;
-  justify-content: center;
- }
- .scale{
- /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  /*color: #ffc107;
-  background-position: 56% 50%;
- }
- .recipe{
- /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
- /*color: #ffc107;
- background-position: 50% 50%;
- }
- .rank{
- /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
- /*color: #ffc107;
- }
- /*.funktion-Container{
- height: 520px;
- width: 100%;
- background: url("Images/tlo.png");
- padding: 30px 0;
- margin-bottom: 30px;
- }
- .slideContainer{
- display: flex;
- height: 50vh;
- width: 100%;
- flex-direction: row;
- animation: slide 20s ease-in-out infinite;
- }
- /* slides container */
- /*.funktion {
- width: 400vw;
- }
- /* single slide */
- /*.slide {
- align-self: center;
- width: 100vw;
- font-size: 25px;
- } */
 
 /* Footer styles */
-/*.bottom {
+.bottom {
   max-width: 1200px;
   display: flex;
   flex-direction: row;
