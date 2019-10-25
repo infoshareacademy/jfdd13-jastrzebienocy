@@ -237,7 +237,7 @@
   
   /* Images for functionality -JK */
   .main-content img {
-  margin: 40px auto;
+  margin: 40px 10px;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
@@ -343,14 +343,10 @@
 
 /* Footer styles */
 .footer-box {
-  /* display: flex; */
-  /* flex-direction: row; */
   height: 2em;
   margin: 0 20px;
-  /* justify-content: space-between; */
   font-size: 0.9em;
   font-family: 'Open Sans', sans-serif;
-  /* border-top: 1px solid black */
 }
 /* Copywrights */
 .copywright {
@@ -358,15 +354,13 @@
   line-height: 2em;
   float: left;
 }
-/* Privacy policy and contact styles */
+/* Privacy policy and contact styles - JK*/
 .footer-links {
-  /* justify-items: flex-start; */
   line-height: 2em;
   margin-left: 10px;
   float: right;
   text-decoration: none;
   color: #000;
-  order: 1;
 
 }
 .footer-links:hover {
@@ -375,7 +369,7 @@
   border-radius: 5px;
   padding: 0 5px;
 }
-/* Privacy policy style */
+/* Privacy policy style - JK*/
 .prywatnosc {
   text-align: center;
   margin: 2em;
