@@ -9,7 +9,7 @@
   padding: 0;
   }
   
-  .wrapper {
+  .wrapperBig {
   max-width: 100%;
 
   margin: 0 auto;
@@ -275,7 +275,9 @@
 }
 
 
-/* Slideshow container */
+
+
+/* Slideshow container
 .slideshow-container {
   max-width: 1200px;
   position: relative;
@@ -288,7 +290,7 @@
 }
 
 /* Hide the images by default */
-.mySlides {
+/* .mySlides {
   display: none;
   color: #FFC107;
   font-size: 40px;
@@ -300,24 +302,24 @@
 }
 .fridge{
   /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-  color: #ffc107;
+ /* color: #ffc107;
   justify-content: center;
  }
  .scale{
  /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  color: #ffc107;
+  /*color: #ffc107;
   background-position: 56% 50%;
  }
  .recipe{
  /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
- color: #ffc107;
+ /*color: #ffc107;
  background-position: 50% 50%;
  }
  .rank{
  /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
- color: #ffc107;
+ /*color: #ffc107;
  }
- .funktion-Container{
+ /*.funktion-Container{
  height: 520px;
  width: 100%;
  background: url("Images/tlo.png");
@@ -332,18 +334,18 @@
  animation: slide 20s ease-in-out infinite;
  }
  /* slides container */
- .funktion {
+ /*.funktion {
  width: 400vw;
  }
  /* single slide */
- .slide {
+ /*.slide {
  align-self: center;
  width: 100vw;
  font-size: 25px;
- }
+ } */
 
 /* Footer styles */
-.bottom {
+/*.bottom {
   max-width: 1200px;
   display: flex;
   flex-direction: row;
