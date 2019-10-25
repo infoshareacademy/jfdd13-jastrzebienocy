@@ -1,10 +1,6 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
-<<<<<<< HEAD
-=======
-  
->>>>>>> 35457be6ed03cc25ba2b1f379a708994d876d95b
   margin: 0 auto;
   }
   
@@ -15,16 +11,9 @@
   
   .wrapper {
   max-width: 100%;
-<<<<<<< HEAD
   width: 100%;
   margin: 0 auto;
 }
-
-=======
->>>>>>> 35457be6ed03cc25ba2b1f379a708994d876d95b
-
-  margin: 0 auto;
-  }
   
   header {
   margin: 0 auto;
@@ -54,19 +43,11 @@
   font-size: 24px;
   text-decoration: none;
   padding: 20px;
-<<<<<<< HEAD
  }
 
 /*hero section*/
 .hero {
   background: url(/food\ waste-Filip3.png) no-repeat;
-=======
-  }
-  
-  /*hero section*/
-  .hero {
-  background: url(Images/hero3.png) no-repeat;
->>>>>>> 35457be6ed03cc25ba2b1f379a708994d876d95b
   background-size: cover; 
   width: 100%;
   height: 50vh;
@@ -83,10 +64,6 @@
   text-transform: uppercase;
   color: #212121;
   padding: 15px;
-<<<<<<< HEAD
-=======
-  
->>>>>>> 35457be6ed03cc25ba2b1f379a708994d876d95b
   font-weight: bold;
   font-size: 45px;
   border: 1px solid #212121;
