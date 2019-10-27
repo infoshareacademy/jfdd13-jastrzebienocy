@@ -7,7 +7,8 @@
   body {
   margin: 0;
   padding: 0;
-  }
+  background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%);
+}
   
   .wrapperBig {
   max-width: 100%;
@@ -118,8 +119,10 @@
 }
 
 .newsBox{
-  height: 60vh;
-  background: url("Images/newsBack.png") no-repeat center;
+  
+  background: url("Images/news2.png") no-repeat center;
+  
+ 
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -190,9 +193,10 @@
 }
 /*Team*/
 #team {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding: 20px;
-  background: #DCEDC8;
+  background: #8BC34A;
+  /* background: #DCEDC8; */
   }
   .team {
   display: flex;
