@@ -276,7 +276,7 @@ a:nth-child(5):hover{
   
   /* Images for functionality -JK */
   .main-content img {
-  margin: 40px 10px;
+  margin: 40px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
