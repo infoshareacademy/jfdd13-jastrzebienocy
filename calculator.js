@@ -11,29 +11,129 @@
 // const accountQuantity = quantity;
 // const timeOfSubscription = time;
 // const price = 99;
+// const priceA = 99;
+// const priceT = 99;
 
-function priceCalculationAccount (accQuantity) {
-    const price = 99;
+// Próba kalkulowania
+// function priceCalculationAccount (accQuantity) {
+//     const priceA = 99;
+//     if(accQuantity >= 1 && accQuantity <= 4) {
+//         // const price = 99;
+//         console.log(priceA + ' PLN per account');
+//         // return price;
+//     } else if(accQuantity >= 5 && accQuantity <= 9) {
+//         const priceA1 = (priceA - (priceA * 0.05));
+//         console.log(priceA1 + ' PLN per account');
+//         // return price - (price* 0.05);
+//     } else {
+//         const priceA2 = (priceA - (priceA * 0.07));
+//         console.log(priceA2 + ' PLN per account');
+//         // return price - (price * 0.07);
+//     }
+// }
+// //Subscription calculation in months
+
+// function priceCalculationTime(timeOfSubscription) {
+//     const priceT = 99;
+//     if (timeOfSubscription > 0 && timeOfSubscription <= 12) {
+//         console.log(priceT +   ' PLN per account');
+//         // return price1  + ' PLN per account';
+//     } else if(timeOfSubscription > 12 && timeOfSubscription <= 24) {
+//         const priceT1 = priceT - (priceT * 0.05);
+//         console.log(priceT1 + 'PLN per account');
+//         // return pricet1  + ' PLN per account';
+//     } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+//         const priceT2 = priceT - (priceT * 0.1);
+//         console.log(priceT2 + 'PLN per account');
+//         // return pricet1  + ' PLN per account';
+//     } else  {
+//         const priceT3 = priceT - (priceT * 0.15);
+//         console.log(priceT3 + 'PLN per account');
+//         // return pricet1  + ' PLN per account';
+//     }
+// }
+
+function priceCalculation (accQuantity, timeOfSubscription) {
+    const priceA = 99;
+    let priceA1 = priceA - (priceA * 0.05);
+    let priceA2 = priceA - (priceA * 0.07);    
+
+    const priceT = 99;
+    let priceT1 = priceT - (priceT * 0.05);
+    let priceT2 = priceT - (priceT * 0.1);
+    let priceT3 = priceT - (priceT * 0.15)
+
     if(accQuantity >= 1 && accQuantity <= 4) {
-        // const price = 99;
-        console.log(price + ' PLN per account');
-        // return price;
-    } else if(accQuantity >= 5 && accQuantity <= 9) {
-        const price1 = (price - (price * 0.05));
-        console.log(price1 + ' PLN per account');
-        // return price - (price* 0.05);
+        if(timeOfSubscription >= 0 && timeOfSubscription <= 12){
+            let finalPrice = (priceA + priceT)/2;
+            console.log(finalPrice.toFixed(2) + 'PLN per account');
+        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+            // let priceT1 = priceT - (priceT * 0.05)
+            // console.log(priceT1);       
+            finalPrice = (priceA + priceT1)/2; 
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+            // let priceT2 = priceT - (priceT * 0.1)
+            console.log(priceT2);       
+            finalPrice = (priceA + priceT2)/2; 
+            console.log(finalPrice.toFixed(2) + ' PLN per account '); 
+        } else {
+            // let priceT3 = priceT - (priceT * 0.15)
+            // console.log(priceT3);       
+            finalPrice = (priceA + priceT3)/2; 
+            console.log(finalPrice.toFixed(2) + ' PLN per account '); 
+        }
+    } else if (accQuantity >= 5 && accQuantity <= 9) {
+        // let priceA1 = (priceA - (priceA * 0.05));
+        if(timeOfSubscription >= 0 && timeOfSubscription <= 12) {
+            // let priceA1 = (priceA - (priceA * 0.05));
+            // console.log(priceA1);
+            finalPrice = (priceA1 + priceT)/2;
+            console.log(priceA1);
+            console.log(priceT);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');
+        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+            finalPrice = (priceA1 + priceT1)/2; 
+            console.log(priceA1);
+            console.log(priceT1);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+            finalPrice = (priceA1 + priceT2)/2;
+            console.log(priceA1);
+            console.log(priceT2);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        } else  {
+            finalPrice = (priceA1 + priceT3)/2;
+            console.log(priceA1);
+            console.log(priceT3);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        }
     } else {
-        const price2 = (price - (price * 0.07));
-        console.log(price2 + ' PLN per account');
-        // return price - (price * 0.07);
+        if(timeOfSubscription >= 0 && timeOfSubscription <= 12) {
+            // let priceA1 = (priceA - (priceA * 0.05));
+            // console.log(priceA1);
+            finalPrice = (priceA2 + priceT)/2;
+            console.log(priceA2);
+            console.log(priceT);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');
+        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+            finalPrice = (priceA2 + priceT1)/2; 
+            console.log(priceA2);
+            console.log(priceT1);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+            finalPrice = (priceA2 + priceT2)/2;
+            console.log(priceA2);
+            console.log(priceT2);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        } else  {
+            finalPrice = (priceA2 + priceT3)/2;
+            console.log(priceA2);
+            console.log(priceT3);
+            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
+        }
     }
-}
-//Subscription calculation in months
-
-function priceCalculationTime(timeOfSubscription) {
-    if (timeOfSubscription > 0 && )
-}
-
+};
 
 // Calculator:
 // class Subsctiption {
@@ -54,4 +154,4 @@ function priceCalculationTime(timeOfSubscription) {
  
 // range.on('input', function(){
 //     value.html(this.value);
-// });
+// })
