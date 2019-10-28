@@ -29,20 +29,19 @@
 </nav>
 
 <section class="hero" id="hero">
-<div class="heroTitle">
-<h1>Don't waste your food!</h1>
-</div>
-<div class="heroText">
-Dane Organizacji Narodów Zjednoczonych do spraw Wyżywienia i Rolnictwa
-wskazują, że marnujemy rocznie 1,3 miliarda ton żywności. Jest to
-strata ok. 1/3 produkowanej żywności w czasach, gdy aż 821 milionów
-ludzi na świecie głoduje.
-<br /><br />
-STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
-<p>co możesz z tym zrobić!</p>
-
-<a href="#newsletter">Zapisz się już dziś do newslettera, aby być z nami na bieżąco!</a>
-</div>
+  <div class="heroTitle">
+    <h1>Don't waste your food!</h1>
+  </div>
+  <div class="heroText">
+    Dane Organizacji Narodów Zjednoczonych do spraw Wyżywienia i Rolnictwa
+    wskazują, że marnujemy rocznie 1,3 miliarda ton żywności. Jest to
+    strata ok. 1/3 produkowanej żywności w czasach, gdy aż 821 milionów
+    ludzi na świecie głoduje.
+    <br />
+    STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, co masz z tym zrobić!<br />
+    <p>Bądź z nami na bieżąco</p>
+    <a href="#newsletter" id="hover">Zapisz się!</a>
+  </div>
 </section>
 
 <section class="function" id="what">
@@ -52,30 +51,30 @@ STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
+                <!-- <div class="numbertext">1 / 4</div> -->
                 <!-- <img src="14584.jpg" style="width:100%"> -->
                 <div class="i-tag"> <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i></div>
-                <div class="text">Caption Text</div>
+                
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
+                <!-- <div class="numbertext">2 / 4</div> -->
                 <!-- <img src="OKLG6T0.jpg" style="width:100%"> -->
                 <div class="i-tag"><i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i></div>
-                <div class="text">Caption Two</div>
+                
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
+                <!-- <div class="numbertext">3 / 4</div> -->
                 <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
                 <div class="i-tag"><i class="fas fa-book"> WYBIERZ PRZEPIS</i></div>
-                <div class="text">Caption Three</div>
+                
             </div>
             <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
+                <!-- <div class="numbertext">4 / 4</div> -->
                 <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
                 <div class="i-tag"><i class="fas fa-star-half-alt"> OCEŃ PRZEPIS</i></div>
-                <div class="text">Caption Three</div>
+                
             </div>
 
             <!-- Next and previous buttons -->
@@ -276,12 +275,12 @@ var slideIndex = 1;
 manualSlides(slideIndex);
 
 
-//  const mouse = document.querySelector('.slideshow-container');
+
  const wrapper = document.querySelector('.wrapper');
 
  wrapper.addEventListener("mouseenter", manualSlides);
  wrapper.addEventListener("mouseleave", autoSlides);
-//  mouse.addEventListener("mouseover", manualSlides);
+
 
 var timeOut;
 
