@@ -6,12 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kalkulator Subskrypcji</title>
     <link rel="stylesheet" href="./calculator.css">
+    <style> 
+  
+            .rangeslider{ 
+                width: 50%; 
+            } 
+              
+            .myslider { 
+                -webkit-appearance: none; 
+                background: #FCF3CF  ; 
+                width: 50%; 
+                height: 20px; 
+                opacity: 2; 
+               } 
+              
+              
+            .myslider::-webkit-slider-thumb { 
+                -webkit-appearance: none; 
+                cursor: pointer; 
+                background: #34495E  ; 
+                width: 5%; 
+                height: 20px; 
+            } 
+              
+              
+            .myslider:hover { 
+                opacity: 1; 
+            } 
+              
+            </style> 
+            
 </head>
 <body>
-    <div class="range-slider">
-        <input type="range" name="range" id="range" step="1" class="input-range" minmax="(1, 10)">
-        <span class="rangeg-value" >Value</span>
-    </div>
+        <!-- <div class="row">
+            <div class="small-10 columns">
+                <div class="range-slider" data-slider data-options="display_selector: #days-off-count; initial: 28;">
+                <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                <span class="range-slider-active-segment"></span>
+                </div>
+            </div>
+            <div class="small-2 columns">
+                <input type="number" id="days-off-count" value="28" />
+            </div>
+        </div> -->
+
+        <p>Use the slider to increment or decrement value.</p> 
+          
+        <div class="rangeslider"> 
+          <input type="range" min="1" max="100" value="10"
+                          class="myslider" id="sliderRange"> 
+          <p>Value: <span id="demo"></span></p> 
+        </div> 
+
+
+        <script> 
+                var rangeslider = document.getElementById("sliderRange"); 
+                var output = document.getElementById("demo"); 
+                output.innerHTML = rangeslider.value; 
+                  
+                rangeslider.oninput = function() { 
+                  output.innerHTML = this.value; 
+                } 
+                </script> 
+
     <script src="./calculator.js"></script>
 </body>
 </html>

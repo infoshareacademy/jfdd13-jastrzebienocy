@@ -155,3 +155,7 @@ function priceCalculation (accQuantity, timeOfSubscription) {
 // range.on('input', function(){
 //     value.html(this.value);
 // })
+
+
+
+// Trying code of slider
