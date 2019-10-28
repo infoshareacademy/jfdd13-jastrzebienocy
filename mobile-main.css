@@ -1,0 +1,39 @@
+@media only screen and (max-width: 400px) {
+    .footer-box-mobile .footer-links {
+        width: 100%;
+        text-align: center;
+        line-height: 2em;
+        text-decoration: none;
+        color: #000;
+        order: 1;
+        display: block;
+        margin: 0 auto;
+    }
+    .footer-box-mobile .copywright {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+/* Main content - mobile */
+    .main-content-mobile {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+    }
+    .main-content-mobile img{
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+    }
+    .main-content-mobile h4 {
+        margin: 5px auto;
+        font-size: 0.9em;
+    }
+    .main-content-mobile p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1px;
+        font-size: 0.8em;
+    }
+}

@@ -1,132 +1,129 @@
 /** Whole page width */
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-  width: 1200px;
-  max-width: 1200px;
-  margin: 0 auto;
-  
-  
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  max-width: 100%;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-
-  header {
-    margin: 0 auto;
-    text-align: center;
-    background: #f3fbe8;
+  /* margin: 0 auto; */
   }
- 
-  /* Navigation*/
   
+  body {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%); */
+}
+  
+  .wrapperBig {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+  
+  header {
+  margin: 0 auto;
+  text-align: center;
+  background: #f3fbe8;
+  }
+  /* Navigation*/
   nav {
-    z-index: 1;
-    font-family: 'Oswald', sans-serif;
- }
- 
- .nav-container {
+  z-index: 1;
+  font-family: 'Oswald', sans-serif;
+  }
+  
+.nav-container {
   font-family: 'Oswald', sans-serif; 
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #8BC34A;
-    height: auto;    
-    z-index: 5;
- }
-
- .nav-container a {  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8BC34A;
+  height: auto; 
+  z-index: 5;
+}
+  
+.nav-container a { 
   font-family: 'Oswald', sans-serif; 
   font-weight: bold;
   color: #212121;
   font-size: 24px;
   text-decoration: none;
   padding: 20px;
- }
+}
 
 /*hero section*/
 .hero {
-  background: url(Images/hero3.png) no-repeat;
-  background-size: cover; 
-  
-  height: 50vh;
-  margin: 50px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  
-  background-size: cover;
+    background: url(/food\ waste-Filip3.png) no-repeat center;
+    background-size: cover; 
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
 }
-
-.heroTitle {
+  
+  .heroTitle {
+  position: relative;
+  top: -12px;  
   text-transform: uppercase;
   color: #212121;
-  padding: 15px;
-  /*text-shadow: 2px 2px 1px #212121;*/
+  padding: 0 15px;
   font-weight: bold;
   font-size: 45px;
   border: 1px solid #212121;
-  width: 50%;
+  line-height: 20px;
+  font-family: oswald;
+  }
   
-}
-
 .heroText {
   color: #212121;
   text-align: center;
   font-weight: bold;
-  background-color: rgba(248, 247, 238, 0.5);
   padding: 10px; 
-  max-width: 90%;
+  max-width: 67%;
   font-size: 20px;
+  font-family: sans-serif;
 }
   
 .hero a{
+  position: relative;
+  top: -60px;
   text-decoration: none;
   color: #212121;
-  padding: 20px;
+  padding: 10px;
   background: transparent;
   font-size: 14px;
+  border: 1px solid #212121;
 }
 
 .hero p {
+  position: relative;
+  top: -40px;
   color: #757575;
   text-decoration: none;
   font-size: 32px;
-  padding: 20px;
+  padding: 10px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
 }
 
-.hero a {
+#hover:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+#hover:active {
+  color: red;
+}
+
+#hover:visited {
   color: #212121;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px;
-  
 }
 
 .newsBox{
-  height: 60vh;
-  background: url("Images/newsBack.png") no-repeat center;
+  
+  background: url("Images/news2.png") no-repeat center;
+  background-size: cover;
+  
+ 
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -154,12 +151,11 @@ body {
   text-decoration: none;
   color: inherit;
   display: flex;
-  justify-content: center;
-  border: 1px solid #212121;
-  border-radius: 20px;
+  flex-direction: row;
+  }
   
 
-}
+
 
 
 
@@ -198,45 +194,41 @@ body {
 }
 /*Team*/
 #team {
-  
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding: 20px;
   background: #DCEDC8;
- }
- 
- .team {
+  }
+  .team {
   display: flex;
- }
-
- .teamText {
+  justify-content: center;
+  }
+  
+  .teamText {
   font-family: 'Oswald', sans-serif; 
   margin: 15px auto;
   text-align: center;
   font-size: 18px;
   line-height: 34px;
-
- }
- 
- .teamFigure {
+  
+  }
+  .teamFigure {
   font-family: 'Open Sans', sans-serif;
-}
-
-.teamFigure figcaption {
+  }
+  
+  .teamFigure figcaption {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-}
-
+  }
   
   /* .teamEach a {
   text-decoration: none;
   color: #212121;
-} */
-.teamEach h3 {
+  } */
+  .teamEach h3 {
   width:17%;
-}
-
-
-.teamFigure img {
+  }
+  
+  .teamFigure img {
   border-radius: 50%;
   border:2px solid #757575;
   margin: 20px;
@@ -260,21 +252,21 @@ body {
   grid-template-columns: 1fr 2fr 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
   text-align: left;
-}
-
-/* Images for functionality -JK */
-.main-content img {
-  margin: 40px auto;
+  }
+  
+  /* Images for functionality -JK */
+  .main-content img {
+  margin: 40px 10px;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-}
-
-/* The only text part for now - JK */
-.main-content h4 {
+  }
+  
+  /* The only text part for now - JK */
+  .main-content h4 {
   margin-bottom: 10px;
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Oswald', sans-serif; 
   letter-spacing: 2px;
   font-weight: bold;
   text-decoration: underline;
@@ -287,10 +279,10 @@ body {
   letter-spacing: 1px;
   font-size: 0.95em;
   padding: 5px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -300,93 +292,36 @@ body {
 }
 
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1200px;
-  position: relative;
-  margin: auto;
-  height: 520px;
-  width: 100%;
-  background: url("Images/tlo.png");
-  padding: 30px 0;
-  margin-bottom: 30px;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  color: #FFC107;
-  font-size: 40px;
-  height: 520px;
-  padding: 190px;
-  text-align: center;
-  
-  
-}
-.fridge{
-  /* background: url(photo-slides/fridge/fridge.jpg) no-repeat; */
-  color: #ffc107;
-  justify-content: center;
- }
- .scale{
- /* background: url(photo-slides/waga/scaleFinal.jpg) no-repeat; */
-  color: #ffc107;
-  background-position: 56% 50%;
- }
- .recipe{
- /* background: url(photo-slides/recipe/recipeFinal.jpg) no-repeat; */
- color: #ffc107;
- background-position: 50% 50%;
- }
- .rank{
- /* background: url(photo-slides/gesler\ gordon/ramseyFinal.jpg) no-repeat; */
- color: #ffc107;
- }
- .funktion-Container{
- height: 520px;
- width: 100%;
- background: url("Images/tlo.png");
- padding: 30px 0;
- margin-bottom: 30px;
- }
- .slideContainer{
- display: flex;
- height: 50vh;
- width: 100%;
- flex-direction: row;
- animation: slide 20s ease-in-out infinite;
- }
- /* slides container */
- .funktion {
- width: 400vw;
- }
- /* single slide */
- .slide {
- align-self: center;
- width: 100vw;
- font-size: 25px;
- }
 
 /* Footer styles */
-.bottom {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  border-top: 1px solid #000;
+.footer-box {
+  height: 2em;
+  margin: 0 20px;
+  font-size: 0.9em;
+  font-family: 'Open Sans', sans-serif;
 }
-.bottom a {
-  justify-content: flex-start;
-  text-decoration: none;
-  margin: 10px;
-  color: #4e4e4e;
+/* Copywrights */
+.copywright {
+  color: #757575;
   line-height: 2em;
+  float: left;
 }
+/* Privacy policy and contact styles - JK*/
+.footer-links {
+  line-height: 2em;
+  margin-left: 10px;
+  float: right;
+  text-decoration: none;
+  color: #000;
 
-.bottom span {
-  justify-content: center;
 }
-
-/* Polityka prywatności - footer */
+.footer-links:hover {
+  background-color: #757575;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+/* Privacy policy style - JK*/
 .prywatnosc {
   text-align: center;
   margin: 2em;
@@ -408,4 +343,75 @@ body {
 
 .policy-text p:last-child{
   padding-bottom: 10px;
+}
+
+
+/* .flip-container {
+	perspective: 1000px;
+} */
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+    
+	}
+
+/* .flip-container, .frontFlipper, .backFlipper {
+	width: 320px;
+	height: 480px;
+} */
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+
+.backFlipper {
+  position: absolute;
+  bottom: 63px;
+  left: 60px;
+  background: #8BC34A;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  /* right: 50px; */
+}
+
+
+/* hide back of pane during swap */
+/* .frontFlipper, .backFlipper {
+	/* backface-visibility: hidden; */
+
+	/* position: absolute; */
+	/* top: 0;
+	left: 0; */
+/* } */ */
+
+/* front pane, placed above back */
+.frontFlipper {
+	/* z-index: 2; */
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.backFlipper {
+  transform: rotateY(180deg);
+  
+}
+
+#team > div.team.flip-container > div > div > a:nth-child(2) > i {
+  position: absolute;
+  top: 50px;
+  left: 90px; 
+}
+
+#team > div.team.flip-container > div > div > a:nth-child(1) > i {
+  position: absolute;
+  left: 30px;
+  top: 50px; 
 }
