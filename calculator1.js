@@ -1,20 +1,19 @@
-// const input = document.querySelectorAll('input');
+const input = document.querySelectorAll('input');
 
 let getTimeOfSubscription = () => {
-    const input = document.querySelectorAll('input');
-    if (input[1]) {
+    // const input = document.querySelectorAll('input');
+    if (input[1].checked) {
         timeOfSubscription = 12;
         // return timeOfSubscription;
-        console.log(timeOfSubscription);
-        
-    } else if (input[2]) {
+        console.log(timeOfSubscription);       
+    } else if (input[2].checked) {
         timeOfSubscription = 24;
         // return timeOfSubscription;
         console.log(timeOfSubscription);
-    } else if (input[3]) {
+    } else if (input[3].checked) {
         timeOfSubscription = 36;
         return timeOfSubscription;
-    } else if (input[4]) {
+    } else if (input[4].checked) {
         timeOfSubscription = 37;
         // return timeOfSubscription;
         console.log(timeOfSubscription);
@@ -27,8 +26,9 @@ let getAccQuantity = () => {
   
   
   
-  function priceCalculation (timeOfSubscription) {
+  function priceCalculation () {
       accQuantity = getAccQuantity();
+      timeOfSubscription = getTimeOfSubscription();
       // const accQuantity = output.innerText;
       // let accQuantity = document.getElementById("quantity").innerText; 
   
@@ -50,7 +50,7 @@ let getAccQuantity = () => {
               // console.log(priceT1);       
               finalPrice = (priceA + priceT1)/2; 
               console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-          } else if (timeOfSubscription > 24 && timeOfSubscription < 36) {
+          } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
               // let priceT2 = priceT - (priceT * 0.1)
               console.log(priceT2);       
               finalPrice = (priceA + priceT2)/2; 
