@@ -7,7 +7,11 @@
   body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   /* background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%); */
+=======
+  
+>>>>>>> 3c07431f7ec9e63dbfd413ad46e3a1ee42bd2492
 }
   
   .wrapperBig {
@@ -36,6 +40,8 @@
   background: #8BC34A;
   height: auto; 
   z-index: 5;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
   
 .nav-container a { 
@@ -47,11 +53,38 @@
   padding: 20px;
 }
 
+/* nav-buttons hover*/
+a:nth-child(1):hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+a:nth-child(2):hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+a:nth-child(3):hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+a:nth-child(4):hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+a:nth-child(5):hover{
+  text-decoration: underline;
+  color: blue;
+}
+
 /*hero section*/
 .hero {
     background: url(/food\ waste-Filip3.png) no-repeat center;
     background-size: cover; 
     width: 100%;
+    min-height: 600px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -61,15 +94,15 @@
 }
   
   .heroTitle {
+  text-align: center;
   position: relative;
-  top: -12px;  
+  top: auto;  
   text-transform: uppercase;
   color: #212121;
   padding: 0 15px;
   font-weight: bold;
   font-size: 45px;
   border: 1px solid #212121;
-  line-height: 20px;
   font-family: oswald;
   }
   
@@ -78,7 +111,7 @@
   text-align: center;
   font-weight: bold;
   padding: 10px; 
-  max-width: 67%;
+  max-width: 50%;
   font-size: 20px;
   font-family: sans-serif;
 }
@@ -105,17 +138,10 @@
   text-shadow: 1px 2px 1px #212121;
 }
 
+/*newsletter - hover*/
 #hover:hover {
   text-decoration: underline;
-  color: red;
-}
-
-#hover:active {
-  color: red;
-}
-
-#hover:visited {
-  color: #212121;
+  color: blue;
 }
 
 .newsBox{
@@ -196,7 +222,15 @@
 #team {
   /* margin-top: 30px; */
   padding: 20px;
+<<<<<<< HEAD
   background: #DCEDC8;
+=======
+  
+  background: #f3fbe8;
+  }
+  .team {
+  display: flex;
+>>>>>>> 3c07431f7ec9e63dbfd413ad46e3a1ee42bd2492
   }
   /* .team {
     display: grid;
@@ -257,7 +291,7 @@
   
   /* Images for functionality -JK */
   .main-content img {
-  margin: 40px 10px;
+  margin: 40px auto;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
