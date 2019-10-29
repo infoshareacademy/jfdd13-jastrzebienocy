@@ -52,8 +52,16 @@
 //         // return pricet1  + ' PLN per account';
 //     }
 // }
+const output = document.getElementById("quantity"); 
+// Trying code of slider calc connection
+const rangeslider = document.getElementById("sliderRange"); 
+// const output = document.getElementById("quantity"); 
+output.innerHTML = rangeslider.value; 
+  
+rangeslider.oninput = function() { 
+  output.innerHTML = this.value; 
 
-function priceCalculation (accQuantity, timeOfSubscription) {
+function priceCalculation (output, timeOfSubscription) {
     const priceA = 99;
     let priceA1 = priceA - (priceA * 0.05);
     let priceA2 = priceA - (priceA * 0.07);    
@@ -158,4 +166,11 @@ function priceCalculation (accQuantity, timeOfSubscription) {
 
 
 
-// Trying code of slider
+// Trying code of slider calc connection
+const rangeslider = document.getElementById("sliderRange"); 
+// const output = document.getElementById("quantity"); 
+output.innerHTML = rangeslider.value; 
+  
+rangeslider.oninput = function() { 
+  output.innerHTML = this.value; 
+} 
