@@ -52,16 +52,21 @@
 //         // return pricet1  + ' PLN per account';
 //     }
 // }
-const output = document.getElementById("quantity"); 
-// Trying code of slider calc connection
-const rangeslider = document.getElementById("sliderRange"); 
-// const output = document.getElementById("quantity"); 
-output.innerHTML = rangeslider.value; 
-  
-rangeslider.oninput = function() { 
-  output.innerHTML = this.value; 
 
-function priceCalculation (output, timeOfSubscription) {
+// const accQuantity = output.innerText;
+// var accQuantity = output.innerText;
+
+let getAccQuantity = () => {
+  return document.getElementById("quantity").innerText;
+}
+
+
+
+function priceCalculation (timeOfSubscription) {
+    accQuantity = getAccQuantity();
+    // const accQuantity = output.innerText;
+    // let accQuantity = document.getElementById("quantity").innerText; 
+
     const priceA = 99;
     let priceA1 = priceA - (priceA * 0.05);
     let priceA2 = priceA - (priceA * 0.07);    
@@ -72,7 +77,7 @@ function priceCalculation (output, timeOfSubscription) {
     let priceT3 = priceT - (priceT * 0.15)
 
     if(accQuantity >= 1 && accQuantity <= 4) {
-        if(timeOfSubscription >= 0 && timeOfSubscription <= 12){
+        if(timeOfSubscription >= 1 && timeOfSubscription <= 12){
             let finalPrice = (priceA + priceT)/2;
             console.log(finalPrice.toFixed(2) + 'PLN per account');
         } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
@@ -80,7 +85,7 @@ function priceCalculation (output, timeOfSubscription) {
             // console.log(priceT1);       
             finalPrice = (priceA + priceT1)/2; 
             console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+        } else if (timeOfSubscription > 24 && timeOfSubscription < 36) {
             // let priceT2 = priceT - (priceT * 0.1)
             console.log(priceT2);       
             finalPrice = (priceA + priceT2)/2; 
@@ -141,6 +146,9 @@ function priceCalculation (output, timeOfSubscription) {
             console.log(finalPrice.toFixed(2) + ' PLN per account ');        
         }
     }
+    // let accQuantity = () => {
+    //     return document.getElementById("quantity").innerText;
+    // };
 };
 
 // Calculator:
@@ -167,10 +175,4 @@ function priceCalculation (output, timeOfSubscription) {
 
 
 // Trying code of slider calc connection
-const rangeslider = document.getElementById("sliderRange"); 
-// const output = document.getElementById("quantity"); 
-output.innerHTML = rangeslider.value; 
-  
-rangeslider.oninput = function() { 
-  output.innerHTML = this.value; 
-} 
+
