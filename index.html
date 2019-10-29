@@ -39,7 +39,7 @@
     <br />
     STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, co masz z tym zrobić!<br /><br />
     <p>Bądź z nami na bieżąco</p>
-    <a href="#newsletter" id="hover">Zapisz się!</a>
+    <a href="#newsletter" ><button id="hero-hover">Zapisz się!</button></a>
   </div>
 </section>
 
@@ -253,7 +253,10 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
   <!--     </div> -->
     </div>
+    <div id="cookies"></div>
   </footer>
+
+
 
 <script>
 window.onscroll = function () {
@@ -332,6 +335,37 @@ function autoSlides() {
   clearTimeout(timeOut);
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 
+
+/* Cookie */autoSlideIndex$(document).ready(function() { 
+
+  $('.notification').show();    
+              $('#close').click(function(){  
+
+                $('.notification').hide();    
+
+              });
+  function checkCookie() {
+      var cookieset = getCookie("_checkCookie");
+
+      if (cookieset!="") {
+
+          $('.notification').hide();    
+
+      }else{
+
+          $('.notification').hide();    
+
+          if (cookieset != "" && cookieset != null) {
+
+
+
+            setCookie("_checkCookie", cookieset, 365);
+          }
+      }
+  } 
+  checkCookie();
+  
+});
 
 
 </script>
