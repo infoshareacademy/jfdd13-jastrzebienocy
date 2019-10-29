@@ -7,7 +7,7 @@
   body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%);
+  
 }
   
   .wrapperBig {
@@ -217,8 +217,8 @@ a:nth-child(5):hover{
 #team {
   /* margin-top: 30px; */
   padding: 20px;
-  background: #8BC34A;
-  /* background: #DCEDC8; */
+  
+  background: #f3fbe8;
   }
   .team {
   display: flex;
