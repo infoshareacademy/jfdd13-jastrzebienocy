@@ -39,7 +39,7 @@
     <br />
     STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, co masz z tym zrobić!<br /><br />
     <p>Bądź z nami na bieżąco</p>
-    <a href="#newsletter" ><button id="hero-hover">Zapisz się!</button></a>
+    <a href="#newsletter" id="hover">Zapisz się!</a>
   </div>
 </section>
 
@@ -144,7 +144,6 @@
     </div>
 
     <!-- <img src="./functionality-images/update-recipy.png" alt="Update your recipy/ies" />
-
     <div class="main-text">
       <h4>Aktualizuj przepis</h4>
       <p>Po zalogowaniu użytkownik będzie miał możliwość aktualizacji
@@ -277,18 +276,15 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
 
 </div>
 </section>
-  <footer >
+  <footer >
     <div class="footer-box footer-box-mobile">
-      <span class="copywright">&copy 2019 Food Waste</span>
+      <span class="copywright">&copy 2019 Food Waste</span>
       <!-- <div class="footer-links"> -->
-      <a class="footer-links" href="#team">Kontakt</a></span>
+      <a class="footer-links" href="#team">Kontakt</a></span>
       <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
-  <!--     </div> -->
+  <!--     </div> -->
     </div>
-    <div id="cookies"></div>
-  </footer>
-
-
+  </footer>
 
 <script>
 window.onscroll = function () {
@@ -303,21 +299,12 @@ navbar.classList.add("sticky");
 navbar.classList.remove("sticky");
 }
 }
-
-
 var slideIndex = 1;
 manualSlides(slideIndex);
-
-
-
  const wrapper = document.querySelector('.wrapper');
-
  wrapper.addEventListener("mouseenter", manualSlides);
  wrapper.addEventListener("mouseleave", autoSlides);
-
-
 var timeOut;
-
  
         // Next/previous controls
 function plusSlides(n) {
@@ -346,14 +333,8 @@ function plusSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
   }
-
-
-
   var autoSlideIndex = 0;
 autoSlides(autoSlideIndex);
-
-
-
 function autoSlides() {
   
   var i;
@@ -367,39 +348,6 @@ function autoSlides() {
   clearTimeout(timeOut);
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 
-
-/* Cookie */autoSlideIndex$(document).ready(function() { 
-
-  $('.notification').show();    
-              $('#close').click(function(){  
-
-                $('.notification').hide();    
-
-              });
-  function checkCookie() {
-      var cookieset = getCookie("_checkCookie");
-
-      if (cookieset!="") {
-
-          $('.notification').hide();    
-
-      }else{
-
-          $('.notification').hide();    
-
-          if (cookieset != "" && cookieset != null) {
-
-
-
-            setCookie("_checkCookie", cookieset, 365);
-          }
-      }
-  } 
-  checkCookie();
-  
-});
-
-
 </script>
 
 </body>
