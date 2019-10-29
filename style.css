@@ -89,15 +89,15 @@ a:nth-child(5):hover{
     padding: 20px 0;
 }
   
-  .heroTitle {
+  .heroTitle h1 {
   text-align: center;
   position: relative;
   top: auto;  
   text-transform: uppercase;
   color: #212121;
-  padding: 0 15px;
+  padding: 25px 15px;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 60px;
   border: 1px solid #212121;
   font-family: oswald;
   }
@@ -107,7 +107,7 @@ a:nth-child(5):hover{
   text-align: center;
   font-weight: bold;
   padding: 10px; 
-  max-width: 50%;
+  max-width: 36%;
   font-size: 20px;
   font-family: sans-serif;
 }
@@ -119,8 +119,6 @@ a:nth-child(5):hover{
   color: #212121;
   padding: 10px;
   background: transparent;
-  font-size: 14px;
-  border: 1px solid #212121;
 }
 
 .hero p {
@@ -129,15 +127,24 @@ a:nth-child(5):hover{
   color: #757575;
   text-decoration: none;
   font-size: 32px;
-  padding: 10px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
 }
 
 /*newsletter - hover*/
-#hover:hover {
+#hero-hover{
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 20px;
+  width: 20%;
+  text-align: center;
+  background-color: #689F38;
+  border: 1px solid;
+}
+
+#hero-hover:hover {
   text-decoration: underline;
-  color: blue;
+  color: #FFC107;
 }
 
 .newsBox{
@@ -364,3 +371,4 @@ a:nth-child(5):hover{
 .policy-text p:last-child{
   padding-bottom: 10px;
 }
+
