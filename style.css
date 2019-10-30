@@ -345,6 +345,7 @@ a:nth-child(5):hover{
 .footer-links:hover {
   background-color: #757575;
   color: #fff;
+  text-decoration: none;
   border-radius: 5px;
   padding: 0 5px;
 }
