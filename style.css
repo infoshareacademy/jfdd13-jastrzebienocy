@@ -7,7 +7,7 @@
   body {
   margin: 0;
   padding: 0;
-  
+  background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%);
 }
   
   .wrapperBig {
@@ -150,7 +150,6 @@ a:nth-child(5):hover{
 .newsBox{
   
   background: url("Images/news2.png") no-repeat center;
-  background-size: cover;
   
  
   padding: 30px;
@@ -225,13 +224,12 @@ a:nth-child(5):hover{
 #team {
   /* margin-top: 30px; */
   padding: 20px;
-  background: #DCEDC8;
+  background: #8BC34A;
+  /* background: #DCEDC8; */
   }
-  /* .team {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-  } */
+  .team {
+  display: flex;
+  }
   
   .teamText {
   font-family: 'Oswald', sans-serif; 
@@ -254,14 +252,13 @@ a:nth-child(5):hover{
   text-decoration: none;
   color: #212121;
   } */
-  /* .teamEach h3 {
+  .teamEach h3 {
   width:17%;
-  } */
+  }
   
   .teamFigure img {
   border-radius: 50%;
   border:2px solid #757575;
-  margin: 20px;
 }
 
 
@@ -286,7 +283,7 @@ a:nth-child(5):hover{
   
   /* Images for functionality -JK */
   .main-content img {
-  margin: 40px auto;
+  margin: 40px 10px;
   border: 2px groove #689F38;
   border-radius: 50%;
   width: 100px;
@@ -318,7 +315,7 @@ a:nth-child(5):hover{
   left: 0;
   right: 0;
   width: 100%;
-  
+  height: 40px;
 }
 
 
@@ -375,152 +372,3 @@ a:nth-child(5):hover{
   padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
-=======
-
- .flip-container {
-	  display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* text-align: center; */
-} 
-
-/* .teamNames {
-  display: grid;
-    grid-template-columns: repeat(4, 1fr);
-} */
-
-.teamNames {
-  text-align: center;
-}
-
-	/* flip the pane when hovered */
-	.flipper1:hover {
-    transform: rotateY(180deg);
-    
-  }
-  
-  .flipper:hover {
-    transform: rotateY(180deg);
-    
-  }
-  
-  .flipper2:hover {
-    transform: rotateY(180deg);
-    
-  }
-
-  .flipper3:hover {
-    transform: rotateY(180deg);
-    
-  }
-
-
-
-  /* .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-    
-	}  */
-
-/* .flip-container, .frontFlipper, .backFlipper {
-	width: 320px;
-	height: 480px;
-} */
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.5s;
-  
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.flipper1 {
-	transition: 0.5s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.flipper2 {
-	transition: 0.5s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.flipper3 {
-	transition: 0.5s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-.backFlipper {
-  position: absolute;
-  bottom: 25px;
-  left: 20px;
-  background: #DCEDC8;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  backface-visibility: hidden;
-  /* right: 50px; */
-}
-
-/* front pane, placed above back */
-.frontFlipper {
-	/* z-index: 2; */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.backFlipper {
-  transform: rotateY(180deg);
-  /* z-index: 3; */
-}
-
-#team > div.team > div > div.flipper > div > a:nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 90px; 
-}
-
-#team > div.team > div > div.flipper > div > a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px; 
-}
-
-#team > div.team > div > div.flipper1 > div > a:nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 90px; 
-}
-
-#team > div.team > div > div.flipper1 > div > a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px; 
-}
-
-#team > div.team > div > div.flipper2 > div > a:nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 90px; 
-}
-
-#team > div.team > div > div.flipper2 > div > a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px; 
-}
-
-#team > div.team > div > div.flipper3 > div > a:nth-child(1) {
-  position: absolute;
-  top: 50px;
-  left: 90px; 
-}
-
-#team > div.team > div > div.flipper3 > div > a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px; 
-}
->>>>>>> 36a029a7517aad506eed38804ba75a00b9af10f0
