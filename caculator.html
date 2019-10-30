@@ -52,30 +52,40 @@
 
         <p>Use the slider to increment or decrement value.</p> 
           
-        <div class="rangeslider"> 
-          <input type="range" min="1" max="10" value="1"
-                          class="myslider" id="sliderRange"> 
-          <p>Value: <span id="quantity"></span></p> 
+        <div class="range-slider"> 
+            <p>Kalkulator Subskrypcji:</p>
+            <input type="range" min="1" max="10" value="1"
+                            class="myslider" id="sliderRange"> 
+            <div id="info" class="info-box">
+                <label for="quantity" class="quantity-label">Ilość kont:</label>
+                <span  id="quantity" class="quantity"></span>
+                <span id="message" class="quantity-message"></span> 
+            </div>
+            
+            <div class="main-months">
+                <label for="months" class="general">Ilość miesięcy:</label>
+                <label for="one-year">do 12</label>
+                <input type="radio" name="months one-year" id="months" class="months">
+                <label for="second-year">do 24</label>
+                <input type="radio" name="months second-year" id="months" class="months">
+                <label for="third-year">do 36</label>
+                <input type="radio" name="months third-year" id="months" class="months"> 
+                <label for="fourth-year">37 wzwyż</label>
+                <input type="radio" name="months fourth-year" id="months" class="months">
+            </div>
         </div> 
-        <div class="months" id="months">
-            <label for="months">Ilość miesięcy:</label>
-            <input type="radio" name="months" id="months" class=""> 0 - 12
-            <input type="radio" name="months" id="months" class=""> 12 - 24
-            <input type="radio" name="months" id="months" class=""> 24 - 36
-            <input type="radio" name="months" id="months" class=""> 36 i więcej
-        </div>
 
         
 
 
         <script> 
-            const rangeslider = document.getElementById("sliderRange"); 
-            let output = document.getElementById("quantity"); 
-            output.innerHTML = rangeslider.value; 
+            // const rangeslider = document.getElementById("sliderRange"); 
+            // let output = document.getElementById("quantity"); 
+            // output.innerHTML = rangeslider.value; 
                 
-            rangeslider.oninput = function() { 
-            output.innerHTML = this.value; 
-            } 
+            // rangeslider.oninput = function() { 
+            // output.innerHTML = this.value; 
+            // } 
         </script> 
 
     <!-- <script src="./calculator.js"></script> -->

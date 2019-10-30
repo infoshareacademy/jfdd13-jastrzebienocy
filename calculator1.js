@@ -1,22 +1,43 @@
-const input = document.querySelectorAll('input');
+// Slider module - 
+
+const rangeslider = document.getElementById("sliderRange"); 
+let output = document.getElementById("quantity"); 
+output.innerHTML = rangeslider.value; 
+    
+rangeslider.oninput = function() { 
+output.innerHTML = this.value; 
+msg();
+} 
+
+
+const input = document.querySelectorAll('#months');
 
 let getTimeOfSubscription = () => {
     // const input = document.querySelectorAll('input');
-    if (input[1].checked) {
+    if (input[0].checked) {
         timeOfSubscription = 12;
         // return timeOfSubscription;
         console.log(timeOfSubscription);       
-    } else if (input[2].checked) {
+    } else if (input[1].checked) {
         timeOfSubscription = 24;
         // return timeOfSubscription;
         console.log(timeOfSubscription);
-    } else if (input[3].checked) {
+    } else if (input[2].checked) {
         timeOfSubscription = 36;
         return timeOfSubscription;
-    } else if (input[4].checked) {
+    } else if (input[3].checked) {
         timeOfSubscription = 37;
         // return timeOfSubscription;
         console.log(timeOfSubscription);
+    }
+}
+const msg =  () => {
+    // let message = document.querySelector('#message').innerText = ' i więcej';
+    if (rangeslider.value == 10) {
+        let message = document.querySelector('#message').innerText = ' i więcej.';
+        return message;
+    } else if  (rangeslider.value < 10) {
+        message = document.querySelector('#message').innerText = ' ';
     }
 }
 // Kolejny element  - czas trwania subskrypcji
@@ -111,7 +132,4 @@ let getAccQuantity = () => {
               console.log(finalPrice.toFixed(2) + ' PLN per account ');        
           }
       }
-      // let accQuantity = () => {
-      //     return document.getElementById("quantity").innerText;
-      // };
   };
