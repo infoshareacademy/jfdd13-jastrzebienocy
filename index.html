@@ -257,7 +257,12 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
     <div id="cookies"></div>
   </footer>
 
+<!--cookies-->
+<div id="cookieAcceptBar" class="cookieAcceptBar">
+  Before browse our site, please accept our <a href="#">cookies policy</a><br> <button id="cookieAcceptBarConfirm" class="btn btn-success">Accept and close this alert</button>
+</div>
 
+<script src="cookies.js"></script>
 
 <script>
 window.onscroll = function () {
@@ -337,36 +342,7 @@ function autoSlides() {
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 
 
-/* Cookie */autoSlideIndex$(document).ready(function() { 
 
-  $('.notification').show();    
-              $('#close').click(function(){  
-
-                $('.notification').hide();    
-
-              });
-  function checkCookie() {
-      var cookieset = getCookie("_checkCookie");
-
-      if (cookieset!="") {
-
-          $('.notification').hide();    
-
-      }else{
-
-          $('.notification').hide();    
-
-          if (cookieset != "" && cookieset != null) {
-
-
-
-            setCookie("_checkCookie", cookieset, 365);
-          }
-      }
-  } 
-  checkCookie();
-  
-});
 
 
 </script>
