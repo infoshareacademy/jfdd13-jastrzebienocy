@@ -7,11 +7,7 @@
   body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  /* background: linear-gradient(to bottom, #f3fbe8 0%,#8BC34A 100%); */
-=======
   
->>>>>>> 36a029a7517aad506eed38804ba75a00b9af10f0
 }
   
   .wrapperBig {
@@ -345,6 +341,7 @@ a:nth-child(5):hover{
 .footer-links:hover {
   background-color: #757575;
   color: #fff;
+  text-decoration: none;
   border-radius: 5px;
   padding: 0 5px;
 }
