@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Food waste</title>
-<link rel="stylesheet" href="style.css" />
+<link rel='stylesheet' media='screen and (max-width: 420px)' href='mobile.css' />
+<link rel="stylesheet" media='screen and (min-width: 421px)'href="style.css" />
 <link rel="stylesheet" href="style-slides.css">
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="./mobile-main.css">
+
 </head>
 
 <body>
@@ -20,12 +21,18 @@
 </header>
 
 <nav id="navbar" class="nav-container">
-
-<a href="#hero">Food Waste</a>
-<a href="#what">Z czym to się je?</a>
-<a href="#whatNext">I co dalej?</a>
-<a href="#newsletter">Newsletter</a>
-<a href="#team">Team</a>
+  <img src="./Images/LOGO.png"  />
+  <div id="myLinks">
+    <a href="#hero">Food Waste</a>
+    <a href="#what">Z czym to się je?</a>
+    <a href="#whatNext">I co dalej?</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#team">Team</a>
+  </div>
+    <a href="javascript:void(0);" class="nav-toggler" onclick="toggleMenu()">
+    <i class="fas fa-bars fa-2x"></i>
+    </a>
+</button>
 
 </nav>
 
@@ -205,6 +212,7 @@
 </div>
 </form>
 </section>
+</section>
 <section id="team">
 <div class="teamText">
 <h2>Nasz zespół:</h2>
@@ -215,35 +223,67 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
 </p>
 </div>
 <div class="team">
-<figure class="teamFigure">
-<img src="Images/kinga.png" width="150px" height="150px" alt="zdjecie" />
-<figcaption>Kinga Zawarczyńska</figcaption>
-</figure>
-<!-- <a href="https://github.com/Kinga-Zawarczynska"> -->
+  <div class="flip-container">
+  <div class="flipper">
+    <div class="teamFigure frontFlipper">
+      <img src="Images/kinga.png" width="200px" height="200px" alt="zdjecie" />
+    
+    </div >
+    
+    <div class="backFlipper">
+    <a href="https://github.com/Kinga-Zawarczynska" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
 
-<!-- <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
-<figure class="teamFigure">
-<img src="Images/jakub.png" width="150px" height="150px" alt="zdjecie" />
-<figcaption>Jakub Kruszyński</figcaption>
-</figure>
-<!-- <a href="https://github.com/Kruchy1980"> -->
-<!-- <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i -->
-<!-- class="fab fa-linkedin fa-5x"></i></a> -->
-<figure class="teamFigure">
-<img src="Images/filip.png" width="150px" height="150px" alt="zdjecie" />
-<figcaption>Filip Siwiec</figcaption>
-</figure>
-<!-- <a href="https://github.com/FilipSiwiec"> </a> -->
-<!-- <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i -->
-<!-- class="fab fa-linkedin fa-5x"></i></a> -->
-<!-- <div class="teamEach"> </div>-->
+    <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>    
+  </div>
+   
+  <div class="flipper1">
+      <div  class="teamFigure frontFlipper">
+          <img src="Images/jakub.png" width="200px" height="200px" alt="zdjecie" />
+          
+      </div >
+      
+    <div class="backFlipper">
+      <a href="https://github.com/Kruchy1980" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+  
+      <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>    
+  </div>
 
-<figure class="teamFigure">
-<img src="Images/adam.jpeg" width="150px" height="150px" alt="zdjecie" />
-<figcaption>Adam Toczko</figcaption>
-</figure>
-<!-- <a href="https://github.com/AdamToczko" target="blank"></a> -->
-<!-- <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
+
+  <div class="flipper2">
+      <div  class="teamFigure frontFlipper">
+          <img src="Images/filip.png" width="200px" height="200px" alt="zdjecie" />
+          
+      </div >
+      
+    <div class="backFlipper">
+      <a href="https://github.com/FilipSiwiec" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+  
+      <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>    
+  </div>
+  
+  <div class="flipper3">
+      <div  class="teamFigure frontFlipper">
+          <img src="Images/adam.jpeg" width="200px" height="200px" alt="zdjecie" />
+    
+      </div >
+      
+    <div class="backFlipper">
+      <a href="https://github.com/AdamToczko" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+  
+      <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>    
+  </div>
+
+  <span class="teamNames">Kinga Zawarczyńska</span>
+  <span class="teamNames">Jakub Kruszyński</span>
+  <span class="teamNames">Filip Siwiec</span>
+  <span class="teamNames"> Adam Toczko</spann>
+
+
+
 </div>
 </section>
   <footer >
@@ -260,6 +300,19 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
 
 
 <script>
+function toggleMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    x.classList.add('navColumn')
+  }
+}
+
+
+
+
 window.onscroll = function () {
 myFunction();
 };
@@ -367,6 +420,9 @@ function autoSlides() {
   checkCookie();
   
 });
+
+
+
 
 
 </script>
