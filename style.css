@@ -50,7 +50,7 @@
 }
 
 /* nav-buttons hover*/
-a:nth-child(1):hover{
+/* a:nth-child(1):hover{
   text-decoration: underline;
   color: blue;
 }
@@ -73,7 +73,7 @@ a:nth-child(4):hover{
 a:nth-child(5):hover{
   text-decoration: underline;
   color: blue;
-}
+} */
 
 /*hero section*/
 .hero {
@@ -336,12 +336,11 @@ a:nth-child(5):hover{
   float: right;
   text-decoration: none;
   color: #000;
-
 }
 .footer-links:hover {
   background-color: #757575;
   color: #fff;
-  text-decoration: none;
+  /* text-decoration: none; */
   border-radius: 5px;
   padding: 0 5px;
 }
