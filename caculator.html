@@ -13,7 +13,8 @@
             } 
               
             .myslider { 
-                -webkit-appearance: none; 
+                /* appearance: none; */
+                /* -webkit-appearance: none;  */
                 background: #FCF3CF  ; 
                 width: 50%; 
                 height: 20px; 
@@ -22,7 +23,8 @@
               
               
             .myslider::-webkit-slider-thumb { 
-                -webkit-appearance: none; 
+                /* -webkit-appearance:listbox;  */
+                appearance: none;
                 cursor: pointer; 
                 background: #34495E  ; 
                 width: 5%; 
@@ -65,30 +67,28 @@
             <div class="main-months">
                 <label for="months" class="general">Ilość miesięcy:</label>
                 <label for="one-year">do 12</label>
-                <input type="radio" name="months one-year" id="months" class="months">
+                <input type="radio" name="months" id="months" class="months-first" checked>
                 <label for="second-year">do 24</label>
-                <input type="radio" name="months second-year" id="months" class="months">
+                <input type="radio" name="months" id="months" class="months-second">
                 <label for="third-year">do 36</label>
-                <input type="radio" name="months third-year" id="months" class="months"> 
+                <input type="radio" name="months" id="months" class="months-third"> 
                 <label for="fourth-year">37 wzwyż</label>
-                <input type="radio" name="months fourth-year" id="months" class="months">
+                <input type="radio" name="months" id="months" class="months-fourth">
+
+            </div>
+            <div class="calculation-elements">
+                <input type="button" value="Oblicz" class="calculate-btn">
+                <div class="calculation-output"></div>
             </div>
         </div> 
 
         
 
 
-        <script> 
-            // const rangeslider = document.getElementById("sliderRange"); 
-            // let output = document.getElementById("quantity"); 
-            // output.innerHTML = rangeslider.value; 
-                
-            // rangeslider.oninput = function() { 
-            // output.innerHTML = this.value; 
-            // } 
-        </script> 
+
 
     <!-- <script src="./calculator.js"></script> -->
-    <script src="./calculator1.js"></script>
+    <!-- <script src="./calculator1.js"></script> -->
+    <script src="./calculator2.js"></script>
 </body>
 </html>
