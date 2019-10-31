@@ -14,7 +14,8 @@
     margin: 0 auto;
   }
 
- 
+ /* HEADER I NAVIGACJA  */
+
   header {
     max-height: 150px;
     margin: 0 auto;
@@ -54,6 +55,7 @@
         align-items: flex-end;
         background: #f3fbe8;
       }
+      
      .nav-container a { 
         font-family: 'Oswald', sans-serif; 
         font-weight: bold;
@@ -93,6 +95,31 @@
     color: white;
   }
 
+
+  /* Jak to dziala to jest problem z otwieraniem menu
+  The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* SEKCJA HERO */
+
+  #hero-hover{
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 40%;
+    text-align: center;
+    background-color: #DCEDC8;
+    border: 1px solid;
+  }
+
+
   .hero {
     background: url(/food\ waste-Filip3.png) no-repeat center;
     background-size: cover; 
@@ -115,13 +142,40 @@
   font-size: 20px;
   line-height: 40px;
   font-family: sans-serif;
+  margin-left: 13px;
+  margin-right: 25px;
 }
 
 
+/* SEKCJA SLAJDY */
 
+.slideshow-container {
+  background: url(Images/tlo.png) repeat;
+  width: 100%;
+  height: 520px;
+  position: relative;
+  margin: auto;
+  
+}
 
+.prev,
+  .next {
+  display: none;
+  }
 
-
+.i-tag {
+  font-size: 40px;
+    
+    text-align: center;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    /* color: #FFC107; */
+    color: #212121;
+    font-family: 'Oswald';
+}
 
 
 
