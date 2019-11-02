@@ -22,7 +22,8 @@ let output = document.getElementById('quantity')
 output.innerHTML = rangeslider.value
 rangeslider.oninput = function () {
   output.innerHTML = this.value
-  msg()
+  msg();
+  priceCalculation ();
 }
 
 //-------------------------------------------------------
@@ -38,19 +39,25 @@ let getAccQuantity = () => {
 // Get time of Subsccriptions function
 let getTimeOfSubscription = () => {
   // const input = document.querySelectorAll('input');
-  if (input[0].checked) {
-    timeOfSubscription = 12
+  if (input[0].checked || input[0].onclick) {
+
+    timeOfSubscription = 12;
+    // rangeslider.set('value', 1);
     return timeOfSubscription;
+
     // console.log(timeOfSubscription);
   } else if (input[1].checked) {
+    // rangeslider.value = 1;
     timeOfSubscription = 24
     return timeOfSubscription;
     // console.log(timeOfSubscription);
   } else if (input[2].checked) {
+    // rangeslider.value = 1;
     timeOfSubscription = 36
     return timeOfSubscription
     // console.log(timeOfSubscription);
   } else if (input[3].checked) {
+    // rangeslider.value = 1;
     timeOfSubscription = 37
     return timeOfSubscription;
     // console.log(timeOfSubscription);
@@ -75,35 +82,36 @@ function priceCalculation () {
     timeOfSubscription = getTimeOfSubscription();
 // } 
     if (accQuantity >= 1 && accQuantity <= 4) {
-      
+      // rangeslider.set('value', 1);
       if (timeOfSubscription >= 1 && timeOfSubscription <= 12) {
         finalPrice = (priceA + priceT)/2;
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+        console.log(priceA);
+        console.log(priceT);
         console.log(finalPrice.toFixed(2) + 'PLN per account')
+        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+
       } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-        // let priceT1 = priceT - (priceT * 0.05)
-        // console.log(priceT1);
         finalPrice = (priceA + priceT1) / 2
+        console.log(priceA);
+        console.log(priceT1);
         console.log(finalPrice.toFixed(2) + ' PLN per account ')
         calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+
       } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-        // let priceT2 = priceT - (priceT * 0.1)
-        console.log(priceT2)
         finalPrice = (priceA + priceT2) / 2
+        console.log(priceA);
+        console.log(priceT2);
         console.log(finalPrice.toFixed(2) + ' PLN per account ')
         calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 37){
-        // let priceT3 = priceT - (priceT * 0.15)
-        // console.log(priceT3);
+      } else if (timeOfSubscription > 36){
         finalPrice = (priceA + priceT3) / 2
+        console.log(priceA);
+        console.log(priceT3);
         console.log(finalPrice.toFixed(2) + ' PLN per account ')
         calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
       }
     } else if (accQuantity >= 5 && accQuantity <= 9) {
-      // let priceA1 = (priceA - (priceA * 0.05));
       if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-        // let priceA1 = (priceA - (priceA * 0.05));
-        // console.log(priceA1);
         finalPrice = (priceA1 + priceT) / 2
         console.log(priceA1)
         console.log(priceT)
@@ -120,7 +128,8 @@ function priceCalculation () {
         console.log(priceA1)
         console.log(priceT2)
         console.log(finalPrice.toFixed(2) + ' PLN per account ')
-      } else {
+        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+      } else if (timeOfSubscription > 36) {
         finalPrice = (priceA1 + priceT3) / 2
         console.log(priceA1)
         console.log(priceT3)
@@ -129,8 +138,6 @@ function priceCalculation () {
       }
     } else {
       if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-        // let priceA1 = (priceA - (priceA * 0.05));
-        // console.log(priceA1);
         finalPrice = (priceA2 + priceT) / 2
         console.log(priceA2)
         console.log(priceT)
@@ -148,7 +155,7 @@ function priceCalculation () {
         console.log(priceT2)
         console.log(finalPrice.toFixed(2) + ' PLN per account ');
         calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else {
+      } else if (timeOfSubscription > 36) {
         finalPrice = (priceA2 + priceT3) / 2
         console.log(priceA2)
         console.log(priceT3)
