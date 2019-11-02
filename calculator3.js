@@ -24,6 +24,7 @@ rangeslider.oninput = function () {
   output.innerHTML = this.value
   msg();
   priceCalculation ();
+  // clicker();
 }
 
 //-------------------------------------------------------
@@ -32,43 +33,46 @@ rangeslider.oninput = function () {
 //Functions
 // Account Quantity of calcualator
 let getAccQuantity = () => {
-  return document.getElementById('quantity').innerText
+  return document.getElementById('quantity').innerText;
 }
 
 
 // Get time of Subsccriptions function
 let getTimeOfSubscription = () => {
   // const input = document.querySelectorAll('input');
-  if (input[0].checked || input[0].onclick) {
-
+  if (input[0].checked) {
+    // clicker();
     timeOfSubscription = 12;
     // rangeslider.set('value', 1);
     return timeOfSubscription;
-
+    
     // console.log(timeOfSubscription);
   } else if (input[1].checked) {
+    // clicker();
     // rangeslider.value = 1;
     timeOfSubscription = 24
     return timeOfSubscription;
     // console.log(timeOfSubscription);
   } else if (input[2].checked) {
+    // clicker();
     // rangeslider.value = 1;
     timeOfSubscription = 36
     return timeOfSubscription
     // console.log(timeOfSubscription);
   } else if (input[3].checked) {
+    // clicker();
     // rangeslider.value = 1;
-    timeOfSubscription = 37
-    return timeOfSubscription;
+    timeOfSubscription = 37;
+    rangeslider.value = '1';
+    return (timeOfSubscription);
     // console.log(timeOfSubscription);
   }
 }
-
-// let checkedInput = () => {
-//     if (input[0] == input[0].checked) {
-//         rangeslider.set('value', 1);
-//     }
-// }
+// Function wchich resets the dlider to beggining position
+let resetSlider = () => {
+  rangeslider.value = 1;
+  // rangeslider.set('value', '1');
+};
 // Message in account Quntity output
 const msg = () => {
   // let message = document.querySelector('#message').innerText = ' i więcej';

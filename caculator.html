@@ -41,7 +41,7 @@
 </head>
 <body>
 
-
+<!-- 
         <p>Use the slider to increment or decrement value.</p> 
           
         <div class="range-slider"> 
@@ -69,7 +69,7 @@
             <div class="calculation-elements">
                 <div class="calculation-output"></div>
             </div>
-        </div> 
+        </div>  -->
 
         
 
@@ -79,6 +79,106 @@
     <!-- <script src="./calculator.js"></script> -->
     <!-- <script src="./calculator1.js"></script> -->
     <!-- <script src="./calculator2.js"></script> -->
-    <script src="./calculator3.js"></script>
+    <!-- <script src="./calculator3.js"></script> -->
+    <script type = "text/javascript">
+
+        var popUpObj;
+    
+        function showModalPopUp()
+    
+        {
+    
+        popUpObj=window.open("PopUp.aspx",
+    
+        "ModalPopUp",
+    
+        "toolbar=no," +
+    
+        "scrollbars=no," +
+    
+        "location=no," +
+    
+        "statusbar=no," +
+    
+        "menubar=yes," +
+    
+        "resizable=0," +
+    
+        "width=100," +
+    
+        "height=100," +
+    
+        "left = 490," +
+    
+        "top=300"
+    
+        );
+    
+        popUpObj.focus();
+    
+        LoadModalDiv();
+    
+        }
+        // Second function
+        function LoadModalDiv()
+
+    {
+
+        var bcgDiv = document.getElementById("divBackground");
+
+        bcgDiv.style.display="block";
+
+        if (bcgDiv != null)
+
+        {         
+
+            if (document.body.clientHeight > document.body.scrollHeight)
+
+            {
+
+                bcgDiv.style.height = document.body.clientHeight + "px";
+
+            }
+
+            else
+
+            {
+
+                bcgDiv.style.height = document.body.scrollHeight + "px" ;
+
+            }
+
+            bcgDiv.style.width = "100%";
+
+        }
+
+    }
+    //third function
+    function HideModalDiv()
+
+{
+
+   var bcgDiv = document.getElementById("divBackground");
+
+   bcgDiv.style.display="none";
+
+}
+//fourth function
+function OnClose()
+
+{
+
+  if(window.opener != null && !window.opener.closed) 
+
+  {
+
+     window.opener.HideModalDiv();
+
+  }
+
+}
+
+window.onunload = OnClose;
+    </script>
 </body>
 </html>
