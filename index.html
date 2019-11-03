@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Food waste</title>
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="style-slides.css">
+<link rel='stylesheet' media='screen and (max-width: 420px)' href='mobile.css' />
+<link rel="stylesheet" media='screen and (min-width: 421px)'href="style.css" />
+<!-- <link rel="stylesheet" href="style-slides.css" > -->
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="./mobile-main.css">
+
 </head>
 
 <body>
@@ -18,13 +19,20 @@
 <header>
 <img src="./Images/LOGO.png" />
 </header>
-<nav id="navbar" class="nav-container">
 
-<a href="#hero">Food Waste</a>
-<a href="#what">Z czym to się je?</a>
-<a href="#whatNext">I co dalej?</a>
-<a href="#newsletter">Newsletter</a>
-<a href="#team">Team</a>
+<nav id="navbar" class="nav-container">
+  <img src="./Images/LOGO.png"  />
+  <div id="myLinks">
+    <a href="#hero">Food Waste</a>
+    <a href="#what">Z czym to się je?</a>
+    <a href="#whatNext">I co dalej?</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#team">Team</a>
+  </div>
+    <a href="javascript:void(0);" class="nav-toggler" onclick="toggleMenu()">
+    <i class="fas fa-bars fa-2x"></i>
+    </a>
+</button>
 
 </nav>
 
@@ -39,7 +47,7 @@
     <br />
     STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, co masz z tym zrobić!<br /><br />
     <p>Bądź z nami na bieżąco</p>
-    <a href="#newsletter" id="hover">Zapisz się!</a>
+    <a href="#newsletter" ><button id="hero-hover">Zapisz się!</button></a>
   </div>
 </section>
 
@@ -204,6 +212,7 @@
 </div>
 </form>
 </section>
+</section>
 <section id="team">
 <div class="teamText">
 <h2>Nasz zespół:</h2>
@@ -285,9 +294,35 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
   <!--     </div> -->
     </div>
+    <div id="cookies"></div>
   </footer>
 
+
+
 <script>
+function toggleMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    x.classList.add('navColumn')
+  }
+}
+
+// chcialem dodac zeby menu sie otwieralo on scroll
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     document.getElementById("myLinks").style.top = "0";
+//   } else {
+//     document.getElementById("myLinks").style.top = "-50px";
+//   }
+// }
+
+
+
 window.onscroll = function () {
 myFunction();
 };
@@ -327,7 +362,7 @@ function plusSlides(n) {
   }
   
   function manualSlides(n) {
-   
+    console.log('manualSlides');
     clearTimeout(timeOut);
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -352,7 +387,7 @@ autoSlides(autoSlideIndex);
 
 
 function autoSlides() {
-  
+  console.log('autoSlides');
   var i;
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
@@ -364,6 +399,40 @@ function autoSlides() {
   clearTimeout(timeOut);
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 
+
+/* Cookie */autoSlideIndex$(document).ready(function() { 
+
+  $('.notification').show();    
+              $('#close').click(function(){  
+
+                $('.notification').hide();    
+
+              });
+  function checkCookie() {
+      var cookieset = getCookie("_checkCookie");
+
+      if (cookieset!="") {
+
+          $('.notification').hide();    
+
+      }else{
+
+          $('.notification').hide();    
+
+          if (cookieset != "" && cookieset != null) {
+
+
+
+            setCookie("_checkCookie", cookieset, 365);
+          }
+      }
+  } 
+  checkCookie();
+  
+});
+
+
+
 
 
 </script>
