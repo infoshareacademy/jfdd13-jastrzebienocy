@@ -23,7 +23,7 @@ output.innerHTML = rangeslider.value
 rangeslider.oninput = function () {
   output.innerHTML = this.value
   msg();
-  priceCalculation ();
+  priceCalculation();
   // clicker();
 }
 
@@ -45,7 +45,7 @@ let getTimeOfSubscription = () => {
     timeOfSubscription = 12;
     // rangeslider.set('value', 1);
     return timeOfSubscription;
-    
+
     // console.log(timeOfSubscription);
   } else if (input[1].checked) {
     // clicker();
@@ -63,7 +63,7 @@ let getTimeOfSubscription = () => {
     // clicker();
     // rangeslider.value = 1;
     timeOfSubscription = 37;
-    rangeslider.value = '1';
+    // rangeslider.value = '1';
     return (timeOfSubscription);
     // console.log(timeOfSubscription);
   }
@@ -87,90 +87,90 @@ const msg = () => {
 //-------------------------------------------------------------
 // Main full function of calculator
 
-function priceCalculation () {
-    accQuantity = getAccQuantity();
-    timeOfSubscription = getTimeOfSubscription();
-// } 
-    if (accQuantity >= 1 && accQuantity <= 4) {
-      // rangeslider.set('value', 1);
-      if (timeOfSubscription >= 1 && timeOfSubscription <= 12) {
-        finalPrice = (priceA + priceT)/2;
-        console.log(priceA);
-        console.log(priceT);
-        console.log(finalPrice.toFixed(2) + 'PLN per account')
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+function priceCalculation() {
+  accQuantity = getAccQuantity();
+  timeOfSubscription = getTimeOfSubscription();
+  // } 
+  if (accQuantity >= 1 && accQuantity <= 4) {
+    // rangeslider.set('value', 1);
+    if (timeOfSubscription >= 1 && timeOfSubscription <= 12) {
+      finalPrice = (priceA + priceT) / 2;
+      console.log(priceA);
+      console.log(priceT);
+      console.log(finalPrice.toFixed(2) + 'PLN per account')
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
 
-      } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-        finalPrice = (priceA + priceT1) / 2
-        console.log(priceA);
-        console.log(priceT1);
-        console.log(finalPrice.toFixed(2) + ' PLN per account ')
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+      finalPrice = (priceA + priceT1) / 2
+      console.log(priceA);
+      console.log(priceT1);
+      console.log(finalPrice.toFixed(2) + ' PLN per account ')
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
 
-      } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-        finalPrice = (priceA + priceT2) / 2
-        console.log(priceA);
-        console.log(priceT2);
-        console.log(finalPrice.toFixed(2) + ' PLN per account ')
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 36){
-        finalPrice = (priceA + priceT3) / 2
-        console.log(priceA);
-        console.log(priceT3);
-        console.log(finalPrice.toFixed(2) + ' PLN per account ')
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      }
-    } else if (accQuantity >= 5 && accQuantity <= 9) {
-      if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-        finalPrice = (priceA1 + priceT) / 2
-        console.log(priceA1)
-        console.log(priceT)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-        finalPrice = (priceA1 + priceT1) / 2
-        console.log(priceA1)
-        console.log(priceT1)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-        finalPrice = (priceA1 + priceT2) / 2
-        console.log(priceA1)
-        console.log(priceT2)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ')
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 36) {
-        finalPrice = (priceA1 + priceT3) / 2
-        console.log(priceA1)
-        console.log(priceT3)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      }
-    } else {
-      if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-        finalPrice = (priceA2 + priceT) / 2
-        console.log(priceA2)
-        console.log(priceT)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-        finalPrice = (priceA2 + priceT1) / 2
-        console.log(priceA2)
-        console.log(priceT1)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-        finalPrice = (priceA2 + priceT2) / 2
-        console.log(priceA2)
-        console.log(priceT2)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      } else if (timeOfSubscription > 36) {
-        finalPrice = (priceA2 + priceT3) / 2
-        console.log(priceA2)
-        console.log(priceT3)
-        console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
-      }
-    } 
+    } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+      finalPrice = (priceA + priceT2) / 2
+      console.log(priceA);
+      console.log(priceT2);
+      console.log(finalPrice.toFixed(2) + ' PLN per account ')
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 36) {
+      finalPrice = (priceA + priceT3) / 2
+      console.log(priceA);
+      console.log(priceT3);
+      console.log(finalPrice.toFixed(2) + ' PLN per account ')
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    }
+  } else if (accQuantity >= 5 && accQuantity <= 9) {
+    if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
+      finalPrice = (priceA1 + priceT) / 2
+      console.log(priceA1)
+      console.log(priceT)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+      finalPrice = (priceA1 + priceT1) / 2
+      console.log(priceA1)
+      console.log(priceT1)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+      finalPrice = (priceA1 + priceT2) / 2
+      console.log(priceA1)
+      console.log(priceT2)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ')
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 36) {
+      finalPrice = (priceA1 + priceT3) / 2
+      console.log(priceA1)
+      console.log(priceT3)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    }
+  } else {
+    if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
+      finalPrice = (priceA2 + priceT) / 2
+      console.log(priceA2)
+      console.log(priceT)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
+      finalPrice = (priceA2 + priceT1) / 2
+      console.log(priceA2)
+      console.log(priceT1)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
+      finalPrice = (priceA2 + priceT2) / 2
+      console.log(priceA2)
+      console.log(priceT2)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    } else if (timeOfSubscription > 36) {
+      finalPrice = (priceA2 + priceT3) / 2
+      console.log(priceA2)
+      console.log(priceT3)
+      console.log(finalPrice.toFixed(2) + ' PLN per account ');
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN per account';
+    }
+  }
 };
