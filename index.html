@@ -254,17 +254,32 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
   <!--     </div> -->
     </div>
-    <div id="cookies"></div>
+
+
+    <div class="cookie-banner">
+      <div class="cookie-container">
+        <p>Wykorzystuję pliki cookies w celu prawidłowego działania strony, korzystania z 
+          narzędzi marketingowych i analitycznych, zapewniania funkcji społecznościowych 
+          oraz systemu komentarzy. Czy zgadzasz się na wykorzystywanie plików cookies?</p>
+          <button class="cookie-button"><a>Akceptuję</a></button>
+      </div>
+    </div>
   </footer>
 
-<!--cookies-->
-<div id="cookieAcceptBar" class="cookieAcceptBar">
-  Before browse our site, please accept our <a href="#">cookies policy</a><br> <button id="cookieAcceptBarConfirm" class="btn btn-success">Accept and close this alert</button>
-</div>
-
 <script src="cookies.js"></script>
-
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
 <script>
+  
+function toggleMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    x.classList.add('navColumn')
+  }
+}
+
 window.onscroll = function () {
 myFunction();
 };
@@ -341,9 +356,6 @@ function autoSlides() {
   clearTimeout(timeOut);
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 
-
-
-
 
 </script>
 

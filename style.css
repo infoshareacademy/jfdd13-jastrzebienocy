@@ -373,41 +373,47 @@ a:nth-child(5):hover{
 .policy-text p:last-child{
   padding-bottom: 10px;
 }
+
+
+#team > div.team > div > div.flipper3 > div > a:nth-child(2) {
+position: absolute;
+left: 30px;
+top: 50px; 
+}
+
 /*cookies*/
-
-* {
-  font-family: sans-serif;
-}
-
-.cookieAcceptBar {
-  display:none;
-  position: fixed;
-  top: 50%;
-  left:0;
-  right: 0;
-  text-align: center;
+.cookie-banner {
+  font: 0.8em Arial;
   background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  z-index: 99999;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.9;
+  
+  
+  
 }
 
-.cookieAcceptBar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+.cookie-container a{
+  color: slategrey;
+  
 }
 
-.cookieAcceptBarConfirm{
-  cursor: pointer;
-  border: none;
-  background-color: #2387c0;
-  color: #fff;
-  text-transform: uppercase;
-  margin-top: 10px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
+.cookie-container{
+  margin: 0 auto;
+  width: 70%;
+  padding: 15px;
+  color: #f0f0f0;
+}
+
+.cookie-button {
+  background-color: #ccc;
+  color: #333;
+  text-decoration-line: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
 }
