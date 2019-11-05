@@ -107,7 +107,13 @@
 
         .myslider {
             padding-top: 5px;
+            width: 40%;
+            margin: 12px auto;
         }
+
+        /* input[type="range" i] {
+            height: 10px;
+        } */
 
         /*  Account Quantity Style */
 
