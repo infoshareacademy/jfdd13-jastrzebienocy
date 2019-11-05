@@ -1,0 +1,79 @@
+        .modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            text-align: center;
+        }
+
+        .modal-calculator-text {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 1.4em;
+            font-family: "Oswald";
+            background-color: green;
+            border-radius: 20px;
+            width: 80%;
+        }
+
+        .month-quantity-text, .account-quantity-text {
+            margin: 10px auto;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 1rem 1.5rem;
+            width: 24rem;
+            border-radius: 0.5rem;
+        }
+
+        .close-button {
+            float: right;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            background-color: lightgray;
+        }
+
+        .close-button:hover {
+            background-color: darkgray;
+        }
+
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+
+        .trigger {
+            line-height: 1.8em;
+            margin-left: 10px;
+            /* float: left; */
+            display: inline;
+            font-size: 1em;
+            border: 1px solid rgb(98, 212, 21);
+            padding: 4px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #000;
+            background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+        }
+
+        .trigger:hover {
+            background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+        }

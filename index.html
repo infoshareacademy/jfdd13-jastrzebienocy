@@ -8,6 +8,7 @@
 <title>Food waste</title>
 <link rel='stylesheet' media='screen and (max-width: 420px)' href='mobile.css' />
 <link rel="stylesheet" media='screen and (min-width: 421px)'href="style.css" />
+<link rel="stylesheet" href="./modal-calculator.css">
 <!-- <link rel="stylesheet" href="style-slides.css" > -->
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
@@ -292,13 +293,43 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       <!-- <div class="footer-links"> -->
       <a class="footer-links" href="#team">Kontakt</a></span>
       <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
+          <a href="#" class="trigger trigger-mobile">Kalkulator subskrypcji !</a>
+          <div class="modal modal-mobile">
+            <div class="modal-content">
+              <span class="close-button">×</span>
+              <p class="modal-calculator-text">Oblicz cenę subskrypcji !</p>
+              <div class="range-slider">
+                <input type="range" min="1" max="10" value="1" class="myslider" id="sliderRange" />
+                <div id="info" class="info-box">
+                  <label for="quantity" class="account-quantity-text">Ilość kont:</label>
+                  <span id="quantity" class="quantity"></span>
+                  <span id="message" class="quantity-message"></span>
+                </div>
+          
+                <div class="main-months">
+                  <div class="month-quantity-text">Ilość miesięcy:</div>
+                  <label for="one-year">do 12</label>
+                  <input type="radio" name="months" id="months" class="months-first" checked />
+                  <label for="second-year">do 24</label>
+                  <input type="radio" name="months" id="months" class="months-second" />
+                  <label for="third-year">do 36</label>
+                  <input type="radio" name="months" id="months" class="months-third" />
+                  <label for="fourth-year">powyżej 36</label>
+                  <input type="radio" name="months" id="months" class="months-fourth" />
+                </div>
+                <div class="calculation-elements">
+                  <div class="calculation-output"></div>
+                </div>
+              </div>
+            </div>
+          </div>
   <!--     </div> -->
     </div>
     <div id="cookies"></div>
   </footer>
 
 
-
+<script src="./calculator3.js"></script>
 <script>
 function toggleMenu() {
   var x = document.getElementById("myLinks");
