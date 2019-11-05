@@ -331,20 +331,21 @@ a:nth-child(5):hover {
   margin: 0 20px;
   font-size: 0.9em;
   font-family: 'Open Sans', sans-serif;
+  border-top: 1px solid #000;
 }
 
 /* Copywrights */
 
 .copywright {
   color: #757575;
-  line-height: 2em;
+  line-height: 3em;
   float: left;
 }
 
 /* Privacy policy and contact styles - JK*/
 
 .footer-links {
-  line-height: 2em;
+  line-height: 3em;
   margin-left: 10px;
   float: right;
   text-decoration: none;
