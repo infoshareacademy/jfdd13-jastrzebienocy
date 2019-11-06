@@ -165,12 +165,12 @@ nav {
   height: 100px;
 }
 
-.main-content img {
+/* .main-content img {
   margin: 50px;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-}
+} */
 
 /* The only text part for now - JK */
 .main-content h4 {
@@ -393,6 +393,7 @@ p {
   line-height: 1.6em;
   float: left;
   margin: 1.4em 20px;
+  font-size: 1.1em;
 }
 
 /* Privacy policy and contact styles - JK*/
@@ -403,6 +404,7 @@ p {
   text-decoration: none;
   color: #000;
   margin: 1.4em 20px;
+  font-size: 1.1em;
 }
 
 .footer-links:hover {
