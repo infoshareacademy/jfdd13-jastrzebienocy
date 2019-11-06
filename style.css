@@ -21,8 +21,11 @@ header {
   text-align: center;
   background: #f3fbe8;
 }
-
 /* Navigation*/
+
+.nav-toggler {
+  display: none;
+}
 
 nav {
   z-index: 1;
@@ -40,6 +43,7 @@ nav {
   z-index: 5;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  top: 0px;
 }
 
 .nav-container a {
@@ -51,32 +55,24 @@ nav {
   padding: 20px;
 }
 
-/* nav-buttons hover*/
-
-/* a:nth-child(1):hover {
-  text-decoration: underline;
-  color: blue;
+#navbar > img {
+  width: 200px;
+  height: 100px;
+  display: block;
+  position: relative;
+  left: -10px;
+  top: -5px;
 }
 
-a:nth-child(2):hover {
-  text-decoration: underline;
-  color: blue;
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
 }
-
-a:nth-child(3):hover {
-  text-decoration: underline;
-  color: blue;
-}
-
-a:nth-child(4):hover {
-  text-decoration: underline;
-  color: blue;
-}
-
-a:nth-child(5):hover {
-  text-decoration: underline;
-  color: blue;
-} */
 
 /*hero section*/
 
@@ -135,8 +131,6 @@ a:nth-child(5):hover {
   text-shadow: 1px 2px 1px #212121;
 }
 
-/*newsletter - hover*/
-
 #hero-hover {
   font-size: 17px;
   padding: 5px;
@@ -152,6 +146,52 @@ a:nth-child(5):hover {
   color: #ffc107;
 }
 
+/* Here is section main content style - JK*/
+.main-content {
+  max-width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: left;
+}
+
+/* Images for functionality -JK */
+.main-content img {
+  margin: 40px 10px;
+  border: 2px groove #689f38;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.main-content img {
+  margin: 50px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+/* The only text part for now - JK */
+.main-content h4 {
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8em;
+}
+/* Small text in functionality  -JK */
+.main-content p {
+  line-height: 1.1em;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  padding: 5px;
+}
+
+/* newsletter */
+
 .newsBox {
   background: url("Images/news2.png") no-repeat center;
   background-size: cover;
@@ -162,6 +202,7 @@ a:nth-child(5):hover {
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
+  background-size: cover;
 }
 
 .news-label,
@@ -192,11 +233,12 @@ a:nth-child(5):hover {
   margin: 20px;
   width: 15vw;
   border: 1px solid #212121;
+  font-size: 16px;
   border-radius: 6px;
   background: #dcedc8;
   text-align: center;
 }
-
+/*  Nie wiem Filip czy ktokolwiek inny czy zdajecie sobie sprawę, że taki zapis nie dotyczy tylko paragrafu w .newsBox, a na całej stronie , natomiast rzeczywiście dotyczy linków tylko w klasie newBox  */
 .newsBox a,
 p {
   text-decoration: none;
@@ -219,69 +261,71 @@ p {
 }
 
 .news-small {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 /*Team*/
 
-#team {
-  /* margin-top: 30px; */
-  padding: 20px;
-  background: #8bc34a;
-  background: #dcedc8;
-}
-
-.team {
-  display: flex;
-}
-
-.teamText {
-  font-family: "Oswald", sans-serif;
-  margin: 15px auto;
-  text-align: center;
-  font-size: 18px;
-  line-height: 34px;
-}
-
-.teamFigure {
-  font-family: "Open Sans", sans-serif;
-}
-
-.teamFigure figcaption {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* .teamEach a {
-  text-decoration: none;
-  color: #212121;
-  } */
-
-.teamEach h3 {
-  width: 17%;
-}
-
-.teamFigure img {
-  border-radius: 50%;
-  border: 2px solid #757575;
-}
-
-.main-content img {
-  margin: 50px;
-  border-radius: 50%;
+#pudelko {
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  /* border:3px dashed #000;
+  background-color:#FDD700; */
+  perspective: 400px;
+  margin-bottom: 20px;
 }
 
-/* Here is section main style - JK*/
+#karta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* background-color:#EEE; */
+  transition: 1s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+}
 
-.main-content {
-  max-width: 80%;
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr;
-  grid-auto-rows: minmax(100px, auto);
-  text-align: left;
+#pudelko:hover > #karta {
+  transform: rotateY(180deg);
+}
+
+#przod {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* color:#F00; */
+  font-size: 1.6em;
+  /* background:url('https://webkod.pl/images/lioncard.png') no-repeat; */
+  background-size: 100%;
+  backface-visibility: hidden;
+}
+
+#przod img {
+  border-radius: 50%;
+}
+
+#tyl {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 50%;
+  width: 102%;
+  height: 102%;
+  /* color:#FFF; */
+  font-size: 1.6em;
+  /* background-color:#000; */
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: #dcedc8;
+  font-family: "Open Sans", sans-serif;
+}
+
+#tyl a {
+  color: #ffc107;
 }
 
 /* Images for functionality -JK */
@@ -293,40 +337,47 @@ p {
   width: 100px;
   height: 100px;
 }
+/* WTF is this skąd team w mojej sekcji?? */
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
-/* The only text part for now - JK */
+.teamText {
+  font-family: "Oswald", sans-serif;
 
-.main-content h4 {
+  text-align: center;
+  font-size: 18px;
+  line-height: 34px;
+}
+
+/* .main-content h4 {
   margin-bottom: 10px;
   font-family: "Oswald", sans-serif;
   letter-spacing: 2px;
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.8em;
+} */
+
+/* To samo tutaj skąd w mojej sekcji?? */
+#team {
+  background: #dcedc8;
 }
 
-/* Small text in functionality  -JK */
-
-.main-content p {
+/* .main-content p {
   line-height: 1.1em;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
   font-size: 0.95em;
   padding: 5px;
+} */
+.teamFigure img {
+  border-radius: 50%;
+  border: 2px solid #757575;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 40px;
-}
-
-/* Footer styles */
+/* Footer styles JK */
 
 .footer-box {
   height: 3em;
@@ -335,7 +386,7 @@ p {
   border-top: 1px solid #000;
 }
 
-/* Copywrights */
+/* Copywrights JK */
 
 .copywright {
   color: #757575;
@@ -386,12 +437,7 @@ p {
 .policy-text p:last-child {
   padding-bottom: 10px;
 }
-
-#team > div.team > div > div.flipper3 > div > a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px;
-}
+/* Finish of section footer by JK */
 
 /*cookies*/
 
