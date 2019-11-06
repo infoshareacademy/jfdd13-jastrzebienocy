@@ -287,7 +287,7 @@ p {
 /* Images for functionality -JK */
 
 .main-content img {
-  margin: 40px 10px;
+  margin: auto;
   border: 2px groove #689f38;
   border-radius: 50%;
   width: 100px;
@@ -330,29 +330,28 @@ p {
 
 .footer-box {
   height: 3em;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-size: 0.9em;
-  font-family: "Open Sans", sans-serif;
-  border-top: 1px solid black;
+  border-top: 1px solid #000;
 }
 
 /* Copywrights */
 
 .copywright {
   color: #757575;
-  line-height: 3em;
+  line-height: 1.6em;
   float: left;
-  margin-left: 20px;
+  margin: 1.4em 20px;
 }
 
 /* Privacy policy and contact styles - JK*/
 
 .footer-links {
-  line-height: 3em;
+  line-height: 1.6em;
   float: right;
   text-decoration: none;
   color: #000;
-  margin: 0 20px;
+  margin: 1.4em 20px;
 }
 
 .footer-links:hover {
