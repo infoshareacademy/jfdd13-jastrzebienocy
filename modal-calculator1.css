@@ -106,39 +106,20 @@
   font-size: 1.4em;
 }
 
-/* .myslider {
-  padding-top: 5px;
-  width: 40%;
-  margin: 12px auto;
-} */
-
-/* .myslider[type="range"]::-webkit-slider-runnable-track {
-  width: 300px;
-  height: 24px;
-  background: rgb(241, 105, 56);
-  background: blue;
-  border: 1px dotted black;
-  border-radius: 3px;
-  padding-top: 5px;
-  width: 40%;
-  margin: 12px auto;
-} */
-
 /* Chrome slider style  */
 
 /* The range belt style */
 
 .myslider {
   -webkit-appearance: none;
-  background: #ccc;
   width: 50%;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
   height: 20px;
   background: rgb(241, 105, 56);
-  border: 1px dotted black;
   border-radius: 10px;
 }
 
@@ -149,7 +130,6 @@
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  margin-top: -1px;
   background: url("./Images/hero.png") no-repeat black;
 }
 
@@ -158,7 +138,6 @@
 .myslider[type="range"]::-moz-range-track {
   height: 20px;
   background: rgb(241, 105, 56);
-  border: 1px dotted black;
   border-radius: 10px;
 }
 
@@ -168,7 +147,6 @@
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  margin-top: -1px;
   background: url("./Images/hero.png") no-repeat black;
 }
 
@@ -234,18 +212,8 @@
   justify-content: space-around;
 }
 
-/* button calculte */
-
-/* .calculate-btn {
-  font-size: 20px;
-  margin: 10px 0;
-  text-emphasis: left;
-  border-radius: 6px;
-  background-color: greenyellow;
-} */
-
 /* Message clculate */
 
 .calculation-output {
-  margin: 13px 0;
+  margin: 1px 0;
 }
