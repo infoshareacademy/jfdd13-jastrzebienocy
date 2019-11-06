@@ -330,6 +330,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+#tyl a{
+  color: #FFC107;
+}
+
 .team {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
