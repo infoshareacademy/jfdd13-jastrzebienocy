@@ -210,6 +210,9 @@
     width: 40px;
     height: 40px;
     margin: 10px auto;
+    border-radius: 50%;
+    border: 2px groove #689F38;
+    
 }
 .main-content-mobile h4 {
     margin: 5px auto;
