@@ -17,16 +17,9 @@
  
   header {
     display: none;
-    max-height: 150px;
-    margin: 0 auto;
-    text-align: center;
-    background: #f3fbe8;
-    margin-bottom: 20px;
     }
 
-    body > div > header > img {
-        max-height: 100px;
-    }
+
       /* Navigation*/
   nav {
     /* z-index: 1; */
@@ -147,13 +140,13 @@
   color: #212121;
   padding: 25px 15px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   border: 1px solid #212121;
   font-family: oswald;
 }
 
 #hero-hover {
-  font-size: 17px;
+  font-size: 20px;
   padding: 5px;
   border-radius: 20px;
   width: 50%;
@@ -402,7 +395,7 @@
 }
 
 /* Footer */
-
+/* 
 .footer-box-mobile .footer-links {
   width: 100%;
   text-align: center;
@@ -417,4 +410,80 @@
   text-align: center;
   width: 100%;
   display: block;
-}
+} */
+
+/* Footer styles JK */
+  
+.footer-box {
+    height: 3em;
+    /* margin-top: 10px; */
+    font-size: 0.9em;
+    border-top: 1px solid #000;
+  }
+  
+  /* Copywrights JK */
+  
+  .copywright {
+    color: #757575;
+    line-height: 1.6em;
+    float: left;
+    margin: 1.4em 20px;
+    font-size: 1.1em;
+  }
+  
+  /* Privacy policy and contact styles - JK*/
+  
+  .footer-links {
+    line-height: 1.6em;
+    float: right;
+    text-decoration: none;
+    color: #000;
+    margin: 1.4em 20px;
+    font-size: 1.1em;
+  }
+  
+  .footer-links:hover {
+    background-color: #757575;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+  }
+  
+
+
+
+/*cookies*/
+
+.cookie-banner {
+    font: 0.8em Arial;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.9;
+  }
+  
+  .cookie-container a {
+    color: slategrey;
+  }
+  
+  .cookie-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px;
+    color: #f0f0f0;
+  }
+  
+  .cookie-button {
+    background-color: #ccc;
+    color: #333;
+    text-decoration-line: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-bottom: 2px solid #aaa;
+  }
+  
+  
