@@ -77,7 +77,7 @@ nav {
 /*hero section*/
 
 .hero {
-  background: url(/food\waste-Filip3.png) no-repeat center;
+  background: url(./food-waste-Filip3.png) no-repeat center;
   background-size: cover;
   width: 100%;
   min-height: 600px;
