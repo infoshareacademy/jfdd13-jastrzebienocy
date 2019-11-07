@@ -17,7 +17,6 @@ trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
-
 // Variables:
 // Account quantity prices
 const priceA = 99;
@@ -33,19 +32,19 @@ let priceT3 = priceT - priceT * 0.15;
 // let finalPrice = (priceA + priceT) / 2;
 // Slider module -
 // Output of calculator variable
-let calculationOutput = document.querySelector('.calculation-output');
+let calculationOutput = document.querySelector(".calculation-output");
 // inputs of calculator variable
-const input = document.querySelectorAll('#months');
+const input = document.querySelectorAll("#months");
 // Range Slider full module.
-const rangeslider = document.getElementById('sliderRange');
-let output = document.getElementById('quantity');
+const rangeslider = document.getElementById("sliderRange");
+let output = document.getElementById("quantity");
 output.innerHTML = rangeslider.value;
-rangeslider.oninput = function () {
+rangeslider.oninput = function() {
   output.innerHTML = this.value;
   msg();
   priceCalculation();
   // clicker();
-}
+};
 
 //-------------------------------------------------------
 //-------------------------------------------------------
@@ -53,9 +52,8 @@ rangeslider.oninput = function () {
 //Functions
 // Account Quantity from slider
 let getAccQuantity = () => {
-  return document.getElementById('quantity').innerText;
-}
-
+  return document.getElementById("quantity").innerText;
+};
 
 // Get time of Subsccriptions function
 let getTimeOfSubscription = () => {
@@ -63,16 +61,16 @@ let getTimeOfSubscription = () => {
     timeOfSubscription = 12;
     return timeOfSubscription;
   } else if (input[1].checked) {
-    timeOfSubscription = 24
+    timeOfSubscription = 24;
     return timeOfSubscription;
   } else if (input[2].checked) {
-    timeOfSubscription = 36
-    return timeOfSubscription
+    timeOfSubscription = 36;
+    return timeOfSubscription;
   } else if (input[3].checked) {
     timeOfSubscription = 37;
-    return (timeOfSubscription);
+    return timeOfSubscription;
   }
-}
+};
 // Function wchich resets the slider to beggining position
 // let resetSlider = () => {  // do not know if will use this time
 //   rangeslider.value = 1;
@@ -81,12 +79,12 @@ let getTimeOfSubscription = () => {
 // Message in account Quntity output
 const msg = () => {
   if (rangeslider.value == 10) {
-    let message = (document.querySelector('#message').innerText = ' i więcej.');
+    let message = (document.querySelector("#message").innerText = " i więcej.");
     return message;
   } else {
-    message = document.querySelector('#message').innerText = ' ';
+    message = document.querySelector("#message").innerText = " ";
   }
-}
+};
 
 //-------------------------------------------------------------
 // Main full function of calculator
@@ -100,27 +98,25 @@ function priceCalculation() {
       // console.log(priceA);
       // console.log(priceT);
       // console.log(finalPrice.toFixed(2) + 'PLN per account')
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
-
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
       finalPrice = (priceA + priceT1) / 2;
       // console.log(priceA);
       // console.log(priceT1);
       // console.log(finalPrice.toFixed(2) + ' PLN per account ')
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
-
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
       finalPrice = (priceA + priceT2) / 2;
       // console.log(priceA);
       // console.log(priceT2);
       // console.log(finalPrice.toFixed(2) + ' PLN per account ')
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 36) {
       finalPrice = (priceA + priceT3) / 2;
       // console.log(priceA);
       // console.log(priceT3);
       // console.log(finalPrice.toFixed(2) + ' PLN per account ')
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     }
   } else if (accQuantity >= 5 && accQuantity <= 9) {
     if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
@@ -128,25 +124,25 @@ function priceCalculation() {
       // console.log(priceA1)
       // console.log(priceT)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
       finalPrice = (priceA1 + priceT1) / 2;
       // console.log(priceA1)
       // console.log(priceT1)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
       finalPrice = (priceA1 + priceT2) / 2;
       // console.log(priceA1)
       // console.log(priceT2)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ')
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 36) {
       finalPrice = (priceA1 + priceT3) / 2;
       // console.log(priceA1)
       // console.log(priceT3)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     }
   } else {
     if (timeOfSubscription >= 0 && timeOfSubscription <= 12) {
@@ -154,25 +150,30 @@ function priceCalculation() {
       // console.log(priceA2)
       // console.log(priceT)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
       finalPrice = (priceA2 + priceT1) / 2;
       // console.log(priceA2)
       // console.log(priceT1)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
       finalPrice = (priceA2 + priceT2) / 2;
       // console.log(priceA2)
       // console.log(priceT2)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     } else if (timeOfSubscription > 36) {
       finalPrice = (priceA2 + priceT3) / 2;
       // console.log(priceA2)
       // console.log(priceT3)
       // console.log(finalPrice.toFixed(2) + ' PLN per account ');
-      calculationOutput.innerHTML = finalPrice.toFixed(2) + 'PLN za konto';
+      calculationOutput.innerHTML = finalPrice.toFixed(2) + "PLN za konto";
     }
   }
-};
+}
+input.forEach(i => {
+  i.addEventListener("change", () => {
+    priceCalculation();
+  });
+});
