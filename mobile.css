@@ -168,7 +168,7 @@
   font-size: 20px;
   line-height: 40px;
   font-family: sans-serif;
-  margin-top: -45px;
+  margin-top: -25px;
 }
 
 .hero a {
@@ -301,7 +301,7 @@
 }
 
 #newsletter > form > div > div.news-label > label:nth-child(1) > span {
-  margin-right: 100px;
+  margin-right: 120px;
 }
 .newsBox a:hover,
 .rodo:hover {
@@ -378,6 +378,7 @@
 
 #team {
   background: #dcedc8;
+  margin-top: -45px;
 }
 
 .team {
@@ -410,3 +411,37 @@
   width: 100%;
   display: block;
 }
+/*cookies*/
+
+.cookie-banner {
+  font: 0.8em Arial;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.9;
+}
+
+.cookie-container a {
+  color: slategrey;
+}
+
+.cookie-container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px;
+  color: #f0f0f0;
+}
+
+.cookie-button {
+  background-color: #ccc;
+  color: #333;
+  text-decoration-line: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
+}
+

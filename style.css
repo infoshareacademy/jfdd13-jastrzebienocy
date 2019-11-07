@@ -17,6 +17,7 @@ body {
 }
 
 header {
+  display: block;
   margin: 0 auto;
   text-align: center;
   background: #f3fbe8;
@@ -324,17 +325,6 @@ p {
 #team-card--back a {
   color: #ffc107;
 }
-
-/* Images for functionality -JK */
-
-.main-content img {
-  margin: auto;
-  border: 2px groove #689f38;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-/* WTF is this skąd team w mojej sekcji?? */
 .team {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -348,6 +338,25 @@ p {
   line-height: 34px;
 }
 
+#team {
+  background: #dcedc8;
+  margin-top: -22px;
+}
+
+
+
+
+/* Images for functionality -JK */
+
+.main-content img {
+  margin: auto;
+  border: 2px groove #689f38;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+
 /* .main-content h4 {
   margin-bottom: 10px;
   font-family: "Oswald", sans-serif;
@@ -357,10 +366,6 @@ p {
   font-size: 1.8em;
 } */
 
-/* To samo tutaj skąd w mojej sekcji?? */
-#team {
-  background: #dcedc8;
-}
 
 /* .main-content p {
   line-height: 1.1em;
@@ -369,10 +374,8 @@ p {
   font-size: 0.95em;
   padding: 5px;
 } */
-.teamFigure img {
-  border-radius: 50%;
-  border: 2px solid #757575;
-}
+
+
 
 /* Footer styles JK */
 
