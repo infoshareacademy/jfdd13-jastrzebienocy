@@ -2,331 +2,342 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Food waste</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Food waste</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style-slides.css">
+<script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./mobile-main.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <img src="./Images/LOGO.png" />
-    </header>
-    <nav id="navbar" class="nav-container">
+<div class="wrapperBig">
+<header>
+<img src="./Images/LOGO.png" />
+</header>
+<nav id="navbar" class="nav-container">
 
-      <a href="#hero">Food Waste</a>
-      <a href="#zCzym">Z czym to się je?</a>
-      <a href="#iCoDalej">I co dalej?</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#team">Team</a>
+<a href="#hero">Food Waste</a>
+<a href="#what">Z czym to się je?</a>
+<a href="#whatNext">I co dalej?</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#team">Team</a>
 
-    </nav>
+</nav>
 
-    <section class="hero" id="hero">
-      <div class="heroTitle">
-        <h1>Don't waste your food!</h1>
-      </div>
-      <div class="heroText">
-        Dane Organizacji Narodów Zjednoczonych do spraw Wyżywienia i Rolnictwa
-        wskazują, że marnujemy rocznie 1,3 miliarda ton żywności. Jest to
-        strata ok. 1/3 produkowanej żywności w czasach, gdy aż 821 milionów
-        ludzi na świecie głoduje.
-        <br /><br />
-        STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
-        <p>co możesz z tym zrobić!</p>
+<section class="hero" id="hero">
+<div class="heroTitle">
+<h1>Don't waste your food!</h1>
+</div>
+<div class="heroText">
+Dane Organizacji Narodów Zjednoczonych do spraw Wyżywienia i Rolnictwa
+wskazują, że marnujemy rocznie 1,3 miliarda ton żywności. Jest to
+strata ok. 1/3 produkowanej żywności w czasach, gdy aż 821 milionów
+ludzi na świecie głoduje.
+<br /><br />
+STOP! Powiedz nam, co masz w swojej lodówce, a my powiemy Ci, <br />
+<p>co możesz z tym zrobić!</p>
 
-        <a href="#newsletter">Zapisz się już dziś do newslettera, aby być z nami na bieżąco!</a>
-      </div>
-    </section>
+<a href="#newsletter">Zapisz się już dziś do newslettera, aby być z nami na bieżąco!</a>
+</div>
+</section>
 
-    <section class="funktion" id="zCzym">
-      
+<section class="funktion" id="what">
+    <div class="wrapper">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
-       
-          
-          <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
-          <i class="fas fa-bread-slice">Wybierz produkty</i>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <!-- <img src="14584.jpg" style="width:100%"> -->
+                <div class="i-tag"> <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i></div>
+                <div class="text">Caption Text</div>
+            </div>
 
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <!-- <img src="OKLG6T0.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i></div>
+                <div class="text">Caption Two</div>
+            </div>
 
-     
-          <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
-          <i class="fas fa-balance-scale">Określ wagę lub ilość</i>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-book"> WYBIERZ PRZEPIS</i></div>
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <!-- <img src="71937424_1374463862706770_6304492956615180288_n.jpg" style="width:100%"> -->
+                <div class="i-tag"><i class="fas fa-star-half-alt"> OCEŃ PRZEPIS</i></div>
+                <div class="text">Caption Three</div>
+            </div>
 
-          <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
-          <i class="fas fa-cookie-bite">Wybierz przepis</i>
-        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
 
-        
-          <!-- Poniżej masz miejsce na odpowiednie zdjęcia czy i w widthmoesz zmieniać ich wielkość -->
-          <i class="fas fa-star-half-alt">Oceniaj przepisy lub stwórz
-            własne</i>
-        
-
-      </div>
-
-
-      <!-- The dots/circles -->
-      <!-- <div style="text-align:center" - Nie działają na razie więc można wywalić>
-        <span class="dot" onclick="currentSlide(1)"></span>section
-        <span class="dot" onclick="currentSlide(2)"></span>section
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div> -->
-    </section>
-
-    <main class="main-content" id="iCoDalej">
-      <img src="./zdjfoods/wyborpr.png" alt="produkty" />
-      <div class="main-text">
-        <h4>Wybór produktu</h4>
-        <p>
-          Użytkownik będzie miał możliwość wybrania rodzaju produktów, w
-          zależności od ich rodzaju, z których będziemy chcieli przygotować
-          danie.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/il-waga.png" alt="Zdjęcie szali" />
-
-      <div class="main-text">
-        <h4>Waga Produktu</h4>
-        <p>
-          Użytkownik będzie miał możliwość wybrania rodzaju produktów, z których zostaną mu podane przepisy możliwych
-          dań.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/ilosc-sztuk.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Ilość produktu</h4>
-        <p>
-          Użytkownik będzie miał możliwość wyboru przepisu na podstawie
-          określonej ilości danego produktu w lodówce
-        </p>
-      </div>
-
-      <img src="./zdjfoods/szacunkowo.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Szacuj</h4>
-        <p>
-          Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów posiadanych we
-          własnej lodówce.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/przepisy.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Wybierz przepis</h4>
-        <p>
-          Użytkownik będzie miał możliwość przeglądania istniejących w bazie danych przepisów na pyszne posiłki.</p>
-      </div>
-
-      <img src="./zdjfoods/dodaj-przepis.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Dodaj przepis</h4>
-        <p>
-          Po zalogowaniu użytkownik będzie miał możliwość dodania własnego
-          przepisu na danie z danych produktów.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/aktualizuj-przepis.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Aktualizuj przepis</h4>
-        <p>
-          Po zalogowaniu użytkownik będzie miał możliwość aktualizacji
-          własnego przepisu na danie z danych produktów.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/czas.png" alt="Zegar" />
-
-      <div class="main-text">
-        <h4>Sprawdź czas</h4>
-        <p>
-          Użytkownik będzie miał możliwość wyboru przepisu w zależności od
-          czasu jego przygotowania.
-        </p>
-      </div>
-
-      <img src="./zdjfoods/ocena.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Oceniaj</h4>
-        <p>
-          Użytkownik będzie miał możliwość oceny przepisu po którym przepisy
-          będą wyświetlały się według najwyższej noty
-          <b> (największej ilości gwiazdek).</b>
-        </p>
-      </div>
-
-      <img src="./zdjfoods/komentarz.png" alt="produkty" />
-
-      <div class="main-text">
-        <h4>Dodaj komentarz</h4>
-        <p>
-          Po zalogowaniu użytkownik będzie miał możliwość dodania komentarza
-          każdego z przepisów.
-        </p>
-      </div>
-    </main>
-    <section id="newsletter">
-      <form>
-
-        <div class="newsBox">
-          <p>Food Waste to przyszłość.
-            <br>Przyszłość Twoich resztek.</p>
-
-          <div class="news-label">
-            <label>
-              <span>Imię:</span>
-            </label>
-            <label>
-              <span>E-mail:</span>
-            </label>
-          </div>
-
-          <div class="news-input">
-            <input type="text" class="wpis" name="imie" id="imie" placeholder="Wpisz swoje imię" />
-            <input type="text" class="wpis" name="email" id="email" placeholder="Wprowadź swój e-mail" />
-          </div>
-
-
-          <a href="#">Wyślij! :)</a>
-          <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
-          <p class="news-small, rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
 
-  </div>
-  </form>
-  </section>
-  <section id="team">
-    <div class="teamText">
-      <h2>Nasz zespół:</h2>
-      <p>Nie ma dla nas rzeczy niemożliwych!</p>
-      <p>
-        Podejmiemy się każdego wyzwania – jak trzeba nie śpimy, nie jemy, po
-        prostu pracujemy, nasze pomysły są świeże i oryginalne.
-      </p>
-
     </div>
-    <div class="teamEach">
-      <img src="Images/kinga.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3>
-        <a href="https://github.com/Kinga-Zawarczynska">Kinga Zawarczyńska
-        </a>
-      </h3>
-      <i class="fab fa-linkedin fa-5x"></i>
+</section>
+
+  <main class="main-content main-content-mobile" id="whatNext">
+
+      <img src="./functionality-images/choose.png" alt="Choose product" />
+
+    <div class="main-text">
+      <h4>Wybór produktu</h4>
+      <p>Użytkownik będzie miał możliwość wybrania rodzaju produktów, w
+      zależności od ich rodzaju, z których będziemy chcieli przygotować
+      danie.</p>
     </div>
-    <div class="teamEach">
-      <img src="Images/jakub.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3><a href="kuba.html"> Jakub Kruszyński </a></h3>
-      <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i
-          class="fab fa-linkedin fa-5x"></i></a>
+
+      <img src="./functionality-images/weight.png" alt="Weight of procuct" />
+
+    <div class="main-text">
+      <h4>Waga produktu</h4>
+      <p>Użytkownik będzie miał możliwość wybrania rodzaju produktów, z których zostaną mu podane przepisy możliwych
+      dań.</p>
     </div>
-    <div class="teamEach">
-      <img src="Images/filip.jpg" width="200px" height="200px" alt="zdjecie" />
-      <h3><a href="https://github.com/FilipSiwiec"> Filip Siwiec </a></h3>
-      <i class="fab fa-linkedin fa-5x"></i>
+
+      <img src="./functionality-images/quantity.png" alt="Quantity of product" />
+
+    <div class="main-text">
+      <h4>Ilość produktu</h4>
+      <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie
+      określonej, lub szacunkowej ilości danego produktu w lodówce.</p>
     </div>
-    <div class="teamEach">
-      <img src="Images/adam.jpeg" alt="zdjecie" />
-      <h3>
-        <a href="https://github.com/AdamToczko" target="blank">
-          Adam Toczko
-        </a>
-      </h3>
-      <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a>
+
+      <!-- <img src="./functionality-images/calculate.png" alt="Calculate quantity of product" /> -->
+
+    <!-- <div class="main-text">
+      <h4>Szacuj</h4>
+      <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów posiadanych we
+      własnej lodówce.</p>
+    </div> -->
+
+    <img src="./functionality-images/recipy.png" alt="Recipies for meal" />
+
+    <div class="main-text">
+      <h4>Wybierz przepis</h4>
+      <p>Użytkownik będzie miał możliwość przeglądania istniejących w bazie danych przepisów na pyszne posiłki.</p>
     </div>
-  </section>
 
-  </div>
+    <img src="./functionality-images/add-recipy.png" alt="Add your recipy/ies" />
+
+    <div class="main-text">
+      <h4>Dodaj przepis</h4>
+      <p>Po zalogowaniu użytkownik będzie miał możliwość dodania lub aktualizacji własnego
+      przepisu na danie.</p>
+    </div>
+
+    <!-- <img src="./functionality-images/update-recipy.png" alt="Update your recipy/ies" />
+
+    <div class="main-text">
+      <h4>Aktualizuj przepis</h4>
+      <p>Po zalogowaniu użytkownik będzie miał możliwość aktualizacji
+      własnego przepisu na danie z danych produktów.</p>
+    </div> -->
+
+    <img src="./functionality-images/time.png" alt="Choose your recipy based on preparing time" />
+
+    <div class="main-text">
+      <h4>Sprawdź czas</h4>
+      <p>Użytkownik będzie miał możliwość wyboru przepisu w zależności od
+      czasu jego przygotowania.</p>
+    </div>
+
+    <img src="./functionality-images/score.png" alt="Score chosed recipy" />
+
+    <div class="main-text">
+      <h4>Oceniaj</h4>
+      <p>Użytkownik będzie miał możliwość oceny przepisu po którym przepisy
+      będą wyświetlały się według najwyższej noty<b> (największej ilości gwiazdek).</b></p>
+    </div>
+
+    <img src="./functionality-images/comment.png" alt="Recipy/ies comment" />
+
+    <div class="main-text">
+      <h4>Dodaj komentarz</h4>
+      <p>Po zalogowaniu użytkownik będzie miał możliwość dodania komentarza
+      każdego z przepisów.</p>
+    </div>
+  </main>
+<section id="newsletter">
+<form>
+
+<div class="newsBox">
+<p>Food Waste to przyszłość.
+<br>Przyszłość Twoich resztek.</p>
+
+<div class="news-label">
+<label>
+<span>Imię:</span>
+</label>
+<label>
+<span>E-mail:</span>
+</label>
+</div>
+
+<div class="news-input">
+<input type="text" class="wpis" name="imie" id="imie" placeholder="Wpisz swoje imię" />
+<input type="text" class="wpis" name="email" id="email" placeholder="Wprowadź swój e-mail" />
+</div>
+
+<a href="#" class="send">Wyślij! :)</a>
+<p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
+<p class="news-small, rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
+</div>
+
+</div>
+</form>
+</section>
+<section id="team">
+<div class="teamText">
+<h2>Nasz zespół:</h2>
+<p>Nie ma dla nas rzeczy niemożliwych!</p>
+<p>
+Podejmiemy się każdego wyzwania – jak trzeba nie śpimy, nie jemy, po
+prostu pracujemy, nasze pomysły są świeże i oryginalne.
+</p>
+</div>
+<div class="team">
+<figure class="teamFigure">
+<img src="Images/kinga.jpg" width="150px" height="150px" alt="zdjecie" />
+<figcaption>Kinga Zawarczyńska</figcaption>
+</figure>
+<!-- <a href="https://github.com/Kinga-Zawarczynska"> -->
+
+<!-- <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
+<figure class="teamFigure">
+<img src="Images/jakub.jpg" width="150px" height="150px" alt="zdjecie" />
+<figcaption>Jakub Kruszyński</figcaption>
+</figure>
+<!-- <a href="https://github.com/Kruchy1980"> -->
+<!-- <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i -->
+<!-- class="fab fa-linkedin fa-5x"></i></a> -->
+<figure class="teamFigure">
+<img src="Images/filip.jpg" width="150px" height="150px" alt="zdjecie" />
+<figcaption>Filip Siwiec</figcaption>
+</figure>
+<!-- <a href="https://github.com/FilipSiwiec"> </a> -->
+<!-- <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i -->
+<!-- class="fab fa-linkedin fa-5x"></i></a> -->
+<!-- <div class="teamEach"> </div>-->
+
+<figure class="teamFigure">
+<img src="Images/adam.jpeg" width="150px" height="150px" alt="zdjecie" />
+<figcaption>Adam Toczko</figcaption>
+</figure>
+<!-- <a href="https://github.com/AdamToczko" target="blank"></a> -->
+<!-- <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
+</div>
+</section>
+  <footer >
+    <div class="footer-box footer-box-mobile">
+      <span class="copywright">&copy 2019 Food Waste</span>
+      <!-- <div class="footer-links"> -->
+      <a class="footer-links" href="#team">Kontakt</a></span>
+      <a class="footer-links" href="./privacy.html">Polityka prywatności</a></span>
+  <!--     </div> -->
+    </div>
+  </footer>
+
+<script>
+window.onscroll = function () {
+myFunction();
+};
+var navbar = document.querySelector("#navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+navbar.classList.add("sticky");
+} else {
+navbar.classList.remove("sticky");
+}
+}
 
 
-  <script>
-    window.onscroll = function () {
-      myFunction();
-    };
-    var navbar = document.querySelector("#navbar");
-    var sticky = navbar.offsetTop;
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-    // Here is code with slides funcionality:
-    // var slideIndex = 1;
-    // showSlides(slideIndex);
+var slideIndex = 1;
+manualSlides(slideIndex);
 
-    // Next/previous controls
-    // function plusSlides(n) {
-    //   showSlides(slideIndex += n);
-    // }
 
-    // Thumbnail image controls
-    // function currentSlide(n) {
-    //   showSlides(slideIndex = n);
-    // }
+//  const mouse = document.querySelector('.slideshow-container');
+ const wrapper = document.querySelector('.wrapper');
 
-    // function showSlides(n) {
-    //   var i;
-    //   var slides = document.getElementsByClassName("mySlides");
-    //   var dots = document.getElementsByClassName("dot");
-    //   if (n > slides.length) {slideIndex = 1}
-    //   if (n < 1) {slideIndex = slides.length}
-    //   for (i = 0; i < slides.length; i++) {
-    //       slides[i].style.display = "none";
-    //   }
-    //   for (i = 0; i < dots.length; i++) {
-    //       dots[i].className = dots[i].className.replace(" active", "");
-    //   }
-    //   slides[slideIndex-1].style.display = "block";
-    //   dots[slideIndex-1].className += " active";
-    // }
-    // ----------------------------------------------------
-    // Automatic slide show
-    let slideIndex = 0;
-    showSlides();
+ wrapper.addEventListener("mouseenter", manualSlides);
+ wrapper.addEventListener("mouseleave", autoSlides);
+//  mouse.addEventListener("mouseover", manualSlides);
 
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
+var timeOut;
+
+ 
+        // Next/previous controls
+function plusSlides(n) {
+    manualSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    manualSlides(slideIndex = n);
+  }
+  
+  function manualSlides(n) {
+    console.log('manualSlides');
+    clearTimeout(timeOut);
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-      } slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        i;
-        slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // Change image every 4 seconds
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
 
 
-  </script>
+
+  var autoSlideIndex = 0;
+autoSlides(autoSlideIndex);
+
+
+
+function autoSlides() {
+  console.log('autoSlides');
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  autoSlideIndex++;
+  if (autoSlideIndex > slides.length) {autoSlideIndex = 1}
+  slides[autoSlideIndex-1].style.display = "block";
+  clearTimeout(timeOut);
+  timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
+} 
+
+
+</script>
 
 </body>
 
-</html>
+</html> 
