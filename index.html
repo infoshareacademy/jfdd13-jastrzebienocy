@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="./modal-calculator.css">
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="game-instructions.css">
 
 </head>
 
@@ -131,13 +132,13 @@
           określonej, lub szacunkowej ilości danego produktu w lodówce.</p>
       </div>
 
-      <!-- <img src="./functionality-images/calculate.png" alt="Calculate quantity of product" /> -->
+      <img src="./functionality-images/calculate.png" alt="Calculate quantity of product" /> -->
 
-      <!-- <div class="main-text">
+     <div class="main-text">
       <h4>Szacuj</h4>
       <p>Użytkownik będzie miał możliwość wyboru przepisu na podstawie szacunkowej ilości produktów posiadanych we
       własnej lodówce.</p>
-    </div> -->
+    </div>
 
       <img src="./functionality-images/recipy.png" alt="Recipies for meal" />
 
@@ -206,7 +207,7 @@
             <input type="text" class="news-input-class" name="email" id="email" placeholder="Wprowadź swój e-mail" />
           </div>
 
-          <a href="newgame.html" class="send">Wyślij! :)</a>
+         <a href="#" class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
           <p class="news-small rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
         </div>
@@ -325,12 +326,36 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       </div>
 
     </div>
-    
 
+    <!--game-instruction-->
+    <div class="game-instruction-overlay">
+      <div class="game-instruction-box">
+        <div class="game-instruction-header">Instrukcja do Gry!</div>
+        <div class="game-instruction-text">
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Praesentium, ipsam!</li>
+            <li>Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Velit.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Eveniet, illum repudiandae.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Praesentium, ipsam!</li>
+            <li>Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Velit.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Eveniet, illum repudiandae.</li>
+          </ul>
+          <div class="game-button">
+          <a href="newgame.html" class="button-style">Zaczynamy!</a>
+        </div>
+        </div>
+      </div>
+    </div>
 
+    <script src="game-instruction.js"></script>
     <script src="./calculator3.js"></script>
     <script src="cookies.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
     
 <script>
 function toggleMenu() {
@@ -383,7 +408,7 @@ function plusSlides(n) {
   }
   
   function manualSlides(n) {
-    console.log('manualSlides');
+    // console.log('manualSlides');
     clearTimeout(timeOut);
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -408,7 +433,7 @@ autoSlides(autoSlideIndex);
 
 
 function autoSlides() {
-  console.log('autoSlides');
+  // console.log('autoSlides');
   var i;
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {

@@ -424,6 +424,7 @@ nav {
 /*cookies*/
 
 .cookie-banner {
+  display: block;
   font: 0.8em Arial;
   background-color: #333;
   position: fixed;
