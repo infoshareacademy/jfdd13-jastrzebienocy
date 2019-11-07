@@ -176,3 +176,9 @@ input.forEach(i => {
     priceCalculation();
   });
 });
+
+rangeslider.value.forEach(value => {
+  value.addEventListener("change", () => {
+    priceCalculation();
+  });
+});
