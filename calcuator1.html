@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wkurzający popup</title>
+    <link rel="stylesheet" href="./modal-calculator.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <a href="#" class="trigger">Kalkulator subskrypcji !</a>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <p class="modal-calculator-text">Oblicz cenę subskrypcji !</p>
+        <div class="range-slider">
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="1"
+            class="myslider"
+            id="sliderRange"
+          />
+          <div id="info" class="info-box">
+            <label for="quantity" class="account-quantity-text"
+              >Ilość kont:</label
+            >
+            <span id="quantity" class="quantity"></span>
+            <span id="message" class="quantity-message"></span>
+          </div>
+
+          <div class="main-months">
+            <div class="month-quantity-text">Ilość miesięcy:</div>
+            <label for="one-year">do 12</label>
+            <input
+              type="radio"
+              name="months"
+              id="months"
+              class="months-first"
+              checked
+            />
+            <label for="second-year">do 24</label>
+            <input
+              type="radio"
+              name="months"
+              id="months"
+              class="months-second"
+            />
+            <label for="third-year">do 36</label>
+            <input
+              type="radio"
+              name="months"
+              id="months"
+              class="months-third"
+            />
+            <label for="fourth-year">powyżej 36</label>
+            <input
+              type="radio"
+              name="months"
+              id="months"
+              class="months-fourth"
+            />
+          </div>
+          <div class="calculation-elements">
+            <div class="calculation-output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./calculator3.js"></script>
+  </body>
+</html>
