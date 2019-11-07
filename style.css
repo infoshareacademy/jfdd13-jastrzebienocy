@@ -20,9 +20,12 @@ header {
   margin: 0 auto;
   text-align: center;
   background: #f3fbe8;
-}
+  }
+  /* Navigation*/
 
-/* Navigation*/
+  .nav-toggler {
+    display: none;
+}
 
 nav {
   z-index: 1;
@@ -40,6 +43,7 @@ nav {
   z-index: 5;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  top: 0px;
 }
 
 .nav-container a {
@@ -51,49 +55,45 @@ nav {
   padding: 20px;
 }
 
-/* nav-buttons hover*/
-
-/* a:nth-child(1):hover {
-  text-decoration: underline;
-  color: blue;
+#navbar > img {
+  width: 200px; 
+  height: 100px;
+  display: block;
+  position: relative;
+  left: -10px;
+  top: -5px;
 }
 
-a:nth-child(2):hover {
-  text-decoration: underline;
-  color: blue;
-}
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+  }
+  
 
-a:nth-child(3):hover {
-  text-decoration: underline;
-  color: blue;
-}
 
-a:nth-child(4):hover {
-  text-decoration: underline;
-  color: blue;
-}
-
-a:nth-child(5):hover {
-  text-decoration: underline;
-  color: blue;
-} */
 
 /*hero section*/
 
 .hero {
-  background: url(/food\ waste-Filip3.png) no-repeat center;
-  background-size: cover;
-  width: 100%;
-  min-height: 600px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px 0;
+    background: url(/food\ waste-Filip3.png) no-repeat center;
+    background-size: cover; 
+    width: 100%;
+    min-height: 600px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+    
 }
-
-.heroTitle h1 {
+  
+  .heroTitle h1 {
   text-align: center;
   position: relative;
   top: auto;
@@ -115,8 +115,8 @@ a:nth-child(5):hover {
   font-size: 20px;
   font-family: sans-serif;
 }
-
-.hero a {
+  
+.hero a{
   position: relative;
   top: -60px;
   text-decoration: none;
@@ -135,8 +135,6 @@ a:nth-child(5):hover {
   text-shadow: 1px 2px 1px #212121;
 }
 
-/*newsletter - hover*/
-
 #hero-hover {
   font-size: 17px;
   padding: 5px;
@@ -152,7 +150,54 @@ a:nth-child(5):hover {
   color: #FFC107;
 }
 
-.newsBox {
+/* Here is section main style - JK*/
+.main-content {
+  max-width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: left;
+  }
+  
+  /* Images for functionality -JK */
+  .main-content img {
+  margin: 40px 10px;
+  border: 2px groove #689F38;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  }
+
+  .main-content img {
+    margin: 50px ;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+   } 
+  
+  /* The only text part for now - JK */
+  .main-content h4 {
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; 
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8em;
+}
+/* Small text in functionality  -JK */
+.main-content p {
+  line-height: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  padding: 5px;
+  }
+  
+
+/* newsletter */
+
+.newsBox{
   background: url("Images/news2.png") no-repeat center;
   background-size: cover;
   padding: 30px;
@@ -162,6 +207,7 @@ a:nth-child(5):hover {
   align-items: center;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
+  background-size: cover;
 }
 
 .news-label, .news-input {
@@ -183,15 +229,16 @@ a:nth-child(5):hover {
   color: inherit;
   display: flex;
   flex-direction: row;
-}
+  }
 
-.wpis {
+
+.news-input-class{
   line-height: 2.2em;
   margin-bottom: 10px;
   margin: 20px;
   width: 15vw;
   border: 1px solid #212121;
-  ;
+  font-size: 16px;
   border-radius: 6px;
   background: #DCEDC8;
   text-align: center;
@@ -217,112 +264,99 @@ a:nth-child(5):hover {
 }
 
 .news-small {
-  font-size: 12px;
+  font-size: 18px;
 }
+
 
 /*Team*/
 
-#team {
-  /* margin-top: 30px; */
-  padding: 20px;
-  background: #8BC34A;
+#team-box {
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  margin:0 auto;
+  /* border:3px dashed #000;
+  background-color:#FDD700; */
+  perspective:400px;
+  margin-bottom: 20px;
+}
+
+#team-card {
+  position:relative;
+  width:100%;
+  height:100%;
+  text-align:center;
+  /* background-color:#EEE; */
+  transition:1s;
+  transform-style:preserve-3d;
+  border-radius: 50%;
+}
+
+#team-box:hover > #team-card {
+  transform:rotateY(180deg);
+}
+
+
+#team-card--front {
+  position:absolute;
+  width:100%;
+  height:100%;
+  /* color:#F00; */
+  font-size:1.6em;
+  /* background:url('https://webkod.pl/images/lioncard.png') no-repeat; */
+  background-size:100%;
+  backface-visibility:hidden;
+}
+
+#team-card--front img{
+  border-radius: 50%;
+}
+
+#team-card--back {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 50%;
+  width:102%;
+  height:102%;
+  /* color:#FFF; */
+  font-size:1.6em;
+  /* background-color:#000; */
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
   background: #DCEDC8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#team-card--back a{
+  color: #FFC107;
 }
 
 .team {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .teamText {
-  font-family: 'Oswald', sans-serif;
-  margin: 15px auto;
+  font-family: 'Oswald', sans-serif; 
+ 
   text-align: center;
   font-size: 18px;
   line-height: 34px;
-}
+  
+  }
 
-.teamFigure {
-  font-family: 'Open Sans', sans-serif;
-}
+  #team {
+    background: #DCEDC8;
+  }
 
-.teamFigure figcaption {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* .teamEach a {
-  text-decoration: none;
-  color: #212121;
-  } */
-
-.teamEach h3 {
-  width: 17%;
-}
 
 .teamFigure img {
   border-radius: 50%;
   border: 2px solid #757575;
 }
 
-.main-content img {
-  margin: 50px;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
-
-/* Here is section main style - JK*/
-
-.main-content {
-  max-width: 80%;
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr;
-  grid-auto-rows: minmax(100px, auto);
-  text-align: left;
-}
-
-/* Images for functionality -JK */
-
-.main-content img {
-  margin: 40px 10px;
-  border: 2px groove #689F38;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-/* The only text part for now - JK */
-
-.main-content h4 {
-  margin-bottom: 10px;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-decoration: underline;
-  font-size: 1.8em;
-}
-
-/* Small text in functionality  -JK */
-
-.main-content p {
-  line-height: 1.1em;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 1px;
-  font-size: 0.95em;
-  padding: 5px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 40px;
-}
 
 /* Footer styles */
 
@@ -386,11 +420,6 @@ a:nth-child(5):hover {
   padding-bottom: 10px;
 }
 
-#team>div.team>div>div.flipper3>div>a:nth-child(2) {
-  position: absolute;
-  left: 30px;
-  top: 50px;
-}
 
 /*cookies*/
 

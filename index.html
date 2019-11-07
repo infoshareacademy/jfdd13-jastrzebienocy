@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Food waste</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-slides.css">
-  <link rel="stylesheet" href="./modal-calculator.css">
-  <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./mobile-main.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Food waste</title>
+<link rel='stylesheet' media='screen and (max-width: 425px)' href='mobile.css' />
+<link rel="stylesheet" media='screen and (min-width: 426px)' href="style.css" />
+<link rel="stylesheet" media='screen and (min-width: 426px)' href="style-slides.css">
+
+<link rel="stylesheet" href="./modal-calculator.css">
+<script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -21,14 +23,20 @@
     </header>
 
     <nav id="navbar" class="nav-container">
-
-      <a href="#hero">Food Waste</a>
-      <a href="#what">Z czym to się je?</a>
-      <a href="#whatNext">I co dalej?</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#team">Team</a>
-
-    </nav>
+        <img src="./Images/LOGO.png"  />
+        <div id="myLinks">
+          <a href="#hero">Food Waste</a>
+          <a href="#what">Z czym to się je?</a>
+          <a href="#whatNext">I co dalej?</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#team">Team</a>
+        </div>
+          <a href="javascript:void(0);" class="nav-toggler" onclick="toggleMenu()">
+          <i class="fas fa-bars fa-2x"></i>
+          </a>
+      </button>
+      
+      </nav>
 
     <section class="hero" id="hero">
       <div class="heroTitle">
@@ -194,59 +202,88 @@
           </div>
 
           <div class="news-input">
-            <input type="text" class="wpis" name="imie" id="imie" placeholder="Wpisz swoje imię" />
-            <input type="text" class="wpis" name="email" id="email" placeholder="Wprowadź swój e-mail" />
+            <input type="text" class="news-input-class" name="imie" id="imie" placeholder="Wpisz swoje imię" />
+            <input type="text" class="news-input-class" name="email" id="email" placeholder="Wprowadź swój e-mail" />
           </div>
 
-          <a href="#" class="send">Wyślij! :)</a>
+          <a href="newgame.html" class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
-          <p class="news-small, rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
+          <p class="news-small rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
         </div>
 
   </div>
   </form>
   </section>
-  <section id="team">
-    <div class="teamText">
-      <h2>Nasz zespół:</h2>
-      <p>Nie ma dla nas rzeczy niemożliwych!</p>
-      <p>
-        Podejmiemy się każdego wyzwania – jak trzeba nie śpimy, nie jemy, po
-        prostu pracujemy, nasze pomysły są świeże i oryginalne.
-      </p>
+ 
+<section id="team">
+<div class="teamText">
+<h2>Nasz zespół:</h2>
+<p>Nie ma dla nas rzeczy niemożliwych!</p>
+<p>
+Podejmiemy się każdego wyzwania – jak trzeba nie śpimy, nie jemy, po
+prostu pracujemy, nasze pomysły są świeże i oryginalne.
+</p>
+</div>
+<div class="team">
+    <div id="team-box">
+        <div id="team-card">
+          <div id="team-card--front">
+              <img src="Images/kinga.png" width="200px" height="200px" alt="zdjecie" />
+          </div>
+          <div id="team-card--back">
+              <a href="https://github.com/Kinga-Zawarczynska" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+              <span>Kinga Zawarczyńska</span>
+              <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-2x"></i></a> 
+            </div>
+        </div>
     </div>
-    <div class="team">
-      <figure class="teamFigure">
-        <img src="Images/kinga.png" width="150px" height="150px" alt="zdjecie" />
-        <figcaption>Kinga Zawarczyńska</figcaption>
-      </figure>
-      <!-- <a href="https://github.com/Kinga-Zawarczynska"> -->
+    <div id="team-box">
+        <div id="team-card">
+          <div id="team-card--front">
+              <img src="Images/jakubSQR.png" width="200px" height="200px" alt="zdjecie" />
+          </div>
+          <div id="team-card--back">
+              <a href="https://github.com/Kruchy1980" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+              <span>Jakub Kruszyński</span>
+            <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a> 
+            </div>
+        </div>
+      </div>
 
-      <!-- <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
-      <figure class="teamFigure">
-        <img src="Images/jakub.png" width="150px" height="150px" alt="zdjecie" />
-        <figcaption>Jakub Kruszyński</figcaption>
-      </figure>
-      <!-- <a href="https://github.com/Kruchy1980"> -->
-      <!-- <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i -->
-      <!-- class="fab fa-linkedin fa-5x"></i></a> -->
-      <figure class="teamFigure">
-        <img src="Images/filip.png" width="150px" height="150px" alt="zdjecie" />
-        <figcaption>Filip Siwiec</figcaption>
-      </figure>
-      <!-- <a href="https://github.com/FilipSiwiec"> </a> -->
-      <!-- <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i -->
-      <!-- class="fab fa-linkedin fa-5x"></i></a> -->
-      <!-- <div class="teamEach"> </div>-->
-
-      <figure class="teamFigure">
-        <img src="Images/adam.jpeg" width="150px" height="150px" alt="zdjecie" />
-        <figcaption>Adam Toczko</figcaption>
-      </figure>
-      <!-- <a href="https://github.com/AdamToczko" target="blank"></a> -->
-      <!-- <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-5x"></i></a> -->
+    <div id="team-box">
+        <div id="team-card">
+          <div id="team-card--front">
+              <img src="Images/filipSQR.png" width="200px" height="200px" alt="zdjecie" />
+          </div>
+          <div id="team-card--back">
+              <a href="https://github.com/FilipSiwiec" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+              <span>Filip Siwiec</span>
+              <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+      </div>
+      <div id="team-box">
+          <div id="team-card">
+            <div id="team-card--front">
+                <img src="Images/adam.jpeg" width="200px" height="200px" alt="zdjecie" />
+            </div>
+            <div id="team-card--back">
+                <a href="https://github.com/AdamToczko" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
+                <span>Adam Toczko</span>
+                <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
+              </div>
+          </div>
+        </div>
+</div>
+</section>
+<div class="cookie-banner">
+    <div class="cookie-container">
+      <p>Wykorzystuję pliki cookies w celu prawidłowego działania strony, korzystania z
+        narzędzi marketingowych i analitycznych, zapewniania funkcji społecznościowych
+        oraz systemu komentarzy. Czy zgadzasz się na wykorzystywanie plików cookies?</p>
+      <button class="cookie-button"><a>Akceptuję</a></button>
     </div>
-  </section>
+  </div>
   <footer>
     <div class="footer-box footer-box-mobile">
       <span class="copywright">&copy 2019 Food Waste</span>
@@ -288,92 +325,101 @@
       </div>
 
     </div>
+    
 
 
-    <div class="cookie-banner">
-      <div class="cookie-container">
-        <p>Wykorzystuję pliki cookies w celu prawidłowego działania strony, korzystania z
-          narzędzi marketingowych i analitycznych, zapewniania funkcji społecznościowych
-          oraz systemu komentarzy. Czy zgadzasz się na wykorzystywanie plików cookies?</p>
-        <button class="cookie-button"><a>Akceptuję</a></button>
-      </div>
-    </div>
-  </footer>
-  <script src="./calculator3.js"></script>
-  <script src="cookies.js"></script>
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
-  <script>
+    <script src="./calculator3.js"></script>
+    <script src="cookies.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    
+<script>
+function toggleMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+    x.classList.add('navColumn')
+    x.classList.add("sticky2");
+  }
+}
 
-    function toggleMenu() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "flex") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "flex";
-        x.classList.add('navColumn')
-      }
-    }
-    window.onscroll = function () {
-      myFunction();
-    };
-    var navbar = document.querySelector("#navbar");
-    var sticky = navbar.offsetTop;
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-    var slideIndex = 1;
-    manualSlides(slideIndex);
-    const wrapper = document.querySelector('.wrapper');
-    wrapper.addEventListener("mouseenter", manualSlides);
-    wrapper.addEventListener("mouseleave", autoSlides);
-    var timeOut;
+window.onscroll = function () {
+myFunction();
+};
+var navbar = document.querySelector("#navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+navbar.classList.add("sticky");
+} else {
+navbar.classList.remove("sticky");
+}
+}
 
-    // Next/previous controls
-    function plusSlides(n) {
-      manualSlides(slideIndex += n);
-    }
 
-    // Thumbnail image controls
-    function currentSlide(n) {
-      manualSlides(slideIndex = n);
-    }
+var slideIndex = 1;
+manualSlides(slideIndex);
 
-    function manualSlides(n) {
-      console.log('manualSlides');
-      clearTimeout(timeOut);
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
+
+
+ const wrapper = document.querySelector('.wrapper');
+
+ wrapper.addEventListener("mouseenter", manualSlides);
+ wrapper.addEventListener("mouseleave", autoSlides);
+
+
+var timeOut;
+
+ 
+        // Next/previous controls
+function plusSlides(n) {
+    manualSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    manualSlides(slideIndex = n);
+  }
+  
+  function manualSlides(n) {
+    console.log('manualSlides');
+    clearTimeout(timeOut);
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
+    }
+    for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
     }
-    var autoSlideIndex = 0;
-    autoSlides(autoSlideIndex);
-    function autoSlides() {
-      console.log('autoSlides');
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      autoSlideIndex++;
-      if (autoSlideIndex > slides.length) { autoSlideIndex = 1 }
-      slides[autoSlideIndex - 1].style.display = "block";
-      clearTimeout(timeOut);
-      timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
-    } 
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+
+
+  var autoSlideIndex = 0;
+autoSlides(autoSlideIndex);
+
+
+
+function autoSlides() {
+  console.log('autoSlides');
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  autoSlideIndex++;
+  if (autoSlideIndex > slides.length) {autoSlideIndex = 1}
+  slides[autoSlideIndex-1].style.display = "block";
+  clearTimeout(timeOut);
+  timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
+} 
   </script>
 
 </body>
