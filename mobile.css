@@ -43,8 +43,6 @@
         height: 90px;
         z-index: 5;
         scroll-behavior: smooth;
-        overflow-y: scroll;
-        
       }
         
       .nav-container #myLinks {
