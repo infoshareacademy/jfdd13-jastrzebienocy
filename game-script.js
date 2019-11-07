@@ -13,28 +13,28 @@ let minSpeed = 3;
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
-      (this.y = human.offsetTop),
+      (this.y = human.offsetTop), // UWAGI AS: wcięcia
       this.points = 0,
       this.lifes = 5;
   }
 
   left() {
-    this.x -= 10;
+    this.x -= 10; // UWAGI AS: wyciagnalbym do zmiennej
   }
   right() {
-    this.x += 10;
+    this.x += 10; // UWAGI AS: j/w
   }
 
   down() {
-    this.y += 10;
+    this.y += 10; // UWAGI AS: j/w
   }
 
   reset() {
-    this.x = 750;
-    this.y = 680;
+    this.x = 750; // UWAGI AS: j/w albo obliczał dynamicznie na podstawie szerokosci gry
+    this.y = 680; // UWAGI AS: j/w albo obliczał dynamicznie na podstawie wysokosci gry
   }
   addPoint() {
-    this.points++;
+    this.points++; // UWAGI AS: zapis this.points += 1; jest optymalniejszy, szybciej sie wykonuje kod, zaleca sie stosowanie tej formy
     document.querySelector('.counterPlus').innerHTML = this.points;
 
     if (this.points >= 10) {
@@ -56,7 +56,7 @@ class Fruit {
   constructor(fruit, speed) {
     this.domFruit = fruit;
     this.speed = speed;
-    this.x = Math.random() * 800;
+    this.x = Math.random() * 800; // UWAGI AS: warto by zaokrąglic wartosc do liczb calkowitych
     this.y = fruit.offsetTop;
     this.firstTouch = false;
   }
@@ -77,6 +77,7 @@ class MoveFruits {
       setTimeout(() => {
         domFruit.remove();
       }, 1000);
+      // UWAGI AS: moim zdaniem usuwalbym natychmiast
     } else {
       fruit.down();
       MoveFruits.RenderElement(fruit, domFruit);
@@ -91,18 +92,18 @@ class Move {
     ludzik.style.top = Player.y + "px";
   }
 
-  static move(event, Player1) {
+  static move(event, Player1) { // UWAGI AS: zmiennych nie nazywamy z duzej litery (sa wyjatki, ale to akurat do tego nie nalezy), dodatkowo bedzie 2 player? jesli nie to ta 1 nie potrzebna
     if (event.key === "ArrowLeft") {
       Player1.left();
       Move.RenderElement(Player1, domRectagle);
-      console.log("moved left");
+      console.log("moved left"); // UWAGI AS: pamietaj by na mastera nie wrzucac console.logow
     } else if (event.key === "ArrowRight") {
       Player1.right();
       Move.RenderElement(Player1, domRectagle);
       console.log("moved right");
     }
 
-    if (Player1.y >= 775) {
+    if (Player1.y >= 775) { // UWAGI AS: player moze sie poruszac w pionie? czemu sluzy to sprawdzenie?
       alert("YOU LOST! PLAY AGAIN :)");
       Player1.reset();
       Move.RenderElement(Player1, domRectagle);
@@ -122,22 +123,24 @@ class Move {
   }
 }
 
+// UWAGI AS: zmienne rzucilbym na sama gore kodu
 const domContainer = document.querySelector(".container");
 const domRectagle = document.querySelector(".human");
-const player1 = new Player(domRectagle);
+const player1 = new Player(domRectagle); // UWAGI AS: bedzie wiecej playerow?
 let lifes = document.querySelectorAll('.life');
 
 
+// UWAGI AS: eventy i wywolania funkcji na sam dol kodu
 document.addEventListener("keydown", event => Move.move(event, player1));
 
 function start() {
-
+ // UWAGI AS: brakuje w tej funkcji porzadku. najpierw deklaracje zmiennych, funkcji, a dopiero potem wywołania funkcji, interwałow
   let fruits = [];
   setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
     domContainer.appendChild(newDomFruit);
-    Fruit;
+    Fruit; // UWAGI AS: co to ma na celu?
     const newFruit = new Fruit(newDomFruit, Math.random() * 3 + minSpeed);
 
     fruits.push(newFruit);
@@ -146,7 +149,8 @@ function start() {
   }, intervalOfNewFruit);
 
 
-  function checkCollision(fruits, player) {
+ // UWAGI AS: ta funkcja nie musi byc w funkcji start
+  function checkCollision(fruits, player) { 
 
     for (let i = 0; i < fruits.length; i++) {
       const fruit = fruits[i];
@@ -161,11 +165,12 @@ function start() {
 
 
 
+      // UWAGI AS: nieczytelny if, nie kumam co sie w nim dzieje. męczy samo patrzenie na niego :(
       if ((
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
           ((leftEdgePplayer <= rightEdgeFruit) && (rightEdgeFruit <= rightEdgePlayer))) &&
         ((bottomEdgeFruit >= topEdgePlayer) && (bottomEdgeFruit <= bottomEdgePlayer)))
-        && fruit.firstTouch == false
+        && fruit.firstTouch == false  // UWAGI AS: "fruit.firstTouch == false" to to samo co "!fruit.firstTouch"
       ) {
         fruit.firstTouch = true;
         console.log('KOLIZJA');
@@ -173,7 +178,7 @@ function start() {
         player.addPoint();
 
       }
-      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) { // UWAGI AS: "fruit.firstTouch == false" to to samo co "!fruit.firstTouch"
         fruit.firstTouch = true;
         console.log('looser');
 

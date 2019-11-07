@@ -1,3 +1,5 @@
+<!-- usuncie niepotrzebne pliki, macie ich bardzo duzo -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -318,6 +320,8 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
     <script src="cookies.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
     
+<!-- UWAGI AS: wyrzucic kod js do plikow js -->
+
 <script>
 function toggleMenu() {
   var x = document.getElementById("myLinks");
@@ -331,20 +335,20 @@ function toggleMenu() {
 }
 
 window.onscroll = function () {
-myFunction();
+myFunction();  // UWAGI AS: tabulacje
 };
-var navbar = document.querySelector("#navbar");
-var sticky = navbar.offsetTop;
+var navbar = document.querySelector("#navbar"); // UWAGI AS: nie uzywamy var
+var sticky = navbar.offsetTop; // UWAGI AS: j/w
 function myFunction() {
 if (window.pageYOffset >= sticky) {
-navbar.classList.add("sticky");
+navbar.classList.add("sticky"); // UWAGI AS: tabulacje
 } else {
-navbar.classList.remove("sticky");
-}
+navbar.classList.remove("sticky"); // UWAGI AS: tabulacje
+}// UWAGI AS: tabulacje
 }
 
 
-var slideIndex = 1;
+var slideIndex = 1; // UWAGI AS: var
 manualSlides(slideIndex);
 
 
@@ -369,9 +373,9 @@ function plusSlides(n) {
   }
   
   function manualSlides(n) {
-    console.log('manualSlides');
+    console.log('manualSlides'); // UWAGI AS: console.log na masterze niedopuszczalny
     clearTimeout(timeOut);
-    var i;
+    var i; // UWAGI AS: var, nizej to samo
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
@@ -379,30 +383,30 @@ function plusSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
+    for (i = 0; i < dots.length; i++) { // UWAGI AS: jesli dotow jest tyle samo co slidow, to mozna by spokojnie w 1 petli to ograc
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "block";  // UWAGI AS: zwyczajem jest operowac na wartosciach od 0 a nie od 1, wtedy nie trzeba robic operacji odejmowania przy tablicach ;)
     dots[slideIndex-1].className += " active";
   }
 
 
 
-  var autoSlideIndex = 0;
-autoSlides(autoSlideIndex);
+  var autoSlideIndex = 0; // UWAGI AS: var
+autoSlides(autoSlideIndex); // UWAGI AS: tabulacje
 
 
 
 function autoSlides() {
-  console.log('autoSlides');
-  var i;
+  console.log('autoSlides'); // UWAGI AS: console log
+  var i;// UWAGI AS: vary
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   autoSlideIndex++;
   if (autoSlideIndex > slides.length) {autoSlideIndex = 1}
-  slides[autoSlideIndex-1].style.display = "block";
+  slides[autoSlideIndex-1].style.display = "block";// UWAGI AS: jak wyzej.. lepiej liczyc od 0
   clearTimeout(timeOut);
   timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
 } 

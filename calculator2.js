@@ -1,3 +1,5 @@
+// UWAGI AS: usunac niepotrzebne i nieuzywane pliki
+
 // Variables:
 const priceA = 99
 let priceA1 = priceA - priceA * 0.05

@@ -1,7 +1,9 @@
+// UWAGI AS: zamknąc kod w funkcji samowykonujacej sie, dzieki temu nie generujemy zmiennych na window
+
 // Modal window show :)
-let modal = document.querySelector(".modal");
-let trigger = document.querySelector(".trigger");
-let closeButton = document.querySelector(".close-button");
+let modal = document.querySelector(".modal"); // UWAGI AS: czy to nie powinny byc const?
+let trigger = document.querySelector(".trigger"); // UWAGI AS: j/w
+let closeButton = document.querySelector(".close-button"); // UWAGI AS: j/w
 
 function toggleModal() {
   modal.classList.toggle("show-modal");
@@ -20,6 +22,8 @@ window.addEventListener("click", windowOnClick);
 
 // Variables:
 // Account quantity prices
+
+// UWAGI AS: bardzo niezrozumialy kod i nie działa zgodnie z załozeniami zlecenia
 const priceA = 99;
 let priceA1 = priceA - priceA * 0.05;
 let priceA2 = priceA - priceA * 0.07;
@@ -94,6 +98,7 @@ const msg = () => {
 function priceCalculation() {
   accQuantity = getAccQuantity();
   timeOfSubscription = getTimeOfSubscription();
+  // UWAGI AS: bardzo skomplikowany proces liczenia.. kod do optymalizacji
   if (accQuantity >= 1 && accQuantity <= 4) {
     if (timeOfSubscription >= 1 && timeOfSubscription <= 12) {
       finalPrice = (priceA + priceT) / 2;
@@ -176,3 +181,36 @@ function priceCalculation() {
     }
   }
 };
+
+
+
+
+
+
+
+// UWAGI AS: ogolnie zastanówcie się nad kodem ponizej.. jest to pseudo kod pokazujący tylko algorytm liczenia. wiec do przerobienia na wlasciwy
+/*
+cenaPodstawowa = 99;
+znizka = 0; // w domysle %, wartosc znizki podstawowej, do niej bedziemy dodawac kolejne znizki jesli spelnia sie warunki
+
+if (wybraneKonta >= 5 && wybraneKonta < 10) {
+  znizka += 5 // jesli ilosc kont pomiedzy 5-10 dodajemy do znizki 5%
+} else if (wybraneKonta >= 10) {
+  znizka += 7  // jesli ilosc kont powyzej 10 dodajemy do znizki 7%
+}
+
+if (iloscLat === 2) {
+  znizka += 5;  // jesli ilosc lat = 2 dodajemy do znizki uwzgledniajacej ilosc kont dodatkowe 5%
+} else if (iloscLat === 3) {
+  znizka += 10; // jesli ilosc lat = 3 dodajemy do znizki uwzgledniajacej ilosc kont dodatkowe 5% (5% za 2 lata + 5% za 3 lata)
+} else if (iloscLat > 3) {
+  znizka += 15; // jesli ilosc lat >= 4 dodajemy do znizki uwzgledniajacej ilosc kont dodatkowe 5%, czyli lacznie 15
+}
+
+canaFinalna = cenaPodstawowa - cenaPodstawowa*(znizka/100); //bo zamieniamy na procenty
+//albo
+canaFinalna = cenaPodstawowa * (1 - znizka/100); //bo zamieniamy na procenty
+
+
+// nic dodac, nic ujac. kod maksymalnie uproszczony, prosty i czytelny
+*/
