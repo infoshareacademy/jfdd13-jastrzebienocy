@@ -17,7 +17,7 @@
   text-decoration: underline;
   font-size: 1.4em;
   font-family: "Oswald";
-  background-color: green;
+  background-color: #689f38;
   border-radius: 20px;
   width: 80%;
   margin: 12px auto;
@@ -27,6 +27,7 @@
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  margin-left: -80px;
 }
 
 .account-quantity-text {
@@ -40,7 +41,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #eee;
+  background-color: #dcedc8;
   padding: 1rem 1.5rem;
   width: 30rem;
   border-radius: 0.5rem;
@@ -53,7 +54,7 @@
   text-align: center;
   cursor: pointer;
   border-radius: 0.25rem;
-  background-color: lightgray;
+  background-color: #aaa;
 }
 
 .close-button:hover {
@@ -99,22 +100,63 @@
 
 /* Main Style */
 
-.range-slider {
-  width: 100%;
+/* range slider general - large screen */
+
+/* .range-slider {
+  width: 100%; 
   text-align: center;
-  border: 1px dashed #666;
+  border: 1px dashed #dcedc8;
   font-size: 1.4em;
-}
+} */
+
+/* Chrome slider style  */
+
+/* The range belt style- general - large screen */
 
 .myslider {
-  padding-top: 5px;
-  width: 40%;
-  margin: 12px auto;
+  -webkit-appearance: none;
+  width: 50%;
+  margin: 10px;
+  /* border-radius: 10px; */
 }
 
-/* input[type="range" i] {
-            height: 10px;
-        } */
+.myslider[type="range"]::-webkit-slider-runnable-track {
+  /* position: relative;
+  top: 5px; */
+  outline-offset: 5px;
+  height: 20px;
+  background: linear-gradient(to right, #ffc107, #8bc34a);
+  /* border-radius: 10px; */
+}
+
+/* The thumb of slider styles */
+
+.myslider[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 60px;
+  width: 40px;
+  margin-bottom: 15px;
+  /* border-radius: 50%; */
+  background: url("./slider-img/chili-thumb.png") no-repeat;
+  background-size: cover;
+}
+
+/* Mozilla FF slider belt style  */
+
+.myslider[type="range"]::-moz-range-track {
+  height: 20px;
+  background: linear-gradient(to right, #ffc107, #8bc34a);
+  border-radius: 10px;
+}
+
+/*  Mozilla FF thumb styles */
+
+.myslider::-moz-range-thumb {
+  height: 30px;
+  width: 20px;
+  /* border-radius: 50%; */
+  background: url("./Images/hero.png") no-repeat black;
+}
 
 /*  Account Quantity Style */
 
@@ -178,18 +220,8 @@
   justify-content: space-around;
 }
 
-/* button calculte */
-
-.calculate-btn {
-  font-size: 20px;
-  margin: 10px 0;
-  text-emphasis: left;
-  border-radius: 6px;
-  background-color: greenyellow;
-}
-
 /* Message clculate */
 
 .calculation-output {
-  margin: 13px 0;
+  margin: 10px 0;
 }
