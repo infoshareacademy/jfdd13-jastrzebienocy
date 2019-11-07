@@ -271,8 +271,6 @@ p {
   height: 200px;
   border-radius: 50%;
   margin: 0 auto;
-  /* border:3px dashed #000;
-  background-color:#FDD700; */
   perspective: 400px;
   margin-bottom: 20px;
 }
