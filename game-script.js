@@ -13,9 +13,9 @@ let minSpeed = 3;
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
-    (this.y = human.offsetTop),
-    this.points = 0,
-    this.lifes = 5;
+      (this.y = human.offsetTop),
+      this.points = 0,
+      this.lifes = 5;
   }
 
   left() {
@@ -40,7 +40,7 @@ class Player {
     if (this.points >= 10) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-     
+
       minSpeed = 7;
 
     }
@@ -145,7 +145,7 @@ function start() {
     // MoveFruits.addFruit(newFruit)
   }, intervalOfNewFruit);
 
-  
+
   function checkCollision(fruits, player) {
 
     for (let i = 0; i < fruits.length; i++) {
@@ -158,35 +158,32 @@ function start() {
       let bottomEdgeFruit = fruit.y + fruitHeight;
       let topEdgePlayer = player.y;
       let bottomEdgePlayer = player.y + playerHeight;
-      
+
 
 
       if ((
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
           ((leftEdgePplayer <= rightEdgeFruit) && (rightEdgeFruit <= rightEdgePlayer))) &&
-        ((bottomEdgeFruit >= topEdgePlayer ) && (bottomEdgeFruit <= bottomEdgePlayer)) ) 
+        ((bottomEdgeFruit >= topEdgePlayer) && (bottomEdgeFruit <= bottomEdgePlayer)))
         && fruit.firstTouch == false
       ) {
         fruit.firstTouch = true;
         console.log('KOLIZJA');
-
-        console.log(fruits);
-        console.log(fruit);
-        console.log(i);
         fruit.domFruit.remove();
         player.addPoint();
 
       }
-      else {
+      else if (bottomEdgeFruit >= 720) {
+        console.log('looser');
 
 
         // nieMaKolizji(); //uzytkownik traci punkt
 
       }
 
-     
-      
-  };
+
+
+    };
 
 
   }
@@ -200,7 +197,7 @@ function start() {
 
 
 
-  }
+}
 
 start();
 
