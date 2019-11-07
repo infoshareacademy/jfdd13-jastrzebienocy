@@ -6,6 +6,7 @@ const fruitHeight = 30;
 let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
 let minSpeed = 3;
+// document.querySelectorAll('.dead').style.display = 'none';
 
 
 
@@ -13,9 +14,9 @@ let minSpeed = 3;
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
-    (this.y = human.offsetTop),
-    this.points = 0,
-    this.lifes = 5;
+      (this.y = human.offsetTop),
+      this.points = 0,
+      this.lifes = 5;
   }
 
   left() {
@@ -40,7 +41,7 @@ class Player {
     if (this.points >= 10) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-     
+
       minSpeed = 7;
 
     }
@@ -92,29 +93,21 @@ class Move {
   }
 
   static move(event, Player1) {
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowLeft" && player1.x > 0) {
       Player1.left();
       Move.RenderElement(Player1, domRectagle);
       console.log("moved left");
-    } else if (event.key === "ArrowRight") {
+    } else if (event.key === "ArrowRight" && player1.x < domContainer.offsetWidth - playerWidth - 10) {
       Player1.right();
       Move.RenderElement(Player1, domRectagle);
       console.log("moved right");
     }
 
-    if (Player1.y >= 775) {
+    if (Player1.x >= domContainer.offsetWidth + 500) {
       alert("YOU LOST! PLAY AGAIN :)");
       Player1.reset();
       Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.y <= 0) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.x >= 1600) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.x <= 0) {
+    } else if (Player1.x <= 0 - 200) {
       alert("YOU LOST! PLAY AGAIN :)");
       Player1.reset();
       Move.RenderElement(Player1, domRectagle);
@@ -125,15 +118,39 @@ class Move {
 const domContainer = document.querySelector(".container");
 const domRectagle = document.querySelector(".human");
 const player1 = new Player(domRectagle);
-let lifes = document.querySelectorAll('.life');
+
 
 
 document.addEventListener("keydown", event => Move.move(event, player1));
 
+let newFriut;
+let falling;
+
 function start() {
 
+  player1.points = 0;
+  document.querySelector('.counterPlus').innerHTML = player1.points;
+
+  let fruitsFromDom = document.querySelectorAll('.fruit')
+
+  fruitsFromDom.forEach(element => element.remove());
+
   let fruits = [];
-  setInterval(() => {
+  
+  let counterMinus = document.querySelector('.counterMinus')
+  counterMinus.innerHTML = `
+    <div class="life"><i class="fas fa-heart"></i></div>
+    <div class="life"><i class="fas fa-heart"></i></div>
+    <div class="life"><i class="fas fa-heart"></i></div>
+    <div class="life"><i class="fas fa-heart"></i></div>
+    <div class="life"><i class="fas fa-heart"></i></div>
+  `
+  
+  clearInterval(falling);
+
+  let lifes = document.querySelectorAll('.life');
+
+  newFriut = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
     domContainer.appendChild(newDomFruit);
@@ -145,7 +162,7 @@ function start() {
     // MoveFruits.addFruit(newFruit)
   }, intervalOfNewFruit);
 
-  
+
   function checkCollision(fruits, player) {
 
     for (let i = 0; i < fruits.length; i++) {
@@ -158,39 +175,45 @@ function start() {
       let bottomEdgeFruit = fruit.y + fruitHeight;
       let topEdgePlayer = player.y;
       let bottomEdgePlayer = player.y + playerHeight;
-      
+
 
 
       if ((
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
           ((leftEdgePplayer <= rightEdgeFruit) && (rightEdgeFruit <= rightEdgePlayer))) &&
-        ((bottomEdgeFruit >= topEdgePlayer ) && (bottomEdgeFruit <= bottomEdgePlayer)) ) 
+        ((bottomEdgeFruit >= topEdgePlayer) && (bottomEdgeFruit <= bottomEdgePlayer)))
         && fruit.firstTouch == false
       ) {
         fruit.firstTouch = true;
         console.log('KOLIZJA');
-
-        console.log(fruits);
-        console.log(fruit);
-        console.log(i);
         fruit.domFruit.remove();
         player.addPoint();
 
       }
-      else {
+      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+        fruit.firstTouch = true;
+        console.log('looser');
 
+        lifes[lifes.length - 1].remove()
+        lifes = document.querySelectorAll('.life')
+        if (lifes.length == 0){
+          console.log('game over');
+          //zapisz wynik
+          alert('GAME OVER');
 
+        }
         // nieMaKolizji(); //uzytkownik traci punkt
 
       }
 
-     
-      
-  };
+
+
+    };
 
 
   }
-  setInterval(() => {
+
+  falling = setInterval(() => {
     fruits.forEach(fruit => {
       MoveFruits.move(fruit, fruit.domFruit);
     });
@@ -200,9 +223,12 @@ function start() {
 
 
 
-  }
+}
 
-start();
+
+const startGameBtn = document.querySelector('#startGame');
+
+startGameBtn.addEventListener('click',  start);
 
 
 // console.log(player1);
