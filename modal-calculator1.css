@@ -138,7 +138,7 @@
   /* text-align: left; */
   position: relative;
   top: -20px;
-  left: -5px;
+  /* left: -5px; */
   background: url("./slider-img/chili-thumb.png") no-repeat;
   background-size: cover;
 }
