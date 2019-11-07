@@ -16,6 +16,7 @@
 
  
   header {
+    display: none;
     max-height: 150px;
     margin: 0 auto;
     text-align: center;
@@ -39,11 +40,11 @@
         overflow: hidden;
         position: relative;
         background: #8BC34A;
-        height: auto;
+        height: 90px;
         z-index: 5;
         scroll-behavior: smooth;
         overflow-y: scroll;
-        top: -20px;
+        
       }
         
       .nav-container #myLinks {
@@ -74,29 +75,39 @@
         padding: 12px;
     }
     
-    .nav-container a:hover {
+    /* .nav-container a:hover {
       background-color: #ddd;
       color: black;
+    } */
+    /* nav-logo */
+    #navbar > a.nav-toggler {
+      position: absolute;
+      background: none;
+      border: none;
+      color: #F1F1F1;
+      font-size: 22px;
+      right: 10px;
+      top: 20px;
     }
 
-    #navbar > a {
-        background: none;
+    /* #navbar > a {
+        /* background: none;
         border: none;
         color: #F1F1F1;
         font-size: 18px;
         
         position: absolute;
         right: 10px;
-        top: 10px;
-    }
+        top: 10px; } */
+    
 
-    #navbar > img {
+    #navbar >a > img  {
       width: 160px; 
       height: 90px;
       display: block;
       position: relative;
       left: -10px;
-      top: -5px;
+      top: -20px;
       z-index: 10;
   }
 
@@ -107,7 +118,7 @@
   }
 
   #navbar > a > i {
-    color: #757575;
+    color: #212121;
     z-index: 6;
   }
 
@@ -118,7 +129,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  height: 85px;
+  height: 90px;
 }
 .sticky2 {
   position: fixed;
