@@ -42,7 +42,6 @@ nav {
   height: auto;
   z-index: 5;
   scroll-behavior: smooth;
-  overflow-y: scroll;
   top: 0px;
 }
 
