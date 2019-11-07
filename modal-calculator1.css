@@ -117,16 +117,16 @@
   -webkit-appearance: none;
   width: 50%;
   margin: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
   /* position: relative;
   top: 5px; */
-  offset-position: ;
+  outline-offset: 5px;
   height: 20px;
   background: linear-gradient(to right, #ffc107, #8bc34a);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /* The thumb of slider styles */
