@@ -1,4 +1,4 @@
-// // Modal window show :)
+// // Modal window show  - fixed variables :)
 const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");
@@ -17,15 +17,15 @@ trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
-// Variables:
-// Account quantity prices
+// Variables for price Calcultion:
+// Account quantity  base price
 const basePrice = 99;
 // Discount
 let discount = 0;
 
 let calculationOutput = document.querySelector(".calculation-output");
 // inputs of calculator variable
-const input = document.querySelectorAll("#months");
+const input = document.querySelectorAll(".months");
 // Range Slider full module.
 const rangeslider = document.getElementById("sliderRange");
 let output = document.getElementById("quantity");
