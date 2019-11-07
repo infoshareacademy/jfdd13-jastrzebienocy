@@ -304,6 +304,11 @@
 /* Team */
 
 /*Team*/
+#team-box > div {
+  text-align: center;
+}
+
+
 #team-box {
   width: 120px;
   height: 120px;
@@ -372,11 +377,13 @@
 #team {
   background: #dcedc8;
   margin-top: -45px;
+  height: 100vh;
 }
 
 .team {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 60%;
 }
 
 .teamText {
