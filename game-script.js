@@ -2,9 +2,9 @@ const playerWidth = 30;
 const fruitWidth = 30;
 const playerHeight = 30;
 const fruitHeight = 30;
-let span = 2;
+
 let intervalOfFalling = 50;
-let intervalOfNewFruit = 5000;
+let intervalOfNewFruit = 3000;
 let minSpeed = 3;
 
 
@@ -37,10 +37,10 @@ class Player {
     this.points++;
     document.querySelector('.counterPlus').innerHTML = this.points;
 
-    if (this.points >= 6) {
+    if (this.points >= 10) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-      span = 4;
+     
       minSpeed = 7;
 
     }
