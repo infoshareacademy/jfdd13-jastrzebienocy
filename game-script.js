@@ -103,15 +103,7 @@ class Move {
       console.log("moved right");
     }
 
-    if (Player1.y >= domContainer.offsetHeight) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.y <= 0) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.x >= domContainer.offsetWidth + 500) {
+    if (Player1.x >= domContainer.offsetWidth + 500) {
       alert("YOU LOST! PLAY AGAIN :)");
       Player1.reset();
       Move.RenderElement(Player1, domRectagle);
