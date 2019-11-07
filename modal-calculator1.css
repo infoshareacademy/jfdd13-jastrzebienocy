@@ -133,13 +133,11 @@
 
 .myslider[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 60px;
+  height: 40px;
   width: 30px;
-  /* text-align: left; */
   position: relative;
-  top: -20px;
-  /* left: -5px; */
-  background: url("./slider-img/chili-thumb.png") no-repeat;
+  top: -15px;
+  background: url("./slider-img/chili-thumb-small.png") no-repeat;
   background-size: cover;
 }
 
@@ -154,10 +152,12 @@
 /*  Mozilla FF thumb styles */
 
 .myslider::-moz-range-thumb {
-  height: 30px;
-  width: 20px;
-  /* border-radius: 50%; */
-  background: url("./Images/hero.png") no-repeat black;
+  height: 40px;
+  width: 30px;
+  position: relative;
+  top: -20px;
+  background: url("./slider-img/chili-thumb-small.png") no-repeat;
+  background-size: cover;
 }
 
 /*  Account Quantity Style */
