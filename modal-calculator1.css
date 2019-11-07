@@ -17,7 +17,7 @@
   text-decoration: underline;
   font-size: 1.4em;
   font-family: "Oswald";
-  background-color: green;
+  background-color: #689f38;
   border-radius: 20px;
   width: 80%;
   margin: 12px auto;
@@ -27,6 +27,7 @@
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  margin-left: -80px;
 }
 
 .account-quantity-text {
@@ -40,7 +41,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ccc;
+  background-color: #dcedc8;
   padding: 1rem 1.5rem;
   width: 30rem;
   border-radius: 0.5rem;
@@ -99,16 +100,18 @@
 
 /* Main Style */
 
-.range-slider {
-  width: 100%;
+/* range slider general - large screen */
+
+/* .range-slider {
+  width: 100%; 
   text-align: center;
-  border: 1px dashed #666;
+  border: 1px dashed #dcedc8;
   font-size: 1.4em;
-}
+} */
 
 /* Chrome slider style  */
 
-/* The range belt style */
+/* The range belt style- general - large screen */
 
 .myslider {
   -webkit-appearance: none;
@@ -118,8 +121,11 @@
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
+  /* position: relative;
+  top: 5px; */
+  offset-position: ;
   height: 20px;
-  background: rgb(241, 105, 56);
+  background: linear-gradient(to right, #ffc107, #8bc34a);
   border-radius: 10px;
 }
 
@@ -127,9 +133,10 @@
 
 .myslider[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 20px;
+  height: 30px;
   width: 20px;
-  border-radius: 50%;
+  /* margin-bottom: 5px; */
+  /* border-radius: 50%; */
   background: url("./Images/hero.png") no-repeat black;
 }
 
@@ -137,16 +144,16 @@
 
 .myslider[type="range"]::-moz-range-track {
   height: 20px;
-  background: rgb(241, 105, 56);
+  background: linear-gradient(to right, #ffc107, #8bc34a);
   border-radius: 10px;
 }
 
 /*  Mozilla FF thumb styles */
 
 .myslider::-moz-range-thumb {
-  height: 20px;
+  height: 30px;
   width: 20px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background: url("./Images/hero.png") no-repeat black;
 }
 
@@ -215,5 +222,5 @@
 /* Message clculate */
 
 .calculation-output {
-  margin: 1px 0;
+  margin: 10px 0;
 }
