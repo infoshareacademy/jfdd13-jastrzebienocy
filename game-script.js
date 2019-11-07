@@ -173,7 +173,8 @@ function start() {
         player.addPoint();
 
       }
-      else if (bottomEdgeFruit >= 720) {
+      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+        fruit.firstTouch = true;
         console.log('looser');
 
 
