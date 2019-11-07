@@ -3,54 +3,45 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    text-align: center;
+    /* text-align: center; */
   }
   .modal-calculator-text {
-    text-align: center;
+    /* text-align: center; */
     text-decoration: underline;
-    font-size: 1.4em;
+    font-size: 1em;
     font-family: "Oswald";
     background-color: #689f38;
     border-radius: 20px;
     width: 80%;
-    margin: 12px auto;
-  }
-  .month-quantity-text {
-    text-decoration: underline;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-left: -82px;
-  }
-  .account-quantity-text {
-    margin: 10px 0;
-    text-decoration: underline;
-    letter-spacing: 1px;
+    /* margin: 12px auto; */
   }
   .modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* text-align: left; */
     transform: translate(-50%, -50%);
     background-color: #dcedc8;
-    padding: 1rem 1.5rem;
-    width: 30rem;
+    /* padding: 0.8rem 1rem; */
+    width: 14rem;
     border-radius: 0.5rem;
   }
   .close-button {
     float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
+    width: 1rem;
+    line-height: 1rem;
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: #aaa;
+    padding-top: 0.2rem;
   }
   .close-button:hover {
     background-color: #333;
@@ -60,7 +51,7 @@
     opacity: 1;
     visibility: visible;
     transform: scale(1);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    /* transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
   }
   /* calculator button caller */
   .calculator-button-box {
@@ -103,12 +94,8 @@
     /* border-radius: 10px; */
   }
   .myslider[type="range"]::-webkit-slider-runnable-track {
-    /* position: relative;
-  top: 5px; */
-    /* background-position-y: center; */
     height: 20px;
     background: linear-gradient(to right, #ffc107, #8bc34a);
-    /* background-position-y: top; */
   }
   /*  Thumb slider styles */
   .myslider[type="range"]::-webkit-slider-thumb {
@@ -135,22 +122,35 @@
     background: url("./slider-img/chili-thumb-small.png") no-repeat;
     background-size: cover;
   }
+  /* Larger text - month and account quantity */
+  .month-quantity-text {
+    text-decoration: underline;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 0.65em;
+    align-self: center;
+  }
+  .account-quantity-text {
+    margin: 15px 0;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+  }
   /*  Account Quantity Style */
   .info-box {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    /* margin: 0 10px; */
-    /* justify-content: space-between; */
+    font-size: 0.8em;
   }
   /* Info Box Span Style */
   .info-box span {
-    height: 20px;
-    line-height: 20px;
+    height: 0.8em;
+    line-height: 0.8em;
+    font-size: 0.8em;
   }
   /* Account Quantity Label */
   .quantity-label {
-    align-self: center;
+    align-self: left;
     /* width: 30%; */
   }
   /* Quantity span - connected to slider - style */
@@ -159,9 +159,7 @@
   }
   /* Quantity Account extended message style*/
   .quantity-message {
-    width: 22%;
-    align-self: center;
-    text-align: left;
+    width: 24%;
   }
   /* Month quantity label */
   .general {
@@ -184,5 +182,17 @@
   /* Message clculate */
   .calculation-output {
     margin: 10px 0;
+    font-size: 0.8em;
+  }
+  .main-months {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-months label {
+    font-size: 0.7em;
+  }
+  .main-months input {
+    align-self: center;
+    margin: 5px;
   }
 }
