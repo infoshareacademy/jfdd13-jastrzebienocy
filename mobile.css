@@ -294,7 +294,7 @@ nav {
 /* Team */
 
 /*Team*/
-#pudelko {
+#team-box {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -305,7 +305,7 @@ nav {
   margin-bottom: 20px;
 }
 
-#karta {
+#team-card {
   position: relative;
   width: 100%;
   height: 100%;
@@ -316,11 +316,11 @@ nav {
   border-radius: 50%;
 }
 
-#pudelko:hover > #karta {
+#team-box:hover > #team-card {
   transform: rotateY(180deg);
 }
 
-#przod {
+#team-card--front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -331,13 +331,13 @@ nav {
   backface-visibility: hidden;
 }
 
-#przod img {
+#team-card--front img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
 }
 
-#tyl {
+#team-card--back {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -355,7 +355,7 @@ nav {
   font-size: 14px;
 }
 
-#tyl a {
+#team-card--back a {
   color: #ffc107;
 }
 
