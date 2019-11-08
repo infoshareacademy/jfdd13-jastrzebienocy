@@ -7,25 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <title>Food waste</title>
 <link rel='stylesheet' media='screen and (max-width: 425px)' href='mobile.css' />
-<link rel="stylesheet" media='screen and (min-width: 426px)' href="style.css" />
-<link rel="stylesheet" media='screen and (min-width: 426px)' href="style-slides.css">
-
-<link rel="stylesheet" href="./modal-calculator.css">
+<link rel='stylesheet' media='screen and (min-width: 426px) and (max-width: 799px)' href='tablet.css' />
+<link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1050px)' href='medium.css' />
+<link rel="stylesheet" media='screen and (min-width: 1051px)' href="style.css" />
+<link rel="stylesheet" media='screen and (min-width: 800px)' href="style-slides.css">
+<link rel="stylesheet" media='screen and (min-width: 426px)' href="./modal-calculator1.css">
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="game-instructions.css">
 
 </head>
 
 <body>
   <div class="wrapperBig">
-    <header>
+    <header class="header">
       <img src="./Images/LOGO.png" />
     </header>
 
     <nav id="navbar" class="nav-container">
-        <img src="./Images/LOGO.png"  />
+      <a href="#" class="nav-logo"><img class="nav-logo--image" src="./Images/logo-nav.png" /></a>
         <div id="myLinks">
-          <a href="#hero">Food Waste</a>
           <a href="#what">Z czym to się je?</a>
           <a href="#whatNext">I co dalej?</a>
           <a href="#newsletter">Newsletter</a>
@@ -193,12 +194,12 @@
             <input type="text" class="news-input-class" name="email" id="email" placeholder="Wprowadź swój e-mail" />
           </div>
 
-          <a href="newgame.html" class="send">Wyślij! :)</a>
+         <a href="#" class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
           <p class="news-small rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
         </div>
 
-  </div>
+  
   </form>
   </section>
  
@@ -219,10 +220,11 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
           </div>
           <div id="team-card--back">
               <a href="https://github.com/Kinga-Zawarczynska" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
-              <span>Kinga Zawarczyńska</span>
+              
               <a href="https://www.facebook.com/misiak.zawarczynska" target="blank"><i class="fab fa-linkedin fa-2x"></i></a> 
             </div>
         </div>
+        <div>Kinga Zawarczyńska</div>
     </div>
     <div id="team-box">
         <div id="team-card">
@@ -231,10 +233,11 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
           </div>
           <div id="team-card--back">
               <a href="https://github.com/Kruchy1980" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
-              <span>Jakub Kruszyński</span>
+              
             <a href="https://www.linkedin.com/in/jakub-kruszy%C5%84ski-776254163/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a> 
             </div>
         </div>
+        <div>Jakub Kruszyński</div>
       </div>
 
     <div id="team-box">
@@ -244,10 +247,11 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
           </div>
           <div id="team-card--back">
               <a href="https://github.com/FilipSiwiec" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
-              <span>Filip Siwiec</span>
+              
               <a href="https://www.linkedin.com/in/filip-siwiec-0a3547195/" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
             </div>
         </div>
+        <div>Filip Siwiec</div>
       </div>
       <div id="team-box">
           <div id="team-card">
@@ -256,10 +260,11 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
             </div>
             <div id="team-card--back">
                 <a href="https://github.com/AdamToczko" target="blank"><i class="fab fa-git-square fa-2x"></i></a>
-                <span>Adam Toczko</span>
+                
                 <a href="https://pl.linkedin.com/in/adamtoczko" target="blank"><i class="fab fa-linkedin fa-2x"></i></a>
               </div>
           </div>
+          <div>Adam Toczko</div>
         </div>
 </div>
 </section>
@@ -271,6 +276,7 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       <button class="cookie-button"><a>Akceptuję</a></button>
     </div>
   </div>
+</div>
   <footer>
     <div class="footer-box footer-box-mobile">
       <span class="copywright">&copy 2019 Food Waste</span>
@@ -311,16 +317,40 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
       </div>
 
     </div>
-    
 
+    <!--game-instruction-->
+    <div class="game-instruction-overlay">
+      <div class="game-instruction-box">
+        <div class="game-instruction-header">Instrukcja do Gry!</div>
+        <div class="game-instruction-text">
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Praesentium, ipsam!</li>
+            <li>Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Velit.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Eveniet, illum repudiandae.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Praesentium, ipsam!</li>
+            <li>Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Velit.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Eveniet, illum repudiandae.</li>
+          </ul>
+          <div class="game-button">
+          <a href="newgame.html" class="button-style">Zaczynamy!</a>
+        </div>
+        </div>
+      </div>
+    </div>
 
+    <script src="game-instruction.js"></script>
     <script src="./calculator3.js"></script>
     <script src="cookies.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
     
 <script>
 function toggleMenu() {
-  var x = document.getElementById("myLinks");
+  const x = document.getElementById("myLinks");
   if (x.style.display === "flex") {
     x.style.display = "none";
   } else {
@@ -333,8 +363,8 @@ function toggleMenu() {
 window.onscroll = function () {
 myFunction();
 };
-var navbar = document.querySelector("#navbar");
-var sticky = navbar.offsetTop;
+const navbar = document.querySelector("#navbar");
+const sticky = navbar.offsetTop;
 function myFunction() {
 if (window.pageYOffset >= sticky) {
 navbar.classList.add("sticky");
@@ -342,6 +372,21 @@ navbar.classList.add("sticky");
 navbar.classList.remove("sticky");
 }
 }
+
+// TRZEBA T PRZEROBIC BO NIE DZIALA _ od 800 zeby sie pojawialo logo przy scrollu na dol 
+// const navCont = document.querySelector("#navbar")
+// const navImage = document.querySelector("#navbar > a.nav-logo > img")
+// function myFunction2(x) {
+//   if (x.matches && navCont.classList.contains("sticky")){ // If media query matches
+//     navImage.style.display = 'block';
+//   } else {
+//     navImage.style.display = 'none';
+//   }
+// }
+
+// const x = window.matchMedia("(min-width: 800px)")
+// myFunction2(x) // Call listener function at run time
+// x.addListener(myFunction2) // Attach listener function on state changes
 
 
 var slideIndex = 1;
@@ -369,7 +414,7 @@ function plusSlides(n) {
   }
   
   function manualSlides(n) {
-    console.log('manualSlides');
+    // console.log('manualSlides');
     clearTimeout(timeOut);
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -394,7 +439,7 @@ autoSlides(autoSlideIndex);
 
 
 function autoSlides() {
-  console.log('autoSlides');
+  // console.log('autoSlides');
   var i;
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
