@@ -8,7 +8,7 @@ const closeButton = document.querySelector(".close-button");
 const basePrice = 99;
 // Discount declaration
 let discount = 0;
-let finalPrice;
+// let finalPrice = basePrice * (1 - discount / 100);
 
 // Calculation output variable
 let calculationOutput = document.querySelector(".calculation-output");
@@ -68,13 +68,11 @@ function priceCalculation() {
   else if (rangeslider.value >= 5 && rangeslider.value <= 9) discount = 5;
   else if (rangeslider.value == 10) discount = 7;
   // time of Subscription
-  if (input[0].checked) discount;
-  else if (input[1].checked) discount += 5;
+  if (input[1].checked) discount += 5;
   else if (input[2].checked) discount += 10;
   else if (input[3].checked) discount += 15;
+  let finalPrice = basePrice * (1 - discount / 100);
 
-  finalPrice = basePrice * (1 - discount / 100);
-  console.log(finalPrice);
   calculationOutput.innerHTML =
     "Cena za Subskrypcję " +
     finalPrice.toFixed(2) +

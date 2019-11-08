@@ -193,7 +193,7 @@
             <input type="text" class="news-input-class" name="email" id="email" placeholder="Wprowadź swój e-mail" />
           </div>
 
-         <a href="#" class="send">Wyślij! :)</a>
+         <a  class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
                 <!-- Modal-calculator button -->
                 <div class="calculator-button-box"><a  class="trigger">Kalkulator subskrypcji !</a></div>
@@ -344,7 +344,7 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
         </div>
       </div>
     </div>
-    <script src="./mail-valid.js"></script>
+
     <script src="navigation.js"></script>
     <script src="game-instruction.js"></script>
     <script src="./calculator4.js"></script>
@@ -352,4 +352,13 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
     <script src="slides.js"></script>
 </body>
 
-</html>
+</html>// const buttonInstruction = document.querySelector("a.send");
+const overlay = document.querySelector(".game-instruction-overlay");
+const InsBox = document.querySelector(".game-instruction-box");
+
+const Instruction = () => {
+overlay.style.display = "block";
+InsBox.style.display = "block";
+};
+
+// buttonInstruction.addEventListener("click", Instruction);
