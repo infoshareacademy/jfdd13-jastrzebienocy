@@ -77,68 +77,69 @@ function priceCalculation() {
   timeOfSubscription = getTimeOfSubscription();
   if (accQuantity >= 1 && accQuantity <= 4) {
     if (timeOfSubscription == 1) {
+      discount = 0;
       finalPrice = basePrice;
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 2) {
       discount = 5;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 3) {
       discount = 10;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 4) {
       discount = 15;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     }
   } else if (accQuantity >= 5 && accQuantity <= 9) {
     discount = 5;
     if (timeOfSubscription == 1) {
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 2) {
       discount += 5;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 3) {
       discount += 10;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 4) {
       discount += 15;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     }
   } else if (accQuantity == 10) {
     discount = 7;
     if (timeOfSubscription == 1) {
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 2) {
       discount += 5;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 3) {
       discount += 10;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     } else if (timeOfSubscription == 4) {
       discount += 15;
       finalPrice = basePrice * (1 - discount / 100);
       return (calculationOutput.innerHTML =
-        finalPrice.toFixed(2) + "PLN za konto");
+        finalPrice.toFixed(2) + "PLN za konto, zniżka " + discount + " %");
     }
   }
 }
