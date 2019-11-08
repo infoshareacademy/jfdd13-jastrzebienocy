@@ -1,25 +1,50 @@
-const banner = document.querySelector('.cookie-banner')
-const guzik = document.querySelector('.cookie-button')
+// const banner = document.querySelector('.cookie-banner')
+// const guzik = document.querySelector('.cookie-button')
 
-const setCookie = () => {
-    document.cookie ="name=user;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
+
+// let setCookie = () => {
+//     document.cookie ="name=user;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
+// };
+
+// function cookieEvent () {
+//     if ( document.cookie === true ) { banner.style.display = "none" } 
+//     else { banner.style.display =  "block"; }
+// };
+
+// guzik.addEventListener('click',function(){
+//     banner.style.display = "none";
+//     setCookie ();
+// });
+
+// cookieEvent();
+
+
+
+const banner = document.querySelector('.cookie-banner');
+const guzik = document.querySelector('.cookie-button');
+let setCookie = () => {
+    document.cookie = `name=user;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax`;
+};
+
+function cookieEvent() {
+    if (document.cookie === true) {
+        banner.style.display = 'none'
+    } else {
+        banner.style.display = 'block';
+    }
 }
 
-guzik.addEventListener('click',function(){
-    //localStorage.setItem('cookie', 'false');
-    banner.style = "display: none";
-    setCookie ();
-})
+guzik.addEventListener('click', function () {
+    banner.style.display = 'none';
+    setCookie();
+});
+cookieEvent();
 
 
 
 
 
-// const Wyswietl = () => {
-// if ( getCookie("name") !== true) {
-//     banner.style = "display: block";
-// }
-// };
+
 
 // function getCookie(cname) {
 //     const name = cname + "=";
@@ -37,4 +62,9 @@ guzik.addEventListener('click',function(){
 //     return "";
 // }
 
-// getCookie();
+// const testing = () => {
+//     if (getCookie('name') === '') 
+//     { banner.style = 'display: block'}}
+
+//     testing()
+    // getCookie()
