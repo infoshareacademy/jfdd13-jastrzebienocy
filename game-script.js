@@ -123,10 +123,15 @@ const player1 = new Player(domRectagle);
 
 document.addEventListener("keydown", event => Move.move(event, player1));
 
-let newFriut;
-let falling;
+var falling;
+var newFruitInterval;
+clearInterval(falling);
+  clearInterval(newFruitInterval);
+  console.log(clearInterval(falling));
 
 function start() {
+  startGameBtn.disabled = true;
+  
 
   player1.points = 0;
   document.querySelector('.counterPlus').innerHTML = player1.points;
@@ -146,11 +151,12 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
   `
   
-  clearInterval(falling);
+  
+  
 
   let lifes = document.querySelectorAll('.life');
 
-  newFriut = setInterval(() => {
+  newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
     domContainer.appendChild(newDomFruit);
@@ -199,15 +205,13 @@ function start() {
         if (lifes.length == 0){
           console.log('game over');
           //zapisz wynik
+           clearInterval(falling);
+            clearInterval(newFruitInterval);
           alert('GAME OVER');
 
         }
         // nieMaKolizji(); //uzytkownik traci punkt
-
       }
-
-
-
     };
 
 
@@ -221,14 +225,13 @@ function start() {
 
   }, intervalOfFalling);
 
-
-
 }
 
 
 const startGameBtn = document.querySelector('#startGame');
 
 startGameBtn.addEventListener('click',  start);
+
 
 
 // console.log(player1);
