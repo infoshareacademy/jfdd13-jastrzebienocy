@@ -458,6 +458,7 @@ p {
 .cookie-banner {
   font: 1.5em Arial;
   line-height: 2em;
+  display: block;
   background-color: #333;
   position: fixed;
   left: 0;
