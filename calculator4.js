@@ -62,13 +62,6 @@ input.forEach(i => {
 //-------------------------------------------------------------
 // Main full function of calculator
 
-// Continue calculation in case of  radiobutton change
-input.forEach(i => {
-  i.addEventListener("click", () => {
-    priceCalculation();
-  });
-});
-
 function priceCalculation() {
   // Account Calculation
   if (rangeslider.value <= 4) discount = 0;
