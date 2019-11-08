@@ -58,7 +58,7 @@
   .nav-logo--image {
     width: 200px;
     height: 100px;
-    display: block;
+    display: none;
     position: relative;
     left: -10px;
     top: -5px;

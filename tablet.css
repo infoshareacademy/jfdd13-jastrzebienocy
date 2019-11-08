@@ -14,10 +14,16 @@
     margin: 0 auto;
   }
 
- 
+  body > div > header > img {
+    height: 90px;
+  }
   header {
-    display: none;
-    }
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #f3fbe8;
+  }
 
 
       /* Navigation*/
@@ -61,15 +67,12 @@
         font-family: 'Oswald', sans-serif; 
         font-weight: bold;
         color: #212121;
-        font-size: 18px;
+        font-size: 20px;
         text-decoration: none;
         padding: 12px;
     }
     
-    /* .nav-container a:hover {
-      background-color: #ddd;
-      color: black;
-    } */
+  
     /* nav-logo */
     #navbar > a.nav-toggler {
       position: absolute;
@@ -81,24 +84,17 @@
       top: 20px;
     }
 
-    /* #navbar > a {
-        /* background: none;
-        border: none;
-        color: #F1F1F1;
-        font-size: 18px;
-        
-        position: absolute;
-        right: 10px;
-        top: 10px; } */
-    
+ 
+    .nav-logo--image {
+      display: none;
+    }
 
     #navbar >a > img  {
       width: 160px; 
       height: 90px;
-      display: block;
       position: relative;
       left: 40px;
-      top: -20px;
+      top: -24px;
       z-index: 10;
   }
 
