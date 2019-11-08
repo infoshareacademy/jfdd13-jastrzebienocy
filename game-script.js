@@ -1,7 +1,7 @@
-const playerWidth = 30;
-const fruitWidth = 30;
-const playerHeight = 30;
-const fruitHeight = 30;
+const playerWidth = 245;
+const fruitWidth = 40;
+const playerHeight = 183;
+const fruitHeight = 40;
 
 let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
@@ -74,7 +74,10 @@ class MoveFruits {
   }
 
   static move(fruit, domFruit) {
-    if (fruit.y > 760) {
+    if (fruit.y > 790) {
+      domFruit.style.backgroundImage = "url(./gameIMG/lost.png)";
+      domFruit.style.height = '100px'
+      domFruit.style.width = '100px'
       setTimeout(() => {
         domFruit.remove();
       }, 1000);
@@ -123,10 +126,17 @@ const player1 = new Player(domRectagle);
 
 document.addEventListener("keydown", event => Move.move(event, player1));
 
-let newFriut;
-let falling;
+var falling;
+var newFruitInterval;
+
 
 function start() {
+  document.querySelector('.human').style.opacity = '1';
+  // startGameBtn.disabled = true;
+  
+  clearInterval(falling);
+  clearInterval(newFruitInterval);
+  // console.log(clearInterval(falling));
 
   player1.points = 0;
   document.querySelector('.counterPlus').innerHTML = player1.points;
@@ -146,11 +156,12 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
   `
   
-  clearInterval(falling);
+  
+  
 
   let lifes = document.querySelectorAll('.life');
 
-  newFriut = setInterval(() => {
+  newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
     domContainer.appendChild(newDomFruit);
@@ -190,7 +201,7 @@ function start() {
         player.addPoint();
 
       }
-      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 820 && fruit.firstTouch == false) {
         fruit.firstTouch = true;
         console.log('looser');
 
@@ -199,15 +210,13 @@ function start() {
         if (lifes.length == 0){
           console.log('game over');
           //zapisz wynik
+           clearInterval(falling);
+            clearInterval(newFruitInterval);
           alert('GAME OVER');
 
         }
         // nieMaKolizji(); //uzytkownik traci punkt
-
       }
-
-
-
     };
 
 
@@ -220,15 +229,16 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-
-
-
+  // clearInterval(newFruitInterval.fruits);
+  // clearInterval(falling.fruits);
+  
 }
 
 
 const startGameBtn = document.querySelector('#startGame');
 
 startGameBtn.addEventListener('click',  start);
+
 
 
 // console.log(player1);
