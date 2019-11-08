@@ -133,6 +133,8 @@ var newFruitInterval;
 function start() {
   document.querySelector('.human').style.opacity = '1';
   document.querySelector('.points').style.opacity = '1';
+  document.getElementById('end-game').classList.remove('shown');
+  
   // startGameBtn.disabled = true;
   
   clearInterval(falling);
