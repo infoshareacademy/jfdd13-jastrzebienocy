@@ -132,6 +132,9 @@ var newFruitInterval;
 
 function start() {
   document.querySelector('.human').style.opacity = '1';
+  document.querySelector('.points').style.opacity = '1';
+  document.getElementById('end-game').classList.remove('shown');
+  
   // startGameBtn.disabled = true;
   
   clearInterval(falling);
@@ -164,6 +167,16 @@ function start() {
   newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
+
+    if (Math.random() <= 0.25){
+      newDomFruit.classList.add("banana");
+    } else if (Math.random() > 0.25 && Math.random() < 0.5)  {
+      newDomFruit.classList.add("peach");
+    } else if (Math.random() >= 0.5 && Math.random() < 0.75)  {
+      newDomFruit.classList.add("strawberry");
+    } else  {
+      newDomFruit.classList.add("grapes");
+    } 
     domContainer.appendChild(newDomFruit);
     Fruit;
     const newFruit = new Fruit(newDomFruit, Math.random() * 3 + minSpeed);
@@ -208,12 +221,17 @@ function start() {
         lifes[lifes.length - 1].remove()
         lifes = document.querySelectorAll('.life')
         if (lifes.length == 0){
-          console.log('game over');
-          //zapisz wynik
+          
            clearInterval(falling);
             clearInterval(newFruitInterval);
-          alert('GAME OVER');
+          
+          document.querySelector('.points').style.opacity = '0';
+          setTimeout(() => {
+            
 
+            document.getElementById('end-game').classList.add('shown');
+          }, 1000);
+          
         }
         // nieMaKolizji(); //uzytkownik traci punkt
       }
@@ -229,8 +247,7 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-  // clearInterval(newFruitInterval.fruits);
-  // clearInterval(falling.fruits);
+  
   
 }
 

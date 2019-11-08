@@ -14,10 +14,16 @@
     margin: 0 auto;
   }
 
- 
+  body > div > header > img {
+    height: 90px;
+  }
   header {
-    display: none;
-    }
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #f3fbe8;
+  }
 
 
       /* Navigation*/
@@ -80,13 +86,12 @@
 
  
     .nav-logo--image {
-      display: block;
+      display: none;
     }
 
     #navbar >a > img  {
       width: 160px; 
       height: 90px;
-      display: block;
       position: relative;
       left: 40px;
       top: -24px;
