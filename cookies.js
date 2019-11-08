@@ -24,6 +24,7 @@ function getCookie(cname) {
 function cookieEvent () {
    if ( getCookie ('name')=== '' ) { banner.style = 'display: block' }
 };
+
    cookieButton.addEventListener('click',function(){
    banner.style = 'display: none';
    setCookie ();

@@ -1,24 +1,43 @@
 *{
-    /* box-sizing: border-box; */
     margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    margin: 10px;
 }
 
 .container{
     position: relative;
-    height: 800px;
-    width: 1200px;
-    border: 3px solid #212121;
-    background: darksalmon;
+    height: 900px;
+    width: 1400px;
+    /* border: 3px solid #212121; */
+    background: url("./gameIMG/background.png") no-repeat;
+    background-size: cover;
+    padding: 30px;
+    
 
 
 }
 
 
+
 .points{
+    font-size: 40px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    opacity: 0;
+    
    
 }
 
@@ -29,9 +48,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 192, 203, 0.5)
 }
 
-.points p, .points i{
+.points i{
     
     color: white;
     font-size: 40px;
@@ -46,20 +66,82 @@
     top: 150px;
     display: flex;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    background: deeppink;
-    border: 1px solid #e905b0;
+    height: 70px;
+    width: 70px;
+    
+   
+    
+}
+
+.banana{
+    background: url("./gameIMG/banana.png") no-repeat;
+    background-size: cover;
+}
+
+.peach{
+    background: url("./gameIMG/peach.png") no-repeat;
+    background-size: cover;
+}
+
+.grapes{
+    background: url("./gameIMG/grapes.png") no-repeat;
+    background-size: cover;
+}
+
+.strawberry{
+    background: url("./gameIMG/strawberry.png") no-repeat;
+    background-size: cover;
 }
 
 .human{
     position: absolute;
-    top: 680px;
+    top: 75%;
     left: 750px;
     display: flex;
+    opacity: 0;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    background: deeppink;
-    /* border: 1px solid #e905b0; */
+    height: 183px;
+    width: 245px;
+    background-image: url("./gameIMG/human.png");
+    background-size: cover;
+    
+}
+
+#startGame {
+    background: rgb(255, 192, 203);
+    font-size: 50px;
+    border-radius: 10px;
+    
+
+}
+#instruction {
+    background: rgb(255, 192, 203);
+    font-size: 50px;
+    border-radius: 10px;
+    
+
+}
+
+
+.hidden{
+    opacity: 0; 
+    pointer-events: none; 
+    transition: 0.7s ease-in; 
+    transform: scale(0);
+}
+
+.shown{
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.7s ease-in; 
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif");
+    background-size: 100% 100%;
+    z-index: 10;
 }

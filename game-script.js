@@ -1,7 +1,7 @@
-const playerWidth = 30;
-const fruitWidth = 30;
-const playerHeight = 30;
-const fruitHeight = 30;
+const playerWidth = 245;
+const fruitWidth = 40;
+const playerHeight = 183;
+const fruitHeight = 40;
 
 let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
@@ -74,7 +74,10 @@ class MoveFruits {
   }
 
   static move(fruit, domFruit) {
-    if (fruit.y > 760) {
+    if (fruit.y > 790) {
+      domFruit.style.backgroundImage = "url(./gameIMG/lost.png)";
+      domFruit.style.height = '100px'
+      domFruit.style.width = '100px'
       setTimeout(() => {
         domFruit.remove();
       }, 1000);
@@ -123,10 +126,20 @@ const player1 = new Player(domRectagle);
 
 document.addEventListener("keydown", event => Move.move(event, player1));
 
-let newFriut;
-let falling;
+var falling;
+var newFruitInterval;
+
 
 function start() {
+  document.querySelector('.human').style.opacity = '1';
+  document.querySelector('.points').style.opacity = '1';
+  document.getElementById('end-game').classList.remove('shown');
+  
+  // startGameBtn.disabled = true;
+  
+  clearInterval(falling);
+  clearInterval(newFruitInterval);
+  // console.log(clearInterval(falling));
 
   player1.points = 0;
   document.querySelector('.counterPlus').innerHTML = player1.points;
@@ -146,13 +159,24 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
   `
   
-  clearInterval(falling);
+  
+  
 
   let lifes = document.querySelectorAll('.life');
 
-  newFriut = setInterval(() => {
+  newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
+
+    if (Math.random() <= 0.25){
+      newDomFruit.classList.add("banana");
+    } else if (Math.random() > 0.25 && Math.random() < 0.5)  {
+      newDomFruit.classList.add("peach");
+    } else if (Math.random() >= 0.5 && Math.random() < 0.75)  {
+      newDomFruit.classList.add("strawberry");
+    } else  {
+      newDomFruit.classList.add("grapes");
+    } 
     domContainer.appendChild(newDomFruit);
     Fruit;
     const newFruit = new Fruit(newDomFruit, Math.random() * 3 + minSpeed);
@@ -190,24 +214,27 @@ function start() {
         player.addPoint();
 
       }
-      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 820 && fruit.firstTouch == false) {
         fruit.firstTouch = true;
         console.log('looser');
 
         lifes[lifes.length - 1].remove()
         lifes = document.querySelectorAll('.life')
         if (lifes.length == 0){
-          console.log('game over');
-          //zapisz wynik
-          alert('GAME OVER');
+          
+           clearInterval(falling);
+            clearInterval(newFruitInterval);
+          
+          document.querySelector('.points').style.opacity = '0';
+          setTimeout(() => {
+            
 
+            document.getElementById('end-game').classList.add('shown');
+          }, 1000);
+          
         }
         // nieMaKolizji(); //uzytkownik traci punkt
-
       }
-
-
-
     };
 
 
@@ -220,15 +247,15 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-
-
-
+  
+  
 }
 
 
 const startGameBtn = document.querySelector('#startGame');
 
 startGameBtn.addEventListener('click',  start);
+
 
 
 // console.log(player1);
