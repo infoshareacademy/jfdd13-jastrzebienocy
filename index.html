@@ -343,50 +343,12 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
         </div>
       </div>
     </div>
-
+    <script src="navigation.js"></script>
     <script src="game-instruction.js"></script>
     <script src="./calculator3.js"></script>
     <script src="cookies.js"></script>
     
 <script>
-function toggleMenu() {
-  const x = document.getElementById("myLinks");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
-    x.classList.add('navColumn')
-    x.classList.add("sticky2");
-  }
-}
-
-window.onscroll = function () {
-myFunction();
-};
-const navbar = document.querySelector("#navbar");
-const sticky = navbar.offsetTop;
-function myFunction() {
-if (window.pageYOffset >= sticky) {
-navbar.classList.add("sticky");
-} else {
-navbar.classList.remove("sticky");
-}
-}
-
-// TRZEBA T PRZEROBIC BO NIE DZIALA _ od 800 zeby sie pojawialo logo przy scrollu na dol 
-// const navCont = document.querySelector("#navbar")
-// const navImage = document.querySelector("#navbar > a.nav-logo > img")
-// function myFunction2(x) {
-//   if (x.matches && navCont.classList.contains("sticky")){ // If media query matches
-//     navImage.style.display = 'block';
-//   } else {
-//     navImage.style.display = 'none';
-//   }
-// }
-
-// const x = window.matchMedia("(min-width: 800px)")
-// myFunction2(x) // Call listener function at run time
-// x.addListener(myFunction2) // Attach listener function on state changes
 
 
 var slideIndex = 1;

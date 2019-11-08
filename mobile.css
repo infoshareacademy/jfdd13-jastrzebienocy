@@ -66,11 +66,7 @@
         padding: 12px;
     }
     
-    /* .nav-container a:hover {
-      background-color: #ddd;
-      color: black;
-    } */
-    /* nav-logo */
+ 
     #navbar > a.nav-toggler {
       position: absolute;
       background: none;
@@ -81,16 +77,6 @@
       top: 20px;
     }
 
-    /* #navbar > a {
-        /* background: none;
-        border: none;
-        color: #F1F1F1;
-        font-size: 18px;
-        
-        position: absolute;
-        right: 10px;
-        top: 10px; } */
-    
 
     #navbar >a > img  {
       width: 160px; 
@@ -101,6 +87,10 @@
       top: -20px;
       z-index: 10;
   }
+  .nav-logo--image {
+    display: block;
+  }
+
 
   .nav-toggler {
     background-color: #4CAF50;
