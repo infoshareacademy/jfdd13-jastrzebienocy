@@ -128,14 +128,15 @@ document.addEventListener("keydown", event => Move.move(event, player1));
 
 var falling;
 var newFruitInterval;
-clearInterval(falling);
-  clearInterval(newFruitInterval);
-  console.log(clearInterval(falling));
+
 
 function start() {
   document.querySelector('.human').style.opacity = '1';
-  startGameBtn.disabled = true;
+  // startGameBtn.disabled = true;
   
+  clearInterval(falling);
+  clearInterval(newFruitInterval);
+  // console.log(clearInterval(falling));
 
   player1.points = 0;
   document.querySelector('.counterPlus').innerHTML = player1.points;
@@ -228,7 +229,9 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-
+  // clearInterval(newFruitInterval.fruits);
+  // clearInterval(falling.fruits);
+  
 }
 
 

@@ -66,3 +66,11 @@
     background-size: cover;
     
 }
+
+#startGame {
+    background: pink;
+    font-size: 20px;
+    border-radius: 10px;
+    
+
+}
