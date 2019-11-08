@@ -273,6 +273,7 @@
 
 .news-small {
   text-align: center;
+  width: 70%;
 }
 
 .news-input-class {
@@ -311,6 +312,10 @@
 /* Team */
 
 /*Team*/
+#team-box > div {
+  text-align: center;
+}
+
 #team-box {
   width: 120px;
   height: 120px;
@@ -319,7 +324,7 @@
   /* border:3px dashed #000;
   background-color:#FDD700; */
   perspective: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 #team-card {
@@ -455,7 +460,8 @@
 /*cookies*/
 
 .cookie-banner {
-    font: 0.8em Arial;
+    font: 1.1em Arial;
+    line-height: 1.5em;
     background-color: #333;
     position: fixed;
     left: 0;
@@ -484,6 +490,7 @@
     display: inline-block;
     border: 1px solid #aaa;
     border-bottom: 2px solid #aaa;
+    font-size: 1.1em;
   }
   
   
