@@ -103,8 +103,7 @@
 
       </div>
     </section>
-      <!-- Modal-calculator button -->
-      <div class="calculator-button-box"><a href="#" class="trigger">Kalkulator subskrypcji !</a></div>
+
     <main class="main-content main-content-mobile" id="whatNext">
 
       <img src="./functionality-images/choose.png" alt="Choose product" />
@@ -196,6 +195,8 @@
 
          <a href="#" class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
+                <!-- Modal-calculator button -->
+                <div class="calculator-button-box"><a href="#" class="trigger">Kalkulator subskrypcji !</a></div>
           <p class="news-small rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
         </div>
 
@@ -297,17 +298,17 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
               <span id="quantity" class="quantity"></span>
               <span id="message" class="quantity-message"></span>
             </div>
-      
+
             <div class="main-months">
               <div class="month-quantity-text">Ilość miesięcy:</div>
-              <label for="one-year">do 12</label>
-              <input type="radio" name="months" id="months" class="months-first" checked />
-              <label for="second-year">do 24</label>
-              <input type="radio" name="months" id="months" class="months-second" />
-              <label for="third-year">do 36</label>
-              <input type="radio" name="months" id="months" class="months-third" />
-              <label for="fourth-year">powyżej 36</label>
-              <input type="radio" name="months" id="months" class="months-fourth" />
+              <label for="months-first">do 12</label>
+              <input type="radio" name="months" id="months" class="months months-first" checked/>
+              <label for="months-second">do 24</label>
+              <input type="radio" name="months" id="months" class=" months months-second" />
+              <label for="months-third">do 36</label>
+              <input type="radio" name="months" id="months" class="months months-third" />
+              <label for="months-fourth">powyżej 36</label>
+              <input type="radio" name="months" id="months" class=" months months-fourth" />
             </div>
             <div class="calculation-elements">
               <div class="calculation-output"></div>
@@ -343,50 +344,12 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
         </div>
       </div>
     </div>
-
+    <script src="navigation.js"></script>
     <script src="game-instruction.js"></script>
-    <script src="./calculator3.js"></script>
+    <script src="./calculator4.js"></script>
     <script src="cookies.js"></script>
     
 <script>
-function toggleMenu() {
-  const x = document.getElementById("myLinks");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "flex";
-    x.classList.add('navColumn')
-    x.classList.add("sticky2");
-  }
-}
-
-window.onscroll = function () {
-myFunction();
-};
-const navbar = document.querySelector("#navbar");
-const sticky = navbar.offsetTop;
-function myFunction() {
-if (window.pageYOffset >= sticky) {
-navbar.classList.add("sticky");
-} else {
-navbar.classList.remove("sticky");
-}
-}
-
-// TRZEBA T PRZEROBIC BO NIE DZIALA _ od 800 zeby sie pojawialo logo przy scrollu na dol 
-// const navCont = document.querySelector("#navbar")
-// const navImage = document.querySelector("#navbar > a.nav-logo > img")
-// function myFunction2(x) {
-//   if (x.matches && navCont.classList.contains("sticky")){ // If media query matches
-//     navImage.style.display = 'block';
-//   } else {
-//     navImage.style.display = 'none';
-//   }
-// }
-
-// const x = window.matchMedia("(min-width: 800px)")
-// myFunction2(x) // Call listener function at run time
-// x.addListener(myFunction2) // Attach listener function on state changes
 
 
 var slideIndex = 1;

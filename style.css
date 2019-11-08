@@ -40,7 +40,7 @@ nav {
   align-items: center;
   justify-content: center;
   background: #8bc34a;
-  height: auto;
+  height: 110px;
   z-index: 5;
   scroll-behavior: smooth;
   top: 0px;
@@ -58,7 +58,7 @@ nav {
 .nav-logo--image {
   width: 250px;
   height: 160px;
-  display: block;
+  display: none;
   position: relative;
   left: -10px;
   top: -5px;

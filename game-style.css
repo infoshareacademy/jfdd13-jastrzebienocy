@@ -1,14 +1,14 @@
 *{
-    /* box-sizing: border-box; */
     margin: 0 auto;
 }
 
 .container{
     position: relative;
-    height: 800px;
-    width: 1200px;
+    height: 900px;
+    width: 1400px;
     border: 3px solid #212121;
-    background: darksalmon;
+    background: url("./gameIMG/background.png") no-repeat;
+    background-size: cover;
 
 
 }
@@ -31,7 +31,7 @@
     justify-content: center;
 }
 
-.points p, .points i{
+.points i{
     
     color: white;
     font-size: 40px;
@@ -46,20 +46,31 @@
     top: 150px;
     display: flex;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    background: deeppink;
-    border: 1px solid #e905b0;
+    height: 70px;
+    width: 70px;
+    background: url("./gameIMG/banana.png") no-repeat;
+    background-size: cover;
+    
 }
 
 .human{
     position: absolute;
-    top: 680px;
+    top: 75%;
     left: 750px;
     display: flex;
+    opacity: 0;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    background: deeppink;
-    /* border: 1px solid #e905b0; */
+    height: 183px;
+    width: 245px;
+    background-image: url("./gameIMG/human.png");
+    background-size: cover;
+    
+}
+
+#startGame {
+    background: pink;
+    font-size: 20px;
+    border-radius: 10px;
+    
+
 }
