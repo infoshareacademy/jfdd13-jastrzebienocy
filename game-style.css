@@ -2,23 +2,42 @@
     margin: 0 auto;
 }
 
+.wrapper{
+    display: flex;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    margin: 10px;
+}
+
 .container{
     position: relative;
     height: 900px;
     width: 1400px;
-    border: 3px solid #212121;
+    /* border: 3px solid #212121; */
     background: url("./gameIMG/background.png") no-repeat;
     background-size: cover;
+    padding: 30px;
+    
 
 
 }
 
 
+
 .points{
+    font-size: 40px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    opacity: 0;
+    
    
 }
 
@@ -29,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 192, 203, 0.5)
 }
 
 .points i{
@@ -48,9 +68,29 @@
     justify-content: center;
     height: 70px;
     width: 70px;
+    
+   
+    
+}
+
+.banana{
     background: url("./gameIMG/banana.png") no-repeat;
     background-size: cover;
-    
+}
+
+.peach{
+    background: url("./gameIMG/peach.png") no-repeat;
+    background-size: cover;
+}
+
+.grapes{
+    background: url("./gameIMG/grapes.png") no-repeat;
+    background-size: cover;
+}
+
+.strawberry{
+    background: url("./gameIMG/strawberry.png") no-repeat;
+    background-size: cover;
 }
 
 .human{
@@ -68,9 +108,38 @@
 }
 
 #startGame {
-    background: pink;
-    font-size: 20px;
+    background: rgb(255, 192, 203);
+    font-size: 50px;
     border-radius: 10px;
     
+
+}
+#instruction {
+    background: rgb(255, 192, 203);
+    font-size: 50px;
+    border-radius: 10px;
+    
+
+}
+
+
+.hidden{
+    opacity: 0; 
+    pointer-events: none; 
+    transition: 0.7s ease-in; 
+    transform: scale(0);
+}
+.shown{
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.7s ease-in; 
+    transform: scale(1);
+    height: 1200px;
+    width: 1900px;
+    
+    background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif") no-repeat;
+    background-size: cover;
+    
+
 
 }
