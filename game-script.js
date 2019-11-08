@@ -247,8 +247,7 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-  // clearInterval(newFruitInterval.fruits);
-  // clearInterval(falling.fruits);
+  
   
 }
 
