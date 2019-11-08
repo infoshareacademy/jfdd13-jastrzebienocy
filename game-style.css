@@ -1,5 +1,4 @@
 *{
-    /* box-sizing: border-box; */
     margin: 0 auto;
 }
 
@@ -31,7 +30,7 @@
     justify-content: center;
 }
 
-.points p, .points i{
+.points i{
     
     color: white;
     font-size: 40px;
@@ -58,8 +57,8 @@
     left: 750px;
     display: flex;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    background: deeppink;
-    /* border: 1px solid #e905b0; */
+    height: 100px;
+    width: 100px;
+    background-image: url("./gameIMG/human.png")
+    
 }
