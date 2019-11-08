@@ -1,7 +1,7 @@
-const playerWidth = 30;
-const fruitWidth = 30;
-const playerHeight = 30;
-const fruitHeight = 30;
+const playerWidth = 245;
+const fruitWidth = 40;
+const playerHeight = 183;
+const fruitHeight = 40;
 
 let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
@@ -74,7 +74,10 @@ class MoveFruits {
   }
 
   static move(fruit, domFruit) {
-    if (fruit.y > 760) {
+    if (fruit.y > 790) {
+      domFruit.style.backgroundImage = "url(./gameIMG/lost.png)";
+      domFruit.style.height = '100px'
+      domFruit.style.width = '100px'
       setTimeout(() => {
         domFruit.remove();
       }, 1000);
@@ -130,6 +133,7 @@ clearInterval(falling);
   console.log(clearInterval(falling));
 
 function start() {
+  document.querySelector('.human').style.opacity = '1';
   startGameBtn.disabled = true;
   
 
@@ -196,7 +200,7 @@ function start() {
         player.addPoint();
 
       }
-      else if (bottomEdgeFruit >= 720 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 820 && fruit.firstTouch == false) {
         fruit.firstTouch = true;
         console.log('looser');
 
