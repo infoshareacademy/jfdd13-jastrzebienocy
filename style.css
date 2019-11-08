@@ -449,14 +449,15 @@ p {
 /*cookies*/
 
 .cookie-banner {
-  display: block;
+  display: none;
   font: 0.8em Arial;
   background-color: #333;
   position: fixed;
   left: 0;
-  width: 100%;
+  width: 10%;
   bottom: 0;
   opacity: 0.9;
+  background-color: red;
 }
 
 .cookie-container a {
