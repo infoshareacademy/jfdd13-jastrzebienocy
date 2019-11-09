@@ -578,6 +578,7 @@ nav {
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  margin-left: -40px;
   font-size: 0.65em;
   align-self: center;
 }
@@ -595,33 +596,28 @@ nav {
   display: flex;
   flex-direction: row;
   font-size: 0.8em;
+  justify-content: center;
 }
 
 /* Info Box Span Style */
 
 .info-box span {
   height: 0.8em;
-  line-height: 0.8em;
   font-size: 0.8em;
+  margin: 15px 0;
 }
 
 /* Account Quantity Label */
 
 .quantity-label {
-  align-self: left;
-  /* width: 30%; */
-}
-
-/* Quantity span - connected to slider - style */
-
-.quantity {
-  margin: 15px 5px;
+  align-self: right;
+  width: 6%;
 }
 
 /* Quantity Account extended message style*/
 
 .quantity-message {
-  width: 24%;
+  width: 19%;
 }
 
 /* Month quantity label */

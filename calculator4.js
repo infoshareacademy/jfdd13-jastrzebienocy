@@ -71,12 +71,8 @@ function priceCalculation() {
   if (input[1].checked) discount += 5;
   else if (input[2].checked) discount += 10;
   else if (input[3].checked) discount += 15;
-  let finalPrice = basePrice * (1 - discount / 100);
+  let finalPrice = (basePrice * (1 - discount / 100)).toFixed(2);
 
-  calculationOutput.innerHTML =
-    "Cena za Subskrypcję " +
-    finalPrice.toFixed(2) +
-    " PLN,zniżka " +
-    discount +
-    " %";
+  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice} PLN
+  zniżka: ${discount} %`;
 }
