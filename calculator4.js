@@ -25,7 +25,7 @@ function windowOnClick(event) {
   }
 }
 
-trigger.addEventListener("click", function() {
+trigger.addEventListener("click", () => {
   priceCalculation();
   toggleModal();
 });
