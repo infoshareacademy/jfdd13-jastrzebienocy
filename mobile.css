@@ -471,6 +471,8 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
   text-align: center;
   transform: translate(-50%, -50%);
   background-color: #dcedc8;
@@ -581,7 +583,7 @@ nav {
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  margin-left: -32px;
+  margin-left: -43px;
   font-size: 0.65em;
   align-self: center;
 }
@@ -620,7 +622,7 @@ nav {
 /* Quantity Account extended message style*/
 
 .quantity-message {
-  width: 19%;
+  width: 22%;
 }
 
 /* Month quantity label */
