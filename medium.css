@@ -455,6 +455,7 @@
   /*cookies*/
   
   .cookie-banner {
+    display: none;
     font: 1.2em Arial;
     line-height: 1.6em;
     background-color: #333;

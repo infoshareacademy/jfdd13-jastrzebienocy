@@ -464,6 +464,7 @@ nav {
 /*cookies*/
 
 .cookie-banner {
+  display: none;
   font: 1.5em Arial;
   line-height: 2em;
   display: block;
