@@ -15,7 +15,7 @@
 .modal-calculator-text {
   text-align: center;
   text-decoration: underline;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-family: "Oswald";
   background-color: #689f38;
   border-radius: 20px;
@@ -27,7 +27,7 @@
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  /* margin-left: -82px; */
+  margin-left: -70px;
 }
 
 .account-quantity-text {
@@ -40,10 +40,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  font-size: 1.3em;
   transform: translate(-50%, -50%);
   background-color: #dcedc8;
   padding: 1rem 1.5rem;
   width: 30rem;
+  height: auto;
   border-radius: 0.5rem;
 }
 
@@ -102,12 +104,7 @@
 
 /* range slider general - large screen */
 
-/* .range-slider {
-  width: 100%; 
-  text-align: center;
-  border: 1px dashed #dcedc8;
-  font-size: 1.4em;
-} */
+/*  Main months class including all the text of months quantity */
 
 /* Chrome slider style  */
 
@@ -166,7 +163,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   align-items: center;
 }
 
@@ -178,11 +174,6 @@
 } */
 
 /* Account Quantity Label */
-
-.quantity-label {
-  align-self: center;
-  /* width: 30%; */
-}
 
 /* Quantity span - connected to slider - style */
 
@@ -226,4 +217,5 @@
 
 .calculation-output {
   margin: 10px 0;
+  /* font-size: 1.3em; */
 }
