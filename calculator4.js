@@ -50,7 +50,6 @@ rangeslider.oninput = function() {
 const msg = () => {
   if (rangeslider.value == 10) {
     let message = (document.querySelector("#message").innerText = " i więcej.");
-    return message;
   } else {
     message = document.querySelector("#message").innerText = " ";
   }
