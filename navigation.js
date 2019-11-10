@@ -32,13 +32,51 @@ function toggleMenu() {
   
   window.onscroll = function () {
     navigationBehavior();
-
+    sectionsHighlight();
+    };
+    
+      function sectionsHighlight() {
+          const section = document.querySelectorAll(".section");
+          const sections = {};
+          leti = 0;
+        
+          Array.prototype.forEach.call(section, function(e) {
+            sections[e.id] = e.offsetTop;
+          })
+        const scrollPosition =  document.documentElement.scrollTop ;
+    
+        for (i in sections) {
+          if (sections[i] <= scrollPosition + 700) {
+            // 
+            document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active2');
+          }
+          else {
+            document.querySelector('a[href*=' + i + ']').classList.remove("active2");
+          }
+          // else if (sections[i] > scrollPosition + 750) {
+          //   document.querySelector('.active2').setAttribute('class', ' ');
+          // }
+        }
     };
 
+
+
+
+
+
+
+
+
+
+
+
+    // offsetTop: 807
+    // offsetTop: 1449
+    // offsetTop: 2546
+    // offsetTop: 2925
     // function event){
-    //   var sections = document.querySelectorAll(".section");
-    //   var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      
+    //   var sections = document.querySelectorAll(".section");  JEST DOBRE 
+    // var scrollPos = window.pageYOffset || document.documentElement.scrollTop ; JEST DOBRE 
     //   for( var i = 0; i < sections.length; i++ ){
     //     var currLink = sections[i]; 
     //     var val = document.querySelector("#myLinks > a");
@@ -76,3 +114,6 @@ function toggleMenu() {
     //     }
     //   };
     // })();
+
+
+
