@@ -74,6 +74,15 @@
     height: 90px;
   }
   
+  .active2 {
+    /* font-family: 'Droid Sans', serif;
+    font-size: 14px; */
+    background-color: #FFC107;
+    text-decoration: none;
+    /* line-height: 50px; */
+  }
+
+
   /*hero section*/
   
   .hero {

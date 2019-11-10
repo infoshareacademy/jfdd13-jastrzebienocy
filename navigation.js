@@ -46,7 +46,7 @@ function toggleMenu() {
         const scrollPosition =  document.documentElement.scrollTop ;
     
         for (i in sections) {
-          if (sections[i] <= scrollPosition + 700) {
+          if (sections[i] <= scrollPosition + 500) {
             // 
             document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active2');
           }
