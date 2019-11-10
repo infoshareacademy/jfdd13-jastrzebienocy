@@ -26,8 +26,8 @@ function windowOnClick(event) {
 }
 
 trigger.addEventListener("click", () => {
-  priceCalculation();
   toggleModal();
+  priceCalculation();
 });
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
@@ -42,10 +42,10 @@ rangeslider.oninput = function() {
   priceCalculation();
 };
 
-//-------------------------------------------------------
-//-------------------------------------------------------
-//-------------------------------------------------------
-//Functions
+// -------------------------------------------------------
+// -------------------------------------------------------
+// -------------------------------------------------------
+// Functions
 // Addition message  display
 const msg = () => {
   if (rangeslider.value == 10) {
@@ -62,7 +62,7 @@ input.forEach(i => {
   });
 });
 
-//-------------------------------------------------------------
+// -------------------------------------------------------------
 // Main full function of calculator
 
 function priceCalculation() {
@@ -74,8 +74,10 @@ function priceCalculation() {
   if (input[1].checked) discount += 5;
   else if (input[2].checked) discount += 10;
   else if (input[3].checked) discount += 15;
-  let finalPrice = (basePrice * (1 - discount / 100)).toFixed(2);
+  let finalPrice = basePrice * (1 - discount / 100);
 
-  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice} PLN
+  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice.toFixed(
+    2
+  )} PLN <br>
   zniżka: ${discount} %`;
 }
