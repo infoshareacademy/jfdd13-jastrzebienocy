@@ -51,14 +51,14 @@ nav {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: #212121;
-  font-size: 30px;
+  font-size: 24px;
   text-decoration: none;
   padding: 20px;
 }
 
 .nav-logo--image {
-  width: 250px;
-  height: 160px;
+  width: 155px;
+  height: 120px;
   display: none;
   position: relative;
   left: -10px;
@@ -73,7 +73,7 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 90px;
+  height: 70px;
 }
 
 .active2 {
@@ -90,7 +90,7 @@ nav {
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   width: 100%;
-  min-height: 600px;
+  height: 600px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ nav {
   color: #212121;
   padding: 25px 15px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 40px;
   border: 1px solid #212121;
   font-family: oswald;
 }
@@ -118,7 +118,7 @@ nav {
   font-weight: bold;
   padding: 10px;
   max-width: 50%;
-  font-size: 28px;
+  font-size: 20px;
   font-family: sans-serif;
   line-height: 40px;
 }
@@ -137,7 +137,7 @@ nav {
   top: -40px;
   color: #757575;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 26px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
 }
@@ -146,7 +146,7 @@ nav {
   line-height: 1.4em;
   display: inline;
   font-size: 1em;
-  border: 1px solid rgb(98, 212, 21);
+  /* border: 1px solid rgb(98, 212, 21); */
   padding: 4px;
   border-radius: 10px;
   text-decoration: none;
@@ -210,7 +210,7 @@ nav {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  font-size: 26px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
@@ -244,7 +244,7 @@ nav {
   margin: 20px;
   width: 25vw;
   border: 1px solid #212121;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 6px;
   background: #dcedc8;
   text-align: center;
@@ -281,7 +281,7 @@ nav {
 }
 
 .news-small {
-  font-size: 26px;
+  font-size: 20px;
   width: 68%;
   text-align: center;
 }
