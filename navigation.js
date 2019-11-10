@@ -15,6 +15,7 @@ function toggleMenu() {
   const navImage = document.querySelector(".nav-logo--image")
   const navbar = document.querySelector("#navbar");
   const sticky = navbar.offsetTop;
+  
   function navigationBehavior() {
   if (window.matchMedia("(min-width: 800px)") && window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
@@ -33,28 +34,27 @@ function toggleMenu() {
     navigationBehavior();
     };
 
-    function onScroll(event){
-      var sections = document.querySelectorAll(".section");
-      var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    // function onScroll(event){
+    //   var sections = document.querySelectorAll(".section");
+    //   var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
       
-      for( var i = 0; i < sections.length; i++ ){
-        var currLink = sections[i]; 
-        var val = currLink.getAttribute('href');
-        var refElement = document.querySelector(val);
-          if( refElement.offsetTop <= scrollPos && ( refElement.offsetTop + refElement.offsetHeight > scrollPos)){
-            document.querySelector('#menu-center ul li a').classList.remove('active');
-            currLink.classList.add('active');
-          }else{
-             currLink.classList.remove('active');
-           }
-      }   
-    };
+    //   for( var i = 0; i < sections.length; i++ ){
+    //     var currLink = sections[i]; 
+    //     var val = document.querySelector("#myLinks > a");
+    //     // var refElement = document.querySelector(val);
+    //       if( val.offsetTop <= scrollPos && ( val.offsetTop + val.offsetHeight > scrollPos)){
+    //         document.document.querySelector("#myLinks > a").classList.remove('active');
+    //         currLink.classList.add('active');
+    //       }else{
+    //          currLink.classList.remove('active');
+    //        }
+    //   }   
+    // };
     
-    window.document.addEventListener('scroll', onScroll );
-
+    // window.document.addEventListener('scroll', onScroll );
+    
     // jak zrobic podswietlanie //
     // (function() {
-    //   'use strict';
     
     //   var section = document.querySelectorAll(".section");
     //   var sections = {};
