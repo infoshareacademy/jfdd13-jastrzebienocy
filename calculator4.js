@@ -8,7 +8,7 @@ const closeButton = document.querySelector(".close-button");
 const basePrice = 99;
 // Discount declaration
 let discount = 0;
-let finalPrice;
+// let finalPrice = basePrice * (1 - discount / 100);
 
 // Calculation output variable
 let calculationOutput = document.querySelector(".calculation-output");
@@ -25,7 +25,10 @@ function windowOnClick(event) {
   }
 }
 
-trigger.addEventListener("click", toggleModal);
+trigger.addEventListener("click", () => {
+  priceCalculation();
+  toggleModal();
+});
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
@@ -62,30 +65,17 @@ input.forEach(i => {
 //-------------------------------------------------------------
 // Main full function of calculator
 
-// Continue calculation in case of  radiobutton change
-input.forEach(i => {
-  i.addEventListener("click", () => {
-    priceCalculation();
-  });
-});
-
 function priceCalculation() {
   // Account Calculation
   if (rangeslider.value <= 4) discount = 0;
   else if (rangeslider.value >= 5 && rangeslider.value <= 9) discount = 5;
   else if (rangeslider.value == 10) discount = 7;
   // time of Subscription
-  if (input[0].checked) discount;
-  else if (input[1].checked) discount += 5;
+  if (input[1].checked) discount += 5;
   else if (input[2].checked) discount += 10;
   else if (input[3].checked) discount += 15;
+  let finalPrice = (basePrice * (1 - discount / 100)).toFixed(2);
 
-  finalPrice = basePrice * (1 - discount / 100);
-  console.log(finalPrice);
-  calculationOutput.innerHTML =
-    "Cena za Subskrypcję " +
-    finalPrice.toFixed(2) +
-    " PLN,zniżka " +
-    discount +
-    " %";
+  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice} PLN
+  zniżka: ${discount} %`;
 }

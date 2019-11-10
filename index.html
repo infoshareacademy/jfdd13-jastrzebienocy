@@ -11,7 +11,7 @@
 <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1050px)' href='medium.css' />
 <link rel="stylesheet" media='screen and (min-width: 1051px)' href="style.css" />
 <link rel="stylesheet" media='screen and (min-width: 800px)' href="style-slides.css">
-<link rel="stylesheet" media='screen and (min-width: 426px)' href="./modal-calculator1.css">
+<link rel="stylesheet" media='screen and (min-width: 426px)' href="./modal-calculator.css">
 <script src="https://kit.fontawesome.com/10d6897be5.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans%7COswald&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="game-instructions.css">
@@ -189,14 +189,14 @@
           </div>
 
           <div class="news-input">
-            <input type="text" class="news-input-class" name="imie" id="imie" placeholder="Wpisz swoje imię" />
+            <input type="text" class="news-input-class" name="name" id="name" placeholder="Wpisz swoje imię" />
             <input type="text" class="news-input-class" name="email" id="email" placeholder="Wprowadź swój e-mail" />
           </div>
 
-         <a href="#" class="send">Wyślij! :)</a>
+         <a  class="send">Wyślij! :)</a>
           <p class="news-small">Wyślemy do Ciebie tylko jedną wiadomość z informacją o premierze Food Waste!</p>
                 <!-- Modal-calculator button -->
-                <div class="calculator-button-box"><a href="#" class="trigger">Kalkulator subskrypcji !</a></div>
+                <div class="calculator-button-box"><a  class="trigger">Kalkulator subskrypcji !</a></div>
           <p class="news-small rodo"> <a href="rodo.html">Twoje dane są z nami bezpieczne!</a> </p>
         </div>
 
@@ -294,7 +294,7 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
           <div class="range-slider">
             <input type="range" min="1" max="10" value="1" class="myslider" id="sliderRange" />
             <div id="info" class="info-box">
-              <label for="quantity" class="account-quantity-text">Ilość kont:</label>
+              <span for="quantity" class="account-quantity-text">Ilość kont:</span>
               <span id="quantity" class="quantity"></span>
               <span id="message" class="quantity-message"></span>
             </div>
@@ -302,13 +302,13 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
             <div class="main-months">
               <div class="month-quantity-text">Ilość miesięcy:</div>
               <label for="months-first">do 12</label>
-              <input type="radio" name="months" id="months" class="months months-first" checked/>
+              <input type="radio" name="months"  class="months months-first" checked/>
               <label for="months-second">do 24</label>
-              <input type="radio" name="months" id="months" class=" months months-second" />
+              <input type="radio" name="months" class=" months months-second" />
               <label for="months-third">do 36</label>
-              <input type="radio" name="months" id="months" class="months months-third" />
+              <input type="radio" name="months" class="months months-third" />
               <label for="months-fourth">powyżej 36</label>
-              <input type="radio" name="months" id="months" class=" months months-fourth" />
+              <input type="radio" name="months" class=" months months-fourth" />
             </div>
             <div class="calculation-elements">
               <div class="calculation-output"></div>
@@ -344,6 +344,7 @@ prostu pracujemy, nasze pomysły są świeże i oryginalne.
         </div>
       </div>
     </div>
+
     <script src="navigation.js"></script>
     <script src="game-instruction.js"></script>
     <script src="./calculator4.js"></script>

@@ -77,7 +77,7 @@
   /*hero section*/
   
   .hero {
-    background: url(./food-waste-Filip3.png) no-repeat center;
+    background: url(./Images/food-waste-hero.png) no-repeat center;
     background-size: cover;
     width: 100%;
     min-height: 600px;
@@ -455,6 +455,7 @@
   /*cookies*/
   
   .cookie-banner {
+    display: none;
     font: 1.2em Arial;
     line-height: 1.6em;
     background-color: #333;
