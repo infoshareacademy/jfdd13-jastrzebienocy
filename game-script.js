@@ -134,9 +134,9 @@ function start() {
   document.querySelector('.human').style.opacity = '1';
   document.querySelector('.points').style.opacity = '1';
   document.getElementById('end-game').classList.remove('shown');
-  
+
   // startGameBtn.disabled = true;
-  
+
   clearInterval(falling);
   clearInterval(newFruitInterval);
   // console.log(clearInterval(falling));
@@ -149,7 +149,7 @@ function start() {
   fruitsFromDom.forEach(element => element.remove());
 
   let fruits = [];
-  
+
   let counterMinus = document.querySelector('.counterMinus')
   counterMinus.innerHTML = `
     <div class="life"><i class="fas fa-heart"></i></div>
@@ -158,9 +158,9 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
     <div class="life"><i class="fas fa-heart"></i></div>
   `
-  
-  
-  
+
+
+
 
   let lifes = document.querySelectorAll('.life');
 
@@ -168,15 +168,15 @@ function start() {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
 
-    if (Math.random() <= 0.25){
+    if (Math.random() <= 0.25) {
       newDomFruit.classList.add("banana");
-    } else if (Math.random() > 0.25 && Math.random() < 0.5)  {
+    } else if (Math.random() > 0.25 && Math.random() < 0.5) {
       newDomFruit.classList.add("peach");
-    } else if (Math.random() >= 0.5 && Math.random() < 0.75)  {
+    } else if (Math.random() >= 0.5 && Math.random() < 0.75) {
       newDomFruit.classList.add("strawberry");
-    } else  {
+    } else {
       newDomFruit.classList.add("grapes");
-    } 
+    }
     domContainer.appendChild(newDomFruit);
     Fruit;
     const newFruit = new Fruit(newDomFruit, Math.random() * 3 + minSpeed);
@@ -220,18 +220,18 @@ function start() {
 
         lifes[lifes.length - 1].remove()
         lifes = document.querySelectorAll('.life')
-        if (lifes.length == 0){
-          
-           clearInterval(falling);
-            clearInterval(newFruitInterval);
-          
+        if (lifes.length == 0) {
+
+          clearInterval(falling);
+          clearInterval(newFruitInterval);
+
           document.querySelector('.points').style.opacity = '0';
           setTimeout(() => {
-            
+
 
             document.getElementById('end-game').classList.add('shown');
           }, 1000);
-          
+
         }
         // nieMaKolizji(); //uzytkownik traci punkt
       }
@@ -247,14 +247,14 @@ function start() {
     checkCollision(fruits, player1)
 
   }, intervalOfFalling);
-  
-  
+
+
 }
 
 
 const startGameBtn = document.querySelector('#startGame');
 
-startGameBtn.addEventListener('click',  start);
+startGameBtn.addEventListener('click', start);
 
 
 
