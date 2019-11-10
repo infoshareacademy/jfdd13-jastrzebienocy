@@ -2,6 +2,7 @@ const playerWidth = 160;
 const fruitWidth = 30;
 const playerHeight = 110;
 const fruitHeight = 30;
+const oneMove = 10;
 const domContainer = document.querySelector(".container");
 const domRectagle = document.querySelector(".human");
 
@@ -16,23 +17,23 @@ let check = false;
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
-      (this.y = human.offsetTop),
-      this.points = 0,
-      this.lifes = 5;
+    (this.y = human.offsetTop),
+    this.points = 0,
+    this.lifes = 5;
   }
 
   left() {
-    this.x -= 10;
+    this.x -= oneMove;
   }
   right() {
-    this.x += 10;
+    this.x += oneMove;
   }
   down() {
-    this.y += 10;
+    this.y += oneMove;
   }
  
   addPoint() {
-    this.points++;
+    this.points += 1;
     document.querySelector('.counterPlus').innerHTML = this.points;
 
     if (this.points >= 7) {
@@ -51,7 +52,7 @@ class Fruit {
   constructor(fruit, speed) {
     this.domFruit = fruit;
     this.speed = speed;
-    this.x = Math.random() * 860;
+    this.x = Math.floor(Math.random() * 850);
     this.y = fruit.offsetTop;
     this.firstTouch = false;
   }
@@ -85,24 +86,24 @@ class MoveFruits {
 }
 
 class Move {
-  static RenderElement(Player, ludzik) {
-    ludzik.style.left = Player.x + "px";
-    ludzik.style.top = Player.y + "px";
+  static RenderElement(player, ludzik) {
+    ludzik.style.left = player.x + "px";
+    ludzik.style.top = player.y + "px";
   }
 
-  static move(event, Player1) {
+  static move(event, player1) {
     if (event.key === "ArrowLeft" && player1.x > 0) {
-      Player1.left();
-      Move.RenderElement(Player1, domRectagle);
+      player1.left();
+      Move.RenderElement(player1, domRectagle);
     } else if (event.key === "ArrowRight" && player1.x < domContainer.offsetWidth - playerWidth ) {
-      Player1.right();
-      Move.RenderElement(Player1, domRectagle);
+      player1.right();
+      Move.RenderElement(player1, domRectagle);
     }
 
-    if (Player1.x >= domContainer.offsetWidth) { 
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.x <= 0 ) {
-      Move.RenderElement(Player1, domRectagle);
+    if (player1.x >= domContainer.offsetWidth) { 
+      Move.RenderElement(player1, domRectagle);
+    } else if (player1.x <= 0 ) {
+      Move.RenderElement(player1, domRectagle);
     }
   }
 }
@@ -169,13 +170,13 @@ function start() {
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
           ((leftEdgePplayer <= rightEdgeFruit) && (rightEdgeFruit <= rightEdgePlayer))) &&
         ((bottomEdgeFruit >= topEdgePlayer) && (bottomEdgeFruit <= bottomEdgePlayer)))
-        && fruit.firstTouch == false
+        && !fruit.firstTouch
       ) {
         fruit.firstTouch = true;
         fruit.domFruit.remove();
         player.addPoint();
       }
-      else if (bottomEdgeFruit >= 500 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 500 && !fruit.firstTouch) {
         fruit.firstTouch = true;
         lifes[lifes.length - 1].remove()
         lifes = document.querySelectorAll('.life')
