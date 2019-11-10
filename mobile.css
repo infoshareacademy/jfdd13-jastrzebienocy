@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-body>div>header>img {
+body > div > header > img {
   height: 90px;
 }
 
@@ -31,14 +31,14 @@ header {
 
 nav {
   /* z-index: 1; */
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .nav-container {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   overflow: hidden;
   position: relative;
-  background: #8BC34A;
+  background: #8bc34a;
   height: 90px;
   z-index: 5;
   scroll-behavior: smooth;
@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-container a {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: #212121;
   font-size: 18px;
@@ -69,17 +69,17 @@ nav {
   padding: 12px;
 }
 
-#navbar>a.nav-toggler {
+#navbar > a.nav-toggler {
   position: absolute;
   background: none;
   border: none;
-  color: #F1F1F1;
+  color: #f1f1f1;
   font-size: 22px;
   right: 10px;
   top: 20px;
 }
 
-#navbar>a>img {
+#navbar > a > img {
   width: 160px;
   height: 90px;
   position: relative;
@@ -93,11 +93,11 @@ nav {
 }
 
 .nav-toggler {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-#navbar>a>i {
+#navbar > a > i {
   color: #212121;
   z-index: 6;
 }
@@ -196,7 +196,8 @@ nav {
   margin: auto;
 }
 
-.prev, .next {
+.prev,
+.next {
   display: none;
 }
 
@@ -270,7 +271,7 @@ nav {
   text-align: center;
 }
 
-#newsletter>form>div>a {
+#newsletter > form > div > a {
   text-decoration: dotted;
   color: inherit;
   /* padding: 5px; */
@@ -285,11 +286,12 @@ nav {
   background-color: #689f38;
 }
 
-#newsletter>form>div>div.news-label>label:nth-child(1)>span {
+#newsletter > form > div > div.news-label > label:nth-child(1) > span {
   margin-right: 120px;
 }
 
-.newsBox a:hover, .rodo:hover {
+.newsBox a:hover,
+.rodo:hover {
   color: #ffc107;
 }
 
@@ -297,7 +299,7 @@ nav {
 
 /*Team*/
 
-#team-box>div {
+#team-box > div {
   text-align: center;
 }
 
@@ -323,7 +325,7 @@ nav {
   border-radius: 50%;
 }
 
-#team-box:hover>#team-card {
+#team-box:hover > #team-card {
   transform: rotateY(180deg);
 }
 
@@ -471,6 +473,8 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-family: "Oswald";
+  letter-spacing: 1px;
   text-align: center;
   transform: translate(-50%, -50%);
   background-color: #dcedc8;
@@ -581,7 +585,7 @@ nav {
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  margin-left: -32px;
+  margin-left: -43px;
   font-size: 0.65em;
   align-self: center;
 }
@@ -620,7 +624,7 @@ nav {
 /* Quantity Account extended message style*/
 
 .quantity-message {
-  width: 19%;
+  width: 22%;
 }
 
 /* Month quantity label */

@@ -502,18 +502,18 @@
 }
 
 .game-instruction-box{
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #eee;
-  border-radius: 0.5rem;
-  font-size: 17px;
-  padding: 40px;
-  font-family: "Oswald";
-  width: 80%;
-  opacity: 0.8;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    border-radius: 0.5rem;
+    font-size: 17px;
+    padding: 40px;
+    font-family: "Oswald";
+    width: 80%;
+    opacity: 0.8;
 }
 
 .game-instruction-header{

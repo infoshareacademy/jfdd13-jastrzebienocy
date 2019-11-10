@@ -25,6 +25,14 @@ header {
 
 /* Navigation*/
 
+.active {
+  /* font-family: 'Droid Sans', serif;
+  font-size: 14px; */
+  color: #FFC107;
+  text-decoration: none;
+  /* line-height: 50px; */
+}
+
 .nav-toggler {
   display: none;
 }
@@ -172,13 +180,6 @@ nav {
   width: 100px;
   height: 100px;
 }
-
-/* .main-content img {
-  margin: 50px;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-} */
 
 /* The only text part for now - JK */
 

@@ -1,6 +1,6 @@
 
 
-var slideIndex = 1;
+let slideIndex = 1;
 manualSlides(slideIndex);
 
 
@@ -27,9 +27,9 @@ function plusSlides(n) {
   function manualSlides(n) {
     // console.log('manualSlides');
     clearTimeout(timeOut);
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -44,15 +44,15 @@ function plusSlides(n) {
 
 
 
-  var autoSlideIndex = 0;
+  let autoSlideIndex = 0;
 autoSlides(autoSlideIndex);
 
 
 
 function autoSlides() {
   // console.log('autoSlides');
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
