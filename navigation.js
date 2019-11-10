@@ -32,9 +32,10 @@ function toggleMenu() {
   
   window.onscroll = function () {
     navigationBehavior();
+
     };
 
-    // function onScroll(event){
+    // function event){
     //   var sections = document.querySelectorAll(".section");
     //   var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
       
