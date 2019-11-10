@@ -2,6 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  font-family: "Oswald";
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -16,7 +17,6 @@
   text-align: center;
   text-decoration: underline;
   font-size: 1.6em;
-  font-family: "Oswald";
   background-color: #689f38;
   border-radius: 20px;
   width: 80%;
@@ -27,7 +27,7 @@
   text-decoration: underline;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  margin-left: -70px;
+  margin-left: -90px;
 }
 
 .account-quantity-text {
@@ -184,7 +184,7 @@
 /* Quantity Account extended message style*/
 
 .quantity-message {
-  width: 22%;
+  width: 26%;
   align-self: center;
   text-align: left;
 }
@@ -216,6 +216,6 @@
 /* Message clculate */
 
 .calculation-output {
-  margin: 10px 0;
-  /* font-size: 1.3em; */
+  /* margin: 10px 0; */
+  font-size: 0.95em;
 }
