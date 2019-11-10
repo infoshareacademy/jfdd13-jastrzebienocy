@@ -23,7 +23,7 @@ function getCookie(cname) {
 }
 
 function cookieEvent() {
-  if (getCookie(name) === "") {
+  if (getCookie("name") === "") {
     banner.style = "display: block";
   }
 }
