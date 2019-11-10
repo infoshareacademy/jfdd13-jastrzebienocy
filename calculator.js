@@ -25,18 +25,15 @@ function windowOnClick(event) {
   }
 }
 
-trigger.addEventListener("click", () => {
-  priceCalculation();
-  toggleModal();
-});
+trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 // Range Slider full module.
-let rangeslider = document.getElementById("sliderRange");
+const rangeslider = document.getElementById("sliderRange");
 let output = document.getElementById("quantity");
 output.innerHTML = rangeslider.value;
-rangeslider.oninput = () => {
+rangeslider.oninput = function() {
   output.innerHTML = this.value;
   msg();
   priceCalculation();
@@ -50,8 +47,9 @@ rangeslider.oninput = () => {
 const msg = () => {
   if (rangeslider.value == 10) {
     let message = (document.querySelector("#message").innerText = " i więcej.");
+    return message;
   } else {
-    document.querySelector("#message").innerText = " ";
+    message = document.querySelector("#message").innerText = " ";
   }
 };
 // Continuing calculation in case of  radiobutton change
@@ -73,8 +71,12 @@ function priceCalculation() {
   if (input[1].checked) discount += 5;
   else if (input[2].checked) discount += 10;
   else if (input[3].checked) discount += 15;
-  let finalPrice = (basePrice * (1 - discount / 100)).toFixed(2);
+  let finalPrice = basePrice * (1 - discount / 100);
 
-  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice} PLN
-  zniżka: ${discount} %`;
+  calculationOutput.innerHTML =
+    "Cena za Subskrypcję " +
+    finalPrice.toFixed(2) +
+    " PLN,zniżka " +
+    discount +
+    " %";
 }
