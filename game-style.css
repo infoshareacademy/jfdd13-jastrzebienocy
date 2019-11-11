@@ -118,7 +118,6 @@ button {
 .hidden {
   opacity: 0;
   pointer-events: none;
-  /* transition: 0.7s ease-in;  */
   transform: scale(0);
 }
 

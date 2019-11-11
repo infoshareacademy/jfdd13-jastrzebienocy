@@ -30,7 +30,6 @@ window.onscroll = function() {
   navigationBehavior();
 };
 
-//highlighting menu by % of scroll
 function getDocHeight() {
   let doc = document;
   return Math.max(
@@ -55,7 +54,7 @@ function amountscrolled() {
     (document.documentElement || document.body.parentNode || document.body)
       .scrollTop;
   let trackLength = docheight - winheight;
-  let pctScrolled = Math.floor((scrollTop / trackLength) * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+  let pctScrolled = Math.floor((scrollTop / trackLength) * 100); 
 
   if (pctScrolled < 17) {
     document
@@ -103,4 +102,3 @@ list.addEventListener(
   false
 );
 
-// let navLogo =
