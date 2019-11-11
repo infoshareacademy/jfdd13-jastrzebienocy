@@ -132,7 +132,7 @@ button{
 .hidden{
     opacity: 0; 
     pointer-events: none; 
-    transition: 0.7s ease-in; 
+    /* transition: 0.7s ease-in;  */
     transform: scale(0);
 }
 
@@ -146,8 +146,35 @@ button{
     position: absolute;
     top: 0;
     left: 0;
-    background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif");
-    background-size: 100% 100%;
     z-index: 10;
 }
+
+
+
+.cat{
+    background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif") no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+.showscore{
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 26px;
+    padding: 10px;
+    color: white;
+    z-index: 20;
+}
+
+.highscore{
+    background: url("./Images/highscore1.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+}
+.yourscore{
+    background: black;
+    background-size: 100% 100%;
+    display: flex;
+}
+
 

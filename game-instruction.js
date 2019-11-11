@@ -1,5 +1,7 @@
 //Variables of form validationof form
 let name = document.querySelector("#name");
+let actualName = name.value;
+localStorage.setItem('name', actualName.innerText);
 let email = document.querySelector("#email");
 const sendButton = document.querySelector(".send");
 // Varibles of game instructions
