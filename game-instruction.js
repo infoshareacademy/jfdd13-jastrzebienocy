@@ -19,7 +19,10 @@ function checkValidation() {
       "Musisz podać swoje imię nie używając spacji czy innych znaków łączeń"
     );
   else if (!checkEmail.test(email.value)) alert("Wpisz poprawny adres email");
-  else Instruction();
+  else {
+    localStorage.setItem("player:", name.value);
+    Instruction();
+  }
 }
 // Game instruction  display function
 const Instruction = () => {

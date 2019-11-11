@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="game-style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="game-style.css" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/f33bec8455.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/f33bec8455.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-     
-  
+  <body>
     <div class="wrapper">
-            
-        <div class="buttons">
-            <button id="startGame">Start game</button>
-            <button id="instruction">Instrukcja</button>
-        </div>
+      <div class="buttons">
+        <button id="startGame">Start game</button>
+        <button id="instruction">Instrukcja</button>
+      </div>
 
-        <div class="container">
-                <div id="end-game" class="hidden"></div>
-               
+      <div class="container">
+        <div id="end-game" class="hidden"></div>
 
+        <section class="points">
+          <div class="counterMinus"></div>
 
-            <section class="points">
-                <div class="counterMinus"></div>
+          <div class="counterPlus"></div>
+        </section>
 
-                <div class="counterPlus">
-
-                </div>
-
-
-            </section>
-
-            <div class="human">
-            </div>
-
-
-        </div>
-
+        <div class="human"></div>
+      </div>
     </div>
-    
-
-
     <!-- <iframe src="https://giphy.com/embed/xn9yw4QWUiC2Y" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a><a href="https://giphy.com/gifs/cat-video-game-xn9yw4QWUiC2Y">via GIPHY</a></a> -->
     <script src="game-script.js"></script>
-</body>
-
+    <script src="./ranking.js"></script>
+  </body>
 </html>
