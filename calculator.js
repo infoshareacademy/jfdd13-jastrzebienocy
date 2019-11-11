@@ -8,7 +8,6 @@ const closeButton = document.querySelector(".close-button");
 const basePrice = 99;
 // Discount declaration
 let discount = 0;
-// let finalPrice = basePrice * (1 - discount / 100);
 
 // Calculation output variable
 let calculationOutput = document.querySelector(".calculation-output");

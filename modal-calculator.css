@@ -114,16 +114,11 @@
   -webkit-appearance: none;
   width: 50%;
   margin: 10px;
-  /* border-radius: 10px; */
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
-  /* position: relative;
-  top: 5px; */
-  /* background-position-y: center; */
   height: 20px;
   background: linear-gradient(to right, #ffc107, #8bc34a);
-  /* background-position-y: top; */
 }
 
 /*  Thumb slider styles */
@@ -165,13 +160,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/* Info Box Span Style */
-
-/* .info-box span {
-  height: 20px;
-  line-height: 20px;
-} */
 
 /* Account Quantity Label */
 
