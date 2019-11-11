@@ -126,22 +126,7 @@ function start() {
   minSpeed = 3;
   intervalOfFalling = 50;
   intervalOfNewFruit = 3000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  pointsToShow = parseInt(localStorage.getItem("playerPoints"));
-=======
-  let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
->>>>>>> 384ed9a222e4142ca2054bcac9e09e00555176a7
-=======
-  
->>>>>>> 00e32c5674b9ba3bda87bb0a5067cbc99af83140
-=======
-
-  pointsToShow = parseInt(localStorage.getItem("playerPoints"));
-
   let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
->>>>>>> 0faf1c3d7368700e6dcc22d9ce76068941d59f42
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -196,7 +181,6 @@ function start() {
       let playerName = localStorage.getItem("name");
       localStorage.setItem("playerPoints", record);
       let highscore = localStorage.getItem("highScore");
-      let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
 
       if (
         ((leftEdgePplayer <= leftEdgeFruit &&
