@@ -126,22 +126,14 @@ function start() {
   minSpeed = 3;
   intervalOfFalling = 50;
   intervalOfNewFruit = 3000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  pointsToShow = parseInt(localStorage.getItem("playerPoints"));
-=======
+
+ 
   let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
->>>>>>> 384ed9a222e4142ca2054bcac9e09e00555176a7
-=======
-  
->>>>>>> 00e32c5674b9ba3bda87bb0a5067cbc99af83140
-=======
-
   pointsToShow = parseInt(localStorage.getItem("playerPoints"));
+  let endOfWord;
 
-  let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
->>>>>>> 0faf1c3d7368700e6dcc22d9ce76068941d59f42
+  
+  
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -197,6 +189,16 @@ function start() {
       localStorage.setItem("playerPoints", record);
       let highscore = localStorage.getItem("highScore");
       let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
+      if (pointsToShow == 1){
+        endOfWord = '';
+      }
+      else if (pointsToShow > 1 && pointsToShow <= 4){
+        endOfWord = 'y';
+      }
+      else if (pointsToShow > 4 || pointsToShow == 0){
+        endOfWord = 'ów';
+      }
+    
 
       if (
         ((leftEdgePplayer <= leftEdgeFruit &&
@@ -235,11 +237,11 @@ function start() {
               document.getElementById("score").classList.add("highscore");
               document.querySelector(".highscore").innerText = `${playerName}
               to Twój rekord!
-              Zdobywasz ${pointsToShow} punktów!`;
+              Zdobywasz ${pointsToShow} punkt${endOfWord}!`;
             } else if (highscore >= pointsToShow) {
               document.getElementById("score").classList.add("yourscore");
               document.querySelector(".yourscore").innerText = `${playerName} 
-              zdobywasz ${pointsToShow} punktów`;
+              zdobywasz ${pointsToShow} punkt${endOfWord}`;
             }
           }, 3400);
           document.getElementById("startGame").innerText = "Jeszcze raz!";
