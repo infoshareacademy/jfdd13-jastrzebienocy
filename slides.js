@@ -3,17 +3,12 @@
 let slideIndex = 1;
 manualSlides(slideIndex);
 
-
-
- const wrapper = document.querySelector('.wrapper');
+const wrapper = document.querySelector('.wrapper');
 
  wrapper.addEventListener("mouseenter", manualSlides);
  wrapper.addEventListener("mouseleave", autoSlides);
-
-
 var timeOut;
 
- 
         // Next/previous controls
 function plusSlides(n) {
     manualSlides(slideIndex += n);

@@ -25,14 +25,6 @@ header {
 
 /* Navigation*/
 
-.active {
-  /* font-family: 'Droid Sans', serif;
-  font-size: 14px; */
-  color: #FFC107;
-  text-decoration: none;
-  /* line-height: 50px; */
-}
-
 .nav-toggler {
   display: none;
 }
@@ -59,14 +51,14 @@ nav {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: #212121;
-  font-size: 30px;
+  font-size: 24px;
   text-decoration: none;
   padding: 20px;
 }
 
 .nav-logo--image {
-  width: 250px;
-  height: 160px;
+  width: 200px;
+  height: 100px;
   display: none;
   position: relative;
   left: -10px;
@@ -81,7 +73,12 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 90px;
+  height: 70px;
+}
+
+.active2 {
+  background-color: rgba(247, 227, 4, 0.4);
+  text-decoration: none;
 }
 
 /*hero section*/
@@ -90,7 +87,8 @@ nav {
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   width: 100%;
-  min-height: 600px;
+  height: 600px;
+  min-height: 50vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -105,9 +103,9 @@ nav {
   top: auto;
   text-transform: uppercase;
   color: #212121;
-  padding: 25px 15px;
+  padding: 10px 15px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   border: 1px solid #212121;
   font-family: oswald;
 }
@@ -116,11 +114,11 @@ nav {
   color: #212121;
   text-align: center;
   font-weight: bold;
-  padding: 10px;
-  max-width: 50%;
-  font-size: 28px;
+  padding: 0px;
+  max-width: 70%;
+  font-size: 26px;
   font-family: sans-serif;
-  line-height: 40px;
+  line-height: 43px;
 }
 
 .hero a {
@@ -137,24 +135,26 @@ nav {
   top: -40px;
   color: #757575;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 26px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
 }
 
 #hero-hover {
+  width: 35%;
   line-height: 1.4em;
-  display: inline;
+  /* display: inline; */
   font-size: 1em;
-  border: 1px solid rgb(98, 212, 21);
+  /* border: 1px solid rgb(98, 212, 21); */
   padding: 4px;
   border-radius: 10px;
   text-decoration: none;
+  font-weight: bold;
   color: #000;
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
 }
 
-.hero-hover:hover {
+#hero-hover:hover {
   color: #000;
   text-decoration: none;
   background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
@@ -210,7 +210,7 @@ nav {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  font-size: 26px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
@@ -223,7 +223,7 @@ nav {
 }
 
 .newsBox span {
-  padding: 0 80px;
+  padding: 0 135px;
 }
 
 .newsBox input {
@@ -242,9 +242,9 @@ nav {
   line-height: 2.2em;
   margin-bottom: 10px;
   margin: 20px;
-  width: 15vw;
+  width: 25vw;
   border: 1px solid #212121;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 6px;
   background: #dcedc8;
   text-align: center;
@@ -259,8 +259,10 @@ nav {
 }
 
 .send {
+  width: 20%;
+  text-align: center;
   line-height: 1.4em;
-  display: inline;
+  /* display: inline; */
   font-size: 1em;
   border: 1px solid rgb(98, 212, 21);
   padding: 4px;
@@ -281,7 +283,7 @@ nav {
 }
 
 .news-small {
-  font-size: 26px;
+  font-size: 20px;
   width: 68%;
   text-align: center;
 }
