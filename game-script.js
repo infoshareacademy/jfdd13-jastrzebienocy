@@ -14,6 +14,7 @@ let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
 let minSpeed = 3;
 let check = false;
+
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
@@ -34,10 +35,11 @@ class Player {
   addPoint() {
     this.points += 1;
     document.querySelector(".counterPlus").innerHTML = this.points;
+
     if (this.points >= 7) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-      minSpeed = 10;
+      minSpeed = 7;
     } else if (this.points >= 15) {
       intervalOfFalling = 10;
       intervalOfNewFruit = 500;
@@ -94,6 +96,7 @@ class Move {
       player1.right();
       Move.RenderElement(player1, domRectagle);
     }
+
     if (player1.x >= domContainer.offsetWidth) {
       Move.RenderElement(player1, domRectagle);
     } else if (player1.x <= 0) {
@@ -109,6 +112,10 @@ function start() {
   document.getElementById("end-game").classList.remove("shown");
   document.getElementById("score").classList.remove("shown");
   document.getElementById("score").innerText = " ";
+  minSpeed = 3;
+  intervalOfFalling = 50;
+  intervalOfNewFruit = 3000;
+  let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
 
   minSpeed = 3;
   intervalOfFalling = 50;
@@ -119,9 +126,11 @@ function start() {
   clearInterval(newFruitInterval);
   player1.points = 0;
   document.querySelector(".counterPlus").innerHTML = player1.points;
+
   let fruitsFromDom = document.querySelectorAll(".fruit");
   fruitsFromDom.forEach(element => element.remove());
   let fruits = [];
+
   let counterMinus = document.querySelector(".counterMinus");
   counterMinus.innerHTML = `
     <div class="life"><i class="fas fa-heart"></i></div>
@@ -130,7 +139,9 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
     <div class="life"><i class="fas fa-heart"></i></div>
   `;
+
   let lifes = document.querySelectorAll(".life");
+
   newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
@@ -161,7 +172,6 @@ function start() {
       let record = document.querySelector(".counterPlus").innerText;
       let playerName = localStorage.getItem("name");
       localStorage.setItem("playerPoints", record);
-      let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
       let highscore = localStorage.getItem("highScore");
 
       if (
@@ -223,8 +233,10 @@ function start() {
 
 const startGameBtn = document.querySelector("#startGame");
 startGameBtn.addEventListener("click", start);
+
 function InstInner() {
   overlay.style.display = "block";
   InsBox.style.display = "block";
 }
+
 InnerInstButton.addEventListener("click", InstInner);
