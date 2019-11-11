@@ -81,11 +81,15 @@ window.addEventListener("scroll", function(){
 
 let list = document.querySelector('#myLinks');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'a') {
-    ev.target.classList.toggle('active2');
+  if (ev.target.className === 'eee'){
+    ev.target.classList.remove('active2');
   }
+  else if (ev.target.tagName === 'a') {
+      ev.target.classList.toggle('active2');
+    }
 }, false);
 
+// let navLogo = 
 
 
 
