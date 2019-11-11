@@ -157,14 +157,6 @@ button{
     
 }
 
-.showscore{
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 26px;
-    padding: 10px;
-    color: white;
-    z-index: 20;
-}
 
 .highscore{
     background: url("./Images/highscore1.png") no-repeat;
@@ -175,6 +167,12 @@ button{
     background: black;
     background-size: 100% 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 26px;
+    padding: 10px;
+    color: white;
+    z-index: 20;
 }
 
 

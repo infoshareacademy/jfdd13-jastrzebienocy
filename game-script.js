@@ -118,9 +118,17 @@ const player1 = new Player(domRectagle);
 document.addEventListener("keydown", event => Move.move(event, player1));
 
 function start() {
+<<<<<<< HEAD
   document.querySelector(".human").style.opacity = "1";
   document.querySelector(".points").style.opacity = "1";
   document.getElementById("end-game").classList.remove("shown");
+=======
+  document.querySelector('.human').style.opacity = '1';
+  document.querySelector('.points').style.opacity = '1';
+  document.getElementById('end-game').classList.remove('shown');
+  document.getElementById('score').classList.remove('shown');
+ 
+>>>>>>> ffa9d7bf1823b7a6508c5448ab032a3fccbe1b0c
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -204,11 +212,17 @@ function start() {
             document.getElementById("score").classList.add("shown");
             //if high or score
             //document.getElementById('score').classList.add('highscore');
+<<<<<<< HEAD
             document.getElementById("score").classList.add("yourscore");
             document.getElementById("showScore").classList.add("showscore");
             document.getElementsByClassName(
               "showscore"
             ).innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+=======
+            document.getElementById('score').classList.add('yourscore');
+            document.querySelector('.yourscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+
+>>>>>>> ffa9d7bf1823b7a6508c5448ab032a3fccbe1b0c
           }, 3400);
           document.getElementById("startGame").innerText = "Jeszcze raz!";
         }
