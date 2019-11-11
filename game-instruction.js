@@ -1,7 +1,7 @@
 //Variables of form validationof form
 let name = document.querySelector("#name");
-let actualName = name.value;
-localStorage.setItem('name', actualName.innerText);
+
+
 let email = document.querySelector("#email");
 const sendButton = document.querySelector(".send");
 // Varibles of game instructions
@@ -21,7 +21,11 @@ function checkValidation() {
       "Musisz podać swoje imię nie używając spacji czy innych znaków łączeń"
     );
   else if (!checkEmail.test(email.value)) alert("Wpisz poprawny adres email");
-  else Instruction();
+  else {
+    Instruction();
+    localStorage.setItem('name', name.value);
+  }
+
 }
 // Game instruction  display function
 const Instruction = () => {
