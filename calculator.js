@@ -1,178 +1,83 @@
-// Abonament
-// Ilość kont/mc
-// 1 - 4kont - 99zł/1konto
-// 5 -9 kont - 99zł - 5%/konto
-// 10kont-> - 99zł - 7%/konto
-// Czas subskrypcji
-//1rok  - 0%
-//2lata - +5%
-//3lata - +5%
-//4> lata +5% - max 15% zniżki
-// const accountQuantity = quantity;
-// const timeOfSubscription = time;
-// const price = 99;
-// const priceA = 99;
-// const priceT = 99;
+// // Modal window show  - fixed variables :)
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
 
-// Próba kalkulowania
-// function priceCalculationAccount (accQuantity) {
-//     const priceA = 99;
-//     if(accQuantity >= 1 && accQuantity <= 4) {
-//         // const price = 99;
-//         console.log(priceA + ' PLN per account');
-//         // return price;
-//     } else if(accQuantity >= 5 && accQuantity <= 9) {
-//         const priceA1 = (priceA - (priceA * 0.05));
-//         console.log(priceA1 + ' PLN per account');
-//         // return price - (price* 0.05);
-//     } else {
-//         const priceA2 = (priceA - (priceA * 0.07));
-//         console.log(priceA2 + ' PLN per account');
-//         // return price - (price * 0.07);
-//     }
-// }
-// //Subscription calculation in months
+// Variables for price Calcultion:
+// Account quantity  base price
+const basePrice = 99;
+// Discount declaration
+let discount = 0;
+// let finalPrice = basePrice * (1 - discount / 100);
 
-// function priceCalculationTime(timeOfSubscription) {
-//     const priceT = 99;
-//     if (timeOfSubscription > 0 && timeOfSubscription <= 12) {
-//         console.log(priceT +   ' PLN per account');
-//         // return price1  + ' PLN per account';
-//     } else if(timeOfSubscription > 12 && timeOfSubscription <= 24) {
-//         const priceT1 = priceT - (priceT * 0.05);
-//         console.log(priceT1 + 'PLN per account');
-//         // return pricet1  + ' PLN per account';
-//     } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-//         const priceT2 = priceT - (priceT * 0.1);
-//         console.log(priceT2 + 'PLN per account');
-//         // return pricet1  + ' PLN per account';
-//     } else  {
-//         const priceT3 = priceT - (priceT * 0.15);
-//         console.log(priceT3 + 'PLN per account');
-//         // return pricet1  + ' PLN per account';
-//     }
-// }
+// Calculation output variable
+let calculationOutput = document.querySelector(".calculation-output");
+// inputs of calculator variable
+const input = document.querySelectorAll(".months");
 
-// const accQuantity = output.innerText;
-// var accQuantity = output.innerText;
-
-let getAccQuantity = () => {
-  return document.getElementById("quantity").innerText;
+function toggleModal() {
+  modal.classList.toggle("show-modal");
 }
 
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
 
+trigger.addEventListener("click", () => {
+  toggleModal();
+  priceCalculation();
+});
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 
-function priceCalculation (timeOfSubscription) {
-    accQuantity = getAccQuantity();
-    // const accQuantity = output.innerText;
-    // let accQuantity = document.getElementById("quantity").innerText; 
-
-    const priceA = 99;
-    let priceA1 = priceA - (priceA * 0.05);
-    let priceA2 = priceA - (priceA * 0.07);    
-
-    const priceT = 99;
-    let priceT1 = priceT - (priceT * 0.05);
-    let priceT2 = priceT - (priceT * 0.1);
-    let priceT3 = priceT - (priceT * 0.15)
-
-    if(accQuantity >= 1 && accQuantity <= 4) {
-        if(timeOfSubscription >= 1 && timeOfSubscription <= 12){
-            let finalPrice = (priceA + priceT)/2;
-            console.log(finalPrice.toFixed(2) + 'PLN per account');
-        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-            // let priceT1 = priceT - (priceT * 0.05)
-            // console.log(priceT1);       
-            finalPrice = (priceA + priceT1)/2; 
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else if (timeOfSubscription > 24 && timeOfSubscription < 36) {
-            // let priceT2 = priceT - (priceT * 0.1)
-            console.log(priceT2);       
-            finalPrice = (priceA + priceT2)/2; 
-            console.log(finalPrice.toFixed(2) + ' PLN per account '); 
-        } else {
-            // let priceT3 = priceT - (priceT * 0.15)
-            // console.log(priceT3);       
-            finalPrice = (priceA + priceT3)/2; 
-            console.log(finalPrice.toFixed(2) + ' PLN per account '); 
-        }
-    } else if (accQuantity >= 5 && accQuantity <= 9) {
-        // let priceA1 = (priceA - (priceA * 0.05));
-        if(timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-            // let priceA1 = (priceA - (priceA * 0.05));
-            // console.log(priceA1);
-            finalPrice = (priceA1 + priceT)/2;
-            console.log(priceA1);
-            console.log(priceT);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-            finalPrice = (priceA1 + priceT1)/2; 
-            console.log(priceA1);
-            console.log(priceT1);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-            finalPrice = (priceA1 + priceT2)/2;
-            console.log(priceA1);
-            console.log(priceT2);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else  {
-            finalPrice = (priceA1 + priceT3)/2;
-            console.log(priceA1);
-            console.log(priceT3);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        }
-    } else {
-        if(timeOfSubscription >= 0 && timeOfSubscription <= 12) {
-            // let priceA1 = (priceA - (priceA * 0.05));
-            // console.log(priceA1);
-            finalPrice = (priceA2 + priceT)/2;
-            console.log(priceA2);
-            console.log(priceT);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');
-        } else if (timeOfSubscription > 12 && timeOfSubscription <= 24) {
-            finalPrice = (priceA2 + priceT1)/2; 
-            console.log(priceA2);
-            console.log(priceT1);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else if (timeOfSubscription > 24 && timeOfSubscription <= 36) {
-            finalPrice = (priceA2 + priceT2)/2;
-            console.log(priceA2);
-            console.log(priceT2);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        } else  {
-            finalPrice = (priceA2 + priceT3)/2;
-            console.log(priceA2);
-            console.log(priceT3);
-            console.log(finalPrice.toFixed(2) + ' PLN per account ');        
-        }
-    }
-    // let accQuantity = () => {
-    //     return document.getElementById("quantity").innerText;
-    // };
+// Range Slider full module.
+const rangeslider = document.getElementById("sliderRange");
+let output = document.getElementById("quantity");
+output.innerHTML = rangeslider.value;
+rangeslider.oninput = function() {
+  output.innerHTML = this.value;
+  msg();
+  priceCalculation();
 };
 
-// Calculator:
-// class Subsctiption {
-//     constructor(accountQuantity, timeOfSubscription) {
-//         this.accountQuantity = accountQuantity;
-//         this.timeOfSubscription = timeOfSubscription;
-//     }
+// -------------------------------------------------------
+// -------------------------------------------------------
+// -------------------------------------------------------
+// Functions
+// Addition message  display
+const msg = () => {
+  if (rangeslider.value == 10) {
+    let message = (document.querySelector("#message").innerText = " i więcej.");
+    return message;
+  } else {
+    message = document.querySelector("#message").innerText = " ";
+  }
+};
+// Continuing calculation in case of  radiobutton change
+input.forEach(i => {
+  i.addEventListener("click", () => {
+    priceCalculation();
+  });
+});
 
-// }
+// -------------------------------------------------------------
+// Main full function of calculator
 
+function priceCalculation() {
+  // Account Calculation
+  if (rangeslider.value <= 4) discount = 0;
+  else if (rangeslider.value >= 5 && rangeslider.value <= 9) discount = 5;
+  else if (rangeslider.value == 10) discount = 7;
+  // time of Subscription
+  if (input[1].checked) discount += 5;
+  else if (input[2].checked) discount += 10;
+  else if (input[3].checked) discount += 15;
+  let finalPrice = basePrice * (1 - discount / 100);
 
-
-
-// var range = document.querySelector('.input-range'),
-//     value = document.querySelector('.range-value');
-    
-// value.html(range.attr('value'));
- 
-// range.on('input', function(){
-//     value.html(this.value);
-// })
-
-
-
-// Trying code of slider calc connection
-
+  calculationOutput.innerHTML = `Cena za Subskrypcję: ${finalPrice.toFixed(
+    2
+  )} PLN <br>
+  zniżka: ${discount} %`;
+}
