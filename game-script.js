@@ -121,9 +121,10 @@ function start() {
   document.getElementById('end-game').classList.remove('shown');
   document.getElementById('score').classList.remove('shown');
   document.getElementById('score').innerText = ' ';
-  
- 
- 
+  minSpeed = 3;
+  intervalOfFalling = 50;
+  intervalOfNewFruit = 3000;
+  let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -179,13 +180,7 @@ function start() {
       let record = document.querySelector('.counterPlus').innerText;
       let playerName = localStorage.getItem('name');
       localStorage.setItem('playerPoints', record);
-      let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
       let highscore = localStorage.getItem('highScore');
-    
-     
-      
-       
-      
 
 
       if ((
@@ -245,6 +240,7 @@ function start() {
     });
     checkCollision(fruits, player1)
   }, intervalOfFalling);
+ 
 }
 
 const startGameBtn = document.querySelector('#startGame');
