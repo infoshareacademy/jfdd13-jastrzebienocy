@@ -52,7 +52,7 @@ function amountscrolled(){
   let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
   let trackLength = docheight - winheight
   let pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
-  console.log(pctScrolled + '% scrolled')
+  
   if (pctScrolled <17) {
     document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', ' ');
   }
