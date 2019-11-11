@@ -127,13 +127,9 @@ function start() {
   intervalOfFalling = 50;
   intervalOfNewFruit = 3000;
 
- 
-  let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
+  let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
   pointsToShow = parseInt(localStorage.getItem("playerPoints"));
   let endOfWord;
-
-  
-  
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -189,16 +185,13 @@ function start() {
       localStorage.setItem("playerPoints", record);
       let highscore = localStorage.getItem("highScore");
       let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
-      if (pointsToShow == 1){
-        endOfWord = '';
+      if (pointsToShow == 1) {
+        endOfWord = "";
+      } else if (pointsToShow > 1 && pointsToShow <= 4) {
+        endOfWord = "y";
+      } else if (pointsToShow > 4 || pointsToShow == 0) {
+        endOfWord = "ów";
       }
-      else if (pointsToShow > 1 && pointsToShow <= 4){
-        endOfWord = 'y';
-      }
-      else if (pointsToShow > 4 || pointsToShow == 0){
-        endOfWord = 'ów';
-      }
-    
 
       if (
         ((leftEdgePplayer <= leftEdgeFruit &&
