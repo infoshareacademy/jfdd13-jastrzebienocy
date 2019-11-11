@@ -22,8 +22,8 @@ function checkValidation() {
   else if (!checkEmail.test(email.value))
     alert("Wpisz poprawny adres email nazwa min 3 litery");
   else {
-    Instruction();
     localStorage.setItem("name", name.value);
+    Instruction();
   }
 }
 // Game instruction  display function

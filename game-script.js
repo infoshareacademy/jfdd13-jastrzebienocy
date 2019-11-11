@@ -120,7 +120,7 @@ function start() {
   minSpeed = 3;
   intervalOfFalling = 50;
   intervalOfNewFruit = 3000;
-  let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
+  pointsToShow = parseInt(localStorage.getItem("playerPoints"));
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
