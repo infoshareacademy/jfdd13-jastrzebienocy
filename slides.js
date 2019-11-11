@@ -7,18 +7,15 @@ wrapper.addEventListener("mouseenter", manualSlides);
 wrapper.addEventListener("mouseleave", autoSlides);
 var timeOut;
 
-// Next/previous controls
 function plusSlides(n) {
   manualSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   manualSlides((slideIndex = n));
 }
 
 function manualSlides(n) {
-  // console.log('manualSlides');
   clearTimeout(timeOut);
   let i;
   const slides = document.getElementsByClassName("mySlides");
@@ -54,5 +51,5 @@ function autoSlides() {
   }
   slides[autoSlideIndex - 1].style.display = "block";
   clearTimeout(timeOut);
-  timeOut = setTimeout(autoSlides, 3000); // Change image every 2 seconds
+  timeOut = setTimeout(autoSlides, 3000); 
 }

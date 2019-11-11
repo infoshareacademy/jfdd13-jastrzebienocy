@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  /* margin: 0 auto; */
+
 }
 
 body {
@@ -26,11 +26,9 @@ header {
   background: #f3fbe8;
 }
 
-*/
-/* Navigation*/
+
 
 nav {
-  /* z-index: 1; */
   font-family: "Oswald", sans-serif;
 }
 
@@ -49,7 +47,6 @@ nav {
 }
 
 #myLinks a {
-  /* color: #FFC107; */
   color: #212121;
 }
 
@@ -120,14 +117,11 @@ nav {
   height: 240px;
 }
 
-/* SEKCJA HERO */
+
 
 .heroTitle h1 {
   text-align: center;
-  /* position: relative; */
-  /* top: auto;   */
   text-transform: uppercase;
-  /* color: #212121; */
   padding: 25px 15px;
   font-weight: bold;
   font-size: 30px;
@@ -186,8 +180,6 @@ nav {
   color: #212121;
   text-align: center;
   font-weight: bold;
-  /* padding: 10px;  */
-  /* max-width: 50%; */
   font-size: 23px;
   line-height: 40px;
   font-family: sans-serif;
@@ -195,7 +187,6 @@ nav {
   margin-right: 18px;
 }
 
-/* SEKCJA SLAJDY */
 
 .slideshow-container {
   background: url(Images/tlo.png) repeat;
@@ -218,12 +209,9 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 50px;
-  /* color: #FFC107; */
   color: #212121;
   font-family: "Oswald";
 }
-
-/* Main content - mobile */
 
 .main-content-mobile {
   display: flex;
@@ -251,7 +239,6 @@ nav {
   font-size: 0.8em;
 }
 
-/* Newsletter */
 
 .newsBox {
   background: url("Images/news2.png") no-repeat center;
@@ -283,7 +270,6 @@ nav {
 #newsletter > form > div > a {
   text-decoration: dotted;
   color: inherit;
-  /* padding: 5px; */
 }
 
 .send {
@@ -312,10 +298,6 @@ nav {
   color: #ffc107;
 }
 
-/* Team */
-
-/*Team*/
-
 #team-box > div {
   text-align: center;
 }
@@ -325,8 +307,6 @@ nav {
   height: 120px;
   border-radius: 50%;
   margin: 0 auto;
-  /* border:3px dashed #000;
-  background-color:#FDD700; */
   perspective: 400px;
   margin-bottom: 20px;
 }
@@ -336,7 +316,6 @@ nav {
   width: 100%;
   height: 100%;
   text-align: center;
-  /* background-color:#EEE; */
   transition: 1s;
   transform-style: preserve-3d;
   border-radius: 50%;
@@ -369,9 +348,7 @@ nav {
   border-radius: 50%;
   width: 102%;
   height: 102%;
-  /* color:#FFF; */
   font-size: 1.6em;
-  /* background-color:#000; */
   transform: rotateY(180deg);
   backface-visibility: hidden;
   background: #dcedc8;
@@ -402,8 +379,6 @@ nav {
   line-height: 34px;
 }
 
-/* Footer */
-
 .footer-box-mobile .footer-links {
   width: 100%;
   text-align: center;
@@ -423,7 +398,6 @@ nav {
   margin: 10px 0;
 }
 
-/*cookies*/
 
 .cookie-banner {
   display: none;
@@ -458,7 +432,6 @@ nav {
   border-bottom: 2px solid #aaa;
 }
 
-/* CALCULATOR STYLES */
 
 .modal {
   position: fixed;
@@ -471,7 +444,6 @@ nav {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  /* text-align: center; */
 }
 
 .modal-calculator-text {
@@ -519,7 +491,6 @@ nav {
   transform: scale(1);
 }
 
-/* calculator button caller */
 
 .calculator-button-box {
   width: 80%;
@@ -546,15 +517,10 @@ nav {
   background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
 }
 
-/* Calculator Style -JK */
-
-/* mobile Style */
-
 .myslider {
   -webkit-appearance: none;
   width: 50%;
   margin: 10px;
-  /* border-radius: 10px; */
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
@@ -562,7 +528,6 @@ nav {
   background: linear-gradient(to right, #ffc107, #8bc34a);
 }
 
-/*  Thumb slider styles */
 
 .myslider[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -574,20 +539,12 @@ nav {
   background-size: cover;
 }
 
-/* Mozilla FF slider belt style  */
 
 .myslider[type="range"]::-moz-range-track {
   height: 20px;
-  background: line /* Info Box Span Style */
-    /* .info-box span {
-  height: 20px;
-  line-height: 20px;
-} */
-    ar-gradient(to right, #ffc107, #8bc34a);
+  background: linear-gradient(to right, #ffc107, #8bc34a);
   border-radius: 10px;
 }
-
-/*  Mozilla FF thumb styles */
 
 .myslider::-moz-range-thumb {
   height: 35px;
@@ -597,8 +554,6 @@ nav {
   background: url("./slider-img/chili-thumb-small1.png") no-repeat;
   background-size: cover;
 }
-
-/* Larger text - month and account quantity */
 
 .month-quantity-text {
   text-decoration: underline;
@@ -616,8 +571,6 @@ nav {
   font-size: 0.8em;
 }
 
-/*  Account Quantity Style */
-
 .info-box {
   display: flex;
   flex-direction: row;
@@ -625,28 +578,20 @@ nav {
   justify-content: center;
 }
 
-/* Info Box Span Style */
-
 .info-box span {
   height: 0.8em;
   font-size: 0.8em;
   margin: 15px 0;
 }
 
-/* Account Quantity Label */
-
 .quantity-label {
   align-self: right;
   width: 6%;
 }
 
-/* Quantity Account extended message style*/
-
 .quantity-message {
   width: 22%;
 }
-
-/* Month quantity label */
 
 .general {
   display: block;
@@ -654,23 +599,17 @@ nav {
   margin-right: 80px;
 }
 
-/* Range slider in general - whole box */
 
 .range-slider {
-  /* width: 45%; */
   text-align: center;
   border: 1px dashed #666;
   font-size: 1.4em;
 }
 
-/* Calculation elements */
-
 .calculation-elements {
   display: flex;
   justify-content: space-around;
 }
-
-/* Message clculate */
 
 .calculation-output {
   margin: 10px 0;
@@ -690,8 +629,6 @@ nav {
   align-self: center;
   margin: 5px;
 }
-
-/* game instruction */
 
 .game-instruction-overlay {
   display: none;
