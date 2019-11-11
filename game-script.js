@@ -122,6 +122,7 @@ function start() {
   document.querySelector(".points").style.opacity = "1";
   document.getElementById("end-game").classList.remove("shown");
   document.getElementById("score").classList.remove("shown");
+  document.getElementById("score").innerText = " ";
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -176,6 +177,7 @@ function start() {
       let playerName = localStorage.getItem("name");
       localStorage.setItem("playerPoints", record);
       let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
+      let highscore = localStorage.getItem("highScore");
 
       if (
         ((leftEdgePplayer <= leftEdgeFruit &&
@@ -203,12 +205,23 @@ function start() {
 
           setTimeout(() => {
             document.getElementById("score").classList.add("shown");
-            //if high or score
-            //document.getElementById('score').classList.add('highscore');
-            document.getElementById("score").classList.add("yourscore");
-            document.querySelector(
-              ".yourscore"
-            ).innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+
+            if (highscore === null) {
+              localStorage.setItem("highScore", pointsToShow);
+              highscore = localStorage.getItem("highScore");
+            }
+            if (highscore < pointsToShow) {
+              localStorage.setItem("highScore", pointsToShow);
+              highest = localStorage.getItem("highScore");
+              document.getElementById("score").classList.add("highscore");
+              document.querySelector(".highscore").innerText = `${playerName}
+              to Twój rekord!
+              Zdobywasz ${pointsToShow} punktów!`;
+            } else if (highscore >= pointsToShow) {
+              document.getElementById("score").classList.add("yourscore");
+              document.querySelector(".yourscore").innerText = `${playerName} 
+              zdobywasz ${pointsToShow} punktów`;
+            }
           }, 3400);
           document.getElementById("startGame").innerText = "Jeszcze raz!";
         }
