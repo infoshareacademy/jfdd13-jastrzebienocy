@@ -74,6 +74,15 @@
     height: 90px;
   }
   
+  .active2 {
+    /* font-family: 'Droid Sans', serif;
+    font-size: 14px; */
+    background-color: #FFC107;
+    text-decoration: none;
+    /* line-height: 50px; */
+  }
+
+
   /*hero section*/
   
   .hero {
@@ -214,7 +223,7 @@
   }
   
   .newsBox span {
-    padding: 0 80px;
+    padding: 0 100px;
   }
   
   .newsBox input {
@@ -233,7 +242,7 @@
     line-height: 2.2em;
     margin-bottom: 10px;
     margin: 20px;
-    width: 15vw;
+    width: 25vw;
     border: 1px solid #212121;
     font-size: 16px;
     border-radius: 6px;

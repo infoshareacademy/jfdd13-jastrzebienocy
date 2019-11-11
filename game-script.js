@@ -1,63 +1,58 @@
-const playerWidth = 245;
-const fruitWidth = 40;
-const playerHeight = 183;
-const fruitHeight = 40;
+const playerWidth = 160;
+const fruitWidth = 30;
+const playerHeight = 110;
+const fruitHeight = 30;
+const oneMove = 10;
+const domContainer = document.querySelector(".container");
+const domRectagle = document.querySelector(".human");
 
+let falling;
+let newFruitInterval;
 let intervalOfFalling = 50;
 let intervalOfNewFruit = 3000;
 let minSpeed = 3;
-// document.querySelectorAll('.dead').style.display = 'none';
-
-
+let check = false;
 
 
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
-      (this.y = human.offsetTop),
-      this.points = 0,
-      this.lifes = 5;
+    (this.y = human.offsetTop),
+    this.points = 0,
+    this.lifes = 5;
   }
 
   left() {
-    this.x -= 10;
+    this.x -= oneMove;
   }
   right() {
-    this.x += 10;
+    this.x += oneMove;
   }
-
   down() {
-    this.y += 10;
+    this.y += oneMove;
   }
-
-  reset() {
-    this.x = 750;
-    this.y = 680;
-  }
+ 
   addPoint() {
-    this.points++;
+    this.points += 1;
     document.querySelector('.counterPlus').innerHTML = this.points;
 
-    if (this.points >= 10) {
+    if (this.points >= 7) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-
-      minSpeed = 7;
-
+      minSpeed = 10;
+    } else if (this.points >=15){
+      intervalOfFalling = 10;
+      intervalOfNewFruit = 500;
+      minSpeed = 20;
     }
-
-
   }
-
-
-
 }
 
 class Fruit {
   constructor(fruit, speed) {
     this.domFruit = fruit;
     this.speed = speed;
-    this.x = Math.random() * 800;
+    this.x = Math.floor(Math.random() * 850);
     this.y = fruit.offsetTop;
     this.firstTouch = false;
   }
@@ -74,82 +69,63 @@ class MoveFruits {
   }
 
   static move(fruit, domFruit) {
-    if (fruit.y > 790) {
+    if (fruit.y > 470) {
       domFruit.style.backgroundImage = "url(./gameIMG/lost.png)";
-      domFruit.style.height = '100px'
-      domFruit.style.width = '100px'
+      domFruit.style.height = '80px'
+      domFruit.style.width = '80px'
+      
       setTimeout(() => {
         domFruit.remove();
       }, 1000);
+      check = true;
     } else {
       fruit.down();
       MoveFruits.RenderElement(fruit, domFruit);
     }
   }
-
 }
 
 class Move {
-  static RenderElement(Player, ludzik) {
-    ludzik.style.left = Player.x + "px";
-    ludzik.style.top = Player.y + "px";
+  static RenderElement(player, ludzik) {
+    ludzik.style.left = player.x + "px";
+    ludzik.style.top = player.y + "px";
   }
 
-  static move(event, Player1) {
+  static move(event, player1) {
     if (event.key === "ArrowLeft" && player1.x > 0) {
-      Player1.left();
-      Move.RenderElement(Player1, domRectagle);
-      console.log("moved left");
-    } else if (event.key === "ArrowRight" && player1.x < domContainer.offsetWidth - playerWidth - 10) {
-      Player1.right();
-      Move.RenderElement(Player1, domRectagle);
-      console.log("moved right");
+      player1.left();
+      Move.RenderElement(player1, domRectagle);
+    } else if (event.key === "ArrowRight" && player1.x < domContainer.offsetWidth - playerWidth ) {
+      player1.right();
+      Move.RenderElement(player1, domRectagle);
     }
 
-    if (Player1.x >= domContainer.offsetWidth + 500) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
-    } else if (Player1.x <= 0 - 200) {
-      alert("YOU LOST! PLAY AGAIN :)");
-      Player1.reset();
-      Move.RenderElement(Player1, domRectagle);
+    if (player1.x >= domContainer.offsetWidth) { 
+      Move.RenderElement(player1, domRectagle);
+    } else if (player1.x <= 0 ) {
+      Move.RenderElement(player1, domRectagle);
     }
   }
 }
 
-const domContainer = document.querySelector(".container");
-const domRectagle = document.querySelector(".human");
 const player1 = new Player(domRectagle);
-
-
-
 document.addEventListener("keydown", event => Move.move(event, player1));
-
-var falling;
-var newFruitInterval;
-
 
 function start() {
   document.querySelector('.human').style.opacity = '1';
   document.querySelector('.points').style.opacity = '1';
   document.getElementById('end-game').classList.remove('shown');
-  
-  // startGameBtn.disabled = true;
-  
+
   clearInterval(falling);
   clearInterval(newFruitInterval);
-  // console.log(clearInterval(falling));
 
   player1.points = 0;
   document.querySelector('.counterPlus').innerHTML = player1.points;
 
   let fruitsFromDom = document.querySelectorAll('.fruit')
-
   fruitsFromDom.forEach(element => element.remove());
-
   let fruits = [];
-  
+
   let counterMinus = document.querySelector('.counterMinus')
   counterMinus.innerHTML = `
     <div class="life"><i class="fas fa-heart"></i></div>
@@ -158,9 +134,6 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
     <div class="life"><i class="fas fa-heart"></i></div>
   `
-  
-  
-  
 
   let lifes = document.querySelectorAll('.life');
 
@@ -168,30 +141,23 @@ function start() {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
 
-    if (Math.random() <= 0.25){
+    if (Math.random() <= 0.25) {
       newDomFruit.classList.add("banana");
-    } else if (Math.random() > 0.25 && Math.random() < 0.5)  {
+    } else if (Math.random() > 0.25 && Math.random() < 0.5) {
       newDomFruit.classList.add("peach");
-    } else if (Math.random() >= 0.5 && Math.random() < 0.75)  {
+    } else if (Math.random() >= 0.5 && Math.random() < 0.75) {
       newDomFruit.classList.add("strawberry");
-    } else  {
+    } else {
       newDomFruit.classList.add("grapes");
-    } 
+    }
     domContainer.appendChild(newDomFruit);
-    Fruit;
     const newFruit = new Fruit(newDomFruit, Math.random() * 3 + minSpeed);
-
     fruits.push(newFruit);
-
-    // MoveFruits.addFruit(newFruit)
   }, intervalOfNewFruit);
 
-
   function checkCollision(fruits, player) {
-
     for (let i = 0; i < fruits.length; i++) {
       const fruit = fruits[i];
-
       let leftEdgeFruit = fruit.x;
       let rightEdgeFruit = fruit.x + fruitWidth;
       let leftEdgePplayer = player.x;
@@ -200,44 +166,32 @@ function start() {
       let topEdgePlayer = player.y;
       let bottomEdgePlayer = player.y + playerHeight;
 
-
-
       if ((
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
           ((leftEdgePplayer <= rightEdgeFruit) && (rightEdgeFruit <= rightEdgePlayer))) &&
         ((bottomEdgeFruit >= topEdgePlayer) && (bottomEdgeFruit <= bottomEdgePlayer)))
-        && fruit.firstTouch == false
+        && !fruit.firstTouch
       ) {
         fruit.firstTouch = true;
-        console.log('KOLIZJA');
         fruit.domFruit.remove();
         player.addPoint();
-
       }
-      else if (bottomEdgeFruit >= 820 && fruit.firstTouch == false) {
+      else if (bottomEdgeFruit >= 500 && !fruit.firstTouch) {
         fruit.firstTouch = true;
-        console.log('looser');
-
         lifes[lifes.length - 1].remove()
         lifes = document.querySelectorAll('.life')
-        if (lifes.length == 0){
-          
-           clearInterval(falling);
-            clearInterval(newFruitInterval);
+        if (lifes.length == 0 && check == true) {
+          clearInterval(falling);
+          clearInterval(newFruitInterval);
           
           document.querySelector('.points').style.opacity = '0';
           setTimeout(() => {
-            
-
             document.getElementById('end-game').classList.add('shown');
-          }, 1000);
-          
+          }, 100);
+          document.getElementById('startGame').innerText = 'Jeszcze raz!'
         }
-        // nieMaKolizji(); //uzytkownik traci punkt
       }
     };
-
-
   }
 
   falling = setInterval(() => {
@@ -245,17 +199,8 @@ function start() {
       MoveFruits.move(fruit, fruit.domFruit);
     });
     checkCollision(fruits, player1)
-
   }, intervalOfFalling);
-  
-  
 }
 
-
 const startGameBtn = document.querySelector('#startGame');
-
-startGameBtn.addEventListener('click',  start);
-
-
-
-// console.log(player1);
+startGameBtn.addEventListener('click', start);
