@@ -133,6 +133,7 @@ button{
     pointer-events: none; 
     /* transition: 0.7s ease-in;  */
     transform: scale(0);
+    
 }
 
 .shown{
@@ -156,23 +157,25 @@ button{
     
 }
 
-
+#score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Oswald';
+    padding: 10px;
+    color: white;
+    
+}
 .highscore{
     background: url("./Images/highscore1.png") no-repeat;
     background-size: 100% 100%;
-    display: flex;
+  
 }
 .yourscore{
     background: black;
     background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 26px;
-    font-family: 'Oswald';
-    padding: 10px;
-    color: white;
-    z-index: 20;
+  
 }
 
 
