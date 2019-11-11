@@ -254,7 +254,7 @@ nav {
 .newsBox a, p {
   text-decoration: none;
   color: inherit;
-  padding: 5px;
+  padding: 8px;
 }
 
 .send {
@@ -371,6 +371,9 @@ nav {
   margin-top: -32px;
 }
 
+.teamText h2 {
+padding-top: 30px;
+}
 /* Images for functionality -JK */
 
 .main-content img {
