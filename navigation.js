@@ -31,43 +31,52 @@
   
   window.onscroll = function () {
     navigationBehavior();
-    sectionsHighlight();
-    };
     
-// need to rework this 
+    };
+  
+//highlighting menu by % of scroll
+function getDocHeight() {
+  let doc = document;
+  return Math.max(
+      doc.body.scrollHeight, doc.documentElement.scrollHeight,
+      doc.body.offsetHeight, doc.documentElement.offsetHeight,
+      doc.body.clientHeight, doc.documentElement.clientHeight
+  )
+}
 
-    //   function sectionsHighlight() {
-    //       const section = document.querySelectorAll(".section");
-    //       // const sections = {};
-          
-        
-    //       // Array.prototype.forEach.call(section, function(e) {
-    //       //   sections[e.id] = e.offsetTop;
-    //       // })
-    //     const scrollPosition =  document.documentElement.scrollTop ;
-    //     // let i = 0;
-    //     // for (i in sections) {
-    //       if (section[type = 'href = #what'] )
-    //       // && (scrollPosition + 1000)) 
-    //       {
-    //         document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', 'active2');
-            
-    //       }
-    //        else {
-    //          console.log('bla bla'); 
-    //        }
-    //       //   document.querySelector('a[href*=' + i + ']').classList.remove("active2");
-    //       // }
-    //       // else if (sections[i] > scrollPosition + 750) {
-    //       //   document.querySelector('.active2').setAttribute('class', ' ');
-    //       // }
-        
-    // };
+let docheight = getDocHeight()
 
+function amountscrolled(){
+  let winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+  let docheight = getDocHeight()
+  let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+  let trackLength = docheight - winheight
+  let pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+  console.log(pctScrolled + '% scrolled')
+  if (pctScrolled <17) {
+    document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', ' ');
+  }
+  else if (pctScrolled > 18 && pctScrolled < 44) {
+    document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', 'active2');
+    document.querySelector('#myLinks > a:nth-child(2)').setAttribute('class', ' ');
+  }
+  else if (pctScrolled >= 45 && pctScrolled < 69) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(2)').setAttribute('class', 'active2');
+  }
+  else if (pctScrolled >= 70 && pctScrolled < 85) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(3)').setAttribute('class', 'active2');
+  }
+  else if (pctScrolled >= 86) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(4)').setAttribute('class', 'active2');
+  }
+}
 
-
-
-
+window.addEventListener("scroll", function(){
+  amountscrolled();
+}, false)
 
 
 

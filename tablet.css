@@ -131,19 +131,19 @@
 .heroTitle h1 {
   text-align: center;
   position: relative;
-  /* top: auto;   */
+  /* top: auto; */
   text-transform: uppercase;
   color: #212121;
-  padding: 25px 15px;
+  padding: 8px 15px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   border: 1px solid #212121;
   font-family: oswald;
 }
 
 #hero-hover {
-  font-size: 20px;
-  padding: 5px;
+  font-size: 18px;
+  padding: 4px;
   border-radius: 10px;
   width: 50%;
   text-align: center;
@@ -167,11 +167,11 @@
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 30px;
   font-family: sans-serif;
   margin-top: -25px;
   width: 100%;
-  min-height: 600px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,10 +204,10 @@
   color: #212121;
   text-align: center;
   font-weight: bold;
-  /* padding: 10px;  */
-  max-width: 70%;
-  font-size: 23px;
-  line-height: 40px;
+  /* padding: 10px; */
+  max-width: 90%;
+  font-size: 18px;
+  line-height: 30px;
   font-family: sans-serif;
   margin-left: 18px;
   margin-right: 18px;

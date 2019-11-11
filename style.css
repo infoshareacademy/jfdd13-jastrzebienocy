@@ -57,8 +57,8 @@ nav {
 }
 
 .nav-logo--image {
-  width: 250px;
-  height: 160px;
+  width: 200px;
+  height: 100px;
   display: none;
   position: relative;
   left: -10px;
@@ -77,11 +77,8 @@ nav {
 }
 
 .active2 {
-  /* font-family: 'Droid Sans', serif;
-  font-size: 14px; */
-  background-color: #FFC107;
+  background-color: rgba(247, 227, 4, 0.4);
   text-decoration: none;
-  /* line-height: 50px; */
 }
 
 /*hero section*/
@@ -90,7 +87,7 @@ nav {
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   width: 100%;
-  min-height: 600px;
+  height: 600px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -105,9 +102,9 @@ nav {
   top: auto;
   text-transform: uppercase;
   color: #212121;
-  padding: 25px 15px;
+  padding: 10px 15px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 50px;
   border: 1px solid #212121;
   font-family: oswald;
 }
@@ -116,11 +113,11 @@ nav {
   color: #212121;
   text-align: center;
   font-weight: bold;
-  padding: 10px;
-  max-width: 50%;
-  font-size: 28px;
+  padding: 0px;
+  max-width: 70%;
+  font-size: 26px;
   font-family: sans-serif;
-  line-height: 40px;
+  line-height: 43px;
 }
 
 .hero a {

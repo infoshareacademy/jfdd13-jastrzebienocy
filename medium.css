@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     background: #8bc34a;
-    height: 140px;
+    height: 120px;
     z-index: 5;
     scroll-behavior: smooth;
     top: 0px;
@@ -75,11 +75,8 @@
   }
   
   .active2 {
-    /* font-family: 'Droid Sans', serif;
-    font-size: 14px; */
-    background-color: #FFC107;
+    background-color: rgba(247, 227, 4, 0.4);
     text-decoration: none;
-    /* line-height: 50px; */
   }
 
 
@@ -89,7 +86,7 @@
     background: url(./Images/food-waste-hero.png) no-repeat center;
     background-size: cover;
     width: 100%;
-    min-height: 600px;
+    height: 550px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -104,9 +101,9 @@
     top: auto;
     text-transform: uppercase;
     color: #212121;
-    padding: 25px 15px;
+    padding: 7px 15px;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
     border: 1px solid #212121;
     font-family: oswald;
   }
@@ -115,8 +112,7 @@
     color: #212121;
     text-align: center;
     font-weight: bold;
-    padding: 10px;
-    max-width: 70%;
+    max-width: 75%;
     font-size: 24px;
     font-family: sans-serif;
     line-height: 40px;
