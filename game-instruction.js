@@ -17,9 +17,12 @@ let checkEmail = /^[a-z\d]{3,20}[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}
 function checkValidation() {
   if (!checkName.test(name.value))
     alert(
-      "Musisz podać swoje imię nie używając spacji czy innych znaków łączeń"
+      "Musisz podać swoje imię nie używając spacji czy innych znaków łączeń, minimum trzy znaki"
     );
-  else if (!checkEmail.test(email.value)) alert("Wpisz poprawny adres email");
+  else if (!checkEmail.test(email.value))
+    alert(
+      "Wpisz poprawny adres email nazwa musi składać się z minimum trzech znaków"
+    );
   else {
     Instruction();
     localStorage.setItem("name", name.value);
