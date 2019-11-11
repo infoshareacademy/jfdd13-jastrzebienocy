@@ -145,16 +145,18 @@
     font-size: 24px;
     font-weight: bold;
     padding: 5px;
-    border-radius: 20px;
-    width: 50%;
+    border-radius: 10px;
+    width: 40%;
     text-align: center;
-    background-color: #dcedc8;
-    border: 1px solid;
+    color: #000;
+    border: 1px solid rgb(98, 212, 21);
+    background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
   }
   
   #hero-hover:hover {
-    text-decoration: underline;
-    color: #ffc107;
+    color: #000;
+    text-decoration: none;
+    background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
   }
   
   /* Here is section main content style - JK*/
@@ -258,14 +260,23 @@
   }
   
   .send {
-    border: 1px solid #212121;
+    
     padding: 5px;
-    border-radius: 20px;
-    width: 20%;
+    border-radius: 10px;
+    width: 25%;
     text-align: center;
-    background-color: #689f38;
+    border: 1px solid rgb(98, 212, 21);
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
   }
   
+  .send:hover {
+    color: #000;
+    text-decoration: none;
+    background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+  }
+
   .newsBox a:hover,
   .rodo:hover {
     color: #ffc107;

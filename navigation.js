@@ -1,4 +1,10 @@
-function toggleMenu() {
+
+  const navCont = document.querySelector("#navbar")
+  const navImage = document.querySelector(".nav-logo--image")
+  const navbar = document.querySelector("#navbar");
+  const sticky = navbar.offsetTop;
+
+  function toggleMenu() {
     const links = document.getElementById("myLinks");
     if (links.style.display === "flex") {
       links.style.display = "none";
@@ -8,13 +14,6 @@ function toggleMenu() {
       links.classList.add("sticky2");
     }
   }
-  
-
-  
-  const navCont = document.querySelector("#navbar")
-  const navImage = document.querySelector(".nav-logo--image")
-  const navbar = document.querySelector("#navbar");
-  const sticky = navbar.offsetTop;
   
   function navigationBehavior() {
   if (window.matchMedia("(min-width: 800px)") && window.pageYOffset >= sticky) {
@@ -35,29 +34,38 @@ function toggleMenu() {
     sectionsHighlight();
     };
     
-      function sectionsHighlight() {
-          const section = document.querySelectorAll(".section");
-          const sections = {};
-          let i = 0;
+// need to rework this 
+
+    //   function sectionsHighlight() {
+    //       const section = document.querySelectorAll(".section");
+    //       // const sections = {};
+          
         
-          Array.prototype.forEach.call(section, function(e) {
-            sections[e.id] = e.offsetTop;
-          })
-        const scrollPosition =  document.documentElement.scrollTop ;
-    
-        for (i in sections) {
-          if (sections[i] <= scrollPosition + 500) {
-            // 
-            document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active2');
-          }
-          else {
-            document.querySelector('a[href*=' + i + ']').classList.remove("active2");
-          }
-          // else if (sections[i] > scrollPosition + 750) {
-          //   document.querySelector('.active2').setAttribute('class', ' ');
-          // }
-        }
-    };
+    //       // Array.prototype.forEach.call(section, function(e) {
+    //       //   sections[e.id] = e.offsetTop;
+    //       // })
+    //     const scrollPosition =  document.documentElement.scrollTop ;
+    //     // let i = 0;
+    //     // for (i in sections) {
+    //       if (section[type = 'href = #what'] )
+    //       // && (scrollPosition + 1000)) 
+    //       {
+    //         document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', 'active2');
+            
+    //       }
+    //        else {
+    //          console.log('bla bla'); 
+    //        }
+    //       //   document.querySelector('a[href*=' + i + ']').classList.remove("active2");
+    //       // }
+    //       // else if (sections[i] > scrollPosition + 750) {
+    //       //   document.querySelector('.active2').setAttribute('class', ' ');
+    //       // }
+        
+    // };
+
+
+
 
 
 
