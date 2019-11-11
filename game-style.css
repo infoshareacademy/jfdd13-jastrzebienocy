@@ -151,13 +151,14 @@ button {
   text-align: center;
   
 }
-.highscore{
-  background: url("./Images/highscore2.png") no-repeat;
+
+.yourscore{
+  background: url("./Images/highscore.png");
   background-size: 100% 100%;
 
 }
-.yourscore{
-  background: url("./Images/highscore.png");
+.highscore{
+  background: url("./Images/highscore2.png") no-repeat;
   background-size: 100% 100%;
 
 }
