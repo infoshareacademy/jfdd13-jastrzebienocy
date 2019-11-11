@@ -56,7 +56,7 @@ class Fruit {
   constructor(fruit, speed) {
     this.domFruit = fruit;
     this.speed = speed;
-    this.x = Math.floor(Math.random() * 850);
+    this.x = Math.floor(Math.random() * 830);
     this.y = fruit.offsetTop;
     this.firstTouch = false;
   }
@@ -159,6 +159,8 @@ function start() {
     fruits.push(newFruit);
   }, intervalOfNewFruit);
 
+
+      
   function checkCollision(fruits, player) {
     for (let i = 0; i < fruits.length; i++) {
       const fruit = fruits[i];
@@ -169,6 +171,12 @@ function start() {
       let bottomEdgeFruit = fruit.y + fruitHeight;
       let topEdgePlayer = player.y;
       let bottomEdgePlayer = player.y + playerHeight;
+      let record = document.querySelector('.counterPlus').innerText;
+      let playerName = localStorage.getItem('name');
+      localStorage.setItem('playerPoints', record);
+      let pointsToShow = parseInt(localStorage.getItem('playerPoints'));
+      
+
 
       if ((
         (((leftEdgePplayer <= leftEdgeFruit) && (leftEdgeFruit <= rightEdgePlayer)) ||
@@ -189,9 +197,18 @@ function start() {
           clearInterval(newFruitInterval);
           
           document.querySelector('.points').style.opacity = '0';
+          document.getElementById('end-game').classList.add('shown');
+          document.getElementById('end-game').classList.add('cat');
+          
           setTimeout(() => {
-            document.getElementById('end-game').classList.add('shown');
-          }, 100);
+            document.getElementById('score').classList.add('shown');
+            //if high or score
+            //document.getElementById('score').classList.add('highscore');
+            document.getElementById('score').classList.add('yourscore');
+            document.getElementById('showScore').classList.add('showscore')
+            document.getElementsByClassName('showscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+
+          }, 3400);
           document.getElementById('startGame').innerText = 'Jeszcze raz!'
         }
       }

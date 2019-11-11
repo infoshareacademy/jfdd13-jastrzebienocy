@@ -51,7 +51,7 @@ nav {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   color: #212121;
-  font-size: 30px;
+  font-size: 24px;
   text-decoration: none;
   padding: 20px;
 }
@@ -73,7 +73,7 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 90px;
+  height: 70px;
 }
 
 .active2 {
@@ -88,6 +88,10 @@ nav {
   background-size: cover;
   width: 100%;
   height: 600px;
+<<<<<<< HEAD
+=======
+  min-height: 50vh;
+>>>>>>> bf0bd20f4258116302e00ec5a83f8eacfe967207
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -134,7 +138,7 @@ nav {
   top: -40px;
   color: #757575;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 26px;
   background: transparent;
   text-shadow: 1px 2px 1px #212121;
 }
@@ -144,7 +148,7 @@ nav {
   line-height: 1.4em;
   /* display: inline; */
   font-size: 1em;
-  border: 1px solid rgb(98, 212, 21);
+  /* border: 1px solid rgb(98, 212, 21); */
   padding: 4px;
   border-radius: 10px;
   text-decoration: none;
@@ -209,7 +213,7 @@ nav {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  font-size: 26px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
@@ -243,7 +247,7 @@ nav {
   margin: 20px;
   width: 25vw;
   border: 1px solid #212121;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 6px;
   background: #dcedc8;
   text-align: center;
@@ -282,7 +286,7 @@ nav {
 }
 
 .news-small {
-  font-size: 26px;
+  font-size: 20px;
   width: 68%;
   text-align: center;
 }
