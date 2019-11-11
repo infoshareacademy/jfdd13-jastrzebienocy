@@ -135,26 +135,30 @@ button {
   z-index: 10;
 }
 
-.cat {
-  background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif")
-    no-repeat;
+.cat{
+  background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif") no-repeat;
   background-size: 100% 100%;
+  
 }
 
-.highscore {
-  background: url("./Images/highscore1.png") no-repeat;
-  background-size: 100% 100%;
+#score{
   display: flex;
-}
-.yourscore {
-  background: black;
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  font-size: 26px;
-  font-family: "Oswald";
+  align-items: center;
+  font-size: 40px;
+  font-family: 'Oswald';
   padding: 10px;
   color: white;
-  z-index: 20;
+  text-align: center;
+  
+}
+.highscore{
+  background: url("./Images/highscore2.png") no-repeat;
+  background-size: 100% 100%;
+
+}
+.yourscore{
+  background: url("./Images/highscore.png");
+  background-size: 100% 100%;
+
 }
