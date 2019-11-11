@@ -87,11 +87,7 @@ nav {
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   width: 100%;
-<<<<<<< HEAD
   height: 600px;
-=======
-  min-height: 50vh;
->>>>>>> 4c8741f17bd8b217cf8112a9fa84bcff78182da5
   margin: 0;
   display: flex;
   flex-direction: column;
