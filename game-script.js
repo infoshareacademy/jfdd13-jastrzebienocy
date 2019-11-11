@@ -1,7 +1,6 @@
 const InnerInstButton = document.querySelector("#instruction");
 const overlay = document.querySelector(".game-instruction-overlay");
 const InsBox = document.querySelector(".game-instruction-box");
-
 const playerWidth = 160;
 const fruitWidth = 30;
 const playerHeight = 110;
@@ -9,14 +8,12 @@ const fruitHeight = 30;
 const oneMove = 10;
 const domContainer = document.querySelector(".container");
 const domRectagle = document.querySelector(".human");
-
 let falling;
 let newFruitInterval;
-let intervalOfFalling;
-let intervalOfNewFruit;
-let minSpeed;
+let intervalOfFalling = 50;
+let intervalOfNewFruit = 3000;
+let minSpeed = 3;
 let check = false;
-
 class Player {
   constructor(human) {
     (this.x = human.offsetLeft),
@@ -24,7 +21,6 @@ class Player {
       (this.points = 0),
       (this.lifes = 5);
   }
-
   left() {
     this.x -= oneMove;
   }
@@ -38,19 +34,17 @@ class Player {
   addPoint() {
     this.points += 1;
     document.querySelector(".counterPlus").innerHTML = this.points;
-
     if (this.points >= 7) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-      minSpeed = 7;
+      minSpeed = 10;
     } else if (this.points >= 15) {
       intervalOfFalling = 10;
       intervalOfNewFruit = 500;
-      minSpeed = 15;
+      minSpeed = 20;
     }
   }
 }
-
 class Fruit {
   constructor(fruit, speed) {
     this.domFruit = fruit;
@@ -59,18 +53,15 @@ class Fruit {
     this.y = fruit.offsetTop;
     this.firstTouch = false;
   }
-
   down() {
     this.y += this.speed;
   }
 }
-
 class MoveFruits {
   static RenderElement(Fruit, domFruit) {
     domFruit.style.top = Fruit.y + "px";
     domFruit.style.left = Fruit.x + "px";
   }
-
   static move(fruit, domFruit) {
     if (fruit.y > 470) {
       domFruit.style.backgroundImage = "url(./gameIMG/lost.png)";
@@ -87,13 +78,11 @@ class MoveFruits {
     }
   }
 }
-
 class Move {
   static RenderElement(player, ludzik) {
     ludzik.style.left = player.x + "px";
     ludzik.style.top = player.y + "px";
   }
-
   static move(event, player1) {
     if (event.key === "ArrowLeft" && player1.x > 0) {
       player1.left();
@@ -105,7 +94,6 @@ class Move {
       player1.right();
       Move.RenderElement(player1, domRectagle);
     }
-
     if (player1.x >= domContainer.offsetWidth) {
       Move.RenderElement(player1, domRectagle);
     } else if (player1.x <= 0) {
@@ -113,10 +101,8 @@ class Move {
     }
   }
 }
-
 const player1 = new Player(domRectagle);
 document.addEventListener("keydown", event => Move.move(event, player1));
-
 function start() {
   document.querySelector(".human").style.opacity = "1";
   document.querySelector(".points").style.opacity = "1";
@@ -124,16 +110,18 @@ function start() {
   document.getElementById("score").classList.remove("shown");
   document.getElementById("score").innerText = " ";
 
+  minSpeed = 3;
+  intervalOfFalling = 50;
+  intervalOfNewFruit = 3000;
+  let pointsToShow = parseInt(localStorage.getItem("playerPoints"));
+
   clearInterval(falling);
   clearInterval(newFruitInterval);
-
   player1.points = 0;
   document.querySelector(".counterPlus").innerHTML = player1.points;
-
   let fruitsFromDom = document.querySelectorAll(".fruit");
   fruitsFromDom.forEach(element => element.remove());
   let fruits = [];
-
   let counterMinus = document.querySelector(".counterMinus");
   counterMinus.innerHTML = `
     <div class="life"><i class="fas fa-heart"></i></div>
@@ -142,13 +130,10 @@ function start() {
     <div class="life"><i class="fas fa-heart"></i></div>
     <div class="life"><i class="fas fa-heart"></i></div>
   `;
-
   let lifes = document.querySelectorAll(".life");
-
   newFruitInterval = setInterval(() => {
     const newDomFruit = document.createElement("div");
     newDomFruit.classList.add("fruit");
-
     if (Math.random() <= 0.25) {
       newDomFruit.classList.add("banana");
     } else if (Math.random() > 0.25 && Math.random() < 0.5) {
@@ -228,7 +213,6 @@ function start() {
       }
     }
   }
-
   falling = setInterval(() => {
     fruits.forEach(fruit => {
       MoveFruits.move(fruit, fruit.domFruit);
@@ -239,10 +223,8 @@ function start() {
 
 const startGameBtn = document.querySelector("#startGame");
 startGameBtn.addEventListener("click", start);
-
 function InstInner() {
   overlay.style.display = "block";
   InsBox.style.display = "block";
 }
-
 InnerInstButton.addEventListener("click", InstInner);
