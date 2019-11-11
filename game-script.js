@@ -207,7 +207,7 @@ function start() {
             //if high or score
             //document.getElementById('score').classList.add('highscore');
             document.getElementById('score').classList.add('yourscore');
-            document.getElementsByClassName('yourscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+            document.querySelector('.yourscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
 
           }, 3400);
           document.getElementById('startGame').innerText = 'Jeszcze raz!'
