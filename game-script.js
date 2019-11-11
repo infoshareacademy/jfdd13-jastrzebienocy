@@ -12,9 +12,9 @@ const domRectagle = document.querySelector(".human");
 
 let falling;
 let newFruitInterval;
-let intervalOfFalling = 50;
-let intervalOfNewFruit = 3000;
-let minSpeed = 3;
+let intervalOfFalling;
+let intervalOfNewFruit;
+let minSpeed;
 let check = false;
 
 
@@ -43,11 +43,11 @@ class Player {
     if (this.points >= 7) {
       intervalOfFalling = 15;
       intervalOfNewFruit = 1000;
-      minSpeed = 10;
+      minSpeed = 7;
     } else if (this.points >=15){
       intervalOfFalling = 10;
       intervalOfNewFruit = 500;
-      minSpeed = 20;
+      minSpeed = 15;
     }
   }
 }
