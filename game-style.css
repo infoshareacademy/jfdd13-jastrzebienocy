@@ -137,6 +137,7 @@ button {
   background-size: 100% 100%;
 }
 
+<<<<<<< HEAD
 #score {
   display: flex;
   justify-content: center;
@@ -145,12 +146,31 @@ button {
   font-family: "Oswald";
   padding: 10px;
   color: white;
+=======
+#score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Oswald';
+    padding: 10px;
+    color: white;
+    text-align: center;
+    
+>>>>>>> 4a2bf4159919844d40cf8b97a5d39d73e9ce0e69
 }
 .highscore {
   background: url("./Images/highscore1.png") no-repeat;
   background-size: 100% 100%;
 }
+<<<<<<< HEAD
 .yourscore {
   background: black;
   background-size: 100% 100%;
+=======
+.yourscore{
+    background: url("./Images/highscore.png");
+    background-size: 100% 100%;
+  
+>>>>>>> 4a2bf4159919844d40cf8b97a5d39d73e9ce0e69
 }
