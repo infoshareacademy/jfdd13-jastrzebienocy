@@ -99,16 +99,18 @@ button {
 
 #startGame,
 #instruction,
-#backToPage {
+.backToPage {
   font-size: 28px;
   border-radius: 10px;
   padding: 10px;
   background-image: linear-gradient(to right, #de6262 0%, #ffb88c 51%);
+  color: black;
+  text-decoration: none;
 }
 
 #startGame:hover,
 #instruction:hover,
-#backToPage:hover {
+.backToPage:hover {
   background-position: right center;
   background-image: linear-gradient(to left, #de6262 0%, #ffb88c 51%);
 }
