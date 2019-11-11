@@ -1,178 +1,155 @@
-*{
-    margin: 0 auto;
+* {
+  margin: 0 auto;
 }
 
-.wrapper{
-    display: flex;
-    background: url(./Images/game-back.png);
-    background-size: cover;
-    
+.wrapper {
+  display: flex;
+  background: url(./Images/game-back.png);
+  background-size: cover;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-button{
-    margin: 10px;
-}
-
-.container{
-    position: relative;
-    height: 570px;
-    width: 890px;
-  
-    background: url("./gameIMG/background.png") no-repeat;
-    background-size: cover;
-    margin: 30px 30px 67px 0 ;
-    
-
-
+button {
+  margin: 10px;
 }
 
-
-
-.points{
-    font-size: 20px;
-    padding: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    opacity: 0;
-    
-   
+.container {
+  position: relative;
+  height: 570px;
+  width: 890px;
+  background: url("./gameIMG/background.png") no-repeat;
+  background-size: cover;
+  margin: 30px 30px 67px 0;
 }
 
-.counterMinus, .counterPlus {
-    padding: 7px 25px;
-    border: solid 1px #212121;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 192, 203, 0.5)
+.points {
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  opacity: 0;
 }
 
-.points i{
-    
-    color: white;
-    font-size: 20px;
+.counterMinus,
+.counterPlus {
+  padding: 7px 25px;
+  border: solid 1px #212121;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 192, 203, 0.5);
 }
 
-.points i{
-    color: red;
-    padding: 3px;
-}
-.fruit{
-    position: absolute;
-    top: 150px;
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    
-   
-    
+.points i {
+  color: white;
+  font-size: 20px;
 }
 
-.banana{
-    background: url("./gameIMG/banana.png") no-repeat;
-    background-size: cover;
+.points i {
+  color: red;
+  padding: 3px;
+}
+.fruit {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
 }
 
-.peach{
-    background: url("./gameIMG/peach.png") no-repeat;
-    background-size: cover;
+.banana {
+  background: url("./gameIMG/banana.png") no-repeat;
+  background-size: cover;
 }
 
-.grapes{
-    background: url("./gameIMG/grapes.png") no-repeat;
-    background-size: cover;
+.peach {
+  background: url("./gameIMG/peach.png") no-repeat;
+  background-size: cover;
 }
 
-.strawberry{
-    background: url("./gameIMG/strawberry.png") no-repeat;
-    background-size: cover;
+.grapes {
+  background: url("./gameIMG/grapes.png") no-repeat;
+  background-size: cover;
 }
 
-.human{
-    position: absolute;
-    top: 75%;
-    left: 400px;
-    display: flex;
-    opacity: 0;
-    justify-content: center;
-    height: 110px;
-    width: 160px;
-    background-image: url("./gameIMG/human.png");
-    background-size: cover;
-    
+.strawberry {
+  background: url("./gameIMG/strawberry.png") no-repeat;
+  background-size: cover;
 }
 
-#startGame, #instruction {
-    
-    font-size: 28px;
-    border-radius: 10px;
-    padding: 10px;
-    background-image: linear-gradient(to right,#DE6262 0%, #FFB88C 51%);
-   
-
+.human {
+  position: absolute;
+  top: 75%;
+  left: 400px;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  height: 110px;
+  width: 160px;
+  background-image: url("./gameIMG/human.png");
+  background-size: cover;
 }
 
-#startGame:hover, #instruction:hover{ 
-    background-position: right center;
-    background-image: linear-gradient(to left, #DE6262 0%, #FFB88C 51%);
-
+#startGame,
+#instruction {
+  font-size: 28px;
+  border-radius: 10px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #de6262 0%, #ffb88c 51%);
 }
 
-
-
-
-.hidden{
-    opacity: 0; 
-    pointer-events: none; 
-    /* transition: 0.7s ease-in;  */
-    transform: scale(0);
+#startGame:hover,
+#instruction:hover {
+  background-position: right center;
+  background-image: linear-gradient(to left, #de6262 0%, #ffb88c 51%);
 }
 
-.shown{
-    opacity: 1; 
-    pointer-events: all; 
-    transition: 0.7s ease-in; 
-    transform: scale(1);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* transition: 0.7s ease-in;  */
+  transform: scale(0);
 }
 
-
-
-.cat{
-    background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif") no-repeat;
-    background-size: 100% 100%;
-    
+.shown {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.7s ease-in;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-
-.highscore{
-    background: url("./Images/highscore1.png") no-repeat;
-    background-size: 100% 100%;
-    display: flex;
-}
-.yourscore{
-    background: black;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-size: 26px;
-    padding: 10px;
-    color: white;
-    z-index: 20;
+.cat {
+  background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif")
+    no-repeat;
+  background-size: 100% 100%;
 }
 
-
+.highscore {
+  background: url("./Images/highscore1.png") no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+}
+.yourscore {
+  background: black;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 26px;
+  padding: 10px;
+  color: white;
+  z-index: 20;
+}
