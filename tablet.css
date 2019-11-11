@@ -24,7 +24,6 @@ header {
   background: #f3fbe8;
 }
 
-/* Navigation*/
 nav {
   font-family: "Oswald", sans-serif;
 }
@@ -62,7 +61,6 @@ nav {
   padding: 12px;
 }
 
-/* nav-logo */
 #navbar > a.nav-toggler {
   position: absolute;
   background: none;
@@ -112,8 +110,6 @@ nav {
   width: 100%;
   height: 240px;
 }
-
-/* SEKCJA HERO */
 
 .heroTitle h1 {
   text-align: center;
@@ -194,8 +190,6 @@ nav {
   margin-right: 18px;
 }
 
-/* SEKCJA SLAJDY */
-
 .slideshow-container {
   background: url(Images/tlo.png) repeat;
   width: 100%;
@@ -218,12 +212,10 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 50px;
-  /* color: #FFC107; */
   color: #212121;
   font-family: "Oswald";
 }
 
-/* Main content - mobile */
 .main-content-mobile {
   display: flex;
   flex-direction: column;
@@ -250,7 +242,6 @@ nav {
   font-size: 0.8em;
 }
 
-/* Newsletter */
 
 .newsBox {
   background: url("Images/news2.png") no-repeat center;
@@ -310,9 +301,6 @@ nav {
   color: #ffc107;
 }
 
-/* Team */
-
-/*Team*/
 #team-box > div {
   text-align: center;
 }
@@ -394,16 +382,11 @@ nav {
   line-height: 34px;
 }
 
-/* Footer styles JK */
-
 .footer-box {
   height: 3em;
-  /* margin-top: 10px; */
   font-size: 0.9em;
   border-top: 1px solid #000;
 }
-
-/* Copywrights JK */
 
 .copywright {
   color: #757575;
@@ -412,8 +395,6 @@ nav {
   margin: 1.4em 20px;
   font-size: 1.1em;
 }
-
-/* Privacy policy and contact styles - JK*/
 
 .footer-links {
   line-height: 1.6em;
@@ -430,8 +411,6 @@ nav {
   border-radius: 5px;
   padding: 0 5px;
 }
-
-/*cookies*/
 
 .cookie-banner {
   display: none;
@@ -467,7 +446,7 @@ nav {
   border-bottom: 2px solid #aaa;
   font-size: 1.1em;
 }
-/* game instruction */
+
 .game-instruction-overlay {
   display: none;
   width: 100%;
