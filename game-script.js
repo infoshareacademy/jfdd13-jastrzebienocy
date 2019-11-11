@@ -119,6 +119,8 @@ function start() {
   document.querySelector('.human').style.opacity = '1';
   document.querySelector('.points').style.opacity = '1';
   document.getElementById('end-game').classList.remove('shown');
+  document.getElementById('score').classList.remove('shown');
+ 
 
   clearInterval(falling);
   clearInterval(newFruitInterval);
@@ -205,8 +207,7 @@ function start() {
             //if high or score
             //document.getElementById('score').classList.add('highscore');
             document.getElementById('score').classList.add('yourscore');
-            document.getElementById('showScore').classList.add('showscore')
-            document.getElementsByClassName('showscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
+            document.getElementsByClassName('yourscore').innerText = `${playerName} zdobyłeś ${pointsToShow} punktów`;
 
           }, 3400);
           document.getElementById('startGame').innerText = 'Jeszcze raz!'
