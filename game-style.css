@@ -141,21 +141,20 @@ button {
   background-size: 100% 100%;
 }
 
-#score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-family: "Oswald";
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
 .highscore {
   background: url("./Images/highscore1.png") no-repeat;
   background-size: 100% 100%;
+  display: flex;
 }
 .yourscore {
-  background: url("./Images/highscore.png");
+  background: black;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 26px;
+  font-family: "Oswald";
+  padding: 10px;
+  color: white;
+  z-index: 20;
 }
