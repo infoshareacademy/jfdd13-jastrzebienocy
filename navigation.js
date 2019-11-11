@@ -1,4 +1,10 @@
-function toggleMenu() {
+
+  const navCont = document.querySelector("#navbar")
+  const navImage = document.querySelector(".nav-logo--image")
+  const navbar = document.querySelector("#navbar");
+  const sticky = navbar.offsetTop;
+
+  function toggleMenu() {
     const links = document.getElementById("myLinks");
     if (links.style.display === "flex") {
       links.style.display = "none";
@@ -8,13 +14,6 @@ function toggleMenu() {
       links.classList.add("sticky2");
     }
   }
-  
-
-  
-  const navCont = document.querySelector("#navbar")
-  const navImage = document.querySelector(".nav-logo--image")
-  const navbar = document.querySelector("#navbar");
-  const sticky = navbar.offsetTop;
   
   function navigationBehavior() {
   if (window.matchMedia("(min-width: 800px)") && window.pageYOffset >= sticky) {
@@ -32,34 +31,52 @@ function toggleMenu() {
   
   window.onscroll = function () {
     navigationBehavior();
-    sectionsHighlight();
-    };
     
-      function sectionsHighlight() {
-          const section = document.querySelectorAll(".section");
-          const sections = {};
-          let i = 0;
-        
-          Array.prototype.forEach.call(section, function(e) {
-            sections[e.id] = e.offsetTop;
-          })
-        const scrollPosition =  document.documentElement.scrollTop ;
-    
-        for (i in sections) {
-          if (sections[i] <= scrollPosition + 500) {
-            // 
-            document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active2');
-          }
-          else {
-            document.querySelector('a[href*=' + i + ']').classList.remove("active2");
-          }
-          // else if (sections[i] > scrollPosition + 750) {
-          //   document.querySelector('.active2').setAttribute('class', ' ');
-          // }
-        }
     };
+  
+//highlighting menu by % of scroll
+function getDocHeight() {
+  let doc = document;
+  return Math.max(
+      doc.body.scrollHeight, doc.documentElement.scrollHeight,
+      doc.body.offsetHeight, doc.documentElement.offsetHeight,
+      doc.body.clientHeight, doc.documentElement.clientHeight
+  )
+}
 
+let docheight = getDocHeight()
 
+function amountscrolled(){
+  let winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+  let docheight = getDocHeight()
+  let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+  let trackLength = docheight - winheight
+  let pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+  console.log(pctScrolled + '% scrolled')
+  if (pctScrolled <17) {
+    document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', ' ');
+  }
+  else if (pctScrolled > 18 && pctScrolled < 44) {
+    document.querySelector('#myLinks > a:nth-child(1)').setAttribute('class', 'active2');
+    document.querySelector('#myLinks > a:nth-child(2)').setAttribute('class', ' ');
+  }
+  else if (pctScrolled >= 45 && pctScrolled < 69) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(2)').setAttribute('class', 'active2');
+  }
+  else if (pctScrolled >= 70 && pctScrolled < 85) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(3)').setAttribute('class', 'active2');
+  }
+  else if (pctScrolled >= 86) {
+    document.querySelector('.active2').setAttribute('class', ' ');
+    document.querySelector('#myLinks > a:nth-child(4)').setAttribute('class', 'active2');
+  }
+}
+
+window.addEventListener("scroll", function(){
+  amountscrolled();
+}, false)
 
 
 

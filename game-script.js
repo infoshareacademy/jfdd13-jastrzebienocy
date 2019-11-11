@@ -1,3 +1,7 @@
+const InnerInstButton = document.querySelector("#instruction");
+const overlay = document.querySelector(".game-instruction-overlay");
+const InsBox = document.querySelector(".game-instruction-box");
+
 const playerWidth = 160;
 const fruitWidth = 30;
 const playerHeight = 110;
@@ -221,3 +225,10 @@ function start() {
 
 const startGameBtn = document.querySelector('#startGame');
 startGameBtn.addEventListener('click', start);
+
+function InstInner () {
+  overlay.style.display = "block";
+  InsBox.style.display = "block";
+};
+
+InnerInstButton.addEventListener("click", InstInner);

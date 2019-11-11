@@ -1,4 +1,5 @@
-/* .game-instruction-overlay{
+/* game instruction */
+.game-instruction-overlay{
     display: none;
     width: 100%;
     height: 100%;
@@ -17,9 +18,11 @@
     transform: translate(-50%, -50%);
     background-color: #eee;
     border-radius: 0.5rem;
-    font-size: 30px;
+    font-size: 25px;
     padding: 40px;
     font-family:"Oswald";
+    width: 65%;
+    opacity: 0.9;
 }
 
 .game-instruction-header{
@@ -45,5 +48,4 @@
   .button-style:hover {
     text-decoration: underline;
     color: #FFC107;
-  } */
-
+  }

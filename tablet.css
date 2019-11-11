@@ -131,41 +131,55 @@
 .heroTitle h1 {
   text-align: center;
   position: relative;
-  /* top: auto;   */
+  /* top: auto; */
   text-transform: uppercase;
   color: #212121;
-  padding: 25px 15px;
+  padding: 8px 15px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   border: 1px solid #212121;
   font-family: oswald;
 }
 
 #hero-hover {
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 20px;
+  font-size: 18px;
+  padding: 4px;
+  border-radius: 10px;
   width: 50%;
   text-align: center;
-  background-color: #dcedc8;
   border: 1px solid;
+  font-weight: bold;
+  color: #000;
+  border: 1px solid rgb(98, 212, 21);
+  background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
 }
+
+
+#hero-hover:hover {
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+}
+
+
 
 .hero {
   background: url(./Images/food-waste-hero.png) no-repeat center;
   background-size: cover;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 30px;
   font-family: sans-serif;
   margin-top: -25px;
   width: 100%;
-  min-height: 600px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 20px 0;
 }
+
+
 
 .hero a {
   position: relative;
@@ -190,10 +204,10 @@
   color: #212121;
   text-align: center;
   font-weight: bold;
-  /* padding: 10px;  */
-  max-width: 70%;
-  font-size: 23px;
-  line-height: 40px;
+  /* padding: 10px; */
+  max-width: 90%;
+  font-size: 18px;
+  line-height: 30px;
   font-family: sans-serif;
   margin-left: 18px;
   margin-right: 18px;
@@ -290,14 +304,24 @@
   color: inherit;
   /* padding: 5px; */
 }
+
 .send {
-  border: 1px solid #212121;
   padding: 5px;
-  border-radius: 20px;
   width: 40%;
+  border-radius: 10px;
   text-align: center;
-  background-color: #689f38;
+  border: 1px solid rgb(98, 212, 21);
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
 }
+
+.send:hover {
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+}
+
 
 #newsletter > form > div > div.news-label > label:nth-child(1) > span {
   margin-right: 175px;
