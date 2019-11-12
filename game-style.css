@@ -98,15 +98,19 @@ button {
 }
 
 #startGame,
-#instruction {
+#instruction,
+.backToPage {
   font-size: 28px;
   border-radius: 10px;
   padding: 10px;
   background-image: linear-gradient(to right, #de6262 0%, #ffb88c 51%);
+  color: black;
+  text-decoration: none;
 }
 
 #startGame:hover,
-#instruction:hover {
+#instruction:hover,
+.backToPage:hover {
   background-position: right center;
   background-image: linear-gradient(to left, #de6262 0%, #ffb88c 51%);
 }
@@ -114,7 +118,6 @@ button {
 .hidden {
   opacity: 0;
   pointer-events: none;
-  /* transition: 0.7s ease-in;  */
   transform: scale(0);
 }
 
@@ -131,27 +134,31 @@ button {
   z-index: 10;
 }
 
-.cat {
-  background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif")
-    no-repeat;
+.cat{
+  background: url("https://media.giphy.com/media/xn9yw4QWUiC2Y/giphy.gif") no-repeat;
   background-size: 100% 100%;
+  
 }
 
-#score {
+#score{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
-  font-family: "Oswald";
+  font-family: 'Oswald';
   padding: 10px;
   color: white;
   text-align: center;
+  
 }
-.highscore {
-  background: url("./Images/highscore1.png") no-repeat;
-  background-size: 100% 100%;
-}
-.yourscore {
+
+.yourscore{
   background: url("./Images/highscore.png");
   background-size: 100% 100%;
+
+}
+.highscore{
+  background: url("./Images/highscore2.png") no-repeat;
+  background-size: 100% 100%;
+
 }

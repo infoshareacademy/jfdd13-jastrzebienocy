@@ -1,559 +1,501 @@
-/** Whole page width */
+
 
 * {
-    box-sizing: border-box;
-    /* margin: 0 auto; */
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .wrapperBig {
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  header {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background: #f3fbe8;
-  }
-  /* Navigation*/
-  
-  .nav-toggler {
-    display: none;
-  }
-  
-  nav {
-    z-index: 1;
-    font-family: "Oswald", sans-serif;
-  }
-  
-  .nav-container {
-    font-family: "Oswald", sans-serif;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #8bc34a;
-    height: 120px;
-    z-index: 5;
-    scroll-behavior: smooth;
-    top: 0px;
-  }
-  
-  .nav-container a {
-    font-family: "Oswald", sans-serif;
-    font-weight: bold;
-    color: #212121;
-    font-size: 24px;
-    text-decoration: none;
-    padding: 20px;
-  }
-  
-  .nav-logo--image {
-    width: 200px;
-    height: 100px;
-    display: none;
-    position: relative;
-    left: -10px;
-    top: -5px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 90px;
-  }
-  
-  .active2 {
-    background-color: rgba(247, 227, 4, 0.4);
-    text-decoration: none;
-  }
-
-
-  /*hero section*/
-  
-  .hero {
-    background: url(./Images/food-waste-hero.png) no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 550px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px 0;
-  }
-  
-  .heroTitle h1 {
-    text-align: center;
-    position: relative;
-    top: auto;
-    text-transform: uppercase;
-    color: #212121;
-    padding: 7px 15px;
-    font-weight: bold;
-    font-size: 40px;
-    border: 1px solid #212121;
-    font-family: oswald;
-  }
-  
-  .heroText {
-    color: #212121;
-    text-align: center;
-    font-weight: bold;
-    max-width: 75%;
-    font-size: 24px;
-    font-family: sans-serif;
-    line-height: 40px;
-  }
-  
-  .hero a {
-    position: relative;
-    top: -60px;
-    text-decoration: none;
-    color: #212121;
-    padding: 10px;
-    background: transparent;
-  }
-  
-  .hero p {
-    position: relative;
-    top: -40px;
-    color: #757575;
-    text-decoration: none;
-    font-size: 32px;
-    background: transparent;
-    text-shadow: 1px 2px 1px #212121;
-  }
-  
-  #hero-hover {
-    font-size: 24px;
-    font-weight: bold;
-    padding: 5px;
-    border-radius: 10px;
-    width: 40%;
-    text-align: center;
-    color: #000;
-    border: 1px solid rgb(98, 212, 21);
-    background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
-  }
-  
-  #hero-hover:hover {
-    color: #000;
-    text-decoration: none;
-    background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
-  }
-  
-  /* Here is section main content style - JK*/
-  .main-content {
-    max-width: 80%;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr;
-    grid-auto-rows: minmax(100px, auto);
-    text-align: left;
-  }
-  
-  /* Images for functionality -JK */
-  .main-content img {
-    margin: 40px 10px;
-    border: 2px groove #689f38;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-  }
-  
-  /* .main-content img {
-    margin: 50px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-  } */
-  
-  /* The only text part for now - JK */
-  .main-content h4 {
-    margin-bottom: 10px;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 1.8em;
-  }
-  /* Small text in functionality  -JK */
-  .main-content p {
-    line-height: 1.1em;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1px;
-    font-size: 0.95em;
-    padding: 5px;
-  }
-  
-  /* newsletter */
-  
-  .newsBox {
-    background: url("Images/news2.png") no-repeat center;
-    background-size: cover;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    font-size: 26px;
-    align-items: center;
-    justify-content: center;
-    font-family: "Open Sans", sans-serif;
-    background-size: cover;
-  }
-  
-  .news-label,
-  .news-input {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .newsBox span {
-    padding: 0 100px;
-  }
-  
-  .newsBox input {
-    line-height: 2.2em;
-    margin-bottom: 10px;
-  }
-  
-  .newsBox div {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .news-input-class {
-    line-height: 2.2em;
-    margin-bottom: 10px;
-    margin: 20px;
-    width: 25vw;
-    border: 1px solid #212121;
-    font-size: 16px;
-    border-radius: 6px;
-    background: #dcedc8;
-    text-align: center;
-  }
-  /*  Nie wiem Filip czy ktokolwiek inny czy zdajecie sobie sprawę, że taki zapis nie dotyczy tylko paragrafu w .newsBox, a na całej stronie , natomiast rzeczywiście dotyczy linków tylko w klasie newBox  */
-  .newsBox a,
-  p {
-    text-decoration: none;
-    color: inherit;
-    padding: 5px;
-  }
-  
-  .send {
-    
-    padding: 5px;
-    border-radius: 10px;
-    width: 25%;
-    text-align: center;
-    border: 1px solid rgb(98, 212, 21);
-    text-decoration: none;
-    color: #000;
-    background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
-  }
-  
-  .send:hover {
-    color: #000;
-    text-decoration: none;
-    background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
-  }
-
-  .newsBox a:hover,
-  .rodo:hover {
-    color: #ffc107;
-  }
-  
-  .news-small {
-    font-size: 22px;
-    width: 75%;
-    text-align: center;
-  }
-  
-  /*Team*/
-
-  #team-box > div {
-    text-align: center;
-    font-size: 22px;
-  }
-  
-  #team-box {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto;
-    perspective: 400px;
-    margin-bottom: 55px;
-  }
-  
-  #team-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    /* background-color:#EEE; */
-    transition: 1s;
-    transform-style: preserve-3d;
-    border-radius: 50%;
-  }
-  
-  #team-box:hover > #team-card {
-    transform: rotateY(180deg);
-  }
-  
-  #team-card--front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* color:#F00; */
-    font-size: 1.6em;
-    /* background:url('https://webkod.pl/images/lioncard.png') no-repeat; */
-    background-size: 100%;
-    backface-visibility: hidden;
-  }
-  
-  #team-card--front img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-  
-  #team-card--back {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 50%;
-    width: 102%;
-    height: 102%;
-    /* color:#FFF; */
-    font-size: 1.6em;
-    /* background-color:#000; */
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    background: #dcedc8;
-    font-family: "Open Sans", sans-serif;
-  }
-  
-  #team-card--back a {
-    color: #ffc107;
-  }
-  .team {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .teamText {
-    font-family: "Oswald", sans-serif;
-  
-    text-align: center;
-    font-size: 22px;
-    line-height: 34px;
-  }
-  
-  #team {
-    background: #dcedc8;
-    margin-top: -25px;
-  }
-  
-  
-  
-  
-  /* Images for functionality -JK */
-  
-  .main-content img {
-    margin: auto;
-    border: 2px groove #689f38;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-  }
-  
-  
-  /* .main-content h4 {
-    margin-bottom: 10px;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 1.8em;
-  } */
-  
-  
-  /* .main-content p {
-    line-height: 1.1em;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1px;
-    font-size: 0.95em;
-    padding: 5px;
-  } */
-  
-  
-  
-  /* Footer styles JK */
-  
-  .footer-box {
-    height: 3em;
-    /* margin-top: 10px; */
-    font-size: 0.9em;
-    border-top: 1px solid #000;
-  }
-  
-  /* Copywrights JK */
-  
-  .copywright {
-    color: #757575;
-    line-height: 1.6em;
-    float: left;
-    margin: 1.4em 20px;
-    font-size: 1.1em;
-  }
-  
-  /* Privacy policy and contact styles - JK*/
-  
-  .footer-links {
-    line-height: 1.6em;
-    float: right;
-    text-decoration: none;
-    color: #000;
-    margin: 1.4em 20px;
-    font-size: 1.1em;
-  }
-  
-  .footer-links:hover {
-    background-color: #757575;
-    color: #fff;
-    border-radius: 5px;
-    padding: 0 5px;
-  }
-  
-  /* Privacy policy style - JK*/
-  
-  .privacy {
-    text-align: center;
-    margin: 2em;
-  }
-  
-  .policy-text {
-    background-color: #dfdfdf;
-    border-radius: 10px;
-  }
-  
-  .policy-text p {
-    text-align: left;
-    margin-top: 1.1em;
-  }
-  
-  .policy-text p:first-child {
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .policy-text p:last-child {
-    padding-bottom: 10px;
-  }
-  /* Finish of section footer by JK */
-  
-  /*cookies*/
-  
-  .cookie-banner {
-    display: none;
-    font: 1.2em Arial;
-    line-height: 1.6em;
-    background-color: #333;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    opacity: 0.9;
-  }
-  
-  .cookie-container a {
-    color: slategrey;
-  }
-  
-  .cookie-container {
-    margin: 0 auto;
-    width: 90%;
-    padding: 15px;
-    color: #f0f0f0;
-  }
-  
-  .cookie-button {
-    background-color: #ccc;
-    color: #333;
-    text-decoration-line: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    display: inline-block;
-    border: 1px solid #aaa;
-    border-bottom: 2px solid #aaa;
-    font-size: 1.5em;
-  }
-
-  /* game instruction */
-  .game-instruction-overlay{
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.7);
+  box-sizing: border-box;
 }
 
-.game-instruction-box{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #eee;
-    border-radius: 0.5rem;
-    font-size: 23px;
-    padding: 40px;
-    font-family: "Oswald";
-    width: 80%;
-    opacity: 0.9  ;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.game-instruction-header{
-    text-align: center;
+.wrapperBig {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.game-button{
-    text-align: center;
+header {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: #f3fbe8;
+}
+
+
+.nav-toggler {
+  display: none;
+}
+
+nav {
+  z-index: 1;
+  font-family: "Oswald", sans-serif;
+}
+
+.nav-container {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8bc34a;
+  height: 120px;
+  z-index: 5;
+  scroll-behavior: smooth;
+  top: 0px;
+}
+
+.nav-container a {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #212121;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.nav-logo--image {
+  width: 200px;
+  height: 100px;
+  display: none;
+  position: relative;
+  left: -10px;
+  top: -5px;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+}
+
+.active2 {
+  background-color: rgba(247, 227, 4, 0.4);
+  text-decoration: none;
+}
+
+
+
+.hero {
+  background: url(./Images/food-waste-hero.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.heroTitle h1 {
+  text-align: center;
+  position: relative;
+  top: auto;
+  text-transform: uppercase;
+  color: #212121;
+  padding: 7px 15px;
+  font-weight: bold;
+  font-size: 40px;
+  border: 1px solid #212121;
+  font-family: oswald;
+}
+
+.heroText {
+  color: #212121;
+  text-align: center;
+  font-weight: bold;
+  max-width: 75%;
+  font-size: 24px;
+  font-family: sans-serif;
+  line-height: 40px;
+}
+
+.hero a {
+  position: relative;
+  top: -60px;
+  text-decoration: none;
+  color: #212121;
+  padding: 10px;
+  background: transparent;
+}
+
+.hero p {
+  position: relative;
+  top: -40px;
+  color: #757575;
+  text-decoration: none;
+  font-size: 32px;
+  background: transparent;
+  text-shadow: 1px 2px 1px #212121;
+}
+
+#hero-hover {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  color: #000;
+  border: 1px solid rgb(98, 212, 21);
+  background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+}
+
+#hero-hover:hover {
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+}
+
+
+.main-content {
+  max-width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: left;
+}
+
+.main-content img {
+  margin: 40px 10px;
+  border: 2px groove #689f38;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.main-content h4 {
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8em;
+}
+
+.main-content p {
+  line-height: 1.1em;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  padding: 5px;
+}
+
+
+.newsBox {
+  background: url("Images/news2.png") no-repeat center;
+  background-size: cover;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  background-size: cover;
+}
+
+.news-label,
+.news-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.newsBox span {
+  padding: 0 100px;
+}
+
+.newsBox input {
+  line-height: 2.2em;
+  margin-bottom: 10px;
+}
+
+.newsBox div {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+}
+
+.news-input-class {
+  line-height: 2.2em;
+  margin-bottom: 10px;
+  margin: 20px;
+  width: 25vw;
+  border: 1px solid #212121;
+  font-size: 16px;
+  border-radius: 6px;
+  background: #dcedc8;
+  text-align: center;
+}
+
+.newsBox a,
+p {
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
+}
+
+.send {
+  padding: 5px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  border: 1px solid rgb(98, 212, 21);
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+}
+
+.send:hover {
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
+}
+
+.newsBox a:hover,
+.rodo:hover {
+  color: #ffc107;
+}
+
+.news-small {
+  font-size: 22px;
+  width: 75%;
+  text-align: center;
+}
+
+
+#team-box > div {
+  text-align: center;
+  font-size: 22px;
+}
+
+#team-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  perspective: 400px;
+  margin-bottom: 55px;
+}
+
+#team-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+}
+
+#team-box:hover > #team-card {
+  transform: rotateY(180deg);
+}
+
+#team-card--front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6em;
+  background-size: 100%;
+  backface-visibility: hidden;
+}
+
+#team-card--front img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#team-card--back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 50%;
+  width: 102%;
+  height: 102%;
+  font-size: 1.6em;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: #dcedc8;
+  font-family: "Open Sans", sans-serif;
+}
+
+#team-card--back a {
+  color: #ffc107;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.teamText {
+  font-family: "Oswald", sans-serif;
+
+  text-align: center;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+#team {
+  background: #dcedc8;
+  margin-top: -25px;
+}
+
+
+.main-content img {
+  margin: auto;
+  border: 2px groove #689f38;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.footer-box {
+  height: 3em;
+  font-size: 0.9em;
+  border-top: 1px solid #000;
+}
+
+.copywright {
+  color: #757575;
+  line-height: 1.6em;
+  float: left;
+  margin: 1.4em 20px;
+  font-size: 1.1em;
+}
+
+.footer-links {
+  line-height: 1.6em;
+  float: right;
+  text-decoration: none;
+  color: #000;
+  margin: 1.4em 20px;
+  font-size: 1.1em;
+}
+
+.footer-links:hover {
+  background-color: #757575;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.privacy {
+  text-align: center;
+  margin: 2em;
+}
+
+.policy-text {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+
+.policy-text p {
+  text-align: left;
+  margin-top: 1.1em;
+}
+
+.policy-text p:first-child {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.policy-text p:last-child {
+  padding-bottom: 10px;
+}
+
+.cookie-banner {
+  display: none;
+  font: 1.2em Arial;
+  line-height: 1.6em;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.9;
+}
+
+.cookie-container a {
+  color: slategrey;
+}
+
+.cookie-container {
+  margin: 0 auto;
+  width: 90%;
+  padding: 15px;
+  color: #f0f0f0;
+}
+
+.cookie-button {
+  background-color: #ccc;
+  color: #333;
+  text-decoration-line: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  font-size: 1.5em;
+}
+
+.game-instruction-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.game-instruction-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  border-radius: 0.5rem;
+  font-size: 23px;
+  padding: 40px;
+  font-family: "Oswald";
+  width: 80%;
+  opacity: 0.9;
+}
+
+.game-instruction-header {
+  text-align: center;
+}
+
+.game-button {
+  text-align: center;
 }
 
 .button-style {
-    font-size: 30px;
-    padding: 5px;
-    border-radius: 20px;
-    width: 20%;
-    text-align: center;
-    background-color: #689F38;
-    border: 1px solid;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .button-style:hover {
-    text-decoration: underline;
-    color: #FFC107;
-  }
-  
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 20px;
+  width: 20%;
+  text-align: center;
+  background-color: #689f38;
+  border: 1px solid;
+  text-decoration: none;
+  color: black;
+}
+
+.button-style:hover {
+  text-decoration: underline;
+  color: #ffc107;
+}

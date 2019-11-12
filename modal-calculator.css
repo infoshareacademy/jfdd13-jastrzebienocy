@@ -71,8 +71,6 @@
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-/* calculator button caller */
-
 .calculator-button-box {
   width: 80%;
   display: flex;
@@ -98,35 +96,17 @@
   background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
 }
 
-/* Calculator Style -JK */
-
-/* Main Style */
-
-/* range slider general - large screen */
-
-/*  Main months class including all the text of months quantity */
-
-/* Chrome slider style  */
-
-/* The range belt style- general - large screen */
 
 .myslider {
   -webkit-appearance: none;
   width: 50%;
   margin: 10px;
-  /* border-radius: 10px; */
 }
 
 .myslider[type="range"]::-webkit-slider-runnable-track {
-  /* position: relative;
-  top: 5px; */
-  /* background-position-y: center; */
   height: 20px;
   background: linear-gradient(to right, #ffc107, #8bc34a);
-  /* background-position-y: top; */
 }
-
-/*  Thumb slider styles */
 
 .myslider[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -138,15 +118,12 @@
   background-size: cover;
 }
 
-/* Mozilla FF slider belt style  */
 
 .myslider[type="range"]::-moz-range-track {
   height: 20px;
   background: linear-gradient(to right, #ffc107, #8bc34a);
   border-radius: 10px;
 }
-
-/*  Mozilla FF thumb styles */
 
 .myslider::-moz-range-thumb {
   height: 35px;
@@ -157,8 +134,6 @@
   background-size: cover;
 }
 
-/*  Account Quantity Style */
-
 .info-box {
   display: flex;
   flex-direction: row;
@@ -166,22 +141,11 @@
   align-items: center;
 }
 
-/* Info Box Span Style */
-
-/* .info-box span {
-  height: 20px;
-  line-height: 20px;
-} */
-
-/* Account Quantity Label */
-
-/* Quantity span - connected to slider - style */
 
 .quantity {
   margin: 15px 5px;
 }
 
-/* Quantity Account extended message style*/
 
 .quantity-message {
   width: 26%;
@@ -189,7 +153,6 @@
   text-align: left;
 }
 
-/* Month quantity label */
 
 .general {
   display: block;
@@ -197,25 +160,18 @@
   margin-right: 80px;
 }
 
-/* Range slider in general - whole box */
 
 .range-slider {
-  /* width: 45%; */
   text-align: center;
   border: 1px dashed #666;
   font-size: 1.4em;
 }
-
-/* Calculation elements */
 
 .calculation-elements {
   display: flex;
   justify-content: space-around;
 }
 
-/* Message clculate */
-
 .calculation-output {
-  /* margin: 10px 0; */
   font-size: 0.95em;
 }

@@ -1,8 +1,7 @@
-/** Whole page width */
+
 
 * {
   box-sizing: border-box;
-  /* margin: 0 auto; */
 }
 
 body {
@@ -23,7 +22,6 @@ header {
   background: #f3fbe8;
 }
 
-/* Navigation*/
 
 .nav-toggler {
   display: none;
@@ -65,8 +63,6 @@ nav {
   top: -5px;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-
 .sticky {
   position: fixed;
   top: 0;
@@ -81,7 +77,6 @@ nav {
   text-decoration: none;
 }
 
-/*hero section*/
 
 .hero {
   background: url(./Images/food-waste-hero.png) no-repeat center;
@@ -142,9 +137,9 @@ nav {
 #hero-hover {
   width: 35%;
   line-height: 1.4em;
-  /* display: inline; */
+
   font-size: 1em;
-  /* border: 1px solid rgb(98, 212, 21); */
+
   padding: 4px;
   border-radius: 10px;
   text-decoration: none;
@@ -159,8 +154,6 @@ nav {
   background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
 }
 
-/* Here is section main content style - JK*/
-
 .main-content {
   max-width: 80%;
   margin: 10px auto;
@@ -170,8 +163,6 @@ nav {
   text-align: left;
 }
 
-/* Images for functionality -JK */
-
 .main-content img {
   margin: 40px 10px;
   border: 2px groove #689f38;
@@ -180,7 +171,6 @@ nav {
   height: 100px;
 }
 
-/* The only text part for now - JK */
 
 .main-content h4 {
   margin-bottom: 10px;
@@ -191,7 +181,6 @@ nav {
   font-size: 1.8em;
 }
 
-/* Small text in functionality  -JK */
 
 .main-content p {
   line-height: 1.1em;
@@ -201,7 +190,6 @@ nav {
   padding: 5px;
 }
 
-/* newsletter */
 
 .newsBox {
   background: url("Images/news2.png") no-repeat center;
@@ -216,7 +204,8 @@ nav {
   background-size: cover;
 }
 
-.news-label, .news-input {
+.news-label,
+.news-input {
   display: flex;
   flex-direction: row;
 }
@@ -249,9 +238,8 @@ nav {
   text-align: center;
 }
 
-/*  Nie wiem Filip czy ktokolwiek inny czy zdajecie sobie sprawę, że taki zapis nie dotyczy tylko paragrafu w .newsBox, a na całej stronie , natomiast rzeczywiście dotyczy linków tylko w klasie newBox  */
-
-.newsBox a, p {
+.newsBox a,
+p {
   text-decoration: none;
   color: inherit;
   padding: 8px;
@@ -261,7 +249,6 @@ nav {
   width: 20%;
   text-align: center;
   line-height: 1.4em;
-  /* display: inline; */
   font-size: 1em;
   border: 1px solid rgb(98, 212, 21);
   padding: 4px;
@@ -277,7 +264,8 @@ nav {
   background: linear-gradient(to bottom, rgb(3, 88, 3), rgb(157, 255, 157));
 }
 
-.newsBox a:hover, .rodo:hover {
+.newsBox a:hover,
+.rodo:hover {
   color: #ffc107;
 }
 
@@ -287,9 +275,7 @@ nav {
   text-align: center;
 }
 
-/*Team*/
-
-#team-box>div {
+#team-box > div {
   text-align: center;
   font-size: 26px;
 }
@@ -314,7 +300,7 @@ nav {
   border-radius: 50%;
 }
 
-#team-box:hover>#team-card {
+#team-box:hover > #team-card {
   transform: rotateY(180deg);
 }
 
@@ -322,9 +308,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* color:#F00; */
   font-size: 1.6em;
-  /* background:url('https://webkod.pl/images/lioncard.png') no-repeat; */
   background-size: 100%;
   backface-visibility: hidden;
 }
@@ -341,9 +325,7 @@ nav {
   border-radius: 50%;
   width: 102%;
   height: 102%;
-  /* color:#FFF; */
   font-size: 1.6em;
-  /* background-color:#000; */
   transform: rotateY(180deg);
   backface-visibility: hidden;
   background: #dcedc8;
@@ -372,9 +354,8 @@ nav {
 }
 
 .teamText h2 {
-padding-top: 30px;
+  padding-top: 30px;
 }
-/* Images for functionality -JK */
 
 .main-content img {
   margin: auto;
@@ -384,33 +365,12 @@ padding-top: 30px;
   height: 100px;
 }
 
-/* .main-content h4 {
-  margin-bottom: 10px;
-  font-family: "Oswald", sans-serif;
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-decoration: underline;
-  font-size: 1.8em;
-} */
-
-/* .main-content p {
-  line-height: 1.1em;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-  font-size: 0.95em;
-  padding: 5px;
-} */
-
-/* Footer styles JK */
-
 .footer-box {
   height: 3em;
-  /* margin-top: 10px; */
+
   font-size: 0.9em;
   border-top: 1px solid #000;
 }
-
-/* Copywrights JK */
 
 .copywright {
   color: #757575;
@@ -419,8 +379,6 @@ padding-top: 30px;
   margin: 1.4em 20px;
   font-size: 1.1em;
 }
-
-/* Privacy policy and contact styles - JK*/
 
 .footer-links {
   line-height: 1.6em;
@@ -437,8 +395,6 @@ padding-top: 30px;
   border-radius: 5px;
   padding: 0 5px;
 }
-
-/* Privacy policy style - JK*/
 
 .privacy {
   text-align: center;
@@ -463,10 +419,6 @@ padding-top: 30px;
 .policy-text p:last-child {
   padding-bottom: 10px;
 }
-
-/* Finish of section footer by JK */
-
-/*cookies*/
 
 .cookie-banner {
   display: none;
@@ -503,54 +455,53 @@ padding-top: 30px;
   font-size: 1.5em;
 }
 
-/* game instruction */
-  .game-instruction-overlay{
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.7);
+.game-instruction-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.game-instruction-box{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #eee;
-    border-radius: 0.5rem;
-    font-size: 25px;
-    padding: 40px;
-    font-family:"Oswald";
-    width: 65%;
-    opacity: 0.9;
+.game-instruction-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  border-radius: 0.5rem;
+  font-size: 25px;
+  padding: 40px;
+  font-family: "Oswald";
+  width: 65%;
+  opacity: 0.9;
 }
 
-.game-instruction-header{
-    text-align: center;
+.game-instruction-header {
+  text-align: center;
 }
 
-.game-button{
-    text-align: center;
+.game-button {
+  text-align: center;
 }
 
 .button-style {
-    font-size: 30px;
-    padding: 5px;
-    border-radius: 20px;
-    width: 20%;
-    text-align: center;
-    background-color: #689F38;
-    border: 1px solid;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .button-style:hover {
-    text-decoration: underline;
-    color: #FFC107;
-  }
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 20px;
+  width: 20%;
+  text-align: center;
+  background-color: #689f38;
+  border: 1px solid;
+  text-decoration: none;
+  color: black;
+}
+
+.button-style:hover {
+  text-decoration: underline;
+  color: #ffc107;
+}
