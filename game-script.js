@@ -226,7 +226,7 @@ function start() {
             }
             if (highscore < pointsToShow) {
               localStorage.setItem("highScore", pointsToShow);
-              highest = localStorage.getItem("highScore");
+              highscore = localStorage.getItem("highScore");
               document.getElementById("score").classList.add("highscore");
               document.querySelector(".highscore").innerText = `${playerName}
               to Twój rekord!
