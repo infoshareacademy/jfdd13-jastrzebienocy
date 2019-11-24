@@ -1,5 +1,6 @@
 
 let name = document.querySelector("#name");
+let closeX = document.querySelector(".closeX")
 
 let email = document.querySelector("#email");
 const sendButton = document.querySelector(".send");
@@ -30,4 +31,10 @@ const Instruction = () => {
   InsBox.style.display = "block";
 };
 
+const closeInstruction = () => {
+  overlay.style.display = "none";
+  InsBox.style.display = "none";
+}
+
 sendButton.addEventListener("click", checkValidation);
+closeX.addEventListener("click", closeInstruction);
