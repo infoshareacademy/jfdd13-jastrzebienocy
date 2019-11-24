@@ -145,6 +145,7 @@ nav {
   color: #000;
   border: 1px solid rgb(98, 212, 21);
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+  cursor: pointer;
 }
 
 #hero-hover:hover {
@@ -252,6 +253,7 @@ p {
   text-decoration: none;
   color: #000;
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+  cursor: pointer;
 }
 
 .send:hover {
