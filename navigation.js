@@ -77,7 +77,7 @@ function amountscrolled() {
     document
       .querySelector("#myLinks > a:nth-child(3)")
       .setAttribute("class", "active2");
-  } else if (pctScrolled >= 93) {
+  } else if (pctScrolled >= 95) {
     document.querySelector(".active2").setAttribute("class", " ");
     document
       .querySelector("#myLinks > a:nth-child(4)")

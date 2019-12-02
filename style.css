@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -62,9 +63,9 @@ nav {
   width: 200px;
   height: 100px;
   display: none;
-  position: relative;
-  left: -10px;
-  top: -5px;
+  position: fixed;
+  left: 100px;
+  top: -12px;
 }
 
 .sticky {
@@ -73,7 +74,10 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 70px;
+  height: 90px;
+}
+.sticky + .content {
+  padding-top: 250px;
 }
 
 .active2 {
