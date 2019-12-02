@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -62,9 +63,9 @@ nav {
   width: 200px;
   height: 100px;
   display: none;
-  position: relative;
-  left: -10px;
-  top: -5px;
+  position: fixed;
+  left: 100px;
+  top: -12px;
 }
 
 .sticky {
@@ -73,7 +74,10 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 70px;
+  height: 90px;
+}
+.sticky + .content {
+  padding-top: 250px;
 }
 
 .active2 {
@@ -509,4 +513,32 @@ p {
 .button-style:hover {
   text-decoration: underline;
   color: #ffc107;
+}
+
+/* close button i instruction */
+
+.closeX{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.closeX:hover {
+  opacity: 1;
+}
+.closeX:before, .closeX:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.closeX:before {
+  transform: rotate(45deg);
+}
+.closeX:after {
+  transform: rotate(-45deg);
 }
