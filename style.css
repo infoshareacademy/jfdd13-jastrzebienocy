@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+ 
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -58,9 +63,9 @@ nav {
   width: 200px;
   height: 100px;
   display: none;
-  position: relative;
-  left: -10px;
-  top: -5px;
+  position: fixed;
+  left: 100px;
+  top: -12px;
 }
 
 .sticky {
@@ -69,7 +74,10 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  height: 70px;
+  height: 90px;
+}
+.sticky + .content {
+  padding-top: 250px;
 }
 
 .active2 {
@@ -137,7 +145,7 @@ nav {
 #hero-hover {
   width: 35%;
   line-height: 1.4em;
-
+  cursor: pointer;
   font-size: 1em;
 
   padding: 4px;
@@ -256,6 +264,7 @@ p {
   text-decoration: none;
   color: #000;
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+  cursor: pointer;
 }
 
 .send:hover {
@@ -504,4 +513,32 @@ p {
 .button-style:hover {
   text-decoration: underline;
   color: #ffc107;
+}
+
+/* close button i instruction */
+
+.closeX{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.closeX:hover {
+  opacity: 1;
+}
+.closeX:before, .closeX:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.closeX:before {
+  transform: rotate(45deg);
+}
+.closeX:after {
+  transform: rotate(-45deg);
 }

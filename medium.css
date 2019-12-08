@@ -39,7 +39,7 @@ nav {
   align-items: center;
   justify-content: center;
   background: #8bc34a;
-  height: 120px;
+  height: 110px;
   z-index: 5;
   scroll-behavior: smooth;
   top: 0px;
@@ -71,6 +71,9 @@ nav {
   right: 0;
   width: 100%;
   height: 90px;
+}
+.sticky + .content {
+  padding-top: 250px;
 }
 
 .active2 {
@@ -145,6 +148,7 @@ nav {
   color: #000;
   border: 1px solid rgb(98, 212, 21);
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+  cursor: pointer;
 }
 
 #hero-hover:hover {
@@ -252,6 +256,7 @@ p {
   text-decoration: none;
   color: #000;
   background: linear-gradient(to bottom, rgb(157, 255, 157), rgb(3, 88, 3));
+  cursor: pointer;
 }
 
 .send:hover {
@@ -498,4 +503,32 @@ p {
 .button-style:hover {
   text-decoration: underline;
   color: #ffc107;
+}
+
+/* close button i instruction */
+
+.closeX{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.closeX:hover {
+  opacity: 1;
+}
+.closeX:before, .closeX:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.closeX:before {
+  transform: rotate(45deg);
+}
+.closeX:after {
+  transform: rotate(-45deg);
 }
