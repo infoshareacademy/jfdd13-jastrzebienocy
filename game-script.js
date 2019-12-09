@@ -7,6 +7,7 @@ const fruitWidth = 30;
 const playerHeight = 110;
 const fruitHeight = 30;
 const oneMove = 10;
+const noMove = 0;
 const domContainer = document.querySelector(".container");
 const domRectagle = document.querySelector(".human");
 
@@ -33,6 +34,9 @@ class Player {
   }
   down() {
     this.y += oneMove;
+  }
+  stop(){
+    this.x += 0;
   }
 
   addPoint() {
@@ -112,10 +116,32 @@ class Move {
       Move.RenderElement(player1, domRectagle);
     }
   }
+
+  static stop(event, player1) {
+    if (event.key !== "ArrowLeft" && player1.x > 0) {
+      player1.stop();
+      Move.RenderElement(player1, domRectagle);
+    } else if (
+      event.key !== "ArrowRight" &&
+      player1.x < domContainer.offsetWidth - playerWidth
+    ) {
+      player1.stop();
+      Move.RenderElement(player1, domRectagle);
+    }
+
+    if (player1.x >= domContainer.offsetWidth) {
+      Move.RenderElement(player1, domRectagle);
+    } else if (player1.x <= 0) {
+      Move.RenderElement(player1, domRectagle);
+    }
+  }
+
+  
 }
 
 const player1 = new Player(domRectagle);
 document.addEventListener("keydown", event => Move.move(event, player1));
+document.addEventListener("keyup", event => Move.stop(event, player1));
 
 function start() {
   document.querySelector(".human").style.opacity = "1";
