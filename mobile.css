@@ -26,7 +26,9 @@ header {
   background: #f3fbe8;
 }
 
-
+.nav-main--container {
+  height: 90px;
+}
 
 nav {
   font-family: "Oswald", sans-serif;
@@ -679,4 +681,32 @@ nav {
 .button-style:hover {
   text-decoration: underline;
   color: #ffc107;
+}
+
+/* close button i instruction */
+
+.closeX{
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.closeX:hover {
+  opacity: 1;
+}
+.closeX:before, .closeX:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.closeX:before {
+  transform: rotate(45deg);
+}
+.closeX:after {
+  transform: rotate(-45deg);
 }
