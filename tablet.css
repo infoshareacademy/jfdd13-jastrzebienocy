@@ -24,6 +24,10 @@ header {
   background: #f3fbe8;
 }
 
+.nav-main--container {
+  height: 90px;
+}
+
 nav {
   font-family: "Oswald", sans-serif;
 }

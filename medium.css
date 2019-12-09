@@ -22,6 +22,9 @@ header {
   background: #f3fbe8;
 }
 
+.nav-main--container {
+  height: 100px;
+}
 
 .nav-toggler {
   display: none;
